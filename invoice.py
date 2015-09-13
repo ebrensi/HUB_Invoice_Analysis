@@ -172,16 +172,16 @@ def flatten_dict(d):
 ### ************************************
 
 
-# # Read in the original Excel workbooks and create the invoices.json file
-# info = xlsx2json(file_names)
+# Read in the original Excel workbooks and create the invoices.json file
+info = xlsx2json(file_names)
 
-# # read in invoices.json and convert it to a flat table, which we will call invoice_items.csv
-# with open('invoices.json','r') as in_file:
-#     invoices = json.loads(in_file.read())
-# df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna()
+# read in invoices.json and convert it to a flat table, which we will call invoice_items.csv
+with open('invoices.json','r') as in_file:
+    invoices = json.loads(in_file.read())
+df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna()
 
-# fields = ['invoice#','title','rate','date','description','hours','discount','subtotal']
-# df[fields].to_csv('invoice_items.csv',index=False,  encoding='utf-8')
+fields = ['invoice#','title','rate','date','description','hours','discount','subtotal']
+df[fields].to_csv('invoice_items.csv',index=False,  encoding='utf-8')
 
 df = pd.read_csv('invoice_items.csv')
 
@@ -194,18 +194,17 @@ for rate in rate_classes:
 
 room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingletown', 'omi':'gallery|omi',
                 'east_oak':'east', 'west_oak':'west', 'up':'uptown', 'down':'downtown'}
+
 for room in room_classes:
     df[room] =  df['description'].str.contains(room_classes[room], case=False, na=False)
 
 discount_classes = {'fdd':'Full[-| ]?day', 'mrd':'Multi[-| ]?Room', 'pd':'Partnership',
                     'fd':'Founder', 'rcd':'Returning[-| ]?client', 'hdd':'Half[-| ]?Day'}
+
 for discount in discount_classes:
     df[discount] =  df['rate'].str.contains(discount_classes[discount], case=False, na=False)
 
 df.to_csv('invoices_flagged.csv',index=False,  encoding='utf-8')
-
-
-
 
 
 
