@@ -12,6 +12,7 @@ import concurrent.futures as futures
 import json
 import time
 import datetime
+import os.path
 from tqdm import *
 
 
@@ -173,40 +174,44 @@ def flatten_dict(d):
 
 
 # Read in the original Excel workbooks and create the invoices.json file
-info = xlsx2json(file_names)
+if not os.path.isfile('invoices.json'):
+    invoices = xlsx2json(file_names)
+else:
+    with open('invoices.json','r') as in_file:
+        invoices = json.loads(in_file.read())
 
-# read in invoices.json and convert it to a flat table, which we will call invoice_items.csv
-with open('invoices.json','r') as in_file:
-    invoices = json.loads(in_file.read())
-df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna()
+# Transform json data into a flat table with boolean indicator columns
+if not os.path.isfile('invoice_items.csv'):
+    df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna()
+    fields = ['invoice#','title','rate','date','description','hours','discount','subtotal']
+    df = df[fields]
 
-fields = ['invoice#','title','rate','date','description','hours','discount','subtotal']
-df[fields].to_csv('invoice_items.csv',index=False,  encoding='utf-8')
+    # Assoicate items with rate-tkeysype, room, half/full-day, and discount-type
+    rate_classes = {'ptm': 'part[-| ]?time', 'ftm':'full[ |-]?time|full member', 'nm':'none?[ |-]member',
+                    'wkn': 'weekend', 'wkd':'weekday|wkday', 'wth':'with'}
 
-df = pd.read_csv('invoice_items.csv')
+    for rate in rate_classes:
+        df['rate_'+rate] =  df['rate'].str.contains(rate_classes[rate], case=False, na=False)
 
-# assoicate items with rate-type, room, half/full-day, and discount-type
-rate_classes = {'ptm': 'part[-| ]?time', 'ftm':'full[ |-]?time|full member', 'nm':'none?[ |-]member',
-                'wkn': 'weekend', 'wkd':'weekday|wkday', 'wth':'with'}
+    room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingletown', 'omi':'gallery|omi',
+                    'east_oak':'east', 'west_oak':'west', 'up':'uptown', 'down':'downtown'}
 
-for rate in rate_classes:
-    df['rate_'+rate] =  df['rate'].str.contains(rate_classes[rate], case=False, na=False)
+    for room in room_classes:
+        df[room] =  df['description'].str.contains(room_classes[room], case=False, na=False)
 
-room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingletown', 'omi':'gallery|omi',
-                'east_oak':'east', 'west_oak':'west', 'up':'uptown', 'down':'downtown'}
+    discount_classes = {'fdd':'Full[-| ]?day', 'mrd':'Multi[-| ]?Room', 'pd':'Partnership',
+                        'fd':'Founder', 'rcd':'Returning[-| ]?client', 'hdd':'Half[-| ]?Day'}
 
-for room in room_classes:
-    df[room] =  df['description'].str.contains(room_classes[room], case=False, na=False)
+    for discount in discount_classes:
+        df[discount] =  df['rate'].str.contains(discount_classes[discount], case=False, na=False)
 
-discount_classes = {'fdd':'Full[-| ]?day', 'mrd':'Multi[-| ]?Room', 'pd':'Partnership',
-                    'fd':'Founder', 'rcd':'Returning[-| ]?client', 'hdd':'Half[-| ]?Day'}
+    df.to_csv('invoices_flagged.csv',index=False,  encoding='utf-8')
 
-for discount in discount_classes:
-    df[discount] =  df['rate'].str.contains(discount_classes[discount], case=False, na=False)
+    df.to_csv('invoice_items.csv',index=False,  encoding='utf-8')
+else:
+    df = pd.read_csv('invoice_items.csv')
 
-df.to_csv('invoices_flagged.csv',index=False,  encoding='utf-8')
-
-
+df.set_index(['date','title'])
 
 # Non Member weekend - average $
 # Non Member weekday
