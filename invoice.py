@@ -43,10 +43,11 @@ file_names = ['IHO_OnGoing_InvoiceTemplate.xlsx',
 #                ]
 
 
-def parse_sheet(ws):
+def parse_sheet(ws, annonymize=False):
     info = {}
 
     sname = ws.title
+
     # make a dataframe from the current sheet
     df = pd.DataFrame([tuple([cell.value for cell in row]) for row in ws.rows])
 
@@ -82,10 +83,14 @@ def parse_sheet(ws):
         if len(sep) < 3:
             info.update({'bill_to':'', 'title':'', 'type':''})
         else:
-            # Exctract bill_to, title, and type fields
-            info.update({'bill_to' : ', '.join(df[0][sep[0]+1:sep[1]-1].dropna()),
-                         'title' : ', '.join(df[0][sep[1]+1:sep[2]-1].dropna()),
-                         'type' : df[0][sep[2]+1] }  )
+            if annonymize:
+                info.update({'title' : sname,
+                             'type' : df[0][sep[2]+1] }  )
+            else:
+                # Exctract bill_to, title, and type fields
+                info.update({'bill_to' : ', '.join(df[0][sep[0]+1:sep[1]-1].dropna()),
+                             'title' : ', '.join(df[0][sep[1]+1:sep[2]-1].dropna()),
+                             'type' : df[0][sep[2]+1] }  )
 
         items = {}
         sep = df[df[0].str.contains('date',case=False, na=False)].index.tolist()
@@ -132,12 +137,10 @@ def parse_sheet(ws):
 ## *******************************
 
 
-invoices = {}
-jobs = {}
 
-
-def xlsx2json(file_names):
+def xlsx2json(file_names, annonymize=True):
     worksheets = []
+    invoices = {}
 
     start_time = time.time()
     for fname in file_names:
@@ -152,14 +155,10 @@ def xlsx2json(file_names):
     for ws in tqdm(worksheets, total=len(worksheets)):
 
         # select one invoice sheet from the workbook
-        invoices[ws.title] = parse_sheet(ws)
+        invoices[ws.title] = parse_sheet(ws, annonymize)
 
     elapsed_string = str(datetime.timedelta(seconds=time.time()-start_time))
     print('Finished in %s' % elapsed_string)
-
-
-    with open('invoices.json','w') as out_file:
-        out_file.write(json.dumps(invoices, indent=3))
 
     return invoices
 
@@ -185,13 +184,14 @@ def flatten_dict(d):
 
 ### ************************************
 
-
 # Read in the original Excel workbooks and create the invoices.json file
 if not os.path.isfile('invoices.json'):
-    invoices = xlsx2json(file_names)
+    invoices = xlsx2json(file_names, annonymize=True)
+    with open('invoices.json','w') as out_file:
+        out_file.write(json.dumps(invoices, indent=3))
 else:
     with open('invoices.json','r') as in_file:
-        invoices = json.loads(in_file.read())
+        invoices = json.load(in_file.read)
 
 # Transform json data into a flat table with boolean indicator columns
 if not os.path.isfile('invoice_items.csv'):
@@ -215,6 +215,8 @@ else:
     df = pd.read_csv('invoice_items.csv')
 
 # Determine which invoices are
+
+doors = room_classes.keys()
 grouped = df.groupby(['title','date'])
 
 
