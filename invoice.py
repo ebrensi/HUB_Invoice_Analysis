@@ -195,7 +195,7 @@ else:
 # Transform json data into a flat table with boolean indicator columns
 if not os.path.isfile('invoice_items.csv'):
     df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna(how='all')
-    fields = ['invoice#','title','rate','date','description','amount','hours','subtotal','discount']
+    fields = ['title','rate','date','description','amount','hours','subtotal','discount']
     df = df[fields]
 
     # Assoicate items with rate, room, half/full-day, and discount-type
@@ -215,7 +215,7 @@ else:
 
 
 rooms = room_classes.keys()
-#grouped = df.groupby(['title','date'])
+grouped = df.groupby(['title','date'])
 
 
 # Non Member weekend - average $
