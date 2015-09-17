@@ -162,13 +162,12 @@ def xlsx2json(file_names, annonymize=True):
 
     return invoices
 
-
-
-def flatten_dict(d):
+# This function produces a list of dictionaries, each entry one item from a nested invoice dictionary
+def flatten_dict(invoices):
     result = []
-    for name in invoices:
-        if invoices[name]:
-            c = invoices[name].copy()
+    for title in invoices:
+        if invoices[title]:
+            c = invoices[title].copy()
             items = c.pop('items')
             for date in items:
                 c['date'] = date
@@ -191,15 +190,15 @@ if not os.path.isfile('invoices.json'):
         out_file.write(json.dumps(invoices, indent=3))
 else:
     with open('invoices.json','r') as in_file:
-        invoices = json.load(in_file.read)
+        invoices = json.load(in_file)
 
 # Transform json data into a flat table with boolean indicator columns
 if not os.path.isfile('invoice_items.csv'):
-    df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna()
+    df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna(how='all')
     fields = ['invoice#','title','rate','date','description','amount','hours','subtotal','discount']
     df = df[fields]
 
-    # Assoicate items with rate-tkeysype, room, half/full-day, and discount-type
+    # Assoicate items with rate, room, half/full-day, and discount-type
     for rate in rate_classes:
         df['rate_'+rate] =  df['rate'].str.contains(rate_classes[rate], case=False, na=False)
 
@@ -214,16 +213,15 @@ if not os.path.isfile('invoice_items.csv'):
 else:
     df = pd.read_csv('invoice_items.csv')
 
-# Determine which invoices are
 
-doors = room_classes.keys()
-grouped = df.groupby(['title','date'])
+rooms = room_classes.keys()
+#grouped = df.groupby(['title','date'])
 
 
 # Non Member weekend - average $
 # Non Member weekday
 # part time member weeend
-# part tiem member weekday
+# part time member weekday
 # full time member weekend
 # full time member weekday
 
@@ -245,4 +243,3 @@ grouped = df.groupby(['title','date'])
 # Multi Room Discount
 # Full Day Discount
 # Partner Discount
-
