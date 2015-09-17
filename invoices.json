@@ -1,6 +1,6 @@
 {
    "2077 BALLE": {
-      "title": "BALLE Conference Party", 
+      "invoice#": "2077", 
       "items": {
          "2014-05-17": {
             "Large Party Cleaning Fee": {
@@ -29,13 +29,12 @@
             }
          }
       }, 
-      "bill_to": "Andrew Connor, BALLE, andrew@bealocalist.org, 510.587.9417 (ext. 103)", 
       "rate": "", 
-      "invoice#": "2077", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2077 BALLE"
    }, 
    "2054 Tessa Finlev": {
-      "title": "Future of Restorative Justice in Oakland 5/6/14", 
+      "invoice#": "2054", 
       "items": {
          "2014-05-06": {
             "Omi Gallery": {
@@ -52,13 +51,12 @@
             }
          }
       }, 
-      "bill_to": "Tessa Finlev, Institute for the Future and Fourm Design , (415)412-9077, tfinlev@iftf.org", 
       "rate": "", 
-      "invoice#": "2054", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2054 Tessa Finlev"
    }, 
    "315008 Kapor Center": {
-      "title": "Kapor Center", 
+      "invoice#": "315008", 
       "items": {
          "2015-05-02": {
             "IHO Staffing": {
@@ -87,13 +85,12 @@
             }
          }
       }, 
-      "bill_to": "Marq Lee, Kapor Center for Social Impact, 510-435-1641, marquelle@kaporcenter.org", 
       "rate": "Full Time Member Weekend Rate -- Full day discount", 
-      "invoice#": "315008", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "315008 Kapor Center"
    }, 
    "2093 BGC  Extended Use Fee": {
-      "title": "Black Girls CODE Love is Respect Hackathon", 
+      "invoice#": "2093", 
       "items": {
          "": {
             "On Broadway": {
@@ -104,13 +101,12 @@
             }
          }
       }, 
-      "bill_to": "Kimberly Brant, Black Girls Code, kbryant@blackgirlscode.org, (415)-860-6387", 
       "rate": "Full Time Member Weekend Rate", 
-      "invoice#": "2093", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2093 BGC  Extended Use Fee"
    }, 
    "2099 World Trust": {
-      "title": "World Trust Annual Gala", 
+      "invoice#": "2099", 
       "items": {
          "2014-10-02": {
             "On Broadway": {
@@ -157,13 +153,12 @@
             }
          }
       }, 
-      "bill_to": "Rhummanee Hang, World Trust Educational Services, (510)632-5156, rhummanee@world-trust.org", 
       "rate": "Part Time Member Weekday Rate -- Multi-Room Discount", 
-      "invoice#": "2099", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2099 World Trust"
    }, 
    "215015 Oakland Institute": {
-      "title": "10th Anniversary Celebration", 
+      "invoice#": "215015", 
       "items": {
          "2015-04-24": {
             "Standard Janitorial Fee": {
@@ -204,13 +199,12 @@
             }
          }
       }, 
-      "bill_to": "Elizabeth Fraser, Oakland Institute, 510-365-9140, elizabethacfraser@gmail.com", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "215015", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215015 Oakland Institute"
    }, 
    "2177 ACOE_Apprentice Training": {
-      "title": "IL Apprentice Training", 
+      "invoice#": "2177", 
       "items": {
          "2014-12-14": {
             "Janitorial Fee": {
@@ -233,13 +227,12 @@
             }
          }
       }, 
-      "bill_to": "Aida Geromino, Alameda County Office of Education, ageronimo@acoe.org, 510-670-4204", 
       "rate": "Non Member Weekend Rate  - Full Day Discount", 
-      "invoice#": "2177", 
-      "type": "Private Meeting"
+      "type": "Private Meeting", 
+      "title": "2177 ACOE_Apprentice Training"
    }, 
    "2037 Get Storied": {
-      "title": "Story University 5/17/2014 & 5/18/2014", 
+      "invoice#": "2037", 
       "items": {
          "0001-255-255": {
             "On Broadway": {
@@ -262,13 +255,12 @@
             }
          }
       }, 
-      "bill_to": "Eric Graham, Get Storied, eric@getstoried.com, (855)467-8679", 
       "rate": "", 
-      "invoice#": "2037", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2037 Get Storied"
    }, 
    "115008 Beyond Separation ": {
-      "title": "P2R Presents: Beyond Separation's Response to #blacklivesmatter", 
+      "invoice#": "115008", 
       "items": {
          "2015-01-27": {
             "OMI Gallery": {
@@ -285,13 +277,12 @@
             }
          }
       }, 
-      "bill_to": "Gregory Mengel, Beyond Separation, gamengel@yahoo.com, 415-515-7702", 
       "rate": "Full Time Member Weekday Rate - Partnership discount", 
-      "invoice#": "115008", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "115008 Beyond Separation "
    }, 
    "2111 HACK THE HOOD GRAD": {
-      "title": "Hack the Hood Graduation", 
+      "invoice#": "2111", 
       "items": {
          "2014-08-14": {
             "Standard Janitorial Fee": {
@@ -314,13 +305,12 @@
             }
          }
       }, 
-      "bill_to": "Susan Mernit, Hack the Hood, mernit@gmail.com", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2111", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2111 HACK THE HOOD GRAD"
    }, 
    "2199-2 Redwood Day School": {
-      "title": "Spring Gala and Auction", 
+      "invoice#": "2199-2", 
       "items": {
          "2015-04-25": {
             "Early Set Up": {
@@ -391,13 +381,12 @@
             }
          }
       }, 
-      "bill_to": "Nikki Maguire, Redwood Day School, nmagui@yahoo.com, 916-806-7321", 
       "rate": "Non Member Weekend Rate - Multi room discount", 
-      "invoice#": "2199-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2199-2 Redwood Day School"
    }, 
    "2049 BACC III": {
-      "title": "Bay Area Capital Connections (BACC) Forum III: Pitching a Company, Not a Product", 
+      "invoice#": "2049", 
       "items": {
          "2014-06-18": {
             "Atrium": {
@@ -432,13 +421,12 @@
             }
          }
       }, 
-      "bill_to": "Rani Croager, Uptima Business Bootcamp, rani.croager@uptimabootcamp.com, (415)361-3296", 
       "rate": "", 
-      "invoice#": "2049", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2049 BACC III"
    }, 
    "615004-2 BGC Hackathon_overtime": {
-      "title": "Black Girls Code Hackathon", 
+      "invoice#": "615004-2", 
       "items": {
          "2015-06-21": {
             "IHO Staffing": {
@@ -455,13 +443,12 @@
             }
          }
       }, 
-      "bill_to": "Kimberly Bryant, Black Girls Code, kbryant@blackgirlscode.org, (415) 860-6387", 
       "rate": "", 
-      "invoice#": "615004-2", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "615004-2 BGC Hackathon_overtime"
    }, 
    "715004-2 PAID_BART ": {
-      "title": "Call for Artists Workshop", 
+      "invoice#": "715004-2", 
       "items": {
          "2015-07-27": {
             "OMI Gallery": {
@@ -490,13 +477,12 @@
             }
          }
       }, 
-      "bill_to": "Abigail Thorne-Lyman, BART, athorne@bart.gov, 510-464-6140", 
       "rate": "Non Member Weekday Rate - Founder Discount", 
-      "invoice#": "715004-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "715004-2 PAID_BART "
    }, 
    "2122 EastBayRentalHousingAssoc": {
-      "title": "Awards Ceremony & Holiday Reception", 
+      "invoice#": "2122", 
       "items": {
          "2014-12-03": {
             "Standard Janitorial Fee": {
@@ -519,13 +505,12 @@
             }
          }
       }, 
-      "bill_to": "Tina Bocheff, East Bay Rental Housing Association, tbocheff@ebrha.com, 360 22nd Street, Suite 240, Oakland, CA 94612", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "2122", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2122 EastBayRentalHousingAssoc"
    }, 
    "2158 Rosenberg Foundation Event": {
-      "title": "Rosenberg Foundation Event", 
+      "invoice#": "2158", 
       "items": {
          "2014-12-02": {
             "Standard Cleaning Fee": {
@@ -548,13 +533,12 @@
             }
          }
       }, 
-      "bill_to": "Linda Moll, Grants and Operations Manager, Rosenberg Foundation, 131 Steuart Street, Suite 650, San Francisco, CA 94105, Phone:\u00a0415-644-9777, Fax:\u00a0415-357-5016", 
       "rate": "None Member Weekday Rate", 
-      "invoice#": "2158", 
-      "type": "AT "
+      "type": "AT ", 
+      "title": "2158 Rosenberg Foundation Event"
    }, 
    "2062 John Pomeroy": {
-      "title": "Know your Palate: Whiskey and Cheese Pairing", 
+      "invoice#": "2062", 
       "items": {
          "2014-05-28": {
             "Omi Gallery": {
@@ -577,13 +561,12 @@
             }
          }
       }, 
-      "bill_to": "John Pomeroy, Omnibibulous, jp@omnibibulous.com, (415)439-3798", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2062", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2062 John Pomeroy"
    }, 
    "2128 AlamedaCountyOfficeofEdu": {
-      "title": "Teacher Training", 
+      "invoice#": "2128", 
       "items": {
          "0001-255-255": {
             "Meridian Room": {
@@ -600,13 +583,12 @@
             }
          }
       }, 
-      "bill_to": "Joelle Fraser, Alameda County Office of Education, 313 West Winton Rm 220, Hayward CA 94544, 510-670-4554", 
       "rate": "Full Time Member Weekend Rate", 
-      "invoice#": "2128", 
-      "type": "Weekend Conference Room Rental"
+      "type": "Weekend Conference Room Rental", 
+      "title": "2128 AlamedaCountyOfficeofEdu"
    }, 
    "2159 LIfe is Living": {
-      "title": "The LIFE is Living Launch Party", 
+      "invoice#": "2159", 
       "items": {
          "2014-10-10": {
             "Standard Cleaning Fee": {
@@ -629,13 +611,12 @@
             }
          }
       }, 
-      "bill_to": "Hodari Davis, Youth Speaks-LIFE is Living, hdavis@youthspeaks.org, 510-457-5210", 
       "rate": "None Member Weekday Rate - Partner Discount", 
-      "invoice#": "2159", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2159 LIfe is Living"
    }, 
    "215014-2 OneLife IHO Collab": {
-      "title": "Transformative Visions", 
+      "invoice#": "215014-2", 
       "items": {
          "2015-03-21": {
             "IHO Staffing": {
@@ -664,13 +645,12 @@
             }
          }
       }, 
-      "bill_to": "Liza Rankow, OneLife Institute , rankow@earthlink.net, 510-338-0958", 
       "rate": "Non Member Weekend Rate - Partnership Discount", 
-      "invoice#": "215014-2", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "215014-2 OneLife IHO Collab"
    }, 
    "2083 Nat Poetry Slam_cleaning": {
-      "title": "National Poetry Slam Semi Finals", 
+      "invoice#": "2083", 
       "items": {
          "2014-08-08": {
             "Standard Janitorial Fee": {
@@ -681,13 +661,12 @@
             }
          }
       }, 
-      "bill_to": "Maureen Benson, The Body is Not An Apology, yesmsbenson@gmail.com, 510-938-8237", 
       "rate": "", 
-      "invoice#": "2083", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2083 Nat Poetry Slam_cleaning"
    }, 
    "815002 Occur Award Dinner": {
-      "title": "Occur Awards Dinner", 
+      "invoice#": "815002", 
       "items": {
          "2015-10-15": {
             "IHO Staffing": {
@@ -722,13 +701,12 @@
             }
          }
       }, 
-      "bill_to": "Cynthia Jones, CDA Consulting Group, cynthiajonesii@yahoo.com, 415-971-4826", 
       "rate": "Non Member Weekday Rate - Returning client discount", 
-      "invoice#": "815002", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "815002 Occur Award Dinner"
    }, 
    "615002-2 IHO Whole Person": {
-      "title": "The Whole Person Economy", 
+      "invoice#": "615002-2", 
       "items": {
          "2015-06-07": {
             "Set Up & Reset": {
@@ -775,13 +753,12 @@
             }
          }
       }, 
-      "bill_to": "Evan Steiner, The Whole Person Economy, evanste@gmail.com, (404) 944-8249", 
       "rate": "Full time Member Weekend Rate - Founders Discount", 
-      "invoice#": "615002-2", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "615002-2 IHO Whole Person"
    }, 
    "115016 Music for the People Ent": {
-      "title": "The Saturday Night Get Down Live", 
+      "invoice#": "115016", 
       "items": {
          "2015-02-15": {
             "IHO Weekend Staffing": {
@@ -810,13 +787,12 @@
             }
          }
       }, 
-      "bill_to": "Chris Jourdn, Music For the People Entertainment, mftpentertainment@yahoo.com, 510-453-9171", 
       "rate": "Non-Member Weekend Rate - Partnership discount", 
-      "invoice#": "115016", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "115016 Music for the People Ent"
    }, 
    "2180 Sandra Lawson_PTmember": {
-      "title": "Sandra's 40th Birthday Party", 
+      "invoice#": "2180", 
       "items": {
          "2015-01-17": {
             "Downtown": {
@@ -851,13 +827,12 @@
             }
          }
       }, 
-      "bill_to": "Sandra Lawson, 510-334-4965, sandraleelawson@gmail.com", 
       "rate": "Part Time Member Weekend Rate", 
-      "invoice#": "2180", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2180 Sandra Lawson_PTmember"
    }, 
    "415008 Rockwood Institute": {
-      "title": "Rockwood's 15 year Anniversary Party", 
+      "invoice#": "415008-2", 
       "items": {
          "2015-07-13": {
             "Set Up & Reset": {
@@ -898,13 +873,12 @@
             }
          }
       }, 
-      "bill_to": "Julie Besaha, Rockwood Leadership Institute, julie@rockwoodleadership.org, 510-251-2500 x-118", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "415008-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415008 Rockwood Institute"
    }, 
    "2092 EBASE Cancel Fee": {
-      "title": "EBASE's 15th Anniversary (G)", 
+      "invoice#": "2092", 
       "items": {
          "": {
             "On Broadway Room Rental": {
@@ -915,13 +889,12 @@
             }
          }
       }, 
-      "bill_to": "Jessica De Jesus, EBASE - East Bay Alliance for Sustainable Economies, jessica@homegrownevents.net, (510)306-4159", 
       "rate": "", 
-      "invoice#": "2092", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2092 EBASE Cancel Fee"
    }, 
    "2090 Mandela Marketplace_Final": {
-      "title": "Mandela Marketplace Celebrates 10 Years!", 
+      "invoice#": "2090", 
       "items": {
          "2014-11-06": {
             "On Broadway": {
@@ -974,13 +947,12 @@
             }
          }
       }, 
-      "bill_to": "Dana Harvey, Mandela Marketplace, 1367 7th St, Oakland, CA 94607, jessica@homegrownevents.net", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "2090", 
-      "type": "AT Private Event"
+      "type": "AT Private Event", 
+      "title": "2090 Mandela Marketplace_Final"
    }, 
    "2131 Black Elected Officials": {
-      "title": "Black Elected Officials Breakfast", 
+      "invoice#": "2131", 
       "items": {
          "2014-09-24": {
             "Standard Janitorial Fee": {
@@ -997,23 +969,21 @@
             }
          }
       }, 
-      "bill_to": "LaNiece Jones, Black Elected Officials & Faith Based Leaders of the East Bay, 750 Canyon Oaks Drive, Unit F, Oakland, CA 94605, (510) 568-5589, laniecejones@gmail.com", 
       "rate": "Non Member Weekday Rate - Founder Discount", 
-      "invoice#": "2131", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2131 Black Elected Officials"
    }, 
    "2025 Self Help Fed Credit Union": {
-      "title": "Economic Justice and Self-Help Federal Credit Union 4/15/14", 
+      "invoice#": "2025", 
       "items": {
          "2014-04-15": {}
       }, 
-      "bill_to": "Self-Help Federal Credit Union, Kristen Cox, (919)956-4630, kristen.cox@self-help.org", 
       "rate": "", 
-      "invoice#": "2025", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2025 Self Help Fed Credit Union"
    }, 
    "2194-2 AAMA_Report Out_AV": {
-      "title": "Community Report Out", 
+      "invoice#": "2194-2", 
       "items": {
          "2015-01-15": {
             "Sound Tech": {
@@ -1024,13 +994,12 @@
             }
          }
       }, 
-      "bill_to": "Christopher Chatmon, Office of African American Male Achievement, christopher.chatmon@ousd.k12.ca.us, 510.589.4658", 
       "rate": "", 
-      "invoice#": "2194-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2194-2 AAMA_Report Out_AV"
    }, 
    "215015-2 Oakland Institute ": {
-      "title": "10th Anniversary Celebration", 
+      "invoice#": "215015", 
       "items": {
          "2015-04-24": {
             "Standard Janitorial Fee": {
@@ -1077,13 +1046,12 @@
             }
          }
       }, 
-      "bill_to": "Elizabeth Fraser, Oakland Institute, 510-365-9140, elizabethacfraser@gmail.com", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "215015", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215015-2 Oakland Institute "
    }, 
    "715008 Ada Initiative": {
-      "title": "Imposter Syndrome Workshop", 
+      "invoice#": "715008", 
       "items": {
          "2015-08-11": {
             "IHO Staffing": {
@@ -1112,10 +1080,9 @@
             }
          }
       }, 
-      "bill_to": "Sarah Clements, The Ada Initiative, sclements@adainitiative.org", 
       "rate": "Part Time Member Wkday Rate  - Offering Broadway ($295/hr) at the Atrium", 
-      "invoice#": "715008", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "715008 Ada Initiative"
    }, 
    "2116 movement strategy center": {
       "title": "", 
@@ -1135,7 +1102,7 @@
       "type": ""
    }, 
    "215002-2 CPD Gala Damage": {
-      "title": "CPD Gala", 
+      "invoice#": "215001-2", 
       "items": {
          "2015-02-05": {
             "Damage Deposit": {
@@ -1146,13 +1113,12 @@
             }
          }
       }, 
-      "bill_to": "Sasha Solomonov, Center for Popular Democracy, ssolo@populardemocracy.org, 602-334-8390", 
       "rate": "", 
-      "invoice#": "215001-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215002-2 CPD Gala Damage"
    }, 
    "2033 Integral Alignment": {
-      "title": "Higher Consciousness in Business: Problems to Potential with Stephen Busby 3/25", 
+      "invoice#": "2033", 
       "items": {
          "2014-03-25": {
             "Set up/Break down": {
@@ -1169,13 +1135,12 @@
             }
          }
       }, 
-      "bill_to": "Michael Stern, Integral Alignment, 917-767-7585, sternmic@gmail.com", 
       "rate": "", 
-      "invoice#": "2033", 
-      "type": "Workshop"
+      "type": "Workshop", 
+      "title": "2033 Integral Alignment"
    }, 
    "2081 BK Foundation": {
-      "title": "Multigenerational Mentorship", 
+      "invoice#": "2081", 
       "items": {
          "2014-07-19": {
             "Atrium": {
@@ -1204,13 +1169,12 @@
             }
          }
       }, 
-      "bill_to": "JuanCarlos Arauz, Berrett-Koehler Foundation, juancarlos@e3ed.org, (415)578-2154", 
       "rate": "Full Time Member Weekend Rate", 
-      "invoice#": "2081", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2081 BK Foundation"
    }, 
    "2058 Vital Systems Revised": {
-      "title": "Running on Local 6/5", 
+      "invoice#": "2058", 
       "items": {
          "2014-06-05": {
             "Atrium": {
@@ -1233,13 +1197,12 @@
             }
          }
       }, 
-      "bill_to": "Tuyen Vo, (510)284-2471, tuyen.vo@vitalsystemsca.com", 
       "rate": "", 
-      "invoice#": "2058", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2058 Vital Systems Revised"
    }, 
    "2133 Unwork Cancel Fee": {
-      "title": "Unwork Third Thursday", 
+      "invoice#": "2133", 
       "items": {
          "": {
             "On Broadway Room Rental": {
@@ -1250,13 +1213,12 @@
             }
          }
       }, 
-      "bill_to": "Micael Orange, Top Ten Social, h2orange@gmail.com, (415) 342-0032", 
       "rate": "", 
-      "invoice#": "2133", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2133 Unwork Cancel Fee"
    }, 
    "2166 SustainAbility RoundTable": {
-      "title": "SustainAbility RoundTable: Water", 
+      "invoice#": "2166", 
       "items": {
          "2014-12-04": {
             "OMI Gallery": {
@@ -1285,13 +1247,12 @@
             }
          }
       }, 
-      "bill_to": "Melissa Hines, SustainAbility, 415-531-8235, hines@sustainability.com", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2166", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2166 SustainAbility RoundTable"
    }, 
    "115013-2 Youth Speaks_Olympics ": {
-      "title": "Bay Area MC Olympics Finals", 
+      "invoice#": "115013-2", 
       "items": {
          "2015-05-30": {
             "OMI Gallery": {
@@ -1320,13 +1281,12 @@
             }
          }
       }, 
-      "bill_to": "Fernande Legros, Youth Speaks Inc., flegros@youthspeaks.org, 415-694-1338", 
       "rate": "Part Time Member Weekend Rate", 
-      "invoice#": "115013-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "115013-2 Youth Speaks_Olympics "
    }, 
    "2172 Lajones & Associates": {
-      "title": "BEO&FBL Holiday Mixer and Awards Celebration", 
+      "invoice#": "2172", 
       "items": {
          "2014-12-16": {
             "Atrium": {
@@ -1355,13 +1315,12 @@
             }
          }
       }, 
-      "bill_to": "Laniece jones, Lajones & Associates, 510-568-5589, laniecejones@gmail.com", 
       "rate": "Part time Member Weekday Rate", 
-      "invoice#": "2172", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2172 Lajones & Associates"
    }, 
    "2090 Mandela Marketplace": {
-      "title": "Mandela Marketplace Celebrates 10 Years!", 
+      "invoice#": "2090", 
       "items": {
          "2014-11-06": {
             "On Broadway": {
@@ -1426,13 +1385,12 @@
             }
          }
       }, 
-      "bill_to": "Dana Harvey, Mandela Marketplace, 1367 7th St, Oakland, CA 94607, jessica@homegrownevents.net", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "2090", 
-      "type": "AT Private Event"
+      "type": "AT Private Event", 
+      "title": "2090 Mandela Marketplace"
    }, 
    "215011 Kaiser HNS Grad": {
-      "title": "Kaiser Oakland HNS 2015 Graduation", 
+      "invoice#": "215011", 
       "items": {
          "2015-06-13": {
             "IHO Weekend Staffing": {
@@ -1461,13 +1419,12 @@
             }
          }
       }, 
-      "bill_to": "Esther Arjona, Kaiser Permanente, esther.hn.arjona@kp.org, 51-0752-1373", 
       "rate": "Non Member Weekend Rate - Half Day Discount", 
-      "invoice#": "215011", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215011 Kaiser HNS Grad"
    }, 
    "2039 United Roots": {
-      "title": "Oakland Boys & Men of Color Youth Summit 5/24", 
+      "invoice#": "2039", 
       "items": {
          "2014-05-24": {
             "Atrium": {
@@ -1502,13 +1459,12 @@
             }
          }
       }, 
-      "bill_to": "Galen Silvestri, United Roots, galen@unitedrootsoakland.org, 510-832-0196", 
       "rate": "", 
-      "invoice#": "2039", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2039 United Roots"
    }, 
    "2089 Vegan Soul Sunday": {
-      "title": "Vegan Soul Sunday", 
+      "invoice#": "2089", 
       "items": {
          "2014-07-20": {
             "Atrium": {
@@ -1543,13 +1499,12 @@
             }
          }
       }, 
-      "bill_to": "Gail McGuire, gail.mcguire@gmail.com, (510)326-0092", 
       "rate": "WITH event rate", 
-      "invoice#": "2089", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2089 Vegan Soul Sunday"
    }, 
    "2176 ACOE_Synergy Day": {
-      "title": "IL Synergy Day", 
+      "invoice#": "2176", 
       "items": {
          "2014-12-13": {
             "Janitorial Fee": {
@@ -1572,13 +1527,12 @@
             }
          }
       }, 
-      "bill_to": "Aida Geromino, Alameda County Office of Education, ageronimo@acoe.org, 510-670-4204", 
       "rate": "Non Member Weekend Rate  - Full Day Discount", 
-      "invoice#": "2176", 
-      "type": "Private Meeting"
+      "type": "Private Meeting", 
+      "title": "2176 ACOE_Synergy Day"
    }, 
    "2084 BuildUp": {
-      "title": "Building Innovation: Technology Inclusion", 
+      "invoice#": "2084", 
       "items": {
          "2014-06-24": {
             "Standard Cleaning Fee": {
@@ -1607,13 +1561,12 @@
             }
          }
       }, 
-      "bill_to": "Wayne Sutton, BUILDUP.vc, 77 Van Ness Ave. #1028, San Francisco, CA 94102, wayne@buildup.vc, (415)295-5605", 
       "rate": "Non-Member Weekday Rate", 
-      "invoice#": "2084", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2084 BuildUp"
    }, 
    "2088 WikiStategies": {
-      "title": "Wikipedia edit-a-thon", 
+      "invoice#": "2088", 
       "items": {
          "2014-07-19": {
             "Meridian Room": {
@@ -1630,13 +1583,12 @@
             }
          }
       }, 
-      "bill_to": "Pete Forsyth, Wiki Strategies, 503-383-9454, pete@wikistrategies.net", 
       "rate": "Non-Member Weekend Rate", 
-      "invoice#": "2088", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2088 WikiStategies"
    }, 
    "215016 Youth Business USA": {
-      "title": "Youth Business USA Founder's Event", 
+      "invoice#": "215016", 
       "items": {
          "2015-03-01": {
             "OMI Gallery": {
@@ -1659,13 +1611,12 @@
             }
          }
       }, 
-      "bill_to": "Bo Ghirardelli, Youth Business USA, bo.ghirardelli@greensidedevelopment.org, 510-379-8952", 
       "rate": "Full Time Member Weekend Rate", 
-      "invoice#": "215016", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215016 Youth Business USA"
    }, 
    "2027 ULI": {
-      "title": "ULI Fire Side Chat Private Event 3/18", 
+      "invoice#": "2027", 
       "items": {
          "2014-03-18": {
             "IHO Staffing": {
@@ -1676,23 +1627,21 @@
             }
          }
       }, 
-      "bill_to": "ULI, Will Heywood, will.heywood@uli.org", 
       "rate": "", 
-      "invoice#": "2027", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2027 ULI"
    }, 
    "2119 ImpactSocial_activevoice": {
-      "title": "FIRST BAY AREA IMPACT SOCIAL", 
+      "invoice#": "2119", 
       "items": {
          "2014-09-15": {}
       }, 
-      "bill_to": "Shaady Salehi, Active Voice, 70 Zoe Street, Suite 100, San Francisco, CA 94107, 415.487.2000 , shaady@activevoice.net", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "2119", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2119 ImpactSocial_activevoice"
    }, 
    "2184 Konda Mason_warmcoat": {
-      "title": "One Warm Coat", 
+      "invoice#": "2184", 
       "items": {
          "2014-12-08": {
             "On Broadway": {
@@ -1739,13 +1688,12 @@
             }
          }
       }, 
-      "bill_to": "Konda Mason, Impact Hub Oakland, konda@oakland.impacthub.net", 
       "rate": "Non Member Weekday Rate - Founder discount", 
-      "invoice#": "2184", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2184 Konda Mason_warmcoat"
    }, 
    "2052 Oak Food Policy Council": {
-      "title": "Food Justice Without Displacement 5/3", 
+      "invoice#": "2052", 
       "items": {
          "2014-05-03": {
             "Atrium": {
@@ -1768,13 +1716,12 @@
             }
          }
       }, 
-      "bill_to": "Esperanza Pallana, (415)412-0585, epallana@oaklandfood.org", 
       "rate": "", 
-      "invoice#": "2052", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2052 Oak Food Policy Council"
    }, 
    "2187-3 AlterConf_Compost": {
-      "title": "AlterConf", 
+      "invoice#": "2187-3", 
       "items": {
          "2015-01-31": {
             "Compostable Products": {
@@ -1785,13 +1732,12 @@
             }
          }
       }, 
-      "bill_to": "Ashe Dryden, AlterConf, 414-510-7928, alterconf@gmail.com", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "2187-3", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2187-3 AlterConf_Compost"
    }, 
    "115009-2  Warthogs Youth Rugby": {
-      "title": "Oakland Warthogs Youth Rugby Program", 
+      "invoice#": "115009-2", 
       "items": {
          "2015-03-14": {
             "On Broadway": {
@@ -1838,13 +1784,12 @@
             }
          }
       }, 
-      "bill_to": "Ryan Burke, Oakland Warthogs Youth Rugby Program, burke4rugby@gmail.com, 650-867-4292", 
       "rate": "Part Time Member Weekend Rate", 
-      "invoice#": "115009-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "115009-2  Warthogs Youth Rugby"
    }, 
    "2200 Rebirth & Renewal": {
-      "title": "Rebirth & Renewal\u00a02015", 
+      "invoice#": "2200", 
       "items": {
          "2015-01-10": {
             "Standard Janitorial Fee": {
@@ -1861,13 +1806,12 @@
             }
          }
       }, 
-      "bill_to": "Amel\u00eda Aeon Karris, Know The Self, amelia@knowtheself.com, 510-274-0996", 
       "rate": "Part Time Member Weekend Rate -- IHO Sponsorship", 
-      "invoice#": "2200", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2200 Rebirth & Renewal"
    }, 
    "2194 AAMA_Report Out": {
-      "title": "Community Report Out", 
+      "invoice#": "2194", 
       "items": {
          "2015-01-15": {
             "On Broadway": {
@@ -1920,13 +1864,12 @@
             }
          }
       }, 
-      "bill_to": "Christopher Chatmon, Office of African American Male Achievement, christopher.chatmon@ousd.k12.ca.us, 510.589.4658", 
       "rate": "Non Member Weekday Rate -- Partnership", 
-      "invoice#": "2194", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2194 AAMA_Report Out"
    }, 
    "2168 PPGBA_OnBroadway": {
-      "title": "PPGBA Monthly Meeting", 
+      "invoice#": "2168", 
       "items": {
          "2014-11-20": {
             "Standard Janitorial Fee": {
@@ -1949,13 +1892,12 @@
             }
          }
       }, 
-      "bill_to": "Julie Olson, Professional Photographers of the Greater Bay Area, julie@ppgba.org", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "2168", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2168 PPGBA_OnBroadway"
    }, 
    "2175 ACOE_meeting_rev1": {
-      "title": "ACOE Meeting", 
+      "invoice#": "2175", 
       "items": {
          "2014-11-22": {
             "Uptown": {
@@ -1978,23 +1920,21 @@
             }
          }
       }, 
-      "bill_to": "Aida Geromino, Alameda County Office of Education, ageronimo@acoe.org, 510-670-4204", 
       "rate": "Non Member Weekend Rate - Multi Event Rental Discount", 
-      "invoice#": "2175", 
-      "type": "Private Meeting"
+      "type": "Private Meeting", 
+      "title": "2175 ACOE_meeting_rev1"
    }, 
    "2000. Movement Generation": {
-      "title": "Resilience-Based Organizing Expos\u00e9 ", 
+      "invoice#": "2000", 
       "items": {
          "2013-09-19": {}
       }, 
-      "bill_to": "Movement Generation, Carla P\u00e9rez, 436 14th Street, 5th Floor, Oakland, CA 94612", 
       "rate": "", 
-      "invoice#": "2000", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2000. Movement Generation"
    }, 
    "2032 Planting Justice Soiree": {
-      "title": "A Snap Pea Soiree 4/11", 
+      "invoice#": "2032", 
       "items": {
          "2014-04-11": {
             "Large party cleaning fee": {
@@ -2011,13 +1951,12 @@
             }
          }
       }, 
-      "bill_to": "Katrina Zavalney, Planting Justice, 503-459-1345, katrinazavalney@gmail.com", 
       "rate": "", 
-      "invoice#": "2032", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2032 Planting Justice Soiree"
    }, 
    "215007-2 Life is Loving ": {
-      "title": "Life is Loving Black Love Conversations", 
+      "invoice#": "215007-2", 
       "items": {
          "2015-02-14": {
             "Site Manager/Staffing": {
@@ -2046,13 +1985,12 @@
             }
          }
       }, 
-      "bill_to": "Hodari Davis, Youth Speaks, hdavis@youthspeaks.org, 510 457-5210", 
       "rate": "Part Time Member Weekend Rate - Founders Discount", 
-      "invoice#": "215007-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215007-2 Life is Loving "
    }, 
    "2102 Future Energy": {
-      "title": "Future Of Energy Screening", 
+      "invoice#": "2102", 
       "items": {
          "2014-09-05": {
             "Green Room": {
@@ -2087,13 +2025,12 @@
             }
          }
       }, 
-      "bill_to": "Maximilan DeArmon, Planetary Advocates, 2328 Channing Way, Berkeley, California 94704, max@thefutureofenergy.org, (415) 470-4150", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2102", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2102 Future Energy"
    }, 
    "2057 OpenOakland": {
-      "title": "Oakland Answers 2014", 
+      "invoice#": "2057", 
       "items": {
          "2014-05-31": {
             "Atrium": {
@@ -2122,13 +2059,12 @@
             }
          }
       }, 
-      "bill_to": "Steve Spiker, OpenOakland, spike@openoakland.org, (510)499-0098", 
       "rate": "Weekend rate - part time member discount", 
-      "invoice#": "2057", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2057 OpenOakland"
    }, 
    "2198 Beyond Sep_SeriesII_April": {
-      "title": "Pathways to Justice Present: Beyond the Culture of , Separation Series II", 
+      "invoice#": "2197", 
       "items": {
          "2015-04-08": {
             "Meridian Room": {
@@ -2163,23 +2099,21 @@
             }
          }
       }, 
-      "bill_to": "gregory mengel, Pathways to Justice, gamengel@yahoo.com, (415) 515-7702", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2197", 
-      "type": "BY"
+      "type": "BY", 
+      "title": "2198 Beyond Sep_SeriesII_April"
    }, 
    "2019. Late Nite in the Dark3-22": {
-      "title": "LATE NITE ART: In The Dark 3/22/2014", 
+      "invoice#": "2019", 
       "items": {
          "2009-02-07": {}
       }, 
-      "bill_to": "Late Nite Art: In The Dark, Adam Rosendahl, 2304 11th Ave., Oakland, CA 94608", 
       "rate": "", 
-      "invoice#": "2019", 
-      "type": "With"
+      "type": "With", 
+      "title": "2019. Late Nite in the Dark3-22"
    }, 
    "415005-2 Amigos Orientation ": {
-      "title": "AMIGOS Youth Ambassadors Family Orientation", 
+      "invoice#": "415005-2", 
       "items": {
          "2015-04-25": {
             "Uptown": {
@@ -2196,13 +2130,12 @@
             }
          }
       }, 
-      "bill_to": "Emma Smith, Amigos de las Americas, esmith@amigoslink.org, 510-703-4313", 
       "rate": "Full Time Member Weekend Rate - Half Day Discount", 
-      "invoice#": "415005-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415005-2 Amigos Orientation "
    }, 
    "415012 Uptima 2.Oakland Demo": {
-      "title": "2.Oakland Demo Evening", 
+      "invoice#": "415012", 
       "items": {
          "2015-05-20": {
             "Atrium": {
@@ -2231,13 +2164,12 @@
             }
          }
       }, 
-      "bill_to": "Rani Croager, Uptima Business Bootcamp, rani.croager@uptimabootcamp.com, 415-361-3296", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "415012", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415012 Uptima 2.Oakland Demo"
    }, 
    "715014 Uptima Coop Challenge": {
-      "title": "Cooperative Challenge", 
+      "invoice#": "715014", 
       "items": {
          "2015-10-09": {
             "Atrium": {
@@ -2310,13 +2242,12 @@
             }
          }
       }, 
-      "bill_to": "Rani Croager, Uptima Business Bootcamp, 415-361-3296, rani.croager@uptimabootcamp.com", 
       "rate": "Full Time Member Weekend Rate - Sponsorship Discount", 
-      "invoice#": "715014", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "715014 Uptima Coop Challenge"
    }, 
    "2029 Higher Circle Education": {
-      "title": "Higher Circle Presents a Joyful Challenge to Education Inequalities in Ethiopia 2/11", 
+      "invoice#": "2029", 
       "items": {
          "2014-02-11": {
             "Venue Rental ": {
@@ -2327,13 +2258,12 @@
             }
          }
       }, 
-      "bill_to": "Higher Circle, Billy Silva, 415-377-4562, wsilva@highercircle.com", 
       "rate": "", 
-      "invoice#": "2029", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2029 Higher Circle Education"
    }, 
    "315006-2 Empathy in Business": {
-      "title": "Empathy in Business", 
+      "invoice#": "315006-2", 
       "items": {
          "2015-04-16": {
             "OMI Gallery": {
@@ -2350,13 +2280,12 @@
             }
          }
       }, 
-      "bill_to": "Rani Croager, Uptima Business Bootcamp, rani.croager@uptimabootcamp.com, 415-361-3296", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "315006-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "315006-2 Empathy in Business"
    }, 
    "715002 Bike East Bay": {
-      "title": "Biketopia", 
+      "invoice#": "715002", 
       "items": {
          "2015-11-12": {
             "Set Up & Reset": {
@@ -2397,13 +2326,12 @@
             }
          }
       }, 
-      "bill_to": "Renee Rivera, Bike East Bay, renee@ebbc.org, 415-252-5617", 
       "rate": "Non-member Weekday Rate - Marketing Partner Discount", 
-      "invoice#": "715002", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "715002 Bike East Bay"
    }, 
    "2165 Marie Bernardo_Rev1": {
-      "title": "Rinabeth & Marie Wedding", 
+      "invoice#": "2165", 
       "items": {
          "2014-12-13": {
             "Atrium": {
@@ -2438,23 +2366,21 @@
             }
          }
       }, 
-      "bill_to": "Marie Bernardo, 510-861-5929, mjbernardo@firstrepublic.com", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "2165", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2165 Marie Bernardo_Rev1"
    }, 
    "2119 ImpactSocial_BAVC": {
-      "title": "FIRST BAY AREA IMPACT SOCIAL", 
+      "invoice#": "2119", 
       "items": {
          "2014-09-15": {}
       }, 
-      "bill_to": "Carol Varney, Bay Area Video Coalition, 2727 Mariposa Street, 2nd Floor, San Francisco CA 94110, carol@bavc.org, 415.861.3282", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "2119", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2119 ImpactSocial_BAVC"
    }, 
    "2178 ACOE_Synergy Day (2)": {
-      "title": "IL Synergy Day", 
+      "invoice#": "2178", 
       "items": {
          "2015-03-21": {
             "OMI Gallery": {
@@ -2477,13 +2403,12 @@
             }
          }
       }, 
-      "bill_to": "Aida Geromino, Alameda County Office of Education, ageronimo@acoe.org, 510-670-4204", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "2178", 
-      "type": "Private Meeting"
+      "type": "Private Meeting", 
+      "title": "2178 ACOE_Synergy Day (2)"
    }, 
    "2125 OpenOak_LeaderRetreat": {
-      "title": "OpenOakland leaders retreat", 
+      "invoice#": "2125", 
       "items": {
          "2014-09-07": {
             "Downtown": {
@@ -2500,13 +2425,12 @@
             }
          }
       }, 
-      "bill_to": "Steve Spiker, Open Oakland, spike@openoakland.org", 
       "rate": "Full Time Member Weekend Rate", 
-      "invoice#": "2125", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2125 OpenOak_LeaderRetreat"
    }, 
    "2094 BAI - Bruce Lipton": {
-      "title": "Bruce Lipton: The Honeymoon Effect", 
+      "invoice#": "2094", 
       "items": {
          "2014-07-10": {
             "Standard Cleaning Fee": {
@@ -2535,13 +2459,12 @@
             }
          }
       }, 
-      "bill_to": "Valerie Beltran, Bay Area Integral, valeriebeltran5@gmail.com, (575) 312-3497", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2094", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2094 BAI - Bruce Lipton"
    }, 
    "615004 BGC Hackathon": {
-      "title": "Black Girls Code Hackathon", 
+      "invoice#": "615004", 
       "items": {
          "2015-06-19": {
             "IHO Staffing": {
@@ -2682,23 +2605,21 @@
             }
          }
       }, 
-      "bill_to": "Kimberly Bryant, Black Girls Code, kbryant@blackgirlscode.org, (415) 860-6387", 
       "rate": "Full Time Member Rate -- Partnership Discount", 
-      "invoice#": "615004", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "615004 BGC Hackathon"
    }, 
    "2017. Start Up Weekend Hack": {
-      "title": "Startup Weekend Oakland: Black Male Achievement Hackathon 2/7-9  2014", 
+      "invoice#": "2017", 
       "items": {
          "2009-02-07": {}
       }, 
-      "bill_to": "Kalimah Priforce, Startup Weekend Hackathon , 1512 Brunswig Lane, Oakland, CA 94608", 
       "rate": "", 
-      "invoice#": "2017", 
-      "type": "With"
+      "type": "With", 
+      "title": "2017. Start Up Weekend Hack"
    }, 
    "415004-2 Amigos Interview Day": {
-      "title": "Amigos Youth Ambassadors: Interview Day", 
+      "invoice#": "415004-2", 
       "items": {
          "2015-04-11": {
             "Uptown": {
@@ -2715,13 +2636,12 @@
             }
          }
       }, 
-      "bill_to": "Emma Smith, Amigos de las Americas, esmith@amigoslink.org, 510-703-4313", 
       "rate": "Full Time Member Weekend Rate - Full Day Discount", 
-      "invoice#": "415004-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415004-2 Amigos Interview Day"
    }, 
    "2183 LNA_Fertile": {
-      "title": "Late Nite Art: Fertile", 
+      "invoice#": "2183", 
       "items": {
          "2014-11-15": {
             "Site Manager/Staffing": {
@@ -2756,13 +2676,12 @@
             }
          }
       }, 
-      "bill_to": "Adam Rosendahl, 707-477-9063, adamrosendahl@gmail.com", 
       "rate": "Full Time Member Weekend Rate - Partnership Discount", 
-      "invoice#": "2183", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2183 LNA_Fertile"
    }, 
    "215013-2 GlobalGirl Media ": {
-      "title": "Girls Media Summit", 
+      "invoice#": "215013-2", 
       "items": {
          "2015-03-21": {
             "IHO Staffing": {
@@ -2797,13 +2716,12 @@
             }
          }
       }, 
-      "bill_to": "Amie Williams, GlobalGirl Media, amie@globalgirlmedia.org, 310-795-7182", 
       "rate": "Full Time Member Weekend Rate - Founder Discount", 
-      "invoice#": "215013-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215013-2 GlobalGirl Media "
    }, 
    "215004-2 Design Thinking ": {
-      "title": "Design Thinking for a Just Economy ", 
+      "invoice#": "215004-2", 
       "items": {
          "2015-02-12": {
             "OMI Gallery": {
@@ -2832,13 +2750,12 @@
             }
          }
       }, 
-      "bill_to": "Rani Croager, Uptima Business Bootcamp, rani.croager@uptimabootcamp.com, 415-361-3296", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "215004-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215004-2 Design Thinking "
    }, 
    "2114 Michael Orange_Jazz": {
-      "title": "Museum of Jazz Oakland", 
+      "invoice#": "2114", 
       "items": {
          "2014-09-25": {
             "On Broadway": {
@@ -2867,13 +2784,12 @@
             }
          }
       }, 
-      "bill_to": "Michael Orange, Top Ten Social, h2orange@gmail.com", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2114", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2114 Michael Orange_Jazz"
    }, 
    "415006-2 CSS Member": {
-      "title": "Flock Together", 
+      "invoice#": "415006-2", 
       "items": {
          "2015-06-04": {
             "Compostables (100 cups and 100 plates)": {
@@ -2884,13 +2800,12 @@
             }
          }
       }, 
-      "bill_to": "Bernice Shaw, Center for Story-based Strategy, bernice@storybasedstrategy.org, 310-880-1389", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "415006-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415006-2 CSS Member"
    }, 
    "115012-2 Habitry": {
-      "title": "Motivate Summit", 
+      "invoice#": "115012-2", 
       "items": {
          "2015-06-27": {
             "Site Manager/Staffing": {
@@ -2957,13 +2872,12 @@
             }
          }
       }, 
-      "bill_to": "Steven Ledbetter, Habitry, stevo@habitry.com, 415-350-8272", 
       "rate": "Part Time Member Weekend Rate -- Multi Day Discount", 
-      "invoice#": "115012-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "115012-2 Habitry"
    }, 
    "415015 Sound of Torture": {
-      "title": "Sound of Torture Fundraiser", 
+      "invoice#": "415015", 
       "items": {
          "2015-05-05": {
             "IHO Staffing": {
@@ -2992,13 +2906,12 @@
             }
          }
       }, 
-      "bill_to": "Michael Orange, Matatu Film Festival, h2orange@gmail.com, 415-342-0032", 
       "rate": "Part Time Member Weekday Rate - Partnership Discount", 
-      "invoice#": "415015", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "415015 Sound of Torture"
    }, 
    "512003 Facebook HR": {
-      "title": "HR Diversity Event", 
+      "invoice#": "512003", 
       "items": {
          "2015-06-09": {
             "Atrium": {
@@ -3033,13 +2946,12 @@
             }
          }
       }, 
-      "bill_to": "Isabel Cueva, Facebook, icueva@fb.com, 650-924-6871", 
       "rate": "Non  Member Weekday Rate  - Multi Room Discount", 
-      "invoice#": "512003", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "512003 Facebook HR"
    }, 
    "715010 TriNet": {
-      "title": "TriNet Inspire for Nonprofit", 
+      "invoice#": "715010", 
       "items": {
          "2015-09-16": {
             "IHO Staffing": {
@@ -3074,13 +2986,12 @@
             }
          }
       }, 
-      "bill_to": "Mishima Yang, TriNet, mishima.yang@trinet.com, 510-875-7218", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "715010", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "715010 TriNet"
    }, 
    "2050 Bootcamp_BusinessInn_pt1": {
-      "title": "Sharing Economy Models: Business Innovation Series I", 
+      "invoice#": "2050", 
       "items": {
          "2014-05-28": {
             "Standard Cleaning Fee": {
@@ -3115,13 +3026,12 @@
             }
          }
       }, 
-      "bill_to": "Rani Croager, Uptima Business Bootcamp, rani.croager@uptimabootcamp.com, (415)361-3296", 
       "rate": "", 
-      "invoice#": "2050", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2050 Bootcamp_BusinessInn_pt1"
    }, 
    "2026 Northgate": {
-      "title": "Intersection for the Environment Private Party 3/29/2014", 
+      "invoice#": "2026", 
       "items": {
          "2014-03-29": {
             "A/V Person $30/hr": {
@@ -3138,23 +3048,21 @@
             }
          }
       }, 
-      "bill_to": "Northgate, Deni Chambers, (510)839-0688, deni@ngem.com", 
       "rate": "", 
-      "invoice#": "2026", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2026 Northgate"
    }, 
    "2016. Institute Golden Gate": {
-      "title": "BioBlitz Speaker Series 3/13/14", 
+      "invoice#": "2016", 
       "items": {
          "2014-03-13": {}
       }, 
-      "bill_to": "Carlo Arreglo, Institute at the Golden Gate, 546 Seitler Road, , Fort Baker, Sausalito, CA\u00a0 94965", 
       "rate": "Member Rate $260/hr", 
-      "invoice#": "2016", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2016. Institute Golden Gate"
    }, 
    "2188 BGC_volunteertraining": {
-      "title": "BGC Robotics Event - Volunteer training 12/6", 
+      "invoice#": "2188", 
       "items": {
          "2014-12-06": {
             "Standard Janitorial Fee": {
@@ -3195,13 +3103,12 @@
             }
          }
       }, 
-      "bill_to": "NNEKA HOLLIDAY, Black Girls CODE, admin@blackgirlscode.org, 415-305-3998", 
       "rate": "Full Time Member Weekend Rate", 
-      "invoice#": "2188", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2188 BGC_volunteertraining"
    }, 
    "2163 Kaiser Emergency Dept": {
-      "title": "Kaiser Eastbay Holiday Party", 
+      "invoice#": "2163", 
       "items": {
          "2014-12-06": {
             "On Broadway": {
@@ -3224,13 +3131,12 @@
             }
          }
       }, 
-      "bill_to": "Arian Brackett, Kaiser Emergency Dept, 510-919-1392, arian.brackett@gmail.com", 
       "rate": "Part Time Member Weekend Rate", 
-      "invoice#": "2163", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2163 Kaiser Emergency Dept"
    }, 
    "2123 Peers": {
-      "title": "New Urban Eating Cookbook Launch Party", 
+      "invoice#": "2123", 
       "items": {
          "2014-10-11": {
             "Standard Janitorial Fee": {
@@ -3253,13 +3159,12 @@
             }
          }
       }, 
-      "bill_to": "Cindy Phan, Peers, 901 Mission St, San Francisco, CA 94103, (916) 995-8395, cindy@peers.org", 
       "rate": "Full Time Member Weekend Rate", 
-      "invoice#": "2123", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2123 Peers"
    }, 
    "515006 CODE2040": {
-      "title": "CODE2040 TAP Retreat", 
+      "invoice#": "515006", 
       "items": {
          "2015-05-29": {
             "IHO Staffing": {
@@ -3346,13 +3251,12 @@
             }
          }
       }, 
-      "bill_to": "Aisha Lewis, CODE2040, aisha@code2040.org, 323-536-2040", 
       "rate": "Part Time Member Weekend Rate - Full day & Multi room discount", 
-      "invoice#": "515006", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "515006 CODE2040"
    }, 
    "215002-2 Equitable Origin": {
-      "title": "Oil & Water: Film Screening and Panel Discussion", 
+      "invoice#": "215002-2", 
       "items": {
          "2015-02-26": {
             "Standard Janitorial Fee": {
@@ -3393,13 +3297,12 @@
             }
          }
       }, 
-      "bill_to": "Josh Garrett, Equitable Origin, 917-755-2417, jgarrett@equitableorigin.com", 
       "rate": "Non Member Weekday Rate - Founders Discount", 
-      "invoice#": "215002-2", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "215002-2 Equitable Origin"
    }, 
    "415014-3 CJ Callen": {
-      "title": "It's Time Oakland Connect", 
+      "invoice#": "415014-3", 
       "items": {
          "2015-04-15": {
             "OMI Gallery": {
@@ -3422,13 +3325,12 @@
             }
          }
       }, 
-      "bill_to": "CJ Callen, It's Time Network, cjcallenjd@gmail.com, 415-515-5041", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "415014-3", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415014-3 CJ Callen"
    }, 
    "715005 Paycation Launch": {
-      "title": "Launch Party Paycation Travel", 
+      "invoice#": "715005", 
       "items": {
          "2011-07-18": {
             "Set Up & Reset": {
@@ -3457,13 +3359,12 @@
             }
          }
       }, 
-      "bill_to": "Crystal Beverly, Serene Journies Paycation, 510.432.7687, crystalopulence8@gmail.com", 
       "rate": "Full Time Member Weekend Rate  - Founder Discount", 
-      "invoice#": "715005", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "715005 Paycation Launch"
    }, 
    "2108 SexyHuman": {
-      "title": "The SexyHuman Workshop", 
+      "invoice#": "2108", 
       "items": {
          "2014-08-13": {
             "OMI Gallery": {
@@ -3480,13 +3381,12 @@
             }
          }
       }, 
-      "bill_to": "Elisabeth Bolaza, SexyHuman, elisabeth@sexyhuman.org", 
       "rate": "Part Time Member Weekday Evening Rate", 
-      "invoice#": "2108", 
-      "type": "WORKSHOP"
+      "type": "WORKSHOP", 
+      "title": "2108 SexyHuman"
    }, 
    "215013 GlobalGirl Media": {
-      "title": "Girls Media Summit", 
+      "invoice#": "215013", 
       "items": {
          "2015-03-21": {
             "IHO Staffing": {
@@ -3521,13 +3421,12 @@
             }
          }
       }, 
-      "bill_to": "Amie Williams, GlobalGirl Media, amie@globalgirlmedia.org, 310-795-7182", 
       "rate": "Full Time Member Weekend Rate - Founder Discount", 
-      "invoice#": "215013", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215013 GlobalGirl Media"
    }, 
    "315012-2 LaunchPad Africa": {
-      "title": "All Things Black & Beautiful", 
+      "invoice#": "315012", 
       "items": {
          "2015-05-16": {
             "IHO Staffing": {
@@ -3562,13 +3461,12 @@
             }
          }
       }, 
-      "bill_to": "Fiifi Deku, LaunchPad Africa, fiifi.deku@gmail.com, 386-916-9614", 
       "rate": "Part Time Member Weekend Rate", 
-      "invoice#": "315012", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "315012-2 LaunchPad Africa"
    }, 
    "Cancel Fee Template": {
-      "title": "", 
+      "invoice#": "", 
       "items": {
          "": {
             "On Broadway Room Rental": {
@@ -3579,13 +3477,12 @@
             }
          }
       }, 
-      "bill_to": "", 
       "rate": "", 
-      "invoice#": "", 
-      "type": null
+      "type": null, 
+      "title": "Cancel Fee Template"
    }, 
    "415001 Agents of Change": {
-      "title": "Agents of Change", 
+      "invoice#": "415001", 
       "items": {
          "2015-04-08": {
             "IHO Staffing": {
@@ -3620,13 +3517,12 @@
             }
          }
       }, 
-      "bill_to": "Joslyn Rose, Abby Ginzberg, Agents of Change, 510-449-5222, joslynroselyons@gmail.com", 
       "rate": "Full Time Member Weekday Rate - Partner Discount", 
-      "invoice#": "415001", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415001 Agents of Change"
    }, 
    "2096 BAI -Sangha in the city": {
-      "title": "Sangha in the Cities with Thomas Hubl (G)", 
+      "invoice#": "2096", 
       "items": {
          "2014-06-29": {
             "Standard Cleaning Fee": {
@@ -3655,13 +3551,12 @@
             }
          }
       }, 
-      "bill_to": "Samuel Bernier, Bay Area Integral, sambernier@gmail.com, (510)332-5426", 
       "rate": "", 
-      "invoice#": "2096", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2096 BAI -Sangha in the city"
    }, 
    "415013-2 Beneficial State FDN": {
-      "title": "Oakland Indie Awards Judging", 
+      "invoice#": "415013-2", 
       "items": {
          "2015-04-15": {
             "Downtown": {
@@ -3672,13 +3567,12 @@
             }
          }
       }, 
-      "bill_to": "Emma Guttman-Slater, Beneficial State Foundation, eguttman-slater@beneficialstate.org , 510-463-6565", 
       "rate": "Part Time Member Weekday Rate - New Member Discount", 
-      "invoice#": "415013-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415013-2 Beneficial State FDN"
    }, 
    "2035 Sungevity Event": {
-      "title": "Sungevity 7th Anniversary Party 4/25", 
+      "invoice#": "2035", 
       "items": {
          "2014-04-25": {
             "On Broadway": {
@@ -3725,13 +3619,12 @@
             }
          }
       }, 
-      "bill_to": "Consuelo Jacobs, Sungevity, 510-914-6701, rikaevents@gmail.com", 
       "rate": "Org Connect Member rate", 
-      "invoice#": "2035", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2035 Sungevity Event"
    }, 
    "615006 BaseCamp": {
-      "title": "The Narrative Project", 
+      "invoice#": "615006", 
       "items": {
          "2015-07-10": {
             "Lucky Goldfish": {
@@ -3772,13 +3665,12 @@
             }
          }
       }, 
-      "bill_to": "Ann Badillo, BaseCamp, annbadillo@gmail.com, (650) 722-2137", 
       "rate": "RATE: Full Time Member Weekday Rate -\u00ad\u2010 Full Day Rental", 
-      "invoice#": "615006", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "615006 BaseCamp"
    }, 
    "415006-3 CSS Member": {
-      "title": "Flock Together", 
+      "invoice#": "415006-3", 
       "items": {
          "2015-06-04": {
             "Compostables (100 cups and 100 plates)": {
@@ -3789,13 +3681,12 @@
             }
          }
       }, 
-      "bill_to": "Bernice Shaw, Center for Story-based Strategy, bernice@storybasedstrategy.org, 310-880-1389", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "415006-3", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415006-3 CSS Member"
    }, 
    "2191_Rev1 SFJazz_OPC": {
-      "title": "SF Jazz & OPC Info Session", 
+      "invoice#": "2191", 
       "items": {
          "2015-01-27": {
             "OMI Gallery": {
@@ -3818,13 +3709,12 @@
             }
          }
       }, 
-      "bill_to": "Angela Wellman, Oakland Public Conservatory of Music, amwellman2@gmail.com, 510-435-7431", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2191", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2191_Rev1 SFJazz_OPC"
    }, 
    "2113 ThirdThursday_Sept": {
-      "title": "Un/work Mixer (Third Thursday)", 
+      "invoice#": "2113", 
       "items": {
          "2014-09-18": {
             "Standard Cleaning Fee": {
@@ -3847,13 +3737,12 @@
             }
          }
       }, 
-      "bill_to": "Michael Orange, Top Ten Social, http://www.toptensocial.com, 415-342-0032", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2113", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2113 ThirdThursday_Sept"
    }, 
    "2101 MarcusFosterEduFund_rev1": {
-      "title": "All Aboard Oakland: Laying the Tracks to College", 
+      "invoice#": "2101", 
       "items": {
          "2014-08-09": {
             "Large Party Cleaning Fee": {
@@ -3888,13 +3777,12 @@
             }
          }
       }, 
-      "bill_to": "Arianna Morales, Marcus Foster Education Fund, (510)858-2173, amorales@marcusfoster.org", 
       "rate": "Non-Member Weekend Rate", 
-      "invoice#": "2101", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2101 MarcusFosterEduFund_rev1"
    }, 
    "2161 Amigos_HostTraining": {
-      "title": "AMIGOS Host Family Training", 
+      "invoice#": "2161", 
       "items": {
          "2014-11-19": {
             "Atrium": {
@@ -3923,13 +3811,12 @@
             }
          }
       }, 
-      "bill_to": "Emma Smith, AMIGOS, esmith@amigoslink.org, (510) 703-4313", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2161", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2161 Amigos_HostTraining"
    }, 
    "315008-2 Kapor Center": {
-      "title": "Kapor Center", 
+      "invoice#": "315008-2", 
       "items": {
          "2015-05-02": {
             "Set Up & Reset": {
@@ -3970,13 +3857,12 @@
             }
          }
       }, 
-      "bill_to": "Marq Lee, Kapor Center for Social Impact, 510-435-1641, marquelle@kaporcenter.org", 
       "rate": "Full Time Member Weekend Rate -- Full day discount", 
-      "invoice#": "315008-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "315008-2 Kapor Center"
    }, 
    "215009-2 CIIS Cancel": {
-      "title": "Peace and Mindfulness in Schools", 
+      "invoice#": "215009", 
       "items": {
          "2015-02-22": {
             "50% Deposit": {
@@ -3993,23 +3879,21 @@
             }
          }
       }, 
-      "bill_to": "Audra Miller, CIIS, amiller@ciis.edu, 415-575-6118/", 
       "rate": "", 
-      "invoice#": "215009", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215009-2 CIIS Cancel"
    }, 
    "2024 The Amauta Foundation": {
-      "title": "Weekend rental of Uptown Conference room 3/15/14", 
+      "invoice#": "2024", 
       "items": {
          "2014-03-15": {}
       }, 
-      "bill_to": "The Amauta Foundation, Joseph Huayllasco, 415-519-4144, jhuayllasco@amauta-foundation.org", 
       "rate": "", 
-      "invoice#": "2024", 
-      "type": "Conference Room Rental"
+      "type": "Conference Room Rental", 
+      "title": "2024 The Amauta Foundation"
    }, 
    "2165 Marie Bernardo": {
-      "title": "Rinabeth & Marie Wedding", 
+      "invoice#": "2165", 
       "items": {
          "2014-12-13": {
             "Weekend Staffing ": {
@@ -4038,43 +3922,39 @@
             }
          }
       }, 
-      "bill_to": "Marie Bernardo, 510-861-5929, mjbernardo@firstrepublic.com", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "2165", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2165 Marie Bernardo"
    }, 
    "2022 Steve Spiker Open Oakland": {
-      "title": "Oakland Data Day: 2/22/2014", 
+      "invoice#": "2022", 
       "items": {
          "2009-02-07": {}
       }, 
-      "bill_to": "Open Oakland, Steve Spiker, 1720 Broadway, Oakland, CA 94612", 
       "rate": "", 
-      "invoice#": "2022", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2022 Steve Spiker Open Oakland"
    }, 
    "2009. Exponent Partners": {
-      "title": "NWPC-AN Endorsement Meeting 11/7/13", 
+      "invoice#": "2009", 
       "items": {
          "2013-11-07": {}
       }, 
-      "bill_to": "Exponent Partners, Katie DeCarlo, 901 Misison Street Suite 105, San Francisco CA 94103", 
       "rate": "", 
-      "invoice#": "2009", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2009. Exponent Partners"
    }, 
    "2013. Culture Strike": {
-      "title": "Before the Destination: Migrations from Central America to the United States", 
+      "invoice#": "2013", 
       "items": {
          "2013-12-07": {}
       }, 
-      "bill_to": "Culture Strike, Marco Antonio Flores, 1505 33rd Ave, Oakland, CA 94601", 
       "rate": "", 
-      "invoice#": "2013", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2013. Culture Strike"
    }, 
    "2120 OneLifeInstitute": {
-      "title": "10th Anniversary Celebration", 
+      "invoice#": "2120", 
       "items": {
          "2015-01-22": {
             "Standard Janitorial Fee": {
@@ -4103,13 +3983,12 @@
             }
          }
       }, 
-      "bill_to": "Liza J. Rankow, OneLife Institute, 2542 - 8th Ave, Oakland, CA 94606, rankow@onelifeinstitute.org", 
       "rate": "Full Time Member Weekday Rate - Founder Discount", 
-      "invoice#": "2120", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2120 OneLifeInstitute"
    }, 
    "2150 Holmes Hummel": {
-      "title": "Opening Doors of Opportunity in the Clean Energy Revolution", 
+      "invoice#": "2150", 
       "items": {
          "2014-10-09": {
             "Standard Cleaning Fee": {
@@ -4132,13 +4011,12 @@
             }
          }
       }, 
-      "bill_to": "Holmes Hummel, holmes.hummel@gmail.com", 
       "rate": "None Member Weekday Rate", 
-      "invoice#": "2150", 
-      "type": "AT "
+      "type": "AT ", 
+      "title": "2150 Holmes Hummel"
    }, 
    "115004 KQED": {
-      "title": "Film Screening of \"Through a Lens Darkly\"", 
+      "invoice#": "115004", 
       "items": {
          "2014-02-13": {
             "IHO Staffing": {
@@ -4173,13 +4051,12 @@
             }
          }
       }, 
-      "bill_to": "Yo Ann Martinez, KQED, ymartinez@kqed.org, 213-713-8550", 
       "rate": "Non Member Weekend Rate -- Partnership Discount", 
-      "invoice#": "115004", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "115004 KQED"
    }, 
    "2151 B Labs": {
-      "title": "Meant to B: An Evening with Rising Appalachia", 
+      "invoice#": "2151", 
       "items": {
          "2014-10-03": {
             "Standard Janitorial Fee": {
@@ -4208,13 +4085,12 @@
             }
          }
       }, 
-      "bill_to": "B Labs, Hub San Francisco, 901 Mission Street, Suite 105, San Francisco, CA 94103, afyfe@bcorporation.net ", 
       "rate": "Non-member weekday; Discount Rate for IHO WITH event", 
-      "invoice#": "2151", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2151 B Labs"
    }, 
    "2140 Feng Shui School_Nov": {
-      "title": "Golden Gate Feng Shui School", 
+      "invoice#": "2140", 
       "items": {
          "0001-255-255": {
             "Meridian Room": {
@@ -4225,13 +4101,12 @@
             }
          }
       }, 
-      "bill_to": "Manu Butterworth, Feng Shui School, 415-816-1202, manu@fengshuischool.com", 
       "rate": "Full Time Member Weekday Rate -- Multi-Day Discount", 
-      "invoice#": "2140", 
-      "type": "Workshop"
+      "type": "Workshop", 
+      "title": "2140 Feng Shui School_Nov"
    }, 
    "415010 LNArt Old Navy": {
-      "title": "Late Nite Art: Private Event for Old Navy", 
+      "invoice#": "415010", 
       "items": {
          "2015-02-24": {
             "IHO Staffing": {
@@ -4260,13 +4135,12 @@
             }
          }
       }, 
-      "bill_to": "Adam Rosendahl, Late Nite Art, adamrosendahl@gmail.com, 707-477-9063", 
       "rate": "None Member Weekday Rate", 
-      "invoice#": "415010", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415010 LNArt Old Navy"
    }, 
    "215005 BE PRESENT": {
-      "title": "Be Present: Tapping into the Gifts of Community", 
+      "invoice#": "215005", 
       "items": {
          "2015-05-14": {
             "On Broadway": {
@@ -4307,13 +4181,12 @@
             }
          }
       }, 
-      "bill_to": "Kate Lillis, Be Present, lilliskate@comcast.net", 
       "rate": "Non Member Weekday Rate - Partnership Discount", 
-      "invoice#": "215005", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "215005 BE PRESENT"
    }, 
    "215001 CPD Gala": {
-      "title": "CPD Gala", 
+      "invoice#": "215001", 
       "items": {
          "2015-02-05": {
             "IHO Staffing": {
@@ -4342,13 +4215,12 @@
             }
          }
       }, 
-      "bill_to": "Sasha Solomonov, Center for Popular Democracy, ssolo@populardemocracy.org, 602-334-8390", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "215001", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215001 CPD Gala"
    }, 
    "215012 Barbara Lee": {
-      "title": "Congresswoman Barbara Lee Fundraiser", 
+      "invoice#": "215012", 
       "items": {
          "2015-03-12": {
             "Atrium": {
@@ -4377,13 +4249,12 @@
             }
          }
       }, 
-      "bill_to": "Chad Houston, Congresswoman Barbara Lee, chad@philhour.com, 415-692-3556", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "215012", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215012 Barbara Lee"
    }, 
    "315011-2 Cleantech Open paid": {
-      "title": "Cleantech Open Business Briefing", 
+      "invoice#": "315011-2", 
       "items": {
          "2015-04-21": {
             "IHO Staffing": {
@@ -4412,13 +4283,12 @@
             }
          }
       }, 
-      "bill_to": "Bill Golove, Cleantech Open, wgolove@cleantechopen.org, 415-728-8246", 
       "rate": "Non Member Weekday Rate - Sponsorhsip", 
-      "invoice#": "315011-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "315011-2 Cleantech Open paid"
    }, 
    "415016 FVLC Be Brave": {
-      "title": "Be Brave Speak Up 2015", 
+      "invoice#": "415016", 
       "items": {
          "2015-09-18": {
             "IHO Staffing": {
@@ -4447,13 +4317,12 @@
             }
          }
       }, 
-      "bill_to": "Sohpie Hagen, Family Violence Law Center, development@fvic.org", 
       "rate": "Part time Member Weekend Rate", 
-      "invoice#": "415016", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415016 FVLC Be Brave"
    }, 
    "2149 Bike East Bay": {
-      "title": "Biketopia", 
+      "invoice#": "2149", 
       "items": {
          "2014-11-13": {
             "Atrium": {
@@ -4482,13 +4351,12 @@
             }
          }
       }, 
-      "bill_to": "Renee Rivera, Bike East Bay, 495 Embarcadero West, Oakland, CA 94607, renee@ebbc.org, 415-252-5617", 
       "rate": "Non-Member Weekday Rate", 
-      "invoice#": "2149", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2149 Bike East Bay"
    }, 
    "2195 SYNCIS": {
-      "title": "Giving the Gift of Wealth: Legacy vs. The Material", 
+      "invoice#": "2195", 
       "items": {
          "2014-12-18": {
             "Meridian Room": {
@@ -4505,13 +4373,12 @@
             }
          }
       }, 
-      "bill_to": "Rebekah Black, SYNCIS, rbinsurancesolutions@gmail.com, 510-269-7599", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "2195", 
-      "type": "workshop"
+      "type": "workshop", 
+      "title": "2195 SYNCIS"
    }, 
    "2043 Ojah Yoga": {
-      "title": "Queer Yoga Gathering 2014 7/12/14", 
+      "invoice#": "2043", 
       "items": {
          "2014-07-12": {
             "Large Event Cleaning Fee": {
@@ -4540,13 +4407,12 @@
             }
          }
       }, 
-      "bill_to": "Richelle Donigan, OJAH Yoga & Healing Arts, yogininoir@gmail.com, (510)484-1085", 
       "rate": "", 
-      "invoice#": "2043", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2043 Ojah Yoga"
    }, 
    "315007 Friends of the Earth": {
-      "title": "Sacred vs. Synthetic: Competing Visions for Life on Earth", 
+      "invoice#": "315007", 
       "items": {
          "2015-04-14": {
             "IHO Staffing": {
@@ -4575,23 +4441,21 @@
             }
          }
       }, 
-      "bill_to": "Dana Perls, Friends of the Earth, dperls@foe.org, 925-705-1074", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "315007", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "315007 Friends of the Earth"
    }, 
    "2018. Start Up Weekend Recept": {
-      "title": "Startup Weekend Oakland: Black Male Achievement Reception 2/8  2014", 
+      "invoice#": "2018", 
       "items": {
          "2009-02-07": {}
       }, 
-      "bill_to": "Kalimah Priforce, Startup Weekend Reception, 1512 Brunswig Lane, Oakland, CA 94608", 
       "rate": "", 
-      "invoice#": "2018", 
-      "type": "With"
+      "type": "With", 
+      "title": "2018. Start Up Weekend Recept"
    }, 
    "2196 Tuux.it": {
-      "title": "Tuux.it Launch", 
+      "invoice#": "2196", 
       "items": {
          "2015-02-06": {
             "Atrium": {
@@ -4620,13 +4484,12 @@
             }
          }
       }, 
-      "bill_to": "Martha Lucero Wallace, Michael Wallace Design, mlw@michaelwallacedesign.com, 510-329-8927", 
       "rate": "Non Member Weekend Rate --Partner Discount", 
-      "invoice#": "2196", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2196 Tuux.it"
    }, 
    "115005-2 Friends of Parks&Rec": {
-      "title": "A Taste of Spring", 
+      "invoice#": "115005-2", 
       "items": {
          "2015-05-07": {
             "On Broadway": {
@@ -4685,13 +4548,12 @@
             }
          }
       }, 
-      "bill_to": "Angela Rundles, Friends of Oakland Park and Recreation, arundles@rundlesandassociates.com, 925-370-7496", 
       "rate": "Part-time Member Weekday Rate -- Multi-Room Discount", 
-      "invoice#": "115005-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "115005-2 Friends of Parks&Rec"
    }, 
    "815003 Piedmont": {
-      "title": "Rocktoberfest", 
+      "invoice#": "815003", 
       "items": {
          "2015-11-14": {
             "Atrium": {
@@ -4726,13 +4588,12 @@
             }
          }
       }, 
-      "bill_to": "Robert Gotto, Piedmont Public Schools - Parts Group, rgotto@adrg.com, 510-637-8626", 
       "rate": "Part Time Weekend Rate - Multi Room Discount", 
-      "invoice#": "815003", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "815003 Piedmont"
    }, 
    "2038 Misssey_org membership": {
-      "title": "Misssey 3rd Annual Inspire Change Gala 6/21", 
+      "invoice#": "2038", 
       "items": {
          "2014-06-21": {
             "A/V tech support": {
@@ -4779,13 +4640,12 @@
             }
          }
       }, 
-      "bill_to": "Jude Wellington, Misssey, 510-214-3701", 
       "rate": "", 
-      "invoice#": "2038", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2038 Misssey_org membership"
    }, 
    "2141 Feng Shui School_Dec": {
-      "title": "Golden Gate Feng Shui School", 
+      "invoice#": "2141", 
       "items": {
          "0001-255-255": {
             "Meridian Room": {
@@ -4796,13 +4656,12 @@
             }
          }
       }, 
-      "bill_to": "Manu Butterworth, Feng Shui School, 415-816-1202, manu@fengshuischool.com", 
       "rate": "Full Time Member Weekday Rate -- Multi-Day Discount", 
-      "invoice#": "2141", 
-      "type": "Workshop"
+      "type": "Workshop", 
+      "title": "2141 Feng Shui School_Dec"
    }, 
    "2199 Redwood Day School_Damage": {
-      "title": "Spring Gala and Auction", 
+      "invoice#": "2199", 
       "items": {
          "2015-04-25": {
             "Damage Deposit": {
@@ -4813,13 +4672,12 @@
             }
          }
       }, 
-      "bill_to": "Sarah Wachs, Redwood Day School, 3245 Sheffield Avenue, Oakland,\u00a0CA\u00a094602, p\u00a0510.534.0800", 
       "rate": "", 
-      "invoice#": "2199", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2199 Redwood Day School_Damage"
    }, 
    "2143 Feng Shui School_Feb": {
-      "title": "Golden Gate Feng Shui School", 
+      "invoice#": "2143", 
       "items": {
          "0001-255-255": {
             "Meridian Room": {
@@ -4838,13 +4696,12 @@
             }
          }
       }, 
-      "bill_to": "Manu Butterworth, Feng Shui School, 415-816-1202, manu@fengshuischool.com", 
       "rate": "Full Time Member Weekday Rate -- Multi-Day Discount", 
-      "invoice#": "2143", 
-      "type": "Workshop"
+      "type": "Workshop", 
+      "title": "2143 Feng Shui School_Feb"
    }, 
    "2170 Alameda Health Services": {
-      "title": "AHS Farewell Dinner", 
+      "invoice#": "2170", 
       "items": {
          "2014-12-09": {
             "On Broadway": {
@@ -4885,13 +4742,12 @@
             }
          }
       }, 
-      "bill_to": "Reign Free, Alameda Health\u00a0System, 510-459-6212, info@reddoorcatering.com", 
       "rate": "Non Member Weekday Rate - Multi-Room Discount", 
-      "invoice#": "2170", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2170 Alameda Health Services"
    }, 
    "2134 HERA": {
-      "title": "Housing & Economic Rights Activists Fundraiser", 
+      "invoice#": "2134", 
       "items": {
          "2014-11-05": {
             "Standard Janitorial Fee": {
@@ -4926,13 +4782,12 @@
             }
          }
       }, 
-      "bill_to": "Maeve Elis Brown, Housing and Economic Rights Advocates, melisebrown@heraca.org, 510-387-8120", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "2134", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2134 HERA"
    }, 
    "315007-2 Friends of the Earth ": {
-      "title": "Sacred vs. Synthetic: Competing Visions for Life on Earth", 
+      "invoice#": "315007-2", 
       "items": {
          "2015-04-14": {
             "IHO Staffing": {
@@ -4961,13 +4816,12 @@
             }
          }
       }, 
-      "bill_to": "Dana Perls, Friends of the Earth, dperls@foe.org, 925-705-1074", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "315007-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "315007-2 Friends of the Earth "
    }, 
    "2157 Thomas Huebl_BAI": {
-      "title": "Open evening with Thomas Huebl", 
+      "invoice#": "2157", 
       "items": {
          "2014-12-11": {
             "Standard Janitorial Fee": {
@@ -4996,13 +4850,12 @@
             }
          }
       }, 
-      "bill_to": "Ellen Offermann, BAI, e_o@hotmail.com, 415-577-4477", 
       "rate": "Non Member Weekday Rate - partner event discount", 
-      "invoice#": "2157", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2157 Thomas Huebl_BAI"
    }, 
    "515002 Racial Equitecture": {
-      "title": "Navigating Race & Power Dynamics @ Work", 
+      "invoice#": "515002", 
       "items": {
          "2015-06-24": {
             "Gallery": {
@@ -5045,23 +4898,21 @@
             }
          }
       }, 
-      "bill_to": "Myosha McAfee, Racial Equitecture, myoshamcafee@racialequitecture.com, 617-642-1388", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "515002", 
-      "type": "WORKSHOP"
+      "type": "WORKSHOP", 
+      "title": "515002 Racial Equitecture"
    }, 
    "2010. Equator Coffee": {
-      "title": "Meet Chido Govera, Founder of Future of Hope 11/4/13", 
+      "invoice#": "2010", 
       "items": {
          "2013-11-04": {}
       }, 
-      "bill_to": "Equator Coffee, Devorah Freudiger, 115 Jordan St, San Rafael, CA 94611", 
       "rate": "", 
-      "invoice#": "2010", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2010. Equator Coffee"
    }, 
    "2112 Women 2.0": {
-      "title": "Women 2.0 City Meetup Oakland", 
+      "invoice#": "2112", 
       "items": {
          "2014-08-07": {
             "Standard Janitorial Fee": {
@@ -5084,13 +4935,12 @@
             }
          }
       }, 
-      "bill_to": "Jin Zhou, Women 2.0, jin@women2.org", 
       "rate": "Non Member Weekday Rate - Partner Discount", 
-      "invoice#": "2112", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2112 Women 2.0"
    }, 
    "2167 Sandra Lawson": {
-      "title": "Sandra's 40th Birthday Party", 
+      "invoice#": "2167", 
       "items": {
          "2015-01-17": {
             "Downtown": {
@@ -5125,13 +4975,12 @@
             }
          }
       }, 
-      "bill_to": "Sandra Lawson, 510-334-4965, sandraleelawson@gmail.com", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "2167", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2167 Sandra Lawson"
    }, 
    "2193_Rev1 Rosenberg Foundation": {
-      "title": "Rosenberg Foundation Event: Burning Down the House", 
+      "invoice#": "2193", 
       "items": {
          "2014-01-14": {
             "Standard Cleaning Fee": {
@@ -5160,23 +5009,21 @@
             }
          }
       }, 
-      "bill_to": "Linda Moll, Grants and Operations Manager, Rosenberg Foundation, 131 Steuart Street, Suite 650, San Francisco, CA 94105, Phone:\u00a0415-644-9777", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "2193", 
-      "type": "AT "
+      "type": "AT ", 
+      "title": "2193_Rev1 Rosenberg Foundation"
    }, 
    "2020. Late Nite in the Dark4-26": {
-      "title": "LATE NITE ART: In The Dark 4/26/2014", 
+      "invoice#": "2020", 
       "items": {
          "2009-02-07": {}
       }, 
-      "bill_to": "Late Nite Art: In The Dark, Adam Rosendahl, 2304 11th Ave., Oakland, CA 94608", 
       "rate": "", 
-      "invoice#": "2020", 
-      "type": "With"
+      "type": "With", 
+      "title": "2020. Late Nite in the Dark4-26"
    }, 
    "2137 Bay Bucks": {
-      "title": "Living the New Economy Convergence", 
+      "invoice#": "2137", 
       "items": {
          "2014-10-26": {
             "On Broadway": {
@@ -5323,13 +5170,12 @@
             }
          }
       }, 
-      "bill_to": "Kendra Shanley, Bay Bucks, kshanley@baybucks.com", 
       "rate": "Full Time Member Rate", 
-      "invoice#": "2137", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2137 Bay Bucks"
    }, 
    "615003 Marian Farms": {
-      "title": "Summer Solstice Member Appreciation Party", 
+      "invoice#": "615003", 
       "items": {
          "2015-06-23": {
             "IHO Staffing ": {
@@ -5358,13 +5204,12 @@
             }
          }
       }, 
-      "bill_to": "John Pomeroy, Marian Farms, jp@omnibibulous.com, 415-439-3798", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "615003", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "615003 Marian Farms"
    }, 
    "2046 GenUp Wiser": {
-      "title": "Wiser Together: Collaborating Across Generations 5/8", 
+      "invoice#": "2046", 
       "items": {
          "2014-05-08": {
             "Standard Cleaning Fee": {
@@ -5399,13 +5244,12 @@
             }
          }
       }, 
-      "bill_to": "Joshua Gorman, Generation Waking Up, (503)929-7331, hanni@generationwakingup.org", 
       "rate": "", 
-      "invoice#": "2046", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2046 GenUp Wiser"
    }, 
    "315002 Develop Yourself": {
-      "title": "Develop Yourself Tech Summit", 
+      "invoice#": "315002", 
       "items": {
          "0001-255-255": {
             "Atrium": {
@@ -5440,13 +5284,12 @@
             }
          }
       }, 
-      "bill_to": "Albrey Brown, Develop Yourself, albrey.brown@hackreactor.com, 510 292-9438", 
       "rate": "Part Time Member Weekend Rate  - Multi Day Discount", 
-      "invoice#": "315002", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "315002 Develop Yourself"
    }, 
    "2065 FilmUpFilmFest": {
-      "title": "Know your Palate: Whiskey and Cheese Pairing", 
+      "invoice#": "2065", 
       "items": {
          "2014-05-28": {
             "Omi Gallery": {
@@ -5469,33 +5312,30 @@
             }
          }
       }, 
-      "bill_to": "John Pomeroy, Omnibibulous, jp@omnibibulous.com, (415)439-3798", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2065", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2065 FilmUpFilmFest"
    }, 
    "2095 Prajekt": {
-      "title": "Prajekt Club", 
+      "invoice#": "2094", 
       "items": {
          "0001-255-255": {}
       }, 
-      "bill_to": "Areca Smit, Prajekt, hlael1@gmail.com, 415-223-4334", 
       "rate": "Full Time Member Weekday Rate - Recurring Event Discount", 
-      "invoice#": "2094", 
-      "type": "WORKSHOP"
+      "type": "WORKSHOP", 
+      "title": "2095 Prajekt"
    }, 
    "2014. Gabriel Crane": {
-      "title": "Reconstructing Narrative: Creative Writing Workshop 12/9/13", 
+      "invoice#": "2014", 
       "items": {
          "2013-12-09": {}
       }, 
-      "bill_to": "Gabriel Crane, 1920 Francisco St Apt 304, Berkeley, CA 94709", 
       "rate": "educed rate for pro bono staffing", 
-      "invoice#": "2014", 
-      "type": "Workshop"
+      "type": "Workshop", 
+      "title": "2014. Gabriel Crane"
    }, 
    "2136 OCCUR_withAV": {
-      "title": "David E. Glover Legacy Awards Dinner", 
+      "invoice#": "2136", 
       "items": {
          "2014-10-22": {
             "On Broadway": {
@@ -5524,13 +5364,12 @@
             }
          }
       }, 
-      "bill_to": "Cindy Adams, OCCUR, cdaconsultingroup@gmail.com", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "2136", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2136 OCCUR_withAV"
    }, 
    "2097 Indie Awards Dinner": {
-      "title": "Oakland Indie Awards Winners Dinner 2014", 
+      "invoice#": "2097", 
       "items": {
          "2014-07-08": {
             "Standard Cleaning Fee": {
@@ -5565,13 +5404,12 @@
             }
          }
       }, 
-      "bill_to": "Andrea Walker, One Pacific Coast Bank, 1438 Webster Street, Ste. 100, Oakland, CA 94612", 
       "rate": "Non-Member Weekday Rate - IHO partial sponsor", 
-      "invoice#": "2097", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2097 Indie Awards Dinner"
    }, 
    "2186 Kiwan": {
-      "title": "N CHILDREN'S NAME- A WALL STREET INVESTMENT WORKSHOP", 
+      "invoice#": "2186", 
       "items": {
          "2014-12-09": {
             "Downtown": {
@@ -5588,13 +5426,12 @@
             }
          }
       }, 
-      "bill_to": "Kiwan Gore, Evelyn & Company, kgore17@gmail.com, 415-290-7168", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "2186", 
-      "type": "WORKSHOP"
+      "type": "WORKSHOP", 
+      "title": "2186 Kiwan"
    }, 
    "2110 Akili Dada Concert": {
-      "title": "Akili Dada Concert", 
+      "invoice#": "2110", 
       "items": {
          "2014-11-21": {
             "Compostables": {
@@ -5629,13 +5466,12 @@
             }
          }
       }, 
-      "bill_to": "Shea Morrissey, Akili Dada, shea.morrissey@gmail.com", 
       "rate": "No-Member Weekday Rate - Part-time member discount applied", 
-      "invoice#": "2110", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2110 Akili Dada Concert"
    }, 
    "2071 KQED_FilmSalon (3)": {
-      "title": "KQED Film Salon pt3", 
+      "invoice#": "2071", 
       "items": {
          "2014-06-25": {
             "Standard Cleaning Fee": {
@@ -5658,13 +5494,12 @@
             }
          }
       }, 
-      "bill_to": "Siouxsie Oki, KQED, soki@kqed.org, (415)722-8911", 
       "rate": "", 
-      "invoice#": "2071", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2071 KQED_FilmSalon (3)"
    }, 
    "415019 HERA 10th Anniversary": {
-      "title": "HERA 10th Anniversary Celebration!", 
+      "invoice#": "415019", 
       "items": {
          "2015-09-24": {
             "Set Up & Reset": {
@@ -5711,13 +5546,12 @@
             }
          }
       }, 
-      "bill_to": "Erika Scott, Do Good Events, erika@dogoodevents.org, 510-387-8120", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "415019", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415019 HERA 10th Anniversary"
    }, 
    "2060 EBASE": {
-      "title": "", 
+      "invoice#": "2060", 
       "items": {
          "2014-06-26": {
             "Standard Cleaning Fee": {
@@ -5740,13 +5574,12 @@
             }
          }
       }, 
-      "bill_to": "Jessica De Jesus, EBASE - East Bay Alliance for Sustainable Economies, jessica@homegrownevents.net, (510)306-4159", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "2060", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2060 EBASE"
    }, 
    "715006 BeThePeace": {
-      "title": "BeThePeace Party", 
+      "invoice#": "715006", 
       "items": {
          "2011-09-18": {
             "IHO Staffing": {
@@ -5781,13 +5614,12 @@
             }
          }
       }, 
-      "bill_to": "David Nicol, BeThePeace SF Bay Area, davidnicol2012@gmail.com, 510-248-9629", 
       "rate": "Part Member Weekend Rate - Multi Room Discount", 
-      "invoice#": "715006", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "715006 BeThePeace"
    }, 
    "2197 Beyond Sep_SeriesII_March": {
-      "title": "Pathways to Justice Present: Beyond the Culture of , Separation Series II", 
+      "invoice#": "2197", 
       "items": {
          "2015-03-18": {
             "OMI Gallery": {
@@ -5822,13 +5654,12 @@
             }
          }
       }, 
-      "bill_to": "gregory mengel, Pathways to Justice, gamengel@yahoo.com, (415) 515-7702", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2197", 
-      "type": "BY"
+      "type": "BY", 
+      "title": "2197 Beyond Sep_SeriesII_March"
    }, 
    "Quote Template": {
-      "title": "", 
+      "invoice#": "Quote Template", 
       "items": {
          "": {
             "A/V Technician": {
@@ -5839,13 +5670,12 @@
             }
          }
       }, 
-      "bill_to": "", 
       "rate": "Part Time Member Weekday Rate -- Multi-Room Discount", 
-      "invoice#": "Quote Template", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "Quote Template"
    }, 
    "2171 Courtney Ruby for Mayor": {
-      "title": "Courtney Ruby for Mayor / Marianne Williamson Talk", 
+      "invoice#": "2171", 
       "items": {
          "2014-10-29": {
             "OMI Gallery": {
@@ -5874,14 +5704,13 @@
             }
          }
       }, 
-      "bill_to": "Darin Cline, Courtney Ruby for Mayor, 314-800-5660, darin@courtneyruby.com", 
       "rate": "Full Time Office Member Weekday Rate", 
-      "invoice#": "2171", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2171 Courtney Ruby for Mayor"
    }, 
    "QUOTES": {}, 
    "2051 Vital Systems": {
-      "title": "Running on Local 6/5", 
+      "invoice#": "2051", 
       "items": {
          "2014-06-05": {
             "Atrium": {
@@ -5904,13 +5733,12 @@
             }
          }
       }, 
-      "bill_to": "Tuyen Vo, (510)284-2471, tuyen.vo@vitalsystemsca.com", 
       "rate": "", 
-      "invoice#": "2051", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2051 Vital Systems"
    }, 
    "2106 LNA_WATER": {
-      "title": "Late Nite Art: Water", 
+      "invoice#": "2106", 
       "items": {
          "2014-08-01": {
             "Standard Janitorial Fee": {
@@ -5933,13 +5761,12 @@
             }
          }
       }, 
-      "bill_to": "Adam Rosendahl, 707-477-9063, adamrosendahl@gmail.com", 
       "rate": "WITH EVENT", 
-      "invoice#": "2106", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2106 LNA_WATER"
    }, 
    "2061 Slow Money": {
-      "title": "", 
+      "invoice#": "2061", 
       "items": {
          "2014-09-12": {
             "Atrium": {
@@ -5962,13 +5789,12 @@
             }
          }
       }, 
-      "bill_to": "Marco Vangelisti, Slow Money , vangelisti@yahoo.com", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2061", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2061 Slow Money"
    }, 
    "2119 ImpactSocial_original": {
-      "title": "FIRST BAY AREA IMPACT SOCIAL", 
+      "invoice#": "2119", 
       "items": {
          "2014-09-15": {
             "Standard Janitorial Fee": {
@@ -5991,13 +5817,12 @@
             }
          }
       }, 
-      "bill_to": "Wendy Levy, New Arts Axis, 3965 Linwood Avenue, Oakland, CA 94602, wendy@newartsaxis.net", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "2119", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2119 ImpactSocial_original"
    }, 
    "715007 Pecha Kucha": {
-      "title": "Pecha Kucha Night", 
+      "invoice#": "715007", 
       "items": {
          "2011-08-13": {
             "IHO Staffing": {
@@ -6032,13 +5857,12 @@
             }
          }
       }, 
-      "bill_to": "Ashara Ekundayo, Pecha Kucha, ashara@oakland.impacthub.net, 303-260-9209", 
       "rate": "Full Time Member Weekday Rate - Founder Discount", 
-      "invoice#": "715007", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "715007 Pecha Kucha"
    }, 
    "715012 Urban Beauty Inc": {
-      "title": "URBAN BEAUTY & WELLNESS EVENT", 
+      "invoice#": "715012", 
       "items": {
          "2015-11-15": {
             "Set Up & Reset": {
@@ -6085,13 +5909,12 @@
             }
          }
       }, 
-      "bill_to": "Rita Owens, Urban Beauty INC, rita@urbanbeautynetwork.com", 
       "rate": "Non Member Wkend Rate - Discounts for: Multi-room, Fullday, & Founders disc.", 
-      "invoice#": "715012", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "715012 Urban Beauty Inc"
    }, 
    "2163 Kaiser Emergency Dept_Rev1": {
-      "title": "Kaiser Eastbay Holiday Party", 
+      "invoice#": "2163", 
       "items": {
          "2014-12-06": {
             "Atrium": {
@@ -6120,13 +5943,12 @@
             }
          }
       }, 
-      "bill_to": "Arian Brackett, Kaiser Emergency Dept, 510-919-1392, arian.brackett@gmail.com", 
       "rate": "Part Time Member Weekend Rate", 
-      "invoice#": "2163", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2163 Kaiser Emergency Dept_Rev1"
    }, 
    "215010-2 Ever Forward Club": {
-      "title": "Screening \"The Mask You Live In\"", 
+      "invoice#": "215010-2", 
       "items": {
          "2015-03-04": {
             "IHO Staffing": {
@@ -6155,13 +5977,12 @@
             }
          }
       }, 
-      "bill_to": "Ashanti Branch, Ever Forward Club, everforwardclub@gmail.com, 510-684-4842", 
       "rate": "Part-time Member Weekday Rate", 
-      "invoice#": "215010-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215010-2 Ever Forward Club"
    }, 
    "715009 HacktheHood": {
-      "title": "2015 Summer Boot Camp Graduation", 
+      "invoice#": "715009", 
       "items": {
          "2015-08-12": {
             "Set Up & Reset": {
@@ -6202,13 +6023,12 @@
             }
          }
       }, 
-      "bill_to": "Henriette Ako-Asare, Hack the Hood, henriette@hackthehood.org, 510-545-3413", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "715009", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "715009 HacktheHood"
    }, 
    "2191 SFJazz_OPC": {
-      "title": "SF Jazz & OPC Info Session", 
+      "invoice#": "2191", 
       "items": {
          "2015-01-13": {
             "OMI Gallery": {
@@ -6231,13 +6051,12 @@
             }
          }
       }, 
-      "bill_to": "Angela Wellman, Oakland Public Conservatory of Music, amwellman2@gmail.com, 510-435-7431", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2191", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2191 SFJazz_OPC"
    }, 
    "2067 Worksafe": {
-      "title": "Worksafe's 31st Anniversary", 
+      "invoice#": "2067", 
       "items": {
          "2014-06-27": {
             "Standard Cleaning Fee": {
@@ -6260,13 +6079,12 @@
             }
          }
       }, 
-      "bill_to": "Sophie Noero, Worksafe, snoero@worksafe.org, (510)302-1027", 
       "rate": "Non-Member Weekday Rate", 
-      "invoice#": "2067", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2067 Worksafe"
    }, 
    "215006 BGC Comm Meeting": {
-      "title": "2015 BGC Bay Area Kickoff Community Meeting", 
+      "invoice#": "215006", 
       "items": {
          "2015-02-23": {
             "IHO Staffing": {
@@ -6295,13 +6113,12 @@
             }
          }
       }, 
-      "bill_to": "Kimberly Bryant, Black Girls Code, kbryant@blackgirlscode.org, 949-309-0361", 
       "rate": "Full Time Member Weekday Rate - Partner Discount", 
-      "invoice#": "215006", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215006 BGC Comm Meeting"
    }, 
    "315009 Hack The Hood": {
-      "title": "Hack the Hood Graduation", 
+      "invoice#": "315009", 
       "items": {
          "2015-04-23": {
             "IHO Staffing": {
@@ -6336,13 +6153,12 @@
             }
          }
       }, 
-      "bill_to": "Henriette Ako-Asare, Hack the Hood, henriette@hackthehood.org, 510-545-3413", 
       "rate": "Full Time Member Weeday Rate", 
-      "invoice#": "315009", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "315009 Hack The Hood"
    }, 
    "2063 Joanne da Luz": {
-      "title": "Know your Palate: Whiskey and Cheese Pairing", 
+      "invoice#": "2063", 
       "items": {
          "2014-05-28": {
             "Omi Gallery": {
@@ -6365,13 +6181,12 @@
             }
          }
       }, 
-      "bill_to": "John Pomeroy, Omnibibulous, jp@omnibibulous.com, (415)439-3798", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2063", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2063 Joanne da Luz"
    }, 
    "2079 Cinema Club": {
-      "title": "Cinema Club presents the Matatu Film Festival", 
+      "invoice#": "2079", 
       "items": {
          "2014-07-16": {
             "Standard Cleaning Fee": {
@@ -6400,13 +6215,12 @@
             }
          }
       }, 
-      "bill_to": "Michael Orange, Cinema Club, h2orange@gmail.com, 415-342-0032", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2079", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2079 Cinema Club"
    }, 
    "2147 OakChamberofComme_fine": {
-      "title": "Oakland Mayoral Candidate Forum", 
+      "invoice#": "2147", 
       "items": {
          "2014-09-16": {
             "Fine": {
@@ -6431,13 +6245,12 @@
             }
          }
       }, 
-      "bill_to": "Isaac Kos-Read, Oakland Metropolitan Chamber of Commerce, 475 14th Street, Oakland, CA 94612", 
       "rate": "", 
-      "invoice#": "2147", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2147 OakChamberofComme_fine"
    }, 
    "2199 Redwood Day School": {
-      "title": "Spring Gala and Auction", 
+      "invoice#": "2199", 
       "items": {
          "2015-04-25": {
             "On Broadway": {
@@ -6490,13 +6303,12 @@
             }
          }
       }, 
-      "bill_to": "Nikki Maguire, Redwood Day School, nmagui@yahoo.com, 916-806-7321", 
       "rate": "Non Member Weekend Rate - Multi room discount", 
-      "invoice#": "2199", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2199 Redwood Day School"
    }, 
    "115002 LNA_Storytelling": {
-      "title": "Late Nite Art: Storytelling", 
+      "invoice#": "115002", 
       "items": {
          "2015-01-16": {
             "Site Manager/Staffing": {
@@ -6531,13 +6343,12 @@
             }
          }
       }, 
-      "bill_to": "Adam Rosendahl, 707-477-9063, adamrosendahl@gmail.com", 
       "rate": "Full Time Member Weekend Rate - Partnership Discount", 
-      "invoice#": "115002", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "115002 LNA_Storytelling"
    }, 
    "715011 Food Craft Institute": {
-      "title": "FCI Entrepreneurial Pitch Competition", 
+      "invoice#": "715011", 
       "items": {
          "2015-09-17": {
             "IHO Staffing": {
@@ -6566,13 +6377,12 @@
             }
          }
       }, 
-      "bill_to": "Ally DeArman, Food Craft Institute, ally@foodcraftinstitute.org", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "715011", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "715011 Food Craft Institute"
    }, 
    "2076 LNA_Beltane": {
-      "title": "Late Nite Art: Beltane", 
+      "invoice#": "2076", 
       "items": {
          "2014-05-17": {
             "Standard Cleaning Fee": {
@@ -6595,13 +6405,12 @@
             }
          }
       }, 
-      "bill_to": "Adam Rosendahl, 707-477-9063, adamrosendahl@gmail.com", 
       "rate": "", 
-      "invoice#": "2076", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2076 LNA_Beltane"
    }, 
    "2083 Nat Poetry Slam": {
-      "title": "National Poetry Slam Semi Finals", 
+      "invoice#": "2083", 
       "items": {
          "2014-08-08": {
             "Large Party Cleaning Fee": {
@@ -6630,13 +6439,12 @@
             }
          }
       }, 
-      "bill_to": "Maureen Benson, The Body is Not An Apology, yesmsbenson@gmail.com, 510-938-8237", 
       "rate": "", 
-      "invoice#": "2083", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2083 Nat Poetry Slam"
    }, 
    "115001-3 P2R Graduation": {
-      "title": "Pathways to Resilience Graduation", 
+      "invoice#": "115001-3", 
       "items": {
          "2015-03-21": {
             "Site Manager/Staffing": {
@@ -6671,13 +6479,12 @@
             }
          }
       }, 
-      "bill_to": "Pandora Thomas, Pathways to Resilience, earthseed72@gmail.com, 510 289 1508", 
       "rate": "Full Time Member Weekend Rate", 
-      "invoice#": "115001-3", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "115001-3 P2R Graduation"
    }, 
    "415017 Loudspeaker Films": {
-      "title": "Code Oakland Film Screening", 
+      "invoice#": "415017", 
       "items": {
          "2015-05-09": {
             "Set Up & Reset": {
@@ -6718,13 +6525,12 @@
             }
          }
       }, 
-      "bill_to": "Kelly Amis, Loudspeaker Films, kamis@loudspeakerfilms.com, 707-287-5837", 
       "rate": "Part Time Member Weekend Rate", 
-      "invoice#": "415017", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415017 Loudspeaker Films"
    }, 
    "2187-2 AlterConf_AV": {
-      "title": "AlterConf", 
+      "invoice#": "2187-2", 
       "items": {
          "2015-01-31": {
             "A/V Technician": {
@@ -6735,13 +6541,12 @@
             }
          }
       }, 
-      "bill_to": "Ashe Dryden, AlterConf, 414-510-7928, alterconf@gmail.com", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "2187-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2187-2 AlterConf_AV"
    }, 
    "715004-2 BART": {
-      "title": "Call for Artists Workshop", 
+      "invoice#": "715004-2", 
       "items": {
          "2015-07-27": {
             "OMI Gallery": {
@@ -6770,13 +6575,12 @@
             }
          }
       }, 
-      "bill_to": "Abigail Thorne-Lyman, BART, athorne@bart.gov, 510-464-6140", 
       "rate": "Non Member Weekday Rate - Founder Discount", 
-      "invoice#": "715004-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "715004-2 BART"
    }, 
    "2201 SF Noir": {
-      "title": "Wine & Food Event - Shrimp, Grits & Greens", 
+      "invoice#": "2201", 
       "items": {
          "2015-02-25": {
             "On Broadway": {
@@ -6817,13 +6621,12 @@
             }
          }
       }, 
-      "bill_to": "Herve Ernest, SF Noir, herve@sfnoir.org, 415-489-8192", 
       "rate": "Non Member Weekday Rate -- Partnership Discount", 
-      "invoice#": "2201", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2201 SF Noir"
    }, 
    "2101 MarcusFosterEduFund": {
-      "title": "Springboard to College: Building Persistence Skills for Oakland, Scholars", 
+      "invoice#": "2101", 
       "items": {
          "2014-08-09": {
             "On Broadway": {
@@ -6870,13 +6673,12 @@
             }
          }
       }, 
-      "bill_to": "Arianna Morales, Marcus Foster Education Fund, (510)858-2173, amorales@marcusfoster.org", 
       "rate": "Non-Member Weekend Rate", 
-      "invoice#": "2101", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2101 MarcusFosterEduFund"
    }, 
    "415017-2 Loudspeaker Films ": {
-      "title": "Code Oakland Film Screening", 
+      "invoice#": "415017-2", 
       "items": {
          "2015-05-09": {
             "Set Up & Reset": {
@@ -6917,13 +6719,12 @@
             }
          }
       }, 
-      "bill_to": "Kelly Amis, Loudspeaker Films, kamis@loudspeakerfilms.com, 707-287-5837", 
       "rate": "Part Time Member Weekend Rate", 
-      "invoice#": "415017-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415017-2 Loudspeaker Films "
    }, 
    "415014-2 CJ Callen": {
-      "title": "It's Time Oakland Connect", 
+      "invoice#": "415014-2", 
       "items": {
          "2015-04-15": {
             "OMI Gallery": {
@@ -6946,13 +6747,12 @@
             }
          }
       }, 
-      "bill_to": "CJ Callen, It's Time Network, cjcallenjd@gmail.com, 415-515-5041", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "415014-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415014-2 CJ Callen"
    }, 
    "2086 OBDC": {
-      "title": "OBDC Retreat", 
+      "invoice#": "2086", 
       "items": {
          "2014-07-15": {
             "Set Up & Clean Up": {
@@ -6969,13 +6769,12 @@
             }
          }
       }, 
-      "bill_to": "Jen Leybovich, OBDC, 415.627.8380, jen@obdc.com", 
       "rate": "Fulltime member Weekday Rate", 
-      "invoice#": "2086", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2086 OBDC"
    }, 
    "2080 Libby Shaaf": {
-      "title": "Safe Oakland Speaker Series", 
+      "invoice#": "2080", 
       "items": {
          "2014-06-08": {
             "A/V Technician": {
@@ -7016,13 +6815,12 @@
             }
          }
       }, 
-      "bill_to": "Bruce Stoffmacher, Libby Schaaf Office, 1 Frank Ogawa Plaza, Oakland, CA 94612, (510)238-7041, bstoffmacher@oaklandnet.com", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "2080", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2080 Libby Shaaf"
    }, 
    "2173 EvolutionLeadership_Fedor": {
-      "title": "Evolutionary Leadership", 
+      "invoice#": "2173", 
       "items": {
          "2014-11-08": {
             "Uptown": {
@@ -7033,13 +6831,12 @@
             }
          }
       }, 
-      "bill_to": "Fedor Ovchinnikov, IEL, fedor.ovchin@gmail.com, 323-246-6922", 
       "rate": "Full Time Member Weekend Rate -- Full Day Discount", 
-      "invoice#": "2173", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2173 EvolutionLeadership_Fedor"
    }, 
    "2066 BlackGirlsCode": {
-      "title": "Black Girls CODE Love is Respect Hackathon", 
+      "invoice#": "2066", 
       "items": {
          "0001-255-255": {
             "Large Party Cleaning Fee": {
@@ -7068,13 +6865,12 @@
             }
          }
       }, 
-      "bill_to": "Kimberly Brant, Black Girls Code, kbryant@blackgirlscode.org, (415)-860-6387", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2066", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2066 BlackGirlsCode"
    }, 
    "415014 CJ Callen": {
-      "title": "It's Time Oakland Connect", 
+      "invoice#": "415014", 
       "items": {
          "2015-04-15": {
             "OMI Gallery": {
@@ -7091,13 +6887,12 @@
             }
          }
       }, 
-      "bill_to": "CJ Callen, It's Time Network, cjcallenjd@gmail.com, 415-515-5041", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "415014", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415014 CJ Callen"
    }, 
    "315004 Oak Int Film Fest": {
-      "title": "13th Oakland International Film Festival", 
+      "invoice#": "315004", 
       "items": {
          "2015-03-25": {
             "OMI Gallery": {
@@ -7132,23 +6927,21 @@
             }
          }
       }, 
-      "bill_to": "David Roach, The Oakland Film Society, 510-776-4178, oaklandfilmfestival@gmail.com", 
       "rate": "Non Member Weekday Rate -- Founders Partnership", 
-      "invoice#": "315004", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "315004 Oak Int Film Fest"
    }, 
    "2008. Feastly": {
-      "title": "Feastly 11/15/13", 
+      "invoice#": "2008", 
       "items": {
          "2013-11-15": {}
       }, 
-      "bill_to": "Feastly, Amanda Yee, 456 40th St. Apt. 2, Oakland, CA 94609", 
       "rate": "", 
-      "invoice#": "2008", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2008. Feastly"
    }, 
    "415018 Worksafe": {
-      "title": "Worksafe's 32nd Anniversary", 
+      "invoice#": "415018", 
       "items": {
          "2015-05-21": {
             "IHO Staffing": {
@@ -7183,13 +6976,12 @@
             }
          }
       }, 
-      "bill_to": "Sohpie Noero, Worksafe, snoero@worksafe.org, 504-909-2697", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "415018", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415018 Worksafe"
    }, 
    "2192 Josh Healey": {
-      "title": "Comedy for Palestine...with a Chanukah Twist!", 
+      "invoice#": "2192", 
       "items": {
          "2014-12-18": {
             "Standard Janitorial Fee": {
@@ -7218,13 +7010,12 @@
             }
          }
       }, 
-      "bill_to": "Josh Healey, josh@joshhealey.org, 510-316-2174", 
       "rate": "Part Ttime Member Weekday Rate", 
-      "invoice#": "2192", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2192 Josh Healey"
    }, 
    "2082 Libby Shaaf": {
-      "title": "Safe Oakland Speaker Series", 
+      "invoice#": "2082", 
       "items": {
          "2014-06-22": {
             "Standard Cleaning Fee": {
@@ -7253,13 +7044,12 @@
             }
          }
       }, 
-      "bill_to": "Bruce Stoffmacher, Libby Schaaf Office, 1 Frank Ogawa Plaza, Oakland, CA 94612, (510)238-7041, bstoffmacher@oaklandnet.com", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "2082", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2082 Libby Shaaf"
    }, 
    "115009  Warthogs Youth Rugby": {
-      "title": "Oakland Warthogs Youth Rugby Program", 
+      "invoice#": "115009", 
       "items": {
          "2015-03-14": {
             "Atrium": {
@@ -7294,13 +7084,12 @@
             }
          }
       }, 
-      "bill_to": "Ryan Burke, Oakland Warthogs Youth Rugby Program, burke4rugby@gmail.com, 650-867-4292", 
       "rate": "Part Time Member Weekend Rate", 
-      "invoice#": "115009", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "115009  Warthogs Youth Rugby"
    }, 
    "2042 SBA": {
-      "title": "Locally Inspired Earth Day Edition: An Evening with Michael Kieschnick, Founder & CEO of CREDO Mobile 4/22", 
+      "invoice#": "2042", 
       "items": {
          "2014-04-22": {
             "Atrium": {
@@ -7317,13 +7106,12 @@
             }
          }
       }, 
-      "bill_to": "Erin Kilmer Neel, Sustainable Business Alliance, (510) 967-3126, erinkilmerneel@gmail.com", 
       "rate": "", 
-      "invoice#": "2042", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2042 SBA"
    }, 
    "2069 KQED_FilmSalon": {
-      "title": "KQED Film Salon pt1", 
+      "invoice#": "2069", 
       "items": {
          "2014-04-29": {
             "Standard Cleaning Fee": {
@@ -7346,13 +7134,12 @@
             }
          }
       }, 
-      "bill_to": "Siouxsie Oki, KQED, soki@kqed.org, (415)722-8911", 
       "rate": "", 
-      "invoice#": "2069", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2069 KQED_FilmSalon"
    }, 
    "2148 Brown Sugar Kitchen_damage": {
-      "title": "Brown Sugar Kitchen cookbook release party, PRIVATE EVENT", 
+      "invoice#": "2148", 
       "items": {
          "2014-09-08": {
             "Damage to Hylo Board": {
@@ -7363,13 +7150,12 @@
             }
          }
       }, 
-      "bill_to": "Tanya Holland, Brown Sugar Kitchen, 510-834-8341, th@brownsugarkitchen.com", 
       "rate": "", 
-      "invoice#": "2148", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2148 Brown Sugar Kitchen_damage"
    }, 
    "2028 The Ever Forward Club": {
-      "title": "The Ever Forward Club 10th Anniversary Celebration 3/20", 
+      "invoice#": "2028", 
       "items": {
          "2014-03-20": {
             "Set up/Break down": {
@@ -7386,13 +7172,12 @@
             }
          }
       }, 
-      "bill_to": "The Ever Forward Club, Ashanti Branch, 510-684-4842, bigabranch@yahoo.com", 
       "rate": "", 
-      "invoice#": "2028", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2028 The Ever Forward Club"
    }, 
    "2189 BGC_volunteertraining_2": {
-      "title": "BGC Robotics Event - Volunteer training 12/10", 
+      "invoice#": "2189", 
       "items": {
          "2014-12-10": {
             "Sm. Party Janitorial Fee": {
@@ -7415,13 +7200,12 @@
             }
          }
       }, 
-      "bill_to": "NNEKA HOLLIDAY, Black Girls CODE, admin@blackgirlscode.org, 415-305-3998", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2189", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2189 BGC_volunteertraining_2"
    }, 
    "2145 Beyond the Culture_Sept": {
-      "title": "Beyond the Culture of Separation", 
+      "invoice#": "2145", 
       "items": {
          "2014-09-29": {
             "Meridian Room": {
@@ -7432,13 +7216,12 @@
             }
          }
       }, 
-      "bill_to": "gregory mengel, Pathways to Justice, gamengel@yahoo.com, (415) 515-7702", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2145", 
-      "type": "BY"
+      "type": "BY", 
+      "title": "2145 Beyond the Culture_Sept"
    }, 
    "2132 NAACP Cancel Fee": {
-      "title": "Town Hall on Police Brutality & Racial Profiling", 
+      "invoice#": "2132", 
       "items": {
          "": {
             "On Broadway Room Rental": {
@@ -7449,13 +7232,12 @@
             }
          }
       }, 
-      "bill_to": "Sean Dugar, NAACP, 443-310-3908, sdugar@naacpnet.org", 
       "rate": "", 
-      "invoice#": "2132", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2132 NAACP Cancel Fee"
    }, 
    "2040 Catchafire AV": {
-      "title": "Catchafire Oakland Launch Event 4/7", 
+      "invoice#": "2040", 
       "items": {
          "2014-04-07": {
             "A/V Technician": {
@@ -7466,13 +7248,12 @@
             }
          }
       }, 
-      "bill_to": "Adrienne Schmoeker, Catchafire, (646)205-4221, adrienne@catchafire.org", 
       "rate": "", 
-      "invoice#": "2040", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2040 Catchafire AV"
    }, 
    "615001-2 Praxis": {
-      "title": "The Praxis Project Celebration", 
+      "invoice#": "615001-2", 
       "items": {
          "2015-10-23": {
             "IHO Staffing ": {
@@ -7507,13 +7288,12 @@
             }
          }
       }, 
-      "bill_to": "Laura Parish, The Praxis Project, 443-801-3069, laura.parish59@gmail.com", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "615001-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "615001-2 Praxis"
    }, 
    "115003 YouthHUB_IHO Holiday": {
-      "title": "IHO Holiday Party & Youth HUB Launch Party", 
+      "invoice#": "115003", 
       "items": {
          "2014-12-17": {
             "On Broadway": {
@@ -7566,13 +7346,12 @@
             }
          }
       }, 
-      "bill_to": "Gino Pastori-Ng, Youth Seed, 510-575-1251, gpastoring@bayareayouthseed.org", 
       "rate": "Full Time Member Weekday Rate -- Partner Discount", 
-      "invoice#": "115003", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "115003 YouthHUB_IHO Holiday"
    }, 
    "2127 Planetary Advocates": {
-      "title": "Future of Energy Film Screening", 
+      "invoice#": "2127", 
       "items": {
          "2014-09-05": {
             "Security": {
@@ -7595,13 +7374,12 @@
             }
          }
       }, 
-      "bill_to": "Maximilian DeArmon, Planetary Advocates, Max@thefutureofenergy.org, (415) 470-4150", 
       "rate": "", 
-      "invoice#": "2127", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2127 Planetary Advocates"
    }, 
    " 215003 Forward Together": {
-      "title": "RAD Summit 2015", 
+      "invoice#": "215003", 
       "items": {
          "2014-02-21": {
             "Standard Janitorial Fee": {
@@ -7724,13 +7502,12 @@
             }
          }
       }, 
-      "bill_to": "Akasha Orr, Forward Together, events@forwardtogether.org, 323-351-6959", 
       "rate": "Part-time Member Weekend Rate -- Multi Day Discount", 
-      "invoice#": "215003", 
-      "type": "AT"
+      "type": "AT", 
+      "title": " 215003 Forward Together"
    }, 
    "715003-2 National Poetry Slam": {
-      "title": "National Poetry Slam Semi-Finals", 
+      "invoice#": "715003-2", 
       "items": {
          "2015-08-14": {
             "IHO Staffing": {
@@ -7765,13 +7542,12 @@
             }
          }
       }, 
-      "bill_to": "Maureen Benson, National Poetry Slam, yesmsbenson@gmail.com", 
       "rate": "Part Time Member Weekend Rate - Partnership Discount", 
-      "invoice#": "715003-2", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "715003-2 National Poetry Slam"
    }, 
    "415018-2 Worksafe ": {
-      "title": "Worksafe's 32nd Anniversary", 
+      "invoice#": "415018-2", 
       "items": {
          "2015-05-21": {
             "IHO Staffing": {
@@ -7806,13 +7582,12 @@
             }
          }
       }, 
-      "bill_to": "Sohpie Noero, Worksafe, snoero@worksafe.org, 504-909-2697", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "415018-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415018-2 Worksafe "
    }, 
    "315013 TeachforAmerica": {
-      "title": "Teach for America Leadership Development Workshop", 
+      "invoice#": "315013", 
       "items": {
          "2015-04-14": {
             "Downtown": {
@@ -7823,13 +7598,12 @@
             }
          }
       }, 
-      "bill_to": "Chantal Below, Teach For America, chantallaurie@gmail.com, 415-577-7440", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "315013", 
-      "type": "Workshop"
+      "type": "Workshop", 
+      "title": "315013 TeachforAmerica"
    }, 
    "2153 Bootcamp_BusinessInn_pt3": {
-      "title": " Intelligent Business Systems: Business Innovation Series III", 
+      "invoice#": "2153", 
       "items": {
          "2014-11-19": {
             "On Broadway": {
@@ -7846,13 +7620,12 @@
             }
          }
       }, 
-      "bill_to": "Rani Croager, Uptima Business Bootcamp, rani.croager@uptimabootcamp.com, (415)361-3296", 
       "rate": "", 
-      "invoice#": "2153", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2153 Bootcamp_BusinessInn_pt3"
    }, 
    "2100 Brown Sugar Kitchen_AV": {
-      "title": "Brown Sugar Kitchen cookbook release party, PRIVATE EVENT", 
+      "invoice#": "2100", 
       "items": {
          "2014-09-08": {
             "A/V Sound Technician": {
@@ -7863,13 +7636,12 @@
             }
          }
       }, 
-      "bill_to": "Tanya Holland, Brown Sugar Kitchen, 510-834-8341, th@brownsugarkitchen.com", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "2100", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2100 Brown Sugar Kitchen_AV"
    }, 
    "315012 LaunchPad Africa": {
-      "title": "All Things Black & Beautiful", 
+      "invoice#": "315012", 
       "items": {
          "2015-05-16": {
             "IHO Staffing": {
@@ -7904,13 +7676,12 @@
             }
          }
       }, 
-      "bill_to": "Fiifi Deku, LaunchPad Africa, fiifi.deku@gmail.com, 386-916-9614", 
       "rate": "Part Time Member Weekend Rate", 
-      "invoice#": "315012", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "315012 LaunchPad Africa"
    }, 
    "415013 Beneficial State FDN": {
-      "title": "Oakland Indie Awards Judging", 
+      "invoice#": "415013", 
       "items": {
          "2015-04-15": {
             "Downtown": {
@@ -7921,13 +7692,12 @@
             }
          }
       }, 
-      "bill_to": "Emma Guttman-Slater, Beneficial State Foundation, eguttman-slater@beneficialstate.org , 510-463-6565", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "415013", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415013 Beneficial State FDN"
    }, 
    "315005 LNA_MidLifeCelebration": {
-      "title": "Late Nite Art: Mid-Life Celebration", 
+      "invoice#": "315005", 
       "items": {
          "2015-04-04": {
             "Site Manager/Staffing": {
@@ -7962,13 +7732,12 @@
             }
          }
       }, 
-      "bill_to": "Adam Rosendahl, 707-477-9063, adamrosendahl@gmail.com", 
       "rate": "Full Time Member Weekend Rate - Partnership Discount", 
-      "invoice#": "315005", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "315005 LNA_MidLifeCelebration"
    }, 
    "2196-2 Tuux.it": {
-      "title": "Tuux.it Launch", 
+      "invoice#": "2196-2", 
       "items": {
          "2015-02-06": {
             "Atrium": {
@@ -8003,13 +7772,12 @@
             }
          }
       }, 
-      "bill_to": "Martha Lucero Wallace, Michael Wallace Design, mlw@michaelwallacedesign.com, 510-329-8927", 
       "rate": "Non Member Weekend Rate --Partner Discount", 
-      "invoice#": "2196-2", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2196-2 Tuux.it"
    }, 
    "2118 HiddenGenius": {
-      "title": "Hidden Genius Summer Celebration", 
+      "invoice#": "2118", 
       "items": {
          "2014-09-23": {
             "Standard Janitorial Fee": {
@@ -8050,13 +7818,12 @@
             }
          }
       }, 
-      "bill_to": "Jason Young, MindBlown Labs, jason@mindblownlabs.com", 
       "rate": "Part-time Member Rate", 
-      "invoice#": "2118", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2118 HiddenGenius"
    }, 
    "2160 OPEN": {
-      "title": "Conversations", 
+      "invoice#": "2160", 
       "items": {
          "2014-10-08": {
             "Standard Janitorial Fee": {
@@ -8079,23 +7846,21 @@
             }
          }
       }, 
-      "bill_to": "Seth Steward, OPEN, 510-213-3240, sethsteward@gmail.com", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2160", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2160 OPEN"
    }, 
    "2119 ImapctSocial_NewArtsAxis": {
-      "title": "FIRST BAY AREA IMPACT SOCIAL", 
+      "invoice#": "2119", 
       "items": {
          "2014-09-15": {}
       }, 
-      "bill_to": "Wendy Levy, New Arts Axis, 3965 Linwood Avenue, Oakland, CA 94602, wendy@newartsaxis.net", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "2119", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2119 ImapctSocial_NewArtsAxis"
    }, 
    "115005 Friends of Parks&Rec": {
-      "title": "A Taste of Spring", 
+      "invoice#": "115005", 
       "items": {
          "2015-05-07": {
             "Downtown": {
@@ -8154,13 +7919,12 @@
             }
          }
       }, 
-      "bill_to": "Angela Rundles, Friends of Oakland Park and Recreation, arundles@rundlesandassociates.com, 925-370-7496", 
       "rate": "Part-time Member Weekday Rate -- Multi-Room Discount", 
-      "invoice#": "115005", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "115005 Friends of Parks&Rec"
    }, 
    "2070 KQED_FilmSalon (2)": {
-      "title": "KQED Film Salon pt2", 
+      "invoice#": "2070", 
       "items": {
          "2014-05-29": {
             "Standard Cleaning Fee": {
@@ -8183,13 +7947,12 @@
             }
          }
       }, 
-      "bill_to": "Siouxsie Oki, KQED, soki@kqed.org, (415)722-8911", 
       "rate": "", 
-      "invoice#": "2070", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2070 KQED_FilmSalon (2)"
    }, 
    "615005-2 Food First": {
-      "title": "40th Anniversary Gala and Auction", 
+      "invoice#": "615005-2", 
       "items": {
          "2015-10-16": {
             "On Broadway": {
@@ -8230,13 +7993,12 @@
             }
          }
       }, 
-      "bill_to": "Alexandra Toledo, Food First, atoledo@foodfirst.org, 510-654-4400", 
       "rate": "Part Time Member Weekend Rate - multi room discount", 
-      "invoice#": "615005-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "615005-2 Food First"
    }, 
    "215014 OneLife IHO Collab ": {
-      "title": "Transformative Visions", 
+      "invoice#": "215014", 
       "items": {
          "2015-03-21": {
             "IHO Staffing": {
@@ -8271,13 +8033,12 @@
             }
          }
       }, 
-      "bill_to": "Liza Rankow, OneLife Institute , rankow@earthlink.net, 510-338-0958", 
       "rate": "Non Member Weekend Rate - Partnership Discount", 
-      "invoice#": "215014", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "215014 OneLife IHO Collab "
    }, 
    "2169 Red Door Group": {
-      "title": "The Red Door Group / Greenwood Event", 
+      "invoice#": "2169", 
       "items": {
          "2014-12-12": {
             "On Broadway": {
@@ -8318,23 +8079,21 @@
             }
          }
       }, 
-      "bill_to": "Reign Free, The Red Door Group, 510-459-6212, info@reddoorcatering.com", 
       "rate": "Non Member Weekday Rate - Multi-Room Discount", 
-      "invoice#": "2169", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2169 Red Door Group"
    }, 
    "2023 Siegal Campaign Kickoff": {
-      "title": "Siegel for Oakland Campaign Kick-Off Gala 3/27", 
+      "invoice#": "2023", 
       "items": {
          "2014-03-27": {}
       }, 
-      "bill_to": "Siegel for Oakland, Nicole Deane , 285 Fairmount Avenue, #101, Oakland, California 94611", 
       "rate": "", 
-      "invoice#": "2023", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2023 Siegal Campaign Kickoff"
    }, 
    "2109 Meridian University": {
-      "title": "Meridian University with Don Michael", 
+      "invoice#": "2109", 
       "items": {
          "2014-10-18": {
             "Atrium": {
@@ -8357,13 +8116,12 @@
             }
          }
       }, 
-      "bill_to": "Rob Gall, Meridian University, robgall@meridianuniversity.edu", 
       "rate": "Full Time Member Weekend Rate", 
-      "invoice#": "2109", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2109 Meridian University"
    }, 
    "2044 VIN12 Spring": {
-      "title": "The Spring Wine Event 5/10/14", 
+      "invoice#": "2044", 
       "items": {
          "2014-05-10": {
             "Large Party Cleaning Fee": {
@@ -8386,13 +8144,12 @@
             }
          }
       }, 
-      "bill_to": "Elie Ernest, VIN12, (415)756-6542, elie@vin12.com", 
       "rate": "", 
-      "invoice#": "2044", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2044 VIN12 Spring"
    }, 
    "2179 ACOE_ILSP Retreat": {
-      "title": "ILSP Retreat", 
+      "invoice#": "2179", 
       "items": {
          "2015-04-18": {
             "Atrium": {
@@ -8415,13 +8172,12 @@
             }
          }
       }, 
-      "bill_to": "Aida Geromino, Alameda County Office of Education, ageronimo@acoe.org, 510-670-4204", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "2179", 
-      "type": "Private Meeting"
+      "type": "Private Meeting", 
+      "title": "2179 ACOE_ILSP Retreat"
    }, 
    "115007 Inn Oakland Town Hall": {
-      "title": "Innovate Oakland Town Hall", 
+      "invoice#": "115007", 
       "items": {
          "2015-02-04": {
             "Standard Janitorial Fee": {
@@ -8444,23 +8200,21 @@
             }
          }
       }, 
-      "bill_to": "Rani Croager, Uptima Business Bootcamp, rani.croager@uptimabootcamp.com, 415-361-3296", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "115007", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "115007 Inn Oakland Town Hall"
    }, 
    "2021 Late Nite in the Dark5-17": {
-      "title": "LATE NITE ART: In The Dark 5/17/2014", 
+      "invoice#": "2021", 
       "items": {
          "2009-02-07": {}
       }, 
-      "bill_to": "Late Nite Art: In The Dark, Adam Rosendahl, 2304 11th Ave., Oakland, CA 94608", 
       "rate": "", 
-      "invoice#": "2021", 
-      "type": "With"
+      "type": "With", 
+      "title": "2021 Late Nite in the Dark5-17"
    }, 
    "2136 OCCUR": {
-      "title": "David E. Glover Legacy Awards Dinner", 
+      "invoice#": "2136", 
       "items": {
          "2014-10-22": {
             "On Broadway": {
@@ -8483,13 +8237,12 @@
             }
          }
       }, 
-      "bill_to": "Cindy Adams, OCCUR, cdaconsultingroup@gmail.com", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "2136", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2136 OCCUR"
    }, 
    "215006-2 BGC Comm Meeting_AV": {
-      "title": "2015 BGC Bay Area Kickoff Community Meeting", 
+      "invoice#": "215006-2", 
       "items": {
          "2015-02-23": {
             "IHO Staffing": {
@@ -8524,13 +8277,12 @@
             }
          }
       }, 
-      "bill_to": "Kimberly Bryant, Black Girls Code, kbryant@blackgirlscode.org, 949-309-0361", 
       "rate": "Full Time Member Weekday Rate - Partner Discount", 
-      "invoice#": "215006-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215006-2 BGC Comm Meeting_AV"
    }, 
    "2030 Higher Circle SuRu": {
-      "title": "Higher Circle Presents SuRu \u201cDiversity Lifestyle\u201d Clothing 2/25", 
+      "invoice#": "2030", 
       "items": {
          "2014-02-25": {
             "Venue Rental ": {
@@ -8541,13 +8293,12 @@
             }
          }
       }, 
-      "bill_to": "Higher Circle, Billy Silva, 415-377-4562, wsilva@highercircle.com", 
       "rate": "", 
-      "invoice#": "2030", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2030 Higher Circle SuRu"
    }, 
    "2129 Women 2.0_2nd": {
-      "title": "2nd Women 2.0 City Meetup Oakland", 
+      "invoice#": "2129", 
       "items": {
          "2014-09-04": {
             "Standard Janitorial Fee": {
@@ -8570,13 +8321,12 @@
             }
          }
       }, 
-      "bill_to": "Jin Zhou, Women 2.0, jin@women2.org", 
       "rate": "Non Member Weekday Rate - Partner Discount", 
-      "invoice#": "2129", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2129 Women 2.0_2nd"
    }, 
    "215008 YBCA #BLM": {
-      "title": "Yerba Buena Center for the Arts #BLM Event", 
+      "invoice#": "215008", 
       "items": {
          "2015-02-16": {
             "Set Up & Reset": {
@@ -8617,23 +8367,21 @@
             }
          }
       }, 
-      "bill_to": "Raquel Gutierrez, Yerba Buena Center for the Arts, rgutierrez@ybca.org, (323) 217-6441", 
       "rate": "Non Member Weekday Rate  - Founder Discount", 
-      "invoice#": "215008", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215008 YBCA #BLM"
    }, 
    "2012. GenUp": {
-      "title": "GenUp 2013 Holiday Party", 
+      "invoice#": "2012", 
       "items": {
          "2013-12-22": {}
       }, 
-      "bill_to": "Joshua Gorman, 565 Bellevue Ave. #2305, Oakland, CA 94610", 
       "rate": "", 
-      "invoice#": "2012", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2012. GenUp"
    }, 
    "315001 Presidio Kunstler ": {
-      "title": "Presidio Presents: James Howard Kunstler", 
+      "invoice#": "315001", 
       "items": {
          "2015-04-09": {
             "Set Up & Reset": {
@@ -8680,13 +8428,12 @@
             }
          }
       }, 
-      "bill_to": "Alyssa Stone, Presidio Graduate School, 925-352-1025, alyssa.stone@presidio.edu", 
       "rate": "Full Time Member Weekday Rate -- Multi-Room Discount", 
-      "invoice#": "315001", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "315001 Presidio Kunstler "
    }, 
    "2056 VIN12 Spring_Revised": {
-      "title": "The Spring Wine Event 5/10/14", 
+      "invoice#": "2056", 
       "items": {
          "2014-05-10": {
             "On Broadway": {
@@ -8727,13 +8474,12 @@
             }
          }
       }, 
-      "bill_to": "Elie Ernest, VIN12, (415)756-6542, elie@vin12.com", 
       "rate": "", 
-      "invoice#": "2056", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2056 VIN12 Spring_Revised"
    }, 
    "2121 OakMetroChamberofCommerce": {
-      "title": "Oakland Mayoral Candidate Forum", 
+      "invoice#": "2121", 
       "items": {
          "": {
             "null": {
@@ -8778,13 +8524,12 @@
             }
          }
       }, 
-      "bill_to": "Isaac Kos-Read, Oakland Metropolitan Chamber of Commerce, 475 14th Street, Oakland, CA 94612", 
       "rate": "Full Time Member Weekday Rate - Founder Discount", 
-      "invoice#": "2121", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2121 OakMetroChamberofCommerce"
    }, 
    "415009 Black Folks House": {
-      "title": "Black Evolution: Activism, Art & The Spirit ", 
+      "invoice#": "415009", 
       "items": {
          "2015-04-18": {
             "OMI Gallery": {
@@ -8813,13 +8558,12 @@
             }
          }
       }, 
-      "bill_to": "Eb Brown, Black Folks House, 510-388-0292, blackfolkshouse@gmail.com", 
       "rate": "Part Time Member Weekend Rate -- Founders Discount", 
-      "invoice#": "415009", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415009 Black Folks House"
    }, 
    "115001-2 P2R Graduation": {
-      "title": "Pathways to Resilience Graduation", 
+      "invoice#": "115001", 
       "items": {
          "2015-03-21": {
             "Site Manager/Staffing": {
@@ -8848,13 +8592,12 @@
             }
          }
       }, 
-      "bill_to": "Pandora Thomas, Pathways to Resilience, earthseed72@gmail.com, 510 289 1508", 
       "rate": "Full Time Member Weekend Rate", 
-      "invoice#": "115001", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "115001-2 P2R Graduation"
    }, 
    "415006 CSS Member": {
-      "title": "Flock Together", 
+      "invoice#": "415006", 
       "items": {
          "2015-06-04": {
             "Atrium": {
@@ -8889,13 +8632,12 @@
             }
          }
       }, 
-      "bill_to": "Bernice Shaw, Center for Story-based Strategy, bernice@storybasedstrategy.org, 310-880-1389", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "415006", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415006 CSS Member"
    }, 
    "715008-2 Ada Initiative": {
-      "title": "Imposter Syndrome Workshop", 
+      "invoice#": "715008-2", 
       "items": {
          "2015-08-11": {
             "IHO Staffing": {
@@ -8930,13 +8672,12 @@
             }
          }
       }, 
-      "bill_to": "Sarah Clements, The Ada Initiative, sclements@adainitiative.org", 
       "rate": "Part Time Member Wkday Rate  - Offering Broadway ($295/hr) at the Atrium", 
-      "invoice#": "715008-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "715008-2 Ada Initiative"
    }, 
    "115013 Youth Speaks_Olympics": {
-      "title": "Bay Area MC Olympics Finals", 
+      "invoice#": "115013", 
       "items": {
          "2015-05-30": {
             "Site Manager": {
@@ -8965,13 +8706,12 @@
             }
          }
       }, 
-      "bill_to": "Fernande Legros, Youth Speaks Inc., flegros@youthspeaks.org, 415-694-1338", 
       "rate": "Part Time Member Weekend Rate", 
-      "invoice#": "115013", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "115013 Youth Speaks_Olympics"
    }, 
    "2162 Housing Consortium": {
-      "title": "One Night Stand: Featuring Comedians with Disabilities Act 2", 
+      "invoice#": "2162", 
       "items": {
          "2014-10-30": {
             "Coffee Service ($12/thermos)": {
@@ -9006,13 +8746,12 @@
             }
          }
       }, 
-      "bill_to": "Lisa Hopkins, Housing Consortium of the East Bay, lhopkins@hceb.org", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "2162", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2162 Housing Consortium"
    }, 
    "515004 Youth HUB Pitch Event ": {
-      "title": "Youth HUB People's Pitch Event", 
+      "invoice#": "515004", 
       "items": {
          "2015-05-23": {
             "Standard Janitorial Fee": {
@@ -9065,23 +8804,21 @@
             }
          }
       }, 
-      "bill_to": "Gino Pastori-Ng, Youth Seed , 510-575-1251, gpastoring@bayareayouthseed.org", 
       "rate": "Full Time Member Weekend Rate - Founders Discount", 
-      "invoice#": "515004", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "515004 Youth HUB Pitch Event "
    }, 
    "2015. PatternDynamics": {
-      "title": "PatternDynamics 1/18/2014", 
+      "invoice#": "2015", 
       "items": {
          "2014-01-18": {}
       }, 
-      "bill_to": "Tim Winton, PatternDynamics, PO BOX 1979, Byron Bay, NSW, 2481 Australia", 
       "rate": "", 
-      "invoice#": "2015", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2015. PatternDynamics"
    }, 
    "315002-2 Develop Yourself ": {
-      "title": "Develop Yourself Tech Summit", 
+      "invoice#": "315002-2", 
       "items": {
          "0001-255-255": {
             "IHO Staffing": {
@@ -9116,13 +8853,12 @@
             }
          }
       }, 
-      "bill_to": "Albrey Brown, Develop Yourself, albrey.brown@hackreactor.com, 510 292-9438", 
       "rate": "Part Time Member Weekend Rate  - Multi Day Discount", 
-      "invoice#": "315002-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "315002-2 Develop Yourself "
    }, 
    "515005 PAID Mills College": {
-      "title": "Creative Entrepreneurship in Policy & Business", 
+      "invoice#": "515005", 
       "items": {
          "2015-06-03": {
             "IHO Staffing": {
@@ -9151,13 +8887,12 @@
             }
          }
       }, 
-      "bill_to": "Lisa Hanson, Mills College, lhanson@mills.edu, 925.997.5420", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "515005", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "515005 PAID Mills College"
    }, 
    "2146 Beyond the Culture_Oct": {
-      "title": "Beyond the Culture of Separation", 
+      "invoice#": "2146", 
       "items": {
          "2014-10-27": {
             "Meridian Room": {
@@ -9192,13 +8927,12 @@
             }
          }
       }, 
-      "bill_to": "gregory mengel, Pathways to Justice, gamengel@yahoo.com, (415) 515-7702", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2146", 
-      "type": "BY"
+      "type": "BY", 
+      "title": "2146 Beyond the Culture_Oct"
    }, 
    "2156 HERA_ScotchTasting": {
-      "title": "HERA 9th Anniversary Pre-Celebration: Scotch Tasting", 
+      "invoice#": "2156", 
       "items": {
          "2014-10-16": {
             "OMI Gallery": {
@@ -9221,13 +8955,12 @@
             }
          }
       }, 
-      "bill_to": "Maeve Elis Brown, Housing and Economic Rights Advocates, melisebrown@heraca.org, 510-387-8120", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "2156", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2156 HERA_ScotchTasting"
    }, 
    "415007 Tradeswomen": {
-      "title": "Tradeswomen, Inc. Celebration", 
+      "invoice#": "415007", 
       "items": {
          "2015-09-25": {
             "Set Up & Reset": {
@@ -9274,13 +9007,12 @@
             }
          }
       }, 
-      "bill_to": "Esther Polk, Tradeswomen, Inc., womenintrades2@gmail.com, 510-332-4419", 
       "rate": "Part Time Member Weekday Rate -- multi room discount", 
-      "invoice#": "415007", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415007 Tradeswomen"
    }, 
    "2068 OpenOakland": {
-      "title": "Oakland Answers 2014", 
+      "invoice#": "2068", 
       "items": {
          "2014-05-31": {
             "Standard Cleaning Fee": {
@@ -9303,13 +9035,12 @@
             }
          }
       }, 
-      "bill_to": "Steve Spiker, OpenOakland, spike@openoakland.org, (510)499-0098", 
       "rate": "Weekday Rate - part time member discount", 
-      "invoice#": "2068", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2068 OpenOakland"
    }, 
    "215010 Ever Forward Club": {
-      "title": "Screening \"The Mask You Live In\"", 
+      "invoice#": "215010", 
       "items": {
          "2015-03-04": {
             "IHO Staffing": {
@@ -9338,13 +9069,12 @@
             }
          }
       }, 
-      "bill_to": "Lizzy Schultz, Ever Forward Club, eschultz@mills.edu, 303-518-098", 
       "rate": "Part-time Member Weekday Rate", 
-      "invoice#": "215010", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215010 Ever Forward Club"
    }, 
    "715013-2 Dinner Lab": {
-      "title": "Dinner Lab", 
+      "invoice#": "715013-2", 
       "items": {
          "2015-08-08": {
             "IHO Staffing ": {
@@ -9373,13 +9103,12 @@
             }
          }
       }, 
-      "bill_to": "Leejay Victor, Dinner Lab, lvictor@dinnerlab.com", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "715013-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "715013-2 Dinner Lab"
    }, 
    "415001-2 Agents of Change ": {
-      "title": "Agents of Change", 
+      "invoice#": "415001-2", 
       "items": {
          "2015-06-18": {
             "Cancellation Fee": {
@@ -9390,13 +9119,12 @@
             }
          }
       }, 
-      "bill_to": "Joslyn Rose, Abby Ginzberg, Agents of Change, 510-449-5222, joslynroselyons@gmail.com", 
       "rate": "Full Time Member Weekday Rate - Partner Discount", 
-      "invoice#": "415001-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415001-2 Agents of Change "
    }, 
    "2055 United Roots_Revised": {
-      "title": "Oakland Boys & Men of Color Youth Summit 5/24", 
+      "invoice#": "2055", 
       "items": {
          "2014-05-24": {
             "On Broadway": {
@@ -9449,13 +9177,12 @@
             }
          }
       }, 
-      "bill_to": "Galen Silvestri, United Roots, galen@unitedrootsoakland.org, 510-832-0196", 
       "rate": "", 
-      "invoice#": "2055", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2055 United Roots_Revised"
    }, 
    "2122 EBayRentalHousing_Member": {
-      "title": "Awards Ceremony & Holiday Reception", 
+      "invoice#": "2122", 
       "items": {
          "2014-12-03": {
             "Standard Janitorial Fee": {
@@ -9478,13 +9205,12 @@
             }
          }
       }, 
-      "bill_to": "Tina Bocheff, East Bay Rental Housing Association, tbocheff@ebrha.com, 360 22nd Street, Suite 240, Oakland, CA 94612", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "2122", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2122 EBayRentalHousing_Member"
    }, 
    "2135 BeyondCultureofSeparation": {
-      "title": "", 
+      "invoice#": "2135", 
       "items": {
          "2014-11-05": {
             "Standard Janitorial Fee": {
@@ -9513,13 +9239,12 @@
             }
          }
       }, 
-      "bill_to": "Gregory Mengel, add more info, to this, doc", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2135", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2135 BeyondCultureofSeparation"
    }, 
    "2158 Rosenberg_Cancellation": {
-      "title": "Rosenberg Foundation Event", 
+      "invoice#": "2158", 
       "items": {
          "2014-12-02": {
             "On Broadway Room Rental": {
@@ -9530,13 +9255,12 @@
             }
          }
       }, 
-      "bill_to": "Linda Moll, Grants and Operations Manager, Rosenberg Foundation, 131 Steuart Street, Suite 650, San Francisco, CA 94105, Phone:\u00a0415-644-9777, Fax:\u00a0415-357-5016", 
       "rate": "", 
-      "invoice#": "2158", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2158 Rosenberg_Cancellation"
    }, 
    "2107 Fall Wine Event": {
-      "title": "Fall Wine Event", 
+      "invoice#": "2107", 
       "items": {
          "2014-10-11": {
             "Standard Janitorial Fee": {
@@ -9559,13 +9283,12 @@
             }
          }
       }, 
-      "bill_to": "Elie Ernest, VIN12, (415)756-6542, elie@vin12.com", 
       "rate": "Non-Member Weekend Rate - Reoccuring event discount", 
-      "invoice#": "2107", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2107 Fall Wine Event"
    }, 
    "2174 CARE Strategies": {
-      "title": "Fertile Ground", 
+      "invoice#": "2174", 
       "items": {
          "2014-11-19": {
             "Uptown": {
@@ -9582,13 +9305,12 @@
             }
          }
       }, 
-      "bill_to": "Eb Brown, CARE Strategies, carestrategicvision@gmail.com", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "2174", 
-      "type": "WORKSHOP"
+      "type": "WORKSHOP", 
+      "title": "2174 CARE Strategies"
    }, 
    "2106 KQED_pechakucha": {
-      "title": "Pecha Kucha", 
+      "invoice#": "2106", 
       "items": {
          "2014-07-26": {
             "A/V Sound Technician": {
@@ -9599,13 +9321,12 @@
             }
          }
       }, 
-      "bill_to": "Siouxsie Oki, KQED, soki@kqed.org, (415)722-8911", 
       "rate": "", 
-      "invoice#": "2106", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2106 KQED_pechakucha"
    }, 
    "315011 Cleantech Open": {
-      "title": "Cleantech Open Business Briefing", 
+      "invoice#": "315011", 
       "items": {
          "2015-04-21": {
             "IHO Staffing": {
@@ -9628,13 +9349,12 @@
             }
          }
       }, 
-      "bill_to": "Bill Golove, Cleantech Open, wgolove@cleantechopen.org, 415-728-8246", 
       "rate": "Non Member Weekday Rate - Sponsorhsip", 
-      "invoice#": "315011", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "315011 Cleantech Open"
    }, 
    "115005-4 Friends of Parks&R ": {
-      "title": "A Taste of Spring", 
+      "invoice#": "115005-4", 
       "items": {
          "2015-05-07": {
             "On Broadway": {
@@ -9699,13 +9419,12 @@
             }
          }
       }, 
-      "bill_to": "Angela Rundles, Friends of Oakland Park and Recreation, arundles@rundlesandassociates.com, 925-370-7496", 
       "rate": "Part-time Member Weekday Rate -- Multi-Room Discount", 
-      "invoice#": "115005-4", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "115005-4 Friends of Parks&R "
    }, 
    "115011 Defy Ventures": {
-      "title": "Prisoner Reentry Community Cocktail Reception", 
+      "invoice#": "115011", 
       "items": {
          "2015-01-27": {
             "IHO Staffing": {
@@ -9740,13 +9459,12 @@
             }
          }
       }, 
-      "bill_to": "Dian Brooks-Milligan, Defy Ventures, dian@defyventures.org, 347-330-0138", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "115011", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "115011 Defy Ventures"
    }, 
    "115015 SustainAbility RoundTbl": {
-      "title": "SustainAbility RoundTable: See Change", 
+      "invoice#": "115015", 
       "items": {
          "2014-02-12": {
             "OMI Gallery": {
@@ -9769,13 +9487,12 @@
             }
          }
       }, 
-      "bill_to": "Melissa Hines, hines@sustainability.com, 415-531-8235", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "115015", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "115015 SustainAbility RoundTbl"
    }, 
    "2190 Kerusso Music Group": {
-      "title": "Breakthrough: Kerusso New Year's Eve concert", 
+      "invoice#": "2190", 
       "items": {
          "2014-12-31": {
             "Additional Holiday Staffing": {
@@ -9810,13 +9527,12 @@
             }
          }
       }, 
-      "bill_to": "Ryann Richardson, Kerusso Music Group, (415) 429-9027, richardsonryann@gmail.com", 
       "rate": "Non Member Weekday Rate -- Holiday Rate", 
-      "invoice#": "2190", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2190 Kerusso Music Group"
    }, 
    "2137 Bay Bucks_Final": {
-      "title": "Living the New Economy Convergence", 
+      "invoice#": "2137", 
       "items": {
          "2014-10-24": {
             "On Broadway": {
@@ -9869,13 +9585,12 @@
             }
          }
       }, 
-      "bill_to": "Kendra Shanley, Bay Bucks, kshanley@baybucks.com", 
       "rate": "Full Time Member Rate", 
-      "invoice#": "2137", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2137 Bay Bucks_Final"
    }, 
    "215015-3 Oakland Institute ": {
-      "title": "10th Anniversary Celebration", 
+      "invoice#": "215015-3", 
       "items": {
          "2015-04-24": {
             "Compostables": {
@@ -9886,13 +9601,12 @@
             }
          }
       }, 
-      "bill_to": "Elizabeth Fraser, Oakland Institute, 510-365-9140, elizabethacfraser@gmail.com", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "215015-3", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215015-3 Oakland Institute "
    }, 
    "2139 Feng Shui School_Oct": {
-      "title": "Golden Gate Feng Shui School", 
+      "invoice#": "2139", 
       "items": {
          "2014-10-31": {
             "Meridian Room": {
@@ -9911,13 +9625,12 @@
             }
          }
       }, 
-      "bill_to": "Manu Butterworth, Feng Shui School, 415-816-1202, manu@fengshuischool.com", 
       "rate": "Full Time Member Weekday Rate -- Multi-Day Discount", 
-      "invoice#": "2139", 
-      "type": "Workshop"
+      "type": "Workshop", 
+      "title": "2139 Feng Shui School_Oct"
    }, 
    "2104 Black Elected": {
-      "title": "Black Elected Officials Breakfast", 
+      "invoice#": "2104", 
       "items": {
          "2014-07-23": {
             "Standard Janitorial Fee": {
@@ -9934,13 +9647,12 @@
             }
          }
       }, 
-      "bill_to": "LaNiece Jones, Black Elected Officials & Faith Based Leaders of the East Bay, 750 Canyon Oaks Drive, Unit F, Oakland, CA 94605, (510) 568-5589", 
       "rate": "Part Time Weekday Rate", 
-      "invoice#": "2104", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2104 Black Elected"
    }, 
    "215007 Life is Loving": {
-      "title": "Life is Loving Black Love Conversations", 
+      "invoice#": "215007", 
       "items": {
          "2015-02-14": {
             "Site Manager/Staffing": {
@@ -9969,13 +9681,12 @@
             }
          }
       }, 
-      "bill_to": "Hodari Davis, Youth Speaks, hdavis@youthspeaks.org, 510 457-5210", 
       "rate": "Part Time Member Weekend Rate", 
-      "invoice#": "215007", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215007 Life is Loving"
    }, 
    "2152 Bootcamp_BusinessInn_pt2": {
-      "title": " Impact Investing:Business Innovation Series II", 
+      "invoice#": "2152", 
       "items": {
          "2014-09-24": {
             "On Broadway": {
@@ -9992,13 +9703,12 @@
             }
          }
       }, 
-      "bill_to": "Rani Croager, Uptima Business Bootcamp, rani.croager@uptimabootcamp.com, (415)361-3296", 
       "rate": "", 
-      "invoice#": "2152", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2152 Bootcamp_BusinessInn_pt2"
    }, 
    "2103 MightyBell": {
-      "title": "", 
+      "invoice#": "2103", 
       "items": {
          "2014-08-04": {
             "Standard Janitorial Fee": {
@@ -10021,13 +9731,12 @@
             }
          }
       }, 
-      "bill_to": "Lauryn Isford, Mightybell, 695 High St, Stanford, CA 94301, 203-962-4318, lauryn@mightybell.com", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "2103", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2103 MightyBell"
    }, 
    "2130 ULI": {
-      "title": "Urban Land Institute - Explore Oakland: Uptown", 
+      "invoice#": "2130", 
       "items": {
          "2014-10-03": {
             "Atrium": {
@@ -10062,13 +9771,12 @@
             }
          }
       }, 
-      "bill_to": "Scott Zengel, Urban Land Institute, szengel@signaturedevelopment.com, (510) 251-9278", 
       "rate": "Full Time Weekday Rate", 
-      "invoice#": "2130", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2130 ULI"
    }, 
    "215004 Design Thinking": {
-      "title": "Design Thinking for a Just Economy ", 
+      "invoice#": "215004", 
       "items": {
          "2015-02-12": {
             "Atrium": {
@@ -10103,13 +9811,12 @@
             }
          }
       }, 
-      "bill_to": "Rani Croager, Uptima Business Bootcamp, rani.croager@uptimabootcamp.com, 415-361-3296", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "215004", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215004 Design Thinking"
    }, 
    "2164 Tides ": {
-      "title": "Kathryn A Snyder", 
+      "invoice#": "2164", 
       "items": {
          "2014-12-01": {
             "Standard Janitorial Fee": {
@@ -10144,13 +9851,12 @@
             }
          }
       }, 
-      "bill_to": "Kathryn Snyder, Tides, 415-608-5891, ksnyder@tides.org", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "2164", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2164 Tides "
    }, 
    "215009 CIIS ": {
-      "title": "Peace and Mindfulness in Schools", 
+      "invoice#": "215009", 
       "items": {
          "2015-02-22": {
             "Standard Janitorial Fee": {
@@ -10191,13 +9897,12 @@
             }
          }
       }, 
-      "bill_to": "Audra Miller, CIIS, amiller@ciis.edu, 415-575-6118/", 
       "rate": "Part Time Member Weekend Rate", 
-      "invoice#": "215009", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215009 CIIS "
    }, 
    "2181 BALANCE": {
-      "title": "Impact Crowdfunding Showcase: Stories & Best Practices", 
+      "invoice#": "2181", 
       "items": {
          "2014-11-12": {
             "Standard Janitorial Fee": {
@@ -10244,13 +9949,12 @@
             }
          }
       }, 
-      "bill_to": "Dave Room, BALANCE, daveroom@gmail.com, 510-285-7075", 
       "rate": "Full Time Member Weekday Rate  - WITH event sponsorship", 
-      "invoice#": "2181", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2181 BALANCE"
    }, 
    "715001 WPC": {
-      "title": "WPC Symposium By the Bay", 
+      "invoice#": "715001", 
       "items": {
          "2011-11-12": {
             "On Broadway": {
@@ -10291,13 +9995,12 @@
             }
          }
       }, 
-      "bill_to": "Jocelyn Wong, WPC Bay Area, wong.jocelyn.y@gmail.com, 858-349-0385", 
       "rate": "Full Time Member Weekend Rate - Multi Room Discount", 
-      "invoice#": "715001", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "715001 WPC"
    }, 
    "315001-2 Presidio Kunstler": {
-      "title": "Presidio Presents: James Howard Kunstler", 
+      "invoice#": "315001-2", 
       "items": {
          "2015-04-09": {
             "Set Up & Reset": {
@@ -10338,13 +10041,12 @@
             }
          }
       }, 
-      "bill_to": "Alyssa Stone, Presidio Graduate School, 925-352-1025, alyssa.stone@presidio.edu", 
       "rate": "Full Time Member Weekday Rate -- Multi-Room Discount", 
-      "invoice#": "315001-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "315001-2 Presidio Kunstler"
    }, 
    "2124 The Loop": {
-      "title": "Oakland Block Party", 
+      "invoice#": "2124", 
       "items": {
          "2014-11-01": {
             "On Broadway": {
@@ -10391,13 +10093,12 @@
             }
          }
       }, 
-      "bill_to": "Jasara Navarro, The Loop Exclusive, jasara.navarro@theloopexclusive.com, 925-297-9234", 
       "rate": "Part Time Member Weekend Rate - multi room discount", 
-      "invoice#": "2124", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2124 The Loop"
    }, 
    "2185 YEP": {
-      "title": "Civil Rights and The Law", 
+      "invoice#": "2185", 
       "items": {
          "2014-11-08": {
             "Atrium": {
@@ -10432,13 +10133,12 @@
             }
          }
       }, 
-      "bill_to": "Yonas Keleta, Young Eritrean Professionals, YEP, yonas.keleta@gmail.com, 510-452-7835", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "2185", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2185 YEP"
    }, 
    "2126 Amigos_Ambassador": {
-      "title": "Amigos de las Americas: Youth Ambassadors Program", 
+      "invoice#": "2126", 
       "items": {
          "2014-09-20": {
             "Downtown": {
@@ -10449,13 +10149,12 @@
             }
          }
       }, 
-      "bill_to": "Irene Malarkey, Amigos de las Americas: Youth Ambassadors Program, imalarkey@amigoslink.org", 
       "rate": "Full Time Member Weekend Rate", 
-      "invoice#": "2126", 
-      "type": "WORKSHOP"
+      "type": "WORKSHOP", 
+      "title": "2126 Amigos_Ambassador"
    }, 
    "315003 EB Church of R Science": {
-      "title": "Celebration of Life", 
+      "invoice#": "315003", 
       "items": {
          "2015-03-27": {
             "IHO Staffing": {
@@ -10484,13 +10183,12 @@
             }
          }
       }, 
-      "bill_to": "Elouise oliver, East Bay Church of Religious Science, mzdaysz1234@gmail.com, 510-978-6878", 
       "rate": "Full Time Member Weekend Rate - Founder Sponsorship", 
-      "invoice#": "315003", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "315003 EB Church of R Science"
    }, 
    "2041 Bryant Terry": {
-      "title": "Bryant Terry's Afro-Vegan National Book Launch Party 4/9/14", 
+      "invoice#": "2041", 
       "items": {
          "2014-04-09": {
             "On Broadway": {
@@ -10501,13 +10199,12 @@
             }
          }
       }, 
-      "bill_to": "Bryant Terry, Afro-Vegan, (510)206-8199, bryant@bryant-terry.com", 
       "rate": "", 
-      "invoice#": "2041", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2041 Bryant Terry"
    }, 
    "2053 Global Solutions Party": {
-      "title": "Global Solutions Party 5/1", 
+      "invoice#": "2053", 
       "items": {
          "2014-05-01": {
             "A/V Tech Support (with setup/breakdown time)": {
@@ -10524,23 +10221,21 @@
             }
          }
       }, 
-      "bill_to": "Kristin Hull, 387-3634, Kristin@oakland.impacthub.net", 
       "rate": "", 
-      "invoice#": "2053", 
-      "type": "BY"
+      "type": "BY", 
+      "title": "2053 Global Solutions Party"
    }, 
    "2007. Pac +": {
-      "title": "Pac + 10/30/13", 
+      "invoice#": "2007", 
       "items": {
          "2013-10-30": {}
       }, 
-      "bill_to": "Pac +, Johanna Silva Waki, 44 Montgomery Street,Suite 2310, Oakland, CA, 94104", 
       "rate": "", 
-      "invoice#": "2007", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2007. Pac +"
    }, 
    "2098 Port Of Oakland": {
-      "title": "Summer Interns Networking Event", 
+      "invoice#": "2098", 
       "items": {
          "2014-07-29": {
             "Standard Cleaning Fee": {
@@ -10563,13 +10258,12 @@
             }
          }
       }, 
-      "bill_to": "Luana Espana, Port of Oakland, lespana@portoakland.com, 510-517-2682", 
       "rate": "Part Time Weekday Rate", 
-      "invoice#": "2098", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2098 Port Of Oakland"
    }, 
    "2144 Feng Shui School_March": {
-      "title": "Golden Gate Feng Shui School", 
+      "invoice#": "2144", 
       "items": {
          "0001-255-255": {
             "Meridian Room": {
@@ -10580,13 +10274,12 @@
             }
          }
       }, 
-      "bill_to": "Manu Butterworth, Feng Shui School, 415-816-1202, manu@fengshuischool.com", 
       "rate": "Full Time Member Weekday Rate -- Multi-Day Discount", 
-      "invoice#": "2144", 
-      "type": "Workshop"
+      "type": "Workshop", 
+      "title": "2144 Feng Shui School_March"
    }, 
    "2138 Linda Curtis": {
-      "title": "Honorable Closure: 4 Steps to Skillful Endings", 
+      "invoice#": "2138", 
       "items": {
          "2014-09-24": {
             "OMI Gallery": {
@@ -10603,13 +10296,12 @@
             }
          }
       }, 
-      "bill_to": "Linda Curtis, On Purpose, LLC, linda@lindaacurtis.com", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "2138", 
-      "type": "WORKSHOP"
+      "type": "WORKSHOP", 
+      "title": "2138 Linda Curtis"
    }, 
    "2175 ACOE_meeting": {
-      "title": "ACOE Meeting", 
+      "invoice#": "2175", 
       "items": {
          "2014-11-22": {
             "Uptown": {
@@ -10632,13 +10324,12 @@
             }
          }
       }, 
-      "bill_to": "Aida Geromino, Alameda County Office of Education, ageronimo@acoe.org, 510-670-4204", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "2175", 
-      "type": "Private Meeting"
+      "type": "Private Meeting", 
+      "title": "2175 ACOE_meeting"
    }, 
    "2138 Linda Curtis_Rev1": {
-      "title": "Honorable Closure: 4 Steps to Skillful Endings", 
+      "invoice#": "2138", 
       "items": {
          "2014-09-24": {
             "OMI Gallery": {
@@ -10655,23 +10346,21 @@
             }
          }
       }, 
-      "bill_to": "Linda Curtis, On Purpose, LLC, linda@lindaacurtis.com", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "2138", 
-      "type": "WORKSHOP"
+      "type": "WORKSHOP", 
+      "title": "2138 Linda Curtis_Rev1"
    }, 
    "2001. BALLE": {
-      "title": "Reading and Book Signing With Judy Wicks - Good Morning, Beautiful Business", 
+      "invoice#": "2001", 
       "items": {
          "2013-10-07": {}
       }, 
-      "bill_to": "BALLE, Pamela Chaloult, 55 Harrison St. Suite 300, Oakland, CA 94607", 
       "rate": "", 
-      "invoice#": "2001", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2001. BALLE"
    }, 
    "2087 Summer Wine Event": {
-      "title": "Summer Wine and Chocolate Event", 
+      "invoice#": "2087", 
       "items": {
          "2014-07-16": {
             "On Broadway": {
@@ -10712,13 +10401,12 @@
             }
          }
       }, 
-      "bill_to": "Elie Ernest, VIN12, (415)756-6542, elie@vin12.com", 
       "rate": "", 
-      "invoice#": "2087", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2087 Summer Wine Event"
    }, 
    "2182 Diversity Challenge": {
-      "title": "Diversity challenge mixer", 
+      "invoice#": "2182", 
       "items": {
          "2014-12-10": {
             "On Broadway": {
@@ -10759,13 +10447,12 @@
             }
          }
       }, 
-      "bill_to": "Darryl Richardson, 100 Black Men BA/ Cut 50, drichardson@itt-tech.edu, 510-207-0217", 
       "rate": "Non Member Weekday Rate -- Multi-Room Discount", 
-      "invoice#": "2182", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2182 Diversity Challenge"
    }, 
    "2123 Peers_Cancellation Fee": {
-      "title": "New Urban Eating Cookbook Launch Party", 
+      "invoice#": "2123", 
       "items": {
          "2014-10-11": {
             "Cancellation Fee": {
@@ -10776,13 +10463,12 @@
             }
          }
       }, 
-      "bill_to": "Cindy Phan, Peers, 901 Mission St, San Francisco, CA 94103, (916) 995-8395, cindy@peers.org", 
       "rate": "", 
-      "invoice#": "2123", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2123 Peers_Cancellation Fee"
    }, 
    "2142 Feng Shui School_Jan": {
-      "title": "Golden Gate Feng Shui School", 
+      "invoice#": "2142", 
       "items": {
          "0001-255-255": {
             "Meridian Room": {
@@ -10793,13 +10479,12 @@
             }
          }
       }, 
-      "bill_to": "Manu Butterworth, Feng Shui School, 415-816-1202, manu@fengshuischool.com", 
       "rate": "Full Time Member Weekday Rate -- Multi-Day Discount", 
-      "invoice#": "2142", 
-      "type": "Workshop"
+      "type": "Workshop", 
+      "title": "2142 Feng Shui School_Jan"
    }, 
    "Invoice Template": {
-      "title": "", 
+      "invoice#": "", 
       "items": {
          "": {
             "A/V Sound Technician": {
@@ -10810,13 +10495,12 @@
             }
          }
       }, 
-      "bill_to": "", 
       "rate": "Part Time Member Weekday Rate -- Multi-Room Discount", 
-      "invoice#": "", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "Invoice Template"
    }, 
    "515001 HipHopForChange": {
-      "title": "Independent Women in Hip Hop Fest", 
+      "invoice#": "515001", 
       "items": {
          "2015-07-04": {
             "IHO Staffing": {
@@ -10851,13 +10535,12 @@
             }
          }
       }, 
-      "bill_to": "Joseph Penner, Hip Hop For Change, jp@hiphopforchange.org, 541-261-0268", 
       "rate": "Full Time Member Weekend Rate", 
-      "invoice#": "515001", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "515001 HipHopForChange"
    }, 
    "415011 Ten Directions": {
-      "title": "Sameness & Difference Series", 
+      "invoice#": "415011", 
       "items": {
          "2015-04-24": {
             "Atrium": {
@@ -10892,13 +10575,12 @@
             }
          }
       }, 
-      "bill_to": "Rebecca Colwell, Ten Directions, rebecca@tendirections.com, 902-830-9799", 
       "rate": "None Member Weekend Rate - Founder Discount", 
-      "invoice#": "415011", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415011 Ten Directions"
    }, 
    "115010 Stephen Busby": {
-      "title": "Stephen Busby Workshop", 
+      "invoice#": "115010", 
       "items": {
          "2015-05-11": {
             "OMI Gallery": {
@@ -10915,13 +10597,12 @@
             }
          }
       }, 
-      "bill_to": "James Redenbaugh, Stephen Busby, james@theplacebetween.us, 215-280-4384", 
       "rate": "Full Time  Member Weekday Rate -- 2 Hours Complementary", 
-      "invoice#": "115010", 
-      "type": "Workshop"
+      "type": "Workshop", 
+      "title": "115010 Stephen Busby"
    }, 
    "2036 Catchafire": {
-      "title": "Catchafire Oakland Launch Event 4/7", 
+      "invoice#": "2036", 
       "items": {
          "2014-04-07": {
             "On Broadway": {
@@ -10932,13 +10613,12 @@
             }
          }
       }, 
-      "bill_to": "Adrienne Schmoeker, Catchafire, (646)205-4221, adrienne@catchafire.org", 
       "rate": "", 
-      "invoice#": "2036", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2036 Catchafire"
    }, 
    "2172_Rev1 Lajones & Associates": {
-      "title": "BEO&FBL Holiday Mixer and Awards Celebration", 
+      "invoice#": "2172", 
       "items": {
          "2014-12-16": {
             "On Broadway": {
@@ -10961,13 +10641,12 @@
             }
          }
       }, 
-      "bill_to": "Laniece jones, Lajones & Associates, 510-568-5589, laniecejones@gmail.com", 
       "rate": "Part time Member Weekday Rate", 
-      "invoice#": "2172", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2172_Rev1 Lajones & Associates"
    }, 
    "2047 BACC I": {
-      "title": "Bay Area Capital Connections (BACC) Forum I: Design Thinking for an Inclusive Economy", 
+      "invoice#": "2047", 
       "items": {
          "2014-03-26": {
             "Standard Cleaning Fee": {
@@ -11002,13 +10681,12 @@
             }
          }
       }, 
-      "bill_to": "Rani Croager, Uptima Business Bootcamp, rani.croager@uptimabootcamp.com, (415)361-3296", 
       "rate": "", 
-      "invoice#": "2047", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2047 BACC I"
    }, 
    "115007-2 Inn Oakland Town Hall": {
-      "title": "Innovate Oakland Town Hall", 
+      "invoice#": "115007-2", 
       "items": {
          "2015-02-04": {
             "Cancellation Fee": {
@@ -11019,13 +10697,12 @@
             }
          }
       }, 
-      "bill_to": "Rani Croager, Uptima Business Bootcamp, rani.croager@uptimabootcamp.com, 415-361-3296", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "115007-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "115007-2 Inn Oakland Town Hall"
    }, 
    "2045 LPFI": {
-      "title": "SMASH Bash 6/14", 
+      "invoice#": "2045", 
       "items": {
          "2014-06-14": {
             "Large Party Cleaning Fee": {
@@ -11054,13 +10731,12 @@
             }
          }
       }, 
-      "bill_to": "Bianca Escalante, Level Playing Field Institute, (415)425-4605, bianca@lpfi.org", 
       "rate": "", 
-      "invoice#": "2045", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2045 LPFI"
    }, 
    "2048 BACC II": {
-      "title": "Bay Area Capital Connections (BACC) Forum II: Creating Value Through Inclusion", 
+      "invoice#": "2048", 
       "items": {
          "2014-04-30": {
             "Atrium": {
@@ -11095,13 +10771,12 @@
             }
          }
       }, 
-      "bill_to": "Rani Croager, Uptima Business Bootcamp, rani.croager@uptimabootcamp.com, (415)361-3296", 
       "rate": "", 
-      "invoice#": "2048", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2048 BACC II"
    }, 
    "415002-2 Tech808": {
-      "title": "Tech808", 
+      "invoice#": "415002-2", 
       "items": {
          "2015-08-15": {
             "Set Up & Reset": {
@@ -11142,13 +10817,12 @@
             }
          }
       }, 
-      "bill_to": "James Lopez, The Phat Startup, james@thephatstartup.com, 347-635-4542", 
       "rate": "Non Member Weekend Rate - Full Day Discount", 
-      "invoice#": "415002-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "415002-2 Tech808"
    }, 
    "2064 SlowMoney Update": {
-      "title": "Slow Money May 2014: Entrepreneur Spotlights pre Farm , Fest showcase", 
+      "invoice#": "2064", 
       "items": {
          "2014-05-28": {
             "Atrium": {
@@ -11171,13 +10845,12 @@
             }
          }
       }, 
-      "bill_to": "Marco Vangelisti, Slow Money, vangelisti@yahoo.com, (510)-219-1624", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2064", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2064 SlowMoney Update"
    }, 
    "815004 Raz vocal productions ": {
-      "title": "C.V.T. Workshop with Cathrine Sadolin ", 
+      "invoice#": "815004", 
       "items": {
          "2015-09-27": {
             "IHO Staffing": {
@@ -11232,13 +10905,12 @@
             }
          }
       }, 
-      "bill_to": "Raz Kennedy, Raz Vocal Productions, kallieskidmusic@comcast.net, 415-200-9097", 
       "rate": "Part Time Member Weekend Rate - Multi Day Discount", 
-      "invoice#": "815004", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "815004 Raz vocal productions "
    }, 
    "2091 Family Violence Law Center": {
-      "title": "Family Violence Law Center Annual Fundraising Event ", 
+      "invoice#": "2091", 
       "items": {
          "2014-09-12": {
             "Atrium": {
@@ -11267,13 +10939,12 @@
             }
          }
       }, 
-      "bill_to": "Vania Deonizio, Family Violence Law Center, vdeonizio@fvlc.org, (510)208-0220", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "2091", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2091 Family Violence Law Center"
    }, 
    "2105 Tradeswomen": {
-      "title": "Tradeswomen Fall Gala", 
+      "invoice#": "2105", 
       "items": {
          "2014-09-19": {
             "On Broadway": {
@@ -11326,13 +10997,12 @@
             }
          }
       }, 
-      "bill_to": "Meg Vasey, Tradeswomen Inc., 1433 Webster, Oakland, CA 94705, 510-207-0603, mdvasey@gmail.com", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "2105", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2105 Tradeswomen"
    }, 
    "215011-2 Kaiser HNS Grad": {
-      "title": "Kaiser Oakland HNS 2015 Graduation", 
+      "invoice#": "215011-2", 
       "items": {
          "2015-06-13": {
             "A/V Technician": {
@@ -11343,13 +11013,12 @@
             }
          }
       }, 
-      "bill_to": "Esther Arjona, Kaiser Permanente, esther.hn.arjona@kp.org, 51-0752-1373", 
       "rate": "", 
-      "invoice#": "215011-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "215011-2 Kaiser HNS Grad"
    }, 
    "2117 SELC": {
-      "title": "SELC Fall Celebration and Showcase", 
+      "invoice#": "2117", 
       "items": {
          "2014-11-18": {
             "Standard Janitorial Fee": {
@@ -11390,13 +11059,12 @@
             }
          }
       }, 
-      "bill_to": "Ricardo Nu\u00f1ez, Sustainable Economies Law Center, ricardo@theselc.org", 
       "rate": "Full-time Member Rate", 
-      "invoice#": "2117", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2117 SELC"
    }, 
    "2147 Beyond the Culture_Nov": {
-      "title": "Beyond the Culture of Separation", 
+      "invoice#": "2147", 
       "items": {
          "2014-11-03": {
             "Meridian Room": {
@@ -11423,13 +11091,12 @@
             }
          }
       }, 
-      "bill_to": "gregory mengel, Pathways to Justice, gamengel@yahoo.com, (415) 515-7702", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2147", 
-      "type": "BY"
+      "type": "BY", 
+      "title": "2147 Beyond the Culture_Nov"
    }, 
    "2154 Honeyman": {
-      "title": "B Corp Book Launch", 
+      "invoice#": "2154", 
       "items": {
          "2014-11-10": {
             "Standard Janitorial Fee": {
@@ -11452,13 +11119,12 @@
             }
          }
       }, 
-      "bill_to": "Adrea Walker, Beneficial State Bank, awalker@beneficialstate.com, 510-550-8411", 
       "rate": "Non Member Weekday Rate - Partner discount", 
-      "invoice#": "2154", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "2154 Honeyman"
    }, 
    "115014 Debby Irving": {
-      "title": "Debby Irving: Waking Up White", 
+      "invoice#": "115014", 
       "items": {
          "2015-02-12": {
             "Site Manager": {
@@ -11481,13 +11147,12 @@
             }
          }
       }, 
-      "bill_to": "Michelle Chalmers, Debby Irving, michelle@debbyirving.com, 781.591.9435", 
       "rate": "Full Member Weekday Rate - 50/50 Rev Share", 
-      "invoice#": "115014", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "115014 Debby Irving"
    }, 
    "815005 Oak Food Policy Council": {
-      "title": "\"Decolonize Your Diet\" Book Launch with Oakland Food Policy Council", 
+      "invoice#": "815005", 
       "items": {
          "2015-11-01": {
             "IHO Staffing": {
@@ -11516,13 +11181,12 @@
             }
          }
       }, 
-      "bill_to": "Esperanza Pallana, Oakland Food Policy Council, epallana@oaklandfood.org", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "815005", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "815005 Oak Food Policy Council"
    }, 
    "715013 Dinner Lab": {
-      "title": "Dinner Lab", 
+      "invoice#": "715013", 
       "items": {
          "2015-08-08": {
             "IHO Staffing ": {
@@ -11551,13 +11215,12 @@
             }
          }
       }, 
-      "bill_to": "Leejay Victor, Dinner Lab, lvictor@dinnerlab.com", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "715013", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "715013 Dinner Lab"
    }, 
    "2078 ThirdThursday": {
-      "title": "THIRD THURSDAYS: Summer Kickoff Party!!", 
+      "invoice#": "2078", 
       "items": {
          "2014-06-19": {
             "Standard Cleaning Fee": {
@@ -11580,13 +11243,12 @@
             }
          }
       }, 
-      "bill_to": "Michael Orange, Top Ten Social, http://www.toptensocial.com, 415-342-0032", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "2078", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2078 ThirdThursday"
    }, 
    "315011-2 Cleantech Open": {
-      "title": "Cleantech Open Business Briefing", 
+      "invoice#": "315011-2", 
       "items": {
          "2015-04-21": {
             "IHO Staffing": {
@@ -11615,10 +11277,9 @@
             }
          }
       }, 
-      "bill_to": "Bill Golove, Cleantech Open, wgolove@cleantechopen.org, 415-728-8246", 
       "rate": "Non Member Weekday Rate - Sponsorhsip", 
-      "invoice#": "315011-2", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "315011-2 Cleantech Open"
    }, 
    "2034 Sungevity Org Membership": {
       "title": "", 
@@ -11638,17 +11299,16 @@
       "type": ""
    }, 
    "2011. Ebony Brown": {
-      "title": "Affordable Health Care Act- Teach In", 
+      "invoice#": "2011", 
       "items": {
          "2013-12-22": {}
       }, 
-      "bill_to": "Ebony Brown, 386 60th Street, Oakland, CA 94618", 
       "rate": "", 
-      "invoice#": "2011", 
-      "type": "Workshop"
+      "type": "Workshop", 
+      "title": "2011. Ebony Brown"
    }, 
    "2099 World Trust_PrePostevent": {
-      "title": "World Trust Annual Gala", 
+      "invoice#": "2099", 
       "items": {
          "2014-10-02": {
             "Post-Event ": {
@@ -11665,13 +11325,12 @@
             }
          }
       }, 
-      "bill_to": "Rhummanee Hang, World Trust Educational Services, (510)632-5156, rhummanee@world-trust.org", 
       "rate": "", 
-      "invoice#": "2099", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2099 World Trust_PrePostevent"
    }, 
    "2115 John Chiang": {
-      "title": "Fundraiser in support of Controller John Chiang's Campaign, for Treasurer", 
+      "invoice#": "2115", 
       "items": {
          "2014-08-27": {
             "OMI Gallery": {
@@ -11694,13 +11353,12 @@
             }
          }
       }, 
-      "bill_to": "Lexy Solomon, John Chiang for Treasurer 2014, lexy@philhour.com", 
       "rate": "Non Member Weekday Rate - Sharon Cornu Credit Applied", 
-      "invoice#": "2115", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2115 John Chiang"
    }, 
    "2193 Rosenberg Foundation": {
-      "title": "Rosenberg Foundation Event", 
+      "invoice#": "2193", 
       "items": {
          "2014-01-14": {
             "Standard Cleaning Fee": {
@@ -11723,13 +11381,12 @@
             }
          }
       }, 
-      "bill_to": "Linda Moll, Grants and Operations Manager, Rosenberg Foundation, 131 Steuart Street, Suite 650, San Francisco, CA 94105, Phone:\u00a0415-644-9777, Fax:\u00a0415-357-5016", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "2193", 
-      "type": "AT "
+      "type": "AT ", 
+      "title": "2193 Rosenberg Foundation"
    }, 
    "2059 Commonwealthclub": {
-      "title": "The Algorithm of Love", 
+      "invoice#": "2059", 
       "items": {
          "2014-09-17": {
             "Atrium": {
@@ -11764,13 +11421,12 @@
             }
          }
       }, 
-      "bill_to": "Caroline Moriarity Sacks, The Commonwealth Club's INFORUM, cms@commonwealthclub.org", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "2059", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2059 Commonwealthclub"
    }, 
    "2160 BK Publishers_LockedDown": {
-      "title": "Book Launch Party", 
+      "invoice#": "2160", 
       "items": {
          "2014-11-04": {
             "Atrium": {
@@ -11805,13 +11461,12 @@
             }
          }
       }, 
-      "bill_to": "Katie Sheehan, Berrett-Koehler Publishers, 415-288-0260, ksheehan@bkpub.com", 
       "rate": "Non Member Weekday Rate", 
-      "invoice#": "2160", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2160 BK Publishers_LockedDown"
    }, 
    "815001 SELC Fall Celebration": {
-      "title": "SELC Fall Celebration", 
+      "invoice#": "815001", 
       "items": {
          "2015-11-19": {
             "IHO Staffing": {
@@ -11840,13 +11495,12 @@
             }
          }
       }, 
-      "bill_to": "Eunice Kwon, Sustainable Economies Law Center, eunice@theselc.org, 510-684-2742", 
       "rate": "Full Time Member Weekday Rate", 
-      "invoice#": "815001", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "815001 SELC Fall Celebration"
    }, 
    "315005-2 LNA_MidLifeCelebration": {
-      "title": "Late Nite Art: Mid-Life Celebration", 
+      "invoice#": "315005-2", 
       "items": {
          "2015-04-04": {
             "Site Manager/Staffing": {
@@ -11881,13 +11535,12 @@
             }
          }
       }, 
-      "bill_to": "Adam Rosendahl, 707-477-9063, adamrosendahl@gmail.com", 
       "rate": "Full Time Member Weekend Rate - Partnership Discount", 
-      "invoice#": "315005-2", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "315005-2 LNA_MidLifeCelebration"
    }, 
    "2182 Diversity Challenge_Rev1": {
-      "title": "Diversity challenge mixer", 
+      "invoice#": "2182", 
       "items": {
          "2014-12-10": {
             "Early Set Up": {
@@ -11934,13 +11587,12 @@
             }
          }
       }, 
-      "bill_to": "Darryl Richardson, 100 Black Men BA/ Cut 50, drichardson@itt-tech.edu, 510-207-0217", 
       "rate": "Non Member Weekday Rate -- Multi-Room Discount", 
-      "invoice#": "2182", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2182 Diversity Challenge_Rev1"
    }, 
    "2031 Planting Justice Decoloniz": {
-      "title": "Decolonizing Permaculture 4/11/14", 
+      "invoice#": "2031", 
       "items": {
          "2014-04-11": {
             "Venue Rental ": {
@@ -11951,13 +11603,12 @@
             }
          }
       }, 
-      "bill_to": "Wiley Rogers, Planting Justice, 510-517-3284, wileyrogers@gmail.com", 
       "rate": "", 
-      "invoice#": "2031", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2031 Planting Justice Decoloniz"
    }, 
    "315010 Defy Ventures_Admisssion": {
-      "title": "Defy Ventures Admissions Meeting", 
+      "invoice#": "315010", 
       "items": {
          "2015-03-25": {
             "IHO Staffing": {
@@ -11986,13 +11637,12 @@
             }
          }
       }, 
-      "bill_to": "Delisha Grant, Defy Ventures, delisha@defyventures.org, 347-218-3381", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "315010", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "315010 Defy Ventures_Admisssion"
    }, 
    "2187 AlterConf": {
-      "title": "AlterConf", 
+      "invoice#": "2187", 
       "items": {
          "2015-01-31": {
             "Standard Janitorial Fee": {
@@ -12033,13 +11683,12 @@
             }
          }
       }, 
-      "bill_to": "Ashe Dryden, AlterConf, 414-510-7928, alterconf@gmail.com", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "2187", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2187 AlterConf"
    }, 
    "2085 P2R Graduation": {
-      "title": "P2R graduation", 
+      "invoice#": "2085", 
       "items": {
          "2014-06-21": {
             "Standard Cleaning Fee": {
@@ -12074,13 +11723,12 @@
             }
          }
       }, 
-      "bill_to": "Pandora Thomas, Pathways2Resilience, earthseed72@gmail.com, 510-289-1508", 
       "rate": "Full Time Member Weekend Rate", 
-      "invoice#": "2085", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2085 P2R Graduation"
    }, 
    "2155 Bay Localize": {
-      "title": "Reel Rhythm of Resilience", 
+      "invoice#": "2155", 
       "items": {
          "2014-11-14": {
             "Standard Janitorial Fee": {
@@ -12109,13 +11757,12 @@
             }
          }
       }, 
-      "bill_to": "Corrine Van Hook, Bay Localize, 510-566-1055, corrine@baylocalize.org", 
       "rate": "Non Member Weekend Rate", 
-      "invoice#": "2155", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2155 Bay Localize"
    }, 
    "2100 Brown Sugar Kitchen": {
-      "title": "Brown Sugar Kitchen cookbook release party, PRIVATE EVENT", 
+      "invoice#": "2100", 
       "items": {
          "2014-09-08": {
             "Atrium": {
@@ -12150,13 +11797,12 @@
             }
          }
       }, 
-      "bill_to": "Tanya Holland, Brown Sugar Kitchen, 510-834-8341, th@brownsugarkitchen.com", 
       "rate": "Part Time Member Weekday Rate", 
-      "invoice#": "2100", 
-      "type": "AT"
+      "type": "AT", 
+      "title": "2100 Brown Sugar Kitchen"
    }, 
    "215002 Equitable Origin": {
-      "title": "Oil & Water: Film Screening and Panel Discussion", 
+      "invoice#": "215002", 
       "items": {
          "2015-02-26": {
             "IHO Staffing": {
@@ -12191,9 +11837,8 @@
             }
          }
       }, 
-      "bill_to": "Josh Garrett, Equitable Origin, 917-755-2417, jgarrett@equitableorigin.com", 
       "rate": "Non Member Weekday Rate - Founders Discount", 
-      "invoice#": "215002", 
-      "type": "WITH"
+      "type": "WITH", 
+      "title": "215002 Equitable Origin"
    }
 }
