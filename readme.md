@@ -3,4 +3,5 @@ This repo is for Mikayla's project to determine a better room rental pricing sch
 
 In order to do this we look at actualy income from room rental invoices over the last year, which give us a sense of what the rooms are worth.
 
-The orignal invoices are in the form of Excel (.xlsx) sheets combined into two workbooks.
+The orignal invoices are in the form of Excel (.xlsx) sheets combined into two workbooks and are not included in this repo.
+

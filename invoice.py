@@ -13,6 +13,7 @@ import json
 import time
 import datetime
 import os.path
+from collections import OrderedDict
 from tqdm import *
 
 room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingletown', 'omi':'gallery|omi',
@@ -140,7 +141,6 @@ def parse_sheet(ws, annonymize=False):
 
 def xlsx2json(file_names, annonymize=True):
     worksheets = []
-    invoices = {}
 
     start_time = time.time()
     for fname in file_names:
@@ -150,6 +150,9 @@ def xlsx2json(file_names, annonymize=True):
     elapsed_string = str(datetime.timedelta(seconds=time.time()-start_time))
     print('workbooks loaded in %s' % elapsed_string)
 
+    sheet_names = reversed([ws.title for ws in worksheets])
+
+    invoices = OrderedDict.fromkeys(sheet_names)
 
     start_time = time.time()
     for ws in tqdm(worksheets, total=len(worksheets)):
@@ -195,8 +198,10 @@ else:
 # Transform json data into a flat table with boolean indicator columns
 if not os.path.isfile('invoice_items.csv'):
     df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna(how='all')
-    fields = ['title','rate','date','description','amount','hours','subtotal','discount']
+    fields = ['title','date','description','amount','hours','subtotal','discount','rate']
     df = df[fields]
+    df2 = df.set_index(['title','date'])
+    df2.to_excel('invoices_flat.xlsx')
 
     # Assoicate items with rate, room, half/full-day, and discount-type
     for rate in rate_classes:
