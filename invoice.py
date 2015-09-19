@@ -103,6 +103,11 @@ def parse_sheet(ws, annonymize=False):
         else:
             last_row = len(df)
 
+
+        # # we might get data by column instead of row.
+        # sheet_item_fields = df.loc[table_header_row]
+
+
         if df[5][table_header_row] and re.search('discount', df[5][table_header_row], re.IGNORECASE):
             discount_col = True
         else:
@@ -136,8 +141,6 @@ def parse_sheet(ws, annonymize=False):
 
 
 ## *******************************
-
-
 
 def xlsx2json(file_names, annonymize=True):
     worksheets = []
@@ -221,13 +224,20 @@ no_charge = no_charge_amount | no_charge_subtot
 df.loc[no_charge,['amount','subtotal']] = 0
 df.loc[no_charge, 'discount'] = 1
 
+# We'll need 'hours' field to be numeric too.
+#  convert any 'flat fee' indicators to 1 so that the amount identifies with subtotal.
+df['hours'][df['hours'].dropna().str.contains('flat',case=False, na=False).index] = 1
+
 # convert all 'amount' and 'subtotal' values to floats (anything non-numeric becomes NaN)
-df[['amount','subtotal']] = df[['amount','subtotal']].convert_objects(convert_numeric=True)
-# keep rows at least one of 'amount' and 'subtotal' are numeric
+df[['amount','subtotal','hours']] = df[['amount','subtotal','hours']].convert_objects(convert_numeric=True)
+
+# drop rows where both 'amount' and 'subtotal' are non-numeric
 df = df[~df[['amount','subtotal']].isnull().all(axis=1)]
 
+# fill in missing subtotal values.  We need these values for determining income.
+
 # output a multi-index excel file for inspection
-df.set_index(['title','date']).to_excel('invoice_items_flat_cleaned.xlsx')
+df.set_index(['title','date']).to_excel('invoice_items_flat_cleaned.xls')
 
 
 
