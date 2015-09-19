@@ -4,11 +4,13 @@ This repo is for Mikayla's project to determine a better room rental pricing sch
 In order to do this we look at income from all past room rental invoices (about 1.5 years worth), which give us a sense of what the rooms are worth.
 
 ## Data Preparation/cleaning
-The orignal invoices are in the form of Excel (.xlsx) sheets combined into two workbooks and are not included in this repo.
+The orignal invoices are in the form of Excel (.xlsx) sheets combined into two workbooks, that are not included in this repo because they contain peoples' names and contact info.
 The majority of the work for this project is in parsing these inconsistently formatted sheets.  Over the last few years, IHO staff (i.e. Mikayla) have modified the invoice template, introducing new fields and moving fields to different columns, etc.  This makes automated parsing not so straightforward.
 
 * Each invoice spreadsheet contains a sub-table of items that fees were charged for, including but not limited to: room, setup/clean-up, IHO staff support, audio technician, etc.  Each of these items has an associated fee: either a flat fee, or a rate and number of hours, and subtotal (rate * hours), and sometimes a discount field given as a percentage.
   - sometimes the amount field contains a string ("comped", "waved", "included") indicating no fee.  In that case we set the amount to the numeric value 0, and set discount to 1 for that item.
+
+* The first step in assembling the invoice data is to put all relevant invoice info into a json dictionary, with sheet-names as keys. this is because accessing Excel files with Python is slow and it's best to parse them as few times as possible.  This dictionary is saved as a json file and without sensitive name and contact info.
 
 ## Analysis
 Rooms (rentable spaces) are categorized as follows:
