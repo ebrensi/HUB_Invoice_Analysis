@@ -55,10 +55,10 @@ def parse_sheet(ws, annonymize=False):
     if any(df):
         # get the invoice number from the sheet content, if it's there
         # otherwise, try to exctract it from the sheet name
-        patt = re.compile('invoice ?#(.*)', re.IGNORECASE)
+        patt = re.compile('invoice #?(.*)', re.IGNORECASE)
         tags = df.dropna(how='all', axis=[0,1]).applymap(find(patt)).dropna(how='all', axis=[0,1])
         tags_list = flatten(tags.values.tolist())
-        if tags_list:
+        if tags_list and bool(tags_list[0]):
             info['invoice#'] = tags_list[0].group(1).strip()
         else:
             match = re.search('(\d+-?\d*) ', sname)
@@ -151,7 +151,6 @@ def xlsx2json(file_names, annonymize=True):
     print('workbooks loaded in %s' % elapsed_string)
 
     sheet_names = reversed([ws.title for ws in worksheets])
-
     invoices = OrderedDict.fromkeys(sheet_names)
 
     start_time = time.time()
@@ -198,6 +197,11 @@ else:
 # Transform json data into a flat table with boolean indicator columns
 if not os.path.isfile('invoice_items.csv'):
     df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna(how='all')
+
+    # sort entries by invoice number
+    sort_by_invoice_num = df['title'].str.extract('(\d+)').dropna().astype(int).order().index
+    df = df.loc[sort_by_invoice_num]
+
     fields = ['title','date','description','amount','hours','subtotal','discount','rate']
     df = df[fields]
     df2 = df.set_index(['title','date'])
