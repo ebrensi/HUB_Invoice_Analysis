@@ -226,7 +226,7 @@ df.loc[no_charge, 'discount'] = 1
 
 # We'll need 'hours' field to be numeric too.
 #  convert any 'flat fee' indicators to 1 so that the amount identifies with subtotal.
-df['hours'][df['hours'].dropna().str.contains('flat',case=False, na=False).index] = 1
+df['hours'].loc[df['hours'].str.contains('flat',case=False, na=False)] = 1
 
 # convert all 'amount' and 'subtotal' values to floats (anything non-numeric becomes NaN)
 df[['amount','subtotal','hours']] = df[['amount','subtotal','hours']].convert_objects(convert_numeric=True)
