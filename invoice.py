@@ -194,8 +194,8 @@ else:
     with open('invoices.json','r') as in_file:
         invoices = json.load(in_file)
 
-# Transform json data into a flat table with boolean indicator columns
-if not os.path.isfile('invoice_items.csv'):
+# Transform json data into a flat table
+if not os.path.isfile('invoice_items_flat.csv'):
     df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna(how='all')
 
     # sort entries by invoice number
@@ -204,27 +204,43 @@ if not os.path.isfile('invoice_items.csv'):
 
     fields = ['title','date','description','amount','hours','subtotal','discount','rate']
     df = df[fields]
-    df2 = df.set_index(['title','date'])
-    df2.to_excel('invoices_flat.xlsx')
 
-    # Assoicate items with rate, room, half/full-day, and discount-type
-    for rate in rate_classes:
-        df['rate_'+rate] =  df['rate'].str.contains(rate_classes[rate], case=False, na=False)
+    # output a multi-index excel file for inspection
+    df.set_index(['title','date']).to_excel('invoice_items_flat.xlsx')
 
-    for room in room_classes:
-        df[room] =  df['description'].str.contains(room_classes[room], case=False, na=False)
-
-
-    for discount in discount_classes:
-        df[discount] =  df['rate'].str.contains(discount_classes[discount], case=False, na=False)
-
-    df.to_csv('invoice_items.csv',index=False,  encoding='utf-8')
+    df.to_csv('invoice_items_flat.csv',index=False,  encoding='utf-8')
 else:
-    df = pd.read_csv('invoice_items.csv')
+    df = pd.read_csv('invoice_items_flat.csv')
 
 
-rooms = room_classes.keys()
-grouped = df.groupby(['title','date'])
+## clean up numeric columns
+# first we take care of implicit full-discount (amounts labeled 'waved', 'comped', 'included')
+no_charge_amount = df['amount'].str.contains("waved|comped|included", case=False, na=False)
+no_charge_subtot = df['subtotal'].str.contains("waved|comped|included", case=False, na=False)
+no_charge = no_charge_amount | no_charge_subtot
+df.loc[no_charge,['amount','subtotal']] = '0'
+df.loc[no_charge, 'discount'] = '1'
+
+# output a multi-index excel file for inspection
+df.set_index(['title','date']).to_excel('invoice_items_flat2.xlsx')
+
+
+
+# # Assoicate items with rate, room, half/full-day, and discount-type
+# for rate in rate_classes:
+#     df['rate_'+rate] =  df['rate'].str.contains(rate_classes[rate], case=False, na=False)
+
+# for room in room_classes:
+#     df[room] =  df['description'].str.contains(room_classes[room], case=False, na=False)
+
+
+# for discount in discount_classes:
+#     df[discount] =  df['rate'].str.contains(discount_classes[discount], case=False, na=False)
+
+
+
+# rooms = room_classes.keys()
+# grouped = df.groupby(['title','date'])
 
 
 # Non Member weekend - average $
