@@ -14,7 +14,7 @@ import time
 import datetime
 import os.path
 from collections import OrderedDict
-from tqdm import *
+#from tqdm import *
 
 room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingletown', 'omi':'gallery|omi',
                  'meditation':'meditation', 'kitchen':'kitchen', 'meridian':'meridian', 'east_oak':'east',
@@ -105,8 +105,8 @@ def parse_sheet(ws, annonymize=False):
 
 
         # # we might get data by column instead of row.
-        # sheet_item_fields = df.loc[table_header_row]
-
+        subsheet = df.loc[table_header_row:last_row].dropna(how='all', axis = [0,1])
+        print(subsheet)
 
         if df[5][table_header_row] and re.search('discount', df[5][table_header_row], re.IGNORECASE):
             discount_col = True
@@ -157,8 +157,7 @@ def xlsx2json(file_names, annonymize=True):
     invoices = OrderedDict.fromkeys(sheet_names)
 
     start_time = time.time()
-    for ws in tqdm(worksheets, total=len(worksheets)):
-
+    for ws in worksheets:
         # select one invoice sheet from the workbook
         invoices[ws.title] = parse_sheet(ws, annonymize)
 
@@ -226,7 +225,7 @@ df.loc[no_charge, 'discount'] = 1
 
 # We'll need 'hours' field to be numeric too.
 #  convert any 'flat fee' indicators to 1 so that the amount identifies with subtotal.
-df['hours'].loc[df['hours'].str.contains('flat',case=False, na=False)] = 1
+df['hours'].loc[df['hours'].str.contains('flat', case=False, na=False)] = 1
 
 # convert all 'amount' and 'subtotal' values to floats (anything non-numeric becomes NaN)
 df[['amount','subtotal','hours']] = df[['amount','subtotal','hours']].convert_objects(convert_numeric=True)
