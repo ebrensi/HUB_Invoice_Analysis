@@ -105,8 +105,12 @@ def parse_sheet(ws, annonymize=False):
 
 
         # # we might get data by column instead of row.
-        subsheet = df.loc[table_header_row:last_row].dropna(how='all', axis = [0,1])
-        print(subsheet)
+        header_row = df.iloc[table_header_row].tolist()
+        last_col = next(i for i, j in reversed(list(enumerate(d))) if j)
+        header = header_row[0:last_col]
+        print(header)
+
+        subsheet = df.iloc[table_header_row:last_row].dropna(how='all', axis = [0,1])
 
         if df[5][table_header_row] and re.search('discount', df[5][table_header_row], re.IGNORECASE):
             discount_col = True
