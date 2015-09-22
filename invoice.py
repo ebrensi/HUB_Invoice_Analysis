@@ -45,15 +45,14 @@ file_names = ['IHO_OnGoing_InvoiceTemplate.xlsx']#,
 #                ]
 
 
-def parse_sheet(ws, annonymize=False):
+def parse_sheet(ws):
     info = {}
     pd.set_option('expand_frame_repr', False)
     sname = ws.title
-    info['sheet'] = sname
 
     template_pattern = re.compile('template|quotes', re.IGNORECASE)
     if template_pattern.search(sname):
-        return False
+        return False, False
 
     # make a dataframe from the current sheet
     df = pd.DataFrame([tuple([cell.value for cell in row]) for row in ws.rows]).dropna(how='all', axis=[0,1])
@@ -127,10 +126,13 @@ def parse_sheet(ws, annonymize=False):
                     subsheet.loc[i, 'DATE'] = "unknown"
         items = subsheet.to_dict("records")
 
-
         info['items'] = items
 
-    return info
+        subsheet['RATE'] = info['rate']
+        subsheet['invoice#'] = info['invoice#']
+        subsheet['SHEET'] = sname
+        # subsheet = subsheet[['SHEET','invoice#']+header+['RATE']]
+    return info, subsheet
 
 
 
@@ -149,21 +151,25 @@ def xlsx2json(file_names):
 
     sheet_names = reversed([ws.title for ws in worksheets])
     invoices = OrderedDict.fromkeys(sheet_names)
-
+    dfs = []
     start_time = time.time()
     for ws in worksheets:
-        invoice_data = parse_sheet(ws)
-        if invoice_data:
-            invoices[ws.title] = invoice_data
+        invoice_dict, invoice_df = parse_sheet(ws)
+        if invoice_dict:
+            invoices[ws.title] = invoice_dict
+            dfs.append(invoice_df)
             print(ws.title)
         else:
-            # if nothing was parsed from this invoice then revove it's key from 'invoices'
+            # if nothing was parsed from this invoice then remove it's key from 'invoices'
             invoices.pop(ws.title, None)
+
+#        df = pd.concat(dfs, ignore_index=True)
+
 
     elapsed_string = str(datetime.timedelta(seconds=time.time()-start_time))
     print('Finished in %s' % elapsed_string)
 
-    return invoices
+    return invoices, dfs
 
 # This function produces a list of dictionaries, each entry one item from a nested invoice dictionary
 def flatten_dict(invoices):
@@ -172,7 +178,7 @@ def flatten_dict(invoices):
         if invoices[title]:
             c = invoices[title].copy()
             items = c.pop('items')
-            for date in items:
+            for item in items:
                 c['date'] = date
                 for description, item in items[date].items():
                     c2 = c.copy()
@@ -188,7 +194,7 @@ def flatten_dict(invoices):
 
 # Read in the original Excel workbooks and create the invoices.json file
 if not os.path.isfile('invoices.json'):
-    invoices = xlsx2json(file_names)
+    invoices, df = xlsx2json(file_names)
     with open('invoices.json','w') as out_file:
         out_file.write(json.dumps(invoices, indent=3))
 else:
