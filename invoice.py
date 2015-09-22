@@ -104,49 +104,57 @@ def parse_sheet(ws, annonymize=False):
             last_row = len(df)
 
 
-        # # we might get data by column instead of row.
+        # grab the items sub-table into a DataFrame
         header_row = df.iloc[table_header_row].tolist()
         last_col = next(i for i, j in reversed(list(enumerate(header_row))) if j)
-        header = header_row[0:last_col+1]
+        header = [str(field) for field in header_row[0:last_col+1]]
 
         subsheet = df.iloc[table_header_row+1:last_row+1, 0:last_col+1]#.dropna(how='all', axis = [0,1])
         subsheet.columns = header
-
         subsheet = subsheet.reset_index(drop=True)
-        for i in subsheet.index:
-            if not subsheet.loc[i, 'DATE OF EVENT']:
-                subsheet.loc[i, 'DATE OF EVENT'] = subsheet.loc[i-1, 'DATE OF EVENT']
 
-
-        print("%s:\n%s" % (info['invoice#'], subsheet) )
-
-        if df[5][table_header_row] and re.search('discount', df[5][table_header_row], re.IGNORECASE):
-            discount_col = True
+        if 'DATE OF EVENT' not in header:
+            print("%s:\n%s" % (info['invoice#'], subsheet) )
         else:
-            discount_col = False
-
-        date = ''
-        for i in range(table_header_row+1, last_row):
-            if df[0][i]:
-                maybe_date = pd.to_datetime(str(df[0][i]), coerce=True)
-                if maybe_date:
-                    date = str(maybe_date.date())
-                    items[date] = {}
-
-            # if the amount field is not empty
-            if df[2][i]:
-                description = df[1][i]
-                other = {'amount':df[2][i], 'hours':df[3][i], 'subtotal':df[4][i], 'discount':''}
-                if discount_col and df[5][i]:
-                    other['discount'] = df[5][i]
-
-                if date:
-                    items[date][description] = other
+            for i in subsheet.index:
+                d = subsheet.loc[i, 'DATE OF EVENT']
+                if d:
+                    if isinstance(d, datetime.datetime):
+                        subsheet.loc[i, 'DATE OF EVENT'] = str(d.date())
+                    else:
+                        subsheet.loc[i, 'DATE OF EVENT'] = str(d)
                 else:
-                    items[''] = {}
-                    items[''][description] = other
+                    subsheet.loc[i, 'DATE OF EVENT'] = subsheet.loc[i-1, 'DATE OF EVENT']
 
-        info['items'] = items
+            print("%s:\n%s" % (info['invoice#'], subsheet) )
+            info['items'] = subsheet.to_dict('records')
+
+        # if df[5][table_header_row] and re.search('discount', df[5][table_header_row], re.IGNORECASE):
+        #     discount_col = True
+        # else:
+        #     discount_col = False
+
+        # date = ''
+        # for i in range(table_header_row+1, last_row):
+        #     if df[0][i]:
+        #         maybe_date = pd.to_datetime(str(df[0][i]), coerce=True)
+        #         if maybe_date:
+        #             date = str(maybe_date.date())
+        #             items[date] = {}
+
+        #     # if the amount field is not empty
+        #     if df[2][i]:
+        #         description = df[1][i]
+        #         other = {'amount':df[2][i], 'hours':df[3][i], 'subtotal':df[4][i], 'discount':''}
+        #         if discount_col and df[5][i]:
+        #             other['discount'] = df[5][i]
+
+        #         if date:
+        #             items[date][description] = other
+        #         else:
+        #             items[''] = {}
+        #             items[''][description] = other
+        # info['items'] = items
 
     return info
 
