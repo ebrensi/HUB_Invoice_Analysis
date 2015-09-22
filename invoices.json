@@ -1,6 +1,5 @@
 {
    "2000. Movement Generation": {
-      "invoice#": "2000", 
       "items": [
          {
             "DATE": "2013-09-19", 
@@ -36,7 +35,6 @@
       "rate": ""
    }, 
    "2001. BALLE": {
-      "invoice#": "2001", 
       "items": [
          {
             "DATE": "2013-10-07", 
@@ -72,7 +70,6 @@
       "rate": ""
    }, 
    "2007. Pac +": {
-      "invoice#": "2007", 
       "items": [
          {
             "DATE": "2013-10-30", 
@@ -108,7 +105,6 @@
       "rate": ""
    }, 
    "2009. Exponent Partners": {
-      "invoice#": "2009", 
       "items": [
          {
             "DATE": "2013-11-07", 
@@ -144,7 +140,6 @@
       "rate": ""
    }, 
    "2010. Equator Coffee": {
-      "invoice#": "2010", 
       "items": [
          {
             "DATE": "2013-11-04", 
@@ -180,7 +175,6 @@
       "rate": ""
    }, 
    "2008. Feastly": {
-      "invoice#": "2008", 
       "items": [
          {
             "DATE": "2013-11-15", 
@@ -216,7 +210,6 @@
       "rate": ""
    }, 
    "2011. Ebony Brown": {
-      "invoice#": "2011", 
       "items": [
          {
             "DATE": "2013-12-22", 
@@ -252,7 +245,6 @@
       "rate": ""
    }, 
    "2012. GenUp": {
-      "invoice#": "2012", 
       "items": [
          {
             "DATE": "2013-12-22", 
@@ -288,7 +280,6 @@
       "rate": ""
    }, 
    "2013. Culture Strike": {
-      "invoice#": "2013", 
       "items": [
          {
             "DATE": "2013-12-07", 
@@ -324,7 +315,6 @@
       "rate": ""
    }, 
    "2014. Gabriel Crane": {
-      "invoice#": "2014", 
       "items": [
          {
             "DATE": "2013-12-09", 
@@ -360,7 +350,6 @@
       "rate": "educed rate for pro bono staffing"
    }, 
    "2015. PatternDynamics": {
-      "invoice#": "2015", 
       "items": [
          {
             "DATE": "2014-01-18", 
@@ -396,7 +385,6 @@
       "rate": ""
    }, 
    "2016. Institute Golden Gate": {
-      "invoice#": "2016", 
       "items": [
          {
             "DATE": "2014-03-13", 
@@ -432,7 +420,6 @@
       "rate": "Member Rate $260/hr"
    }, 
    "2017. Start Up Weekend Hack": {
-      "invoice#": "2017", 
       "items": [
          {
             "DATE": "2/7-9 2014", 
@@ -468,7 +455,6 @@
       "rate": ""
    }, 
    "2018. Start Up Weekend Recept": {
-      "invoice#": "2018", 
       "items": [
          {
             "DATE": "2/7-9 2014", 
@@ -504,7 +490,6 @@
       "rate": ""
    }, 
    "2019. Late Nite in the Dark3-22": {
-      "invoice#": "2019", 
       "items": [
          {
             "DATE": "2/7-9 2014", 
@@ -540,7 +525,6 @@
       "rate": ""
    }, 
    "2020. Late Nite in the Dark4-26": {
-      "invoice#": "2020", 
       "items": [
          {
             "DATE": "2/7-9 2014", 
@@ -576,7 +560,6 @@
       "rate": ""
    }, 
    "2021 Late Nite in the Dark5-17": {
-      "invoice#": "2021", 
       "items": [
          {
             "DATE": "2/7-9 2014", 
@@ -612,7 +595,6 @@
       "rate": ""
    }, 
    "2022 Steve Spiker Open Oakland": {
-      "invoice#": "2022", 
       "items": [
          {
             "DATE": "2/7-9 2014", 
@@ -648,7 +630,6 @@
       "rate": ""
    }, 
    "2023 Siegal Campaign Kickoff": {
-      "invoice#": "2023", 
       "items": [
          {
             "DATE": "3/27 2014", 
@@ -694,7 +675,6 @@
       "rate": ""
    }, 
    "2024 The Amauta Foundation": {
-      "invoice#": "2024", 
       "items": [
          {
             "DATE": "3/15 2014", 
@@ -740,7 +720,6 @@
       "rate": ""
    }, 
    "2025 Self Help Fed Credit Union": {
-      "invoice#": "2025", 
       "items": [
          {
             "DATE": "2014-04-15", 
@@ -786,7 +765,6 @@
       "rate": ""
    }, 
    "2026 Northgate": {
-      "invoice#": "2026", 
       "items": [
          {
             "DATE": "2014-03-29", 
@@ -846,7 +824,6 @@
       "rate": ""
    }, 
    "2027 ULI": {
-      "invoice#": "2027", 
       "items": [
          {
             "DATE": "2014-03-18", 
@@ -912,7 +889,6 @@
       "rate": ""
    }, 
    "2028 The Ever Forward Club": {
-      "invoice#": "2028", 
       "items": [
          {
             "DATE": "2014-03-20", 
@@ -988,7 +964,6 @@
       "rate": ""
    }, 
    "2029 Higher Circle Education": {
-      "invoice#": "2029", 
       "items": [
          {
             "DATE": "2014-02-11", 
@@ -1064,7 +1039,6 @@
       "rate": ""
    }, 
    "2030 Higher Circle SuRu": {
-      "invoice#": "2030", 
       "items": [
          {
             "DATE": "2014-02-25", 
@@ -1140,7 +1114,6 @@
       "rate": ""
    }, 
    "2031 Planting Justice Decoloniz": {
-      "invoice#": "2031", 
       "items": [
          {
             "DATE": "2014-04-11", 
@@ -1216,7 +1189,6 @@
       "rate": ""
    }, 
    "2032 Planting Justice Soiree": {
-      "invoice#": "2032", 
       "items": [
          {
             "DATE": "2014-04-11", 
@@ -1292,7 +1264,6 @@
       "rate": ""
    }, 
    "2033 Integral Alignment": {
-      "invoice#": "2033", 
       "items": [
          {
             "DATE": "2014-03-25", 
@@ -1368,7 +1339,6 @@
       "rate": ""
    }, 
    "2034 Sungevity Org Membership": {
-      "invoice#": "2034", 
       "items": [
          {
             "DATE": "4/14-10/14", 
@@ -1402,7 +1372,6 @@
       "rate": ""
    }, 
    "2035 Sungevity Event": {
-      "invoice#": "2035", 
       "items": [
          {
             "DATE": "2014-04-25", 
@@ -1464,7 +1433,6 @@
       "rate": "Org Connect Member rate"
    }, 
    "2036 Catchafire": {
-      "invoice#": "2036", 
       "items": [
          {
             "DATE": "2014-04-07", 
@@ -1519,7 +1487,6 @@
       "rate": ""
    }, 
    "2037 Get Storied": {
-      "invoice#": "2037", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -1565,7 +1532,6 @@
       "rate": ""
    }, 
    "2038 Misssey_org membership": {
-      "invoice#": "2038", 
       "items": [
          {
             "DATE": "2014-06-21", 
@@ -1627,7 +1593,6 @@
       "rate": ""
    }, 
    "2039 United Roots": {
-      "invoice#": "2039", 
       "items": [
          {
             "DATE": "2014-05-24", 
@@ -1696,7 +1661,6 @@
       "rate": ""
    }, 
    "2040 Catchafire AV": {
-      "invoice#": "2040", 
       "items": [
          {
             "DATE": "2014-04-07", 
@@ -1751,7 +1715,6 @@
       "rate": ""
    }, 
    "2041 Bryant Terry": {
-      "invoice#": "2041", 
       "items": [
          {
             "DATE": "2014-04-09", 
@@ -1799,7 +1762,6 @@
       "rate": ""
    }, 
    "2042 SBA": {
-      "invoice#": "2042", 
       "items": [
          {
             "DATE": "2014-04-22", 
@@ -1861,7 +1823,6 @@
       "rate": ""
    }, 
    "2043 Ojah Yoga": {
-      "invoice#": "2043", 
       "items": [
          {
             "DESCRIPTION": "Gallery", 
@@ -1923,7 +1884,6 @@
       "rate": ""
    }, 
    "2044 VIN12 Spring": {
-      "invoice#": "2044", 
       "items": [
          {
             "DATE": "2014-05-10", 
@@ -1985,7 +1945,6 @@
       "rate": ""
    }, 
    "2045 LPFI": {
-      "invoice#": "2045", 
       "items": [
          {
             "DATE": "2014-06-14", 
@@ -2047,7 +2006,6 @@
       "rate": ""
    }, 
    "2046 GenUp Wiser": {
-      "invoice#": "2046", 
       "items": [
          {
             "DATE": "2014-05-08", 
@@ -2116,7 +2074,6 @@
       "rate": ""
    }, 
    "2047 BACC I": {
-      "invoice#": "2047", 
       "items": [
          {
             "DATE": "2014-03-26", 
@@ -2185,7 +2142,6 @@
       "rate": ""
    }, 
    "2048 BACC II": {
-      "invoice#": "2048", 
       "items": [
          {
             "DATE": "2014-04-30", 
@@ -2254,7 +2210,6 @@
       "rate": ""
    }, 
    "2049 BACC III": {
-      "invoice#": "2049", 
       "items": [
          {
             "DATE": "2014-06-18", 
@@ -2323,7 +2278,6 @@
       "rate": ""
    }, 
    "2050 Bootcamp_BusinessInn_pt1": {
-      "invoice#": "2050", 
       "items": [
          {
             "DATE": "2014-05-28", 
@@ -2392,7 +2346,6 @@
       "rate": ""
    }, 
    "2051 Vital Systems": {
-      "invoice#": "2051", 
       "items": [
          {
             "DATE": "2014-06-05", 
@@ -2447,7 +2400,6 @@
       "rate": ""
    }, 
    "2052 Oak Food Policy Council": {
-      "invoice#": "2052", 
       "items": [
          {
             "DATE": "2014-05-03", 
@@ -2502,7 +2454,6 @@
       "rate": ""
    }, 
    "2053 Global Solutions Party": {
-      "invoice#": "2053", 
       "items": [
          {
             "DATE": "2014-05-01", 
@@ -2564,7 +2515,6 @@
       "rate": ""
    }, 
    "2054 Tessa Finlev": {
-      "invoice#": "2054", 
       "items": [
          {
             "DATE": "2014-05-06", 
@@ -2633,7 +2583,6 @@
       "rate": ""
    }, 
    "2055 United Roots_Revised": {
-      "invoice#": "2055", 
       "items": [
          {
             "DATE": "2014-05-24", 
@@ -2716,7 +2665,6 @@
       "rate": ""
    }, 
    "2056 VIN12 Spring_Revised": {
-      "invoice#": "2056", 
       "items": [
          {
             "DATE": "2014-05-10", 
@@ -2778,7 +2726,6 @@
       "rate": ""
    }, 
    "2057 OpenOakland": {
-      "invoice#": "2057", 
       "items": [
          {
             "DATE": "2014-05-31", 
@@ -2840,7 +2787,6 @@
       "rate": "Weekend rate - part time member discount"
    }, 
    "2058 Vital Systems Revised": {
-      "invoice#": "2058", 
       "items": [
          {
             "DATE": "2014-06-05", 
@@ -2895,7 +2841,6 @@
       "rate": ""
    }, 
    "2059 Commonwealthclub": {
-      "invoice#": "2059", 
       "items": [
          {
             "DATE": "2014-09-17", 
@@ -2978,7 +2923,6 @@
       "rate": "Non Member Weekday Rate"
    }, 
    "2060 EBASE": {
-      "invoice#": "#2060", 
       "items": [
          {
             "DATE": "2014-06-26", 
@@ -3068,7 +3012,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "2061 Slow Money": {
-      "invoice#": "#2061", 
       "items": [
          {
             "DATE": "2014-09-12", 
@@ -3158,7 +3101,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2062 John Pomeroy": {
-      "invoice#": "#2061", 
       "items": [
          {
             "DATE": "2014-05-28", 
@@ -3248,7 +3190,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2063 Joanne da Luz": {
-      "invoice#": "#2061", 
       "items": [
          {
             "DATE": "2014-05-28", 
@@ -3338,7 +3279,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2064 SlowMoney Update": {
-      "invoice#": "#2064", 
       "items": [
          {
             "DATE": "2014-05-28", 
@@ -3428,7 +3368,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2065 FilmUpFilmFest": {
-      "invoice#": "#2061", 
       "items": [
          {
             "DATE": "2014-05-28", 
@@ -3518,7 +3457,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2066 BlackGirlsCode": {
-      "invoice#": "#2066", 
       "items": [
          {
             "DATE": "6/7/14-6/8/14", 
@@ -3615,7 +3553,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2067 Worksafe": {
-      "invoice#": "#2067", 
       "items": [
          {
             "DATE": "2014-06-27", 
@@ -3705,7 +3642,6 @@
       "rate": "Non-Member Weekday Rate"
    }, 
    "2068 OpenOakland": {
-      "invoice#": "#2068", 
       "items": [
          {
             "DATE": "2014-05-31", 
@@ -3795,7 +3731,6 @@
       "rate": "Weekday Rate - part time member discount"
    }, 
    "2069 KQED_FilmSalon": {
-      "invoice#": "#2069", 
       "items": [
          {
             "DATE": "2014-04-29", 
@@ -3885,7 +3820,6 @@
       "rate": ""
    }, 
    "2070 KQED_FilmSalon (2)": {
-      "invoice#": "#2070", 
       "items": [
          {
             "DATE": "2014-05-29", 
@@ -3975,7 +3909,6 @@
       "rate": ""
    }, 
    "2071 KQED_FilmSalon (3)": {
-      "invoice#": "#2071", 
       "items": [
          {
             "DATE": "2014-06-25", 
@@ -4065,7 +3998,6 @@
       "rate": ""
    }, 
    "2076 LNA_Beltane": {
-      "invoice#": "#2076", 
       "items": [
          {
             "DATE": "2014-05-17", 
@@ -4155,7 +4087,6 @@
       "rate": ""
    }, 
    "2077 BALLE": {
-      "invoice#": "#2077", 
       "items": [
          {
             "DATE": "2014-05-17", 
@@ -4196,7 +4127,6 @@
       "rate": ""
    }, 
    "2078 ThirdThursday": {
-      "invoice#": "#2078", 
       "items": [
          {
             "DATE": "2014-06-19", 
@@ -4286,7 +4216,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2079 Cinema Club": {
-      "invoice#": "#2079", 
       "items": [
          {
             "DATE": "2014-07-16", 
@@ -4376,7 +4305,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2080 Libby Shaaf": {
-      "invoice#": "#2080", 
       "items": [
          {
             "DATE": "2014-06-08", 
@@ -4431,7 +4359,6 @@
       "rate": "Non Member Weekend Rate"
    }, 
    "2081 BK Foundation": {
-      "invoice#": "#2081", 
       "items": [
          {
             "DATE": "2014-07-19", 
@@ -4521,7 +4448,6 @@
       "rate": "Full Time Member Weekend Rate"
    }, 
    "2082 Libby Shaaf": {
-      "invoice#": "#2082", 
       "items": [
          {
             "DATE": "2014-06-22", 
@@ -4611,7 +4537,6 @@
       "rate": "Non Member Weekend Rate"
    }, 
    "2083 Nat Poetry Slam": {
-      "invoice#": "#2083", 
       "items": [
          {
             "DATE": "2014-08-08", 
@@ -4701,7 +4626,6 @@
       "rate": ""
    }, 
    "2084 BuildUp": {
-      "invoice#": "#2084", 
       "items": [
          {
             "DATE": "2014-06-24", 
@@ -4784,7 +4708,6 @@
       "rate": "Non-Member Weekday Rate"
    }, 
    "2085 P2R Graduation": {
-      "invoice#": "#2085", 
       "items": [
          {
             "DATE": "2014-06-21", 
@@ -4867,7 +4790,6 @@
       "rate": "Full Time Member Weekend Rate"
    }, 
    "2086 OBDC": {
-      "invoice#": "#2084", 
       "items": [
          {
             "DATE": "2014-07-15", 
@@ -4922,7 +4844,6 @@
       "rate": "Fulltime member Weekday Rate"
    }, 
    "2087 Summer Wine Event": {
-      "invoice#": "2087", 
       "items": [
          {
             "DATE": "2014-07-16", 
@@ -4984,7 +4905,6 @@
       "rate": ""
    }, 
    "2088 WikiStategies": {
-      "invoice#": "#2088", 
       "items": [
          {
             "DATE": "2014-07-19", 
@@ -5074,7 +4994,6 @@
       "rate": "Non-Member Weekend Rate"
    }, 
    "2089 Vegan Soul Sunday": {
-      "invoice#": "#2089", 
       "items": [
          {
             "DATE": "2014-07-20", 
@@ -5164,7 +5083,6 @@
       "rate": "WITH event rate"
    }, 
    "2090 Mandela Marketplace": {
-      "invoice#": "#2090", 
       "items": [
          {
             "DATE": "2014-11-06", 
@@ -5261,7 +5179,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "2090 Mandela Marketplace_Final": {
-      "invoice#": "#2090", 
       "items": [
          {
             "DATE": "2014-11-06", 
@@ -5344,7 +5261,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "2091 Family Violence Law Center": {
-      "invoice#": "2091", 
       "items": [
          {
             "DATE": "2014-09-12", 
@@ -5434,7 +5350,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "2092 EBASE Cancel Fee": {
-      "invoice#": "2092", 
       "items": [
          {
             "DATE": "?", 
@@ -5454,7 +5369,6 @@
       "rate": ""
    }, 
    "2093 BGC  Extended Use Fee": {
-      "invoice#": "2093", 
       "items": [
          {
             "DATE": "?", 
@@ -5474,7 +5388,6 @@
       "rate": "Full Time Member Weekend Rate"
    }, 
    "2094 BAI - Bruce Lipton": {
-      "invoice#": "2094", 
       "items": [
          {
             "DATE": "2014-07-10", 
@@ -5564,7 +5477,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2095 Prajekt": {
-      "invoice#": "2094", 
       "items": [
          {
             "DESCRIPTION": "Uptown Room", 
@@ -5626,7 +5538,6 @@
       "rate": "Full Time Member Weekday Rate - Recurring Event Discount"
    }, 
    "2096 BAI -Sangha in the city": {
-      "invoice#": "2096", 
       "items": [
          {
             "DATE": "2014-06-29", 
@@ -5716,7 +5627,6 @@
       "rate": ""
    }, 
    "2097 Indie Awards Dinner": {
-      "invoice#": "2097", 
       "items": [
          {
             "DATE": "2014-07-08", 
@@ -5806,7 +5716,6 @@
       "rate": "Non-Member Weekday Rate - IHO partial sponsor"
    }, 
    "2098 Port Of Oakland": {
-      "invoice#": "2098", 
       "items": [
          {
             "DATE": "2014-07-29", 
@@ -5889,7 +5798,6 @@
       "rate": "Part Time Weekday Rate"
    }, 
    "2099 World Trust": {
-      "invoice#": "2099", 
       "items": [
          {
             "DESCRIPTION": "Lower Level", 
@@ -5976,7 +5884,6 @@
       "rate": "Part Time Member Weekday Rate -- Multi-Room Discount"
    }, 
    "2099 World Trust_PrePostevent": {
-      "invoice#": "2099", 
       "items": [
          {
             "DESCRIPTION": "Pre-Event", 
@@ -6006,7 +5913,6 @@
       "rate": ""
    }, 
    "2100 Brown Sugar Kitchen": {
-      "invoice#": "2100", 
       "items": [
          {
             "DATE": "2014-09-08", 
@@ -6096,7 +6002,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "2100 Brown Sugar Kitchen_AV": {
-      "invoice#": "2100", 
       "items": [
          {
             "DATE": "2014-09-08", 
@@ -6123,7 +6028,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "2101 MarcusFosterEduFund": {
-      "invoice#": "2101", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -6210,7 +6114,6 @@
       "rate": "Non-Member Weekend Rate"
    }, 
    "2101 MarcusFosterEduFund_rev1": {
-      "invoice#": "2101", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -6279,7 +6182,6 @@
       "rate": "Non-Member Weekend Rate"
    }, 
    "2102 Future Energy": {
-      "invoice#": "2102", 
       "items": [
          {
             "DATE": "2014-09-05", 
@@ -6348,7 +6250,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2103 MightyBell": {
-      "invoice#": "2103", 
       "items": [
          {
             "DATE": "2014-08-04", 
@@ -6403,7 +6304,6 @@
       "rate": "Non Member Weekday Rate"
    }, 
    "2104 Black Elected": {
-      "invoice#": "2104", 
       "items": [
          {
             "DATE": "2014-07-23", 
@@ -6444,7 +6344,6 @@
       "rate": "Part Time Weekday Rate"
    }, 
    "2105 Tradeswomen": {
-      "invoice#": "2105", 
       "items": [
          {
             "DATE": "2014-09-19", 
@@ -6520,7 +6419,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "2106 KQED_pechakucha": {
-      "invoice#": "#2106", 
       "items": [
          {
             "DATE": "2014-07-26", 
@@ -6610,7 +6508,6 @@
       "rate": ""
    }, 
    "2106 LNA_WATER": {
-      "invoice#": "2106", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -6769,7 +6666,6 @@
       "rate": "WITH EVENT"
    }, 
    "2107 Fall Wine Event": {
-      "invoice#": "2107", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -6928,7 +6824,6 @@
       "rate": "Non-Member Weekend Rate - Reoccuring event discount"
    }, 
    "2108 SexyHuman": {
-      "invoice#": "2108", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -7087,7 +6982,6 @@
       "rate": "Part Time Member Weekday Evening Rate"
    }, 
    "2109 Meridian University": {
-      "invoice#": "2109", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -7205,7 +7099,6 @@
       "rate": "Full Time Member Weekend Rate"
    }, 
    "2110 Akili Dada Concert": {
-      "invoice#": "2110", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -7373,7 +7266,6 @@
       "rate": "No-Member Weekday Rate - Part-time member discount applied"
    }, 
    "2111 HACK THE HOOD GRAD": {
-      "invoice#": "2111", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -7532,7 +7424,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2112 Women 2.0": {
-      "invoice#": "2112", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -7691,7 +7582,6 @@
       "rate": "Non Member Weekday Rate - Partner Discount"
    }, 
    "2113 ThirdThursday_Sept": {
-      "invoice#": "#2113", 
       "items": [
          {
             "DATE": "2014-09-18", 
@@ -7781,7 +7671,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2114 Michael Orange_Jazz": {
-      "invoice#": "2114", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -7907,7 +7796,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2115 John Chiang": {
-      "invoice#": "2115", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -8048,7 +7936,6 @@
       "rate": "Non Member Weekday Rate - Sharon Cornu Credit Applied"
    }, 
    "2116 movement strategy center": {
-      "invoice#": "2116", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -8142,7 +8029,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2117 SELC": {
-      "invoice#": "2117", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -8284,7 +8170,6 @@
       "rate": "Full-time Member Rate"
    }, 
    "2118 HiddenGenius": {
-      "invoice#": "2118", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -8426,7 +8311,6 @@
       "rate": "Part-time Member Rate"
    }, 
    "2119 ImpactSocial_original": {
-      "invoice#": "2119", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -8552,7 +8436,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "2119 ImapctSocial_NewArtsAxis": {
-      "invoice#": "2119", 
       "items": [
          {
             "DATE": "2014-09-15", 
@@ -8576,7 +8459,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "2119 ImpactSocial_BAVC": {
-      "invoice#": "2119", 
       "items": [
          {
             "DATE": "2014-09-15", 
@@ -8600,7 +8482,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "2119 ImpactSocial_activevoice": {
-      "invoice#": "2119", 
       "items": [
          {
             "DATE": "2014-09-15", 
@@ -8624,7 +8505,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "2120 OneLifeInstitute": {
-      "invoice#": "2120", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -8750,7 +8630,6 @@
       "rate": "Full Time Member Weekday Rate - Founder Discount"
    }, 
    "2121 OakMetroChamberofCommerce": {
-      "invoice#": "2121", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -8891,7 +8770,6 @@
       "rate": "Full Time Member Weekday Rate - Founder Discount"
    }, 
    "2122 EastBayRentalHousingAssoc": {
-      "invoice#": "2122", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -9017,7 +8895,6 @@
       "rate": "Non Member Weekday Rate"
    }, 
    "2122 EBayRentalHousing_Member": {
-      "invoice#": "2122", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -9143,7 +9020,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "2123 Peers": {
-      "invoice#": "2123", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -9269,7 +9145,6 @@
       "rate": "Full Time Member Weekend Rate"
    }, 
    "2123 Peers_Cancellation Fee": {
-      "invoice#": "2123", 
       "items": [
          {
             "DESCRIPTION": "Cancellation Fee", 
@@ -9299,7 +9174,6 @@
       "rate": ""
    }, 
    "2124 The Loop": {
-      "invoice#": "2124", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -9440,7 +9314,6 @@
       "rate": "Part Time Member Weekend Rate - multi room discount"
    }, 
    "2125 OpenOak_LeaderRetreat": {
-      "invoice#": "2125", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -9566,7 +9439,6 @@
       "rate": "Full Time Member Weekend Rate"
    }, 
    "2083 Nat Poetry Slam_cleaning": {
-      "invoice#": "#2083", 
       "items": [
          {
             "DATE": "2014-08-08", 
@@ -9586,7 +9458,6 @@
       "rate": ""
    }, 
    "2126 Amigos_Ambassador": {
-      "invoice#": "2126", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -9712,7 +9583,6 @@
       "rate": "Full Time Member Weekend Rate"
    }, 
    "2127 Planetary Advocates": {
-      "invoice#": "2127", 
       "items": [
          {
             "DATE": "2014-09-05", 
@@ -9738,7 +9608,6 @@
       "rate": ""
    }, 
    "2128 AlamedaCountyOfficeofEdu": {
-      "invoice#": "2128", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -9840,7 +9709,6 @@
       "rate": "Full Time Member Weekend Rate"
    }, 
    "2129 Women 2.0_2nd": {
-      "invoice#": "2129", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -9999,7 +9867,6 @@
       "rate": "Non Member Weekday Rate - Partner Discount"
    }, 
    "2130 ULI": {
-      "invoice#": "2130", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -10133,7 +10000,6 @@
       "rate": "Full Time Weekday Rate"
    }, 
    "2131 Black Elected Officials": {
-      "invoice#": "2131", 
       "items": [
          {
             "DATE": "2014-09-24", 
@@ -10174,7 +10040,6 @@
       "rate": "Non Member Weekday Rate - Founder Discount"
    }, 
    "2132 NAACP Cancel Fee": {
-      "invoice#": "2132", 
       "items": [
          {
             "DATE": "?", 
@@ -10194,7 +10059,6 @@
       "rate": ""
    }, 
    "2133 Unwork Cancel Fee": {
-      "invoice#": "2133", 
       "items": [
          {
             "DATE": "?", 
@@ -10214,7 +10078,6 @@
       "rate": ""
    }, 
    "2134 HERA": {
-      "invoice#": "2134", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -10348,7 +10211,6 @@
       "rate": "Non Member Weekday Rate"
    }, 
    "2135 BeyondCultureofSeparation": {
-      "invoice#": "2135", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -10482,7 +10344,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2136 OCCUR": {
-      "invoice#": "2136", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -10608,7 +10469,6 @@
       "rate": "Non Member Weekday Rate"
    }, 
    "2136 OCCUR_withAV": {
-      "invoice#": "2136", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -10726,7 +10586,6 @@
       "rate": "Non Member Weekday Rate"
    }, 
    "2137 Bay Bucks": {
-      "invoice#": "2137", 
       "items": [
          {
             "DESCRIPTION": "Space Rentals", 
@@ -10804,7 +10663,6 @@
       "rate": "Full Time Member Rate"
    }, 
    "2137 Bay Bucks_Final": {
-      "invoice#": "2137", 
       "items": [
          {
             "DESCRIPTION": "Space Rentals", 
@@ -10891,7 +10749,6 @@
       "rate": "Full Time Member Rate"
    }, 
    "2138 Linda Curtis": {
-      "invoice#": "2138", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -11009,7 +10866,6 @@
       "rate": "Non Member Weekday Rate"
    }, 
    "2138 Linda Curtis_Rev1": {
-      "invoice#": "2138", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -11127,7 +10983,6 @@
       "rate": "Non Member Weekday Rate"
    }, 
    "2139 Feng Shui School_Oct": {
-      "invoice#": "2139", 
       "items": [
          {
             "DESCRIPTION": "Meridian Room", 
@@ -11169,7 +11024,6 @@
       "rate": "Full Time Member Weekday Rate -- Multi-Day Discount"
    }, 
    "2140 Feng Shui School_Nov": {
-      "invoice#": "2140", 
       "items": [
          {
             "DESCRIPTION": "Meridian Room", 
@@ -11211,7 +11065,6 @@
       "rate": "Full Time Member Weekday Rate -- Multi-Day Discount"
    }, 
    "2141 Feng Shui School_Dec": {
-      "invoice#": "2141", 
       "items": [
          {
             "DESCRIPTION": "Meridian Room", 
@@ -11244,7 +11097,6 @@
       "rate": "Full Time Member Weekday Rate -- Multi-Day Discount"
    }, 
    "2142 Feng Shui School_Jan": {
-      "invoice#": "2142", 
       "items": [
          {
             "DESCRIPTION": "Meridian Room", 
@@ -11277,7 +11129,6 @@
       "rate": "Full Time Member Weekday Rate -- Multi-Day Discount"
    }, 
    "2143 Feng Shui School_Feb": {
-      "invoice#": "2143", 
       "items": [
          {
             "DESCRIPTION": "Meridian Room", 
@@ -11310,7 +11161,6 @@
       "rate": "Full Time Member Weekday Rate -- Multi-Day Discount"
    }, 
    "2144 Feng Shui School_March": {
-      "invoice#": "2144", 
       "items": [
          {
             "DESCRIPTION": "Meridian Room", 
@@ -11334,7 +11184,6 @@
       "rate": "Full Time Member Weekday Rate -- Multi-Day Discount"
    }, 
    "2145 Beyond the Culture_Sept": {
-      "invoice#": "2145", 
       "items": [
          {
             "DESCRIPTION": "Meridian Room", 
@@ -11364,7 +11213,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2146 Beyond the Culture_Oct": {
-      "invoice#": "2146", 
       "items": [
          {
             "DESCRIPTION": "Meridian Room", 
@@ -11418,7 +11266,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2147 Beyond the Culture_Nov": {
-      "invoice#": "2147", 
       "items": [
          {
             "DESCRIPTION": "Meridian Room", 
@@ -11464,7 +11311,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2147 OakChamberofComme_fine": {
-      "invoice#": "2147", 
       "items": [
          {
             "DESCRIPTION": "Compostable Products", 
@@ -11502,7 +11348,6 @@
       "rate": ""
    }, 
    "2148 Brown Sugar Kitchen_damage": {
-      "invoice#": "2148", 
       "items": [
          {
             "DATE": "2014-09-08", 
@@ -11529,7 +11374,6 @@
       "rate": ""
    }, 
    "2149 Bike East Bay": {
-      "invoice#": "2149", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -11607,7 +11451,6 @@
       "rate": "Non-Member Weekday Rate"
    }, 
    "2150 Holmes Hummel": {
-      "invoice#": "2150", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -11741,7 +11584,6 @@
       "rate": "None Member Weekday Rate"
    }, 
    "2151 B Labs": {
-      "invoice#": "2151", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -11801,7 +11643,6 @@
       "rate": "Non-member weekday; Discount Rate for IHO WITH event"
    }, 
    "2152 Bootcamp_BusinessInn_pt2": {
-      "invoice#": "2152", 
       "items": [
          {
             "DATE": "2014-09-24", 
@@ -11856,7 +11697,6 @@
       "rate": ""
    }, 
    "2153 Bootcamp_BusinessInn_pt3": {
-      "invoice#": "2153", 
       "items": [
          {
             "DATE": "2014-11-19", 
@@ -11911,7 +11751,6 @@
       "rate": ""
    }, 
    "2154 Honeyman": {
-      "invoice#": "2154", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -12052,7 +11891,6 @@
       "rate": "Non Member Weekday Rate - Partner discount"
    }, 
    "2155 Bay Localize": {
-      "invoice#": "2155", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -12178,7 +12016,6 @@
       "rate": "Non Member Weekend Rate"
    }, 
    "2156 HERA_ScotchTasting": {
-      "invoice#": "2156", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -12312,7 +12149,6 @@
       "rate": "Non Member Weekday Rate"
    }, 
    "2157 Thomas Huebl_BAI": {
-      "invoice#": "2157", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -12453,7 +12289,6 @@
       "rate": "Non Member Weekday Rate - partner event discount"
    }, 
    "2158 Rosenberg Foundation Event": {
-      "invoice#": "2158", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -12587,7 +12422,6 @@
       "rate": "None Member Weekday Rate"
    }, 
    "2158 Rosenberg_Cancellation": {
-      "invoice#": "2158", 
       "items": [
          {
             "DATE": "2014-12-02", 
@@ -12607,7 +12441,6 @@
       "rate": ""
    }, 
    "2159 LIfe is Living": {
-      "invoice#": "2159", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -12757,7 +12590,6 @@
       "rate": "None Member Weekday Rate - Partner Discount"
    }, 
    "2160 BK Publishers_LockedDown": {
-      "invoice#": "2160", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -12891,7 +12723,6 @@
       "rate": "Non Member Weekday Rate"
    }, 
    "2160 OPEN": {
-      "invoice#": "2160", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -13001,7 +12832,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2161 Amigos_HostTraining": {
-      "invoice#": "2161", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -13119,7 +12949,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2162 Housing Consortium": {
-      "invoice#": "2162", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -13237,7 +13066,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "2163 Kaiser Emergency Dept": {
-      "invoice#": "2163", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -13347,7 +13175,6 @@
       "rate": "Part Time Member Weekend Rate"
    }, 
    "2163 Kaiser Emergency Dept_Rev1": {
-      "invoice#": "2163", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -13457,7 +13284,6 @@
       "rate": "Part Time Member Weekend Rate"
    }, 
    "2164 Tides ": {
-      "invoice#": "2164", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -13571,7 +13397,6 @@
       "rate": "Non Member Weekday Rate"
    }, 
    "2165 Marie Bernardo": {
-      "invoice#": "2165", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -13673,7 +13498,6 @@
       "rate": "Non Member Weekend Rate"
    }, 
    "2165 Marie Bernardo_Rev1": {
-      "invoice#": "2165", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -13775,7 +13599,6 @@
       "rate": "Non Member Weekend Rate"
    }, 
    "2166 SustainAbility RoundTable": {
-      "invoice#": "2166", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -13901,7 +13724,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2167 Sandra Lawson": {
-      "invoice#": "2167", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -14033,7 +13855,6 @@
       "rate": "Non Member Weekend Rate"
    }, 
    "2168 PPGBA_OnBroadway": {
-      "invoice#": "2168", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -14151,7 +13972,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "2169 Red Door Group": {
-      "invoice#": "2169", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -14274,7 +14094,6 @@
       "rate": "Non Member Weekday Rate - Multi-Room Discount"
    }, 
    "2170 Alameda Health Services": {
-      "invoice#": "2170", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -14406,7 +14225,6 @@
       "rate": "Non Member Weekday Rate - Multi-Room Discount"
    }, 
    "2171 Courtney Ruby for Mayor": {
-      "invoice#": "2171", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -14516,7 +14334,6 @@
       "rate": "Full Time Office Member Weekday Rate"
    }, 
    "2172 Lajones & Associates": {
-      "invoice#": "2172", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -14626,7 +14443,6 @@
       "rate": "Part time Member Weekday Rate"
    }, 
    "2172_Rev1 Lajones & Associates": {
-      "invoice#": "2172", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -14736,7 +14552,6 @@
       "rate": "Part time Member Weekday Rate"
    }, 
    "2173 EvolutionLeadership_Fedor": {
-      "invoice#": "2173", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -14859,7 +14674,6 @@
       "rate": "Full Time Member Weekend Rate -- Full Day Discount"
    }, 
    "2174 CARE Strategies": {
-      "invoice#": "2174", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -14969,7 +14783,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "2175 ACOE_meeting": {
-      "invoice#": "2175", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -15079,7 +14892,6 @@
       "rate": "Non Member Weekend Rate"
    }, 
    "2175 ACOE_meeting_rev1": {
-      "invoice#": "2175", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -15202,7 +15014,6 @@
       "rate": "Non Member Weekend Rate - Multi Event Rental Discount"
    }, 
    "2176 ACOE_Synergy Day": {
-      "invoice#": "2176", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -15325,7 +15136,6 @@
       "rate": "Non Member Weekend Rate  - Full Day Discount"
    }, 
    "2177 ACOE_Apprentice Training": {
-      "invoice#": "2177", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -15448,7 +15258,6 @@
       "rate": "Non Member Weekend Rate  - Full Day Discount"
    }, 
    "2178 ACOE_Synergy Day (2)": {
-      "invoice#": "2178", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -15558,7 +15367,6 @@
       "rate": "Non Member Weekend Rate"
    }, 
    "2179 ACOE_ILSP Retreat": {
-      "invoice#": "2179", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -15668,7 +15476,6 @@
       "rate": "Non Member Weekend Rate"
    }, 
    "2180 Sandra Lawson_PTmember": {
-      "invoice#": "2180", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -15800,7 +15607,6 @@
       "rate": "Part Time Member Weekend Rate"
    }, 
    "2181 BALANCE": {
-      "invoice#": "2181", 
       "items": [
          {
             "DESCRIPTION": "Set Up & Breakdown", 
@@ -15959,7 +15765,6 @@
       "rate": "Full Time Member Weekday Rate  - WITH event sponsorship"
    }, 
    "2182 Diversity Challenge": {
-      "invoice#": "2182", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -16109,7 +15914,6 @@
       "rate": "Non Member Weekday Rate -- Multi-Room Discount"
    }, 
    "2182 Diversity Challenge_Rev1": {
-      "invoice#": "2182", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -16259,7 +16063,6 @@
       "rate": "Non Member Weekday Rate -- Multi-Room Discount"
    }, 
    "2183 LNA_Fertile": {
-      "invoice#": "2183", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -16418,7 +16221,6 @@
       "rate": "Full Time Member Weekend Rate - Partnership Discount"
    }, 
    "2184 Konda Mason_warmcoat": {
-      "invoice#": "2184", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -16586,7 +16388,6 @@
       "rate": "Non Member Weekday Rate - Founder discount"
    }, 
    "2185 YEP": {
-      "invoice#": "2185", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -16727,7 +16528,6 @@
       "rate": "Non Member Weekend Rate"
    }, 
    "2186 Kiwan": {
-      "invoice#": "2186", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -16829,7 +16629,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "2187 AlterConf": {
-      "invoice#": "2187", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -16971,7 +16770,6 @@
       "rate": "Non Member Weekend Rate"
    }, 
    "2187-2 AlterConf_AV": {
-      "invoice#": "2187-2", 
       "items": [
          {
             "DESCRIPTION": "A/V Technician", 
@@ -16993,7 +16791,6 @@
       "rate": "Non Member Weekend Rate"
    }, 
    "2187-3 AlterConf_Compost": {
-      "invoice#": "2187-3", 
       "items": [
          {
             "DESCRIPTION": "Compostable Products", 
@@ -17023,7 +16820,6 @@
       "rate": "Non Member Weekend Rate"
    }, 
    "2188 BGC_volunteertraining": {
-      "invoice#": "2188", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -17165,7 +16961,6 @@
       "rate": "Full Time Member Weekend Rate"
    }, 
    "2189 BGC_volunteertraining_2": {
-      "invoice#": "2189", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -17299,7 +17094,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2190 Kerusso Music Group": {
-      "invoice#": "2190", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -17417,7 +17211,6 @@
       "rate": "Non Member Weekday Rate -- Holiday Rate"
    }, 
    "2191 SFJazz_OPC": {
-      "invoice#": "2191", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -17519,7 +17312,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2191_Rev1 SFJazz_OPC": {
-      "invoice#": "2191", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -17621,7 +17413,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2192 Josh Healey": {
-      "invoice#": "2192", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -17762,7 +17553,6 @@
       "rate": "Part Ttime Member Weekday Rate"
    }, 
    "2193 Rosenberg Foundation": {
-      "invoice#": "2193", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -17896,7 +17686,6 @@
       "rate": "Non Member Weekday Rate"
    }, 
    "2193_Rev1 Rosenberg Foundation": {
-      "invoice#": "2193", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -18030,7 +17819,6 @@
       "rate": "Non Member Weekday Rate"
    }, 
    "2194 AAMA_Report Out": {
-      "invoice#": "2194", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -18180,7 +17968,6 @@
       "rate": "Non Member Weekday Rate -- Partnership"
    }, 
    "2194-2 AAMA_Report Out_AV": {
-      "invoice#": "2194-2", 
       "items": [
          {
             "DESCRIPTION": "Sound Tech", 
@@ -18210,7 +17997,6 @@
       "rate": ""
    }, 
    "2195 SYNCIS": {
-      "invoice#": "2195", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -18344,7 +18130,6 @@
       "rate": "Non Member Weekday Rate"
    }, 
    "2196 Tuux.it": {
-      "invoice#": "2196", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -18503,7 +18288,6 @@
       "rate": "Non Member Weekend Rate --Partner Discount"
    }, 
    "2196-2 Tuux.it": {
-      "invoice#": "2196-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -18662,7 +18446,6 @@
       "rate": "Non Member Weekend Rate --Partner Discount"
    }, 
    "2197 Beyond Sep_SeriesII_March": {
-      "invoice#": "2197", 
       "items": [
          {
             "DESCRIPTION": "Meridian Room", 
@@ -18716,7 +18499,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2198 Beyond Sep_SeriesII_April": {
-      "invoice#": "2197", 
       "items": [
          {
             "DESCRIPTION": "Meridian Room", 
@@ -18770,7 +18552,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "2199 Redwood Day School": {
-      "invoice#": "2199", 
       "items": [
          {
             "DESCRIPTION": "Entire Lower Floor", 
@@ -18911,7 +18692,6 @@
       "rate": "Non Member Weekend Rate - Multi room discount"
    }, 
    "2199-2 Redwood Day School": {
-      "invoice#": "2199-2", 
       "items": [
          {
             "DESCRIPTION": "Entire Lower Floor", 
@@ -19079,7 +18859,6 @@
       "rate": "Non Member Weekend Rate - Multi room discount"
    }, 
    "2199 Redwood Day School_Damage": {
-      "invoice#": "2199", 
       "items": [
          {
             "DESCRIPTION": "Damage Deposit", 
@@ -19101,7 +18880,6 @@
       "rate": ""
    }, 
    "2200 Rebirth & Renewal": {
-      "invoice#": "2200", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -19242,7 +19020,6 @@
       "rate": "Part Time Member Weekend Rate -- IHO Sponsorship"
    }, 
    "2201 SF Noir": {
-      "invoice#": "2201", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -19392,7 +19169,6 @@
       "rate": "Non Member Weekday Rate -- Partnership Discount"
    }, 
    "115001-2 P2R Graduation": {
-      "invoice#": "115001", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -19542,7 +19318,6 @@
       "rate": "Full Time Member Weekend Rate"
    }, 
    "115001-3 P2R Graduation": {
-      "invoice#": "115001-3", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -19692,7 +19467,6 @@
       "rate": "Full Time Member Weekend Rate"
    }, 
    "115002 LNA_Storytelling": {
-      "invoice#": "115002", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -19851,7 +19625,6 @@
       "rate": "Full Time Member Weekend Rate - Partnership Discount"
    }, 
    "115003 YouthHUB_IHO Holiday": {
-      "invoice#": "115003", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -20019,7 +19792,6 @@
       "rate": "Full Time Member Weekday Rate -- Partner Discount"
    }, 
    "115004 KQED": {
-      "invoice#": "115004", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -20178,7 +19950,6 @@
       "rate": "Non Member Weekend Rate -- Partnership Discount"
    }, 
    "115005 Friends of Parks&Rec": {
-      "invoice#": "115005", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -20328,7 +20099,6 @@
       "rate": "Part-time Member Weekday Rate -- Multi-Room Discount"
    }, 
    "115005-2 Friends of Parks&Rec": {
-      "invoice#": "115005-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -20478,7 +20248,6 @@
       "rate": "Part-time Member Weekday Rate -- Multi-Room Discount"
    }, 
    "115005-4 Friends of Parks&R ": {
-      "invoice#": "115005-4", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -20628,7 +20397,6 @@
       "rate": "Part-time Member Weekday Rate -- Multi-Room Discount"
    }, 
    "215001 CPD Gala": {
-      "invoice#": "215001", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -20770,7 +20538,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "215002-2 CPD Gala Damage": {
-      "invoice#": "215001-2", 
       "items": [
          {
             "DESCRIPTION": "Damage Deposit", 
@@ -20800,7 +20567,6 @@
       "rate": ""
    }, 
    "215002 Equitable Origin": {
-      "invoice#": "215002", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -20968,7 +20734,6 @@
       "rate": "Non Member Weekday Rate - Founders Discount"
    }, 
    "215002-2 Equitable Origin": {
-      "invoice#": "215002-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -21136,7 +20901,6 @@
       "rate": "Non Member Weekday Rate - Founders Discount"
    }, 
    "415001 Agents of Change": {
-      "invoice#": "415001", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -21286,7 +21050,6 @@
       "rate": "Full Time Member Weekday Rate - Partner Discount"
    }, 
    "415001-2 Agents of Change ": {
-      "invoice#": "415001-2", 
       "items": [
          {
             "DESCRIPTION": "Cancellation Fee", 
@@ -21316,7 +21079,6 @@
       "rate": "Full Time Member Weekday Rate - Partner Discount"
    }, 
    " 215003 Forward Together": {
-      "invoice#": "215003", 
       "items": [
          {
             "DESCRIPTION": "Broadway", 
@@ -21376,7 +21138,6 @@
       "rate": "Part-time Member Weekend Rate -- Multi Day Discount"
    }, 
    "115007 Inn Oakland Town Hall": {
-      "invoice#": "115007", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -21526,7 +21287,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "115007-2 Inn Oakland Town Hall": {
-      "invoice#": "115007-2", 
       "items": [
          {
             "DESCRIPTION": "Cancellation Fee", 
@@ -21556,7 +21316,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "115008 Beyond Separation ": {
-      "invoice#": "115008", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -21706,7 +21465,6 @@
       "rate": "Full Time Member Weekday Rate - Partnership discount"
    }, 
    "115009  Warthogs Youth Rugby": {
-      "invoice#": "115009", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -21874,7 +21632,6 @@
       "rate": "Part Time Member Weekend Rate"
    }, 
    "115009-2  Warthogs Youth Rugby": {
-      "invoice#": "115009-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -22042,7 +21799,6 @@
       "rate": "Part Time Member Weekend Rate"
    }, 
    "115010 Stephen Busby": {
-      "invoice#": "115010", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -22184,7 +21940,6 @@
       "rate": "Full Time  Member Weekday Rate -- 2 Hours Complementary"
    }, 
    "115011 Defy Ventures": {
-      "invoice#": "115011", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -22334,7 +22089,6 @@
       "rate": "Non Member Weekday Rate"
    }, 
    "115012-2 Habitry": {
-      "invoice#": "115012-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -22394,7 +22148,6 @@
       "rate": "Part Time Member Weekend Rate -- Multi Day Discount"
    }, 
    "115013 Youth Speaks_Olympics": {
-      "invoice#": "115013", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -22544,7 +22297,6 @@
       "rate": "Part Time Member Weekend Rate"
    }, 
    "115013-2 Youth Speaks_Olympics ": {
-      "invoice#": "115013-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -22694,7 +22446,6 @@
       "rate": "Part Time Member Weekend Rate"
    }, 
    "115014 Debby Irving": {
-      "invoice#": "115014", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -22836,7 +22587,6 @@
       "rate": "Full Member Weekday Rate - 50/50 Rev Share"
    }, 
    "115015 SustainAbility RoundTbl": {
-      "invoice#": "115015", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -22954,7 +22704,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "115016 Music for the People Ent": {
-      "invoice#": "115016", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -23113,7 +22862,6 @@
       "rate": "Non-Member Weekend Rate - Partnership discount"
    }, 
    "215004 Design Thinking": {
-      "invoice#": "215004", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -23281,7 +23029,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "215004-2 Design Thinking ": {
-      "invoice#": "215004-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -23440,7 +23187,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "215005 BE PRESENT": {
-      "invoice#": "215005", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -23581,7 +23327,6 @@
       "rate": "Non Member Weekday Rate - Partnership Discount"
    }, 
    "215006 BGC Comm Meeting": {
-      "invoice#": "215006", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -23740,7 +23485,6 @@
       "rate": "Full Time Member Weekday Rate - Partner Discount"
    }, 
    "215006-2 BGC Comm Meeting_AV": {
-      "invoice#": "215006-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -23899,7 +23643,6 @@
       "rate": "Full Time Member Weekday Rate - Partner Discount"
    }, 
    "215007 Life is Loving": {
-      "invoice#": "215007", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -24049,7 +23792,6 @@
       "rate": "Part Time Member Weekend Rate"
    }, 
    "215007-2 Life is Loving ": {
-      "invoice#": "215007-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -24217,7 +23959,6 @@
       "rate": "Part Time Member Weekend Rate - Founders Discount"
    }, 
    "215008 YBCA #BLM": {
-      "invoice#": "215008", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -24376,7 +24117,6 @@
       "rate": "Non Member Weekday Rate  - Founder Discount"
    }, 
    "215009 CIIS ": {
-      "invoice#": "215009", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -24526,7 +24266,6 @@
       "rate": "Part Time Member Weekend Rate"
    }, 
    "215009-2 CIIS Cancel": {
-      "invoice#": "215009", 
       "items": [
          {
             "DESCRIPTION": "50% Deposit", 
@@ -24564,7 +24303,6 @@
       "rate": ""
    }, 
    "215010 Ever Forward Club": {
-      "invoice#": "215010", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -24706,7 +24444,6 @@
       "rate": "Part-time Member Weekday Rate"
    }, 
    "215010-2 Ever Forward Club": {
-      "invoice#": "215010-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -24865,7 +24602,6 @@
       "rate": "Part-time Member Weekday Rate"
    }, 
    "215011 Kaiser HNS Grad": {
-      "invoice#": "215011", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -25024,7 +24760,6 @@
       "rate": "Non Member Weekend Rate - Half Day Discount"
    }, 
    "215011-2 Kaiser HNS Grad": {
-      "invoice#": "215011-2", 
       "items": [
          {
             "DESCRIPTION": "A/V Technician", 
@@ -25054,7 +24789,6 @@
       "rate": ""
    }, 
    "215012 Barbara Lee": {
-      "invoice#": "215012", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -25196,7 +24930,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "215013 GlobalGirl Media": {
-      "invoice#": "215013", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -25355,7 +25088,6 @@
       "rate": "Full Time Member Weekend Rate - Founder Discount"
    }, 
    "215013-2 GlobalGirl Media ": {
-      "invoice#": "215013-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -25514,7 +25246,6 @@
       "rate": "Full Time Member Weekend Rate - Founder Discount"
    }, 
    "215014 OneLife IHO Collab ": {
-      "invoice#": "215014", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -25655,7 +25386,6 @@
       "rate": "Non Member Weekend Rate - Partnership Discount"
    }, 
    "215014-2 OneLife IHO Collab": {
-      "invoice#": "215014-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -25796,7 +25526,6 @@
       "rate": "Non Member Weekend Rate - Partnership Discount"
    }, 
    "215015 Oakland Institute": {
-      "invoice#": "215015", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -25946,7 +25675,6 @@
       "rate": "Non Member Weekend Rate"
    }, 
    "215015-2 Oakland Institute ": {
-      "invoice#": "215015", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -26096,7 +25824,6 @@
       "rate": "Non Member Weekend Rate"
    }, 
    "215015-3 Oakland Institute ": {
-      "invoice#": "215015-3", 
       "items": [
          {
             "DESCRIPTION": "Compostables", 
@@ -26118,7 +25845,6 @@
       "rate": "Non Member Weekend Rate"
    }, 
    "215016 Youth Business USA": {
-      "invoice#": "215016", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -26252,7 +25978,6 @@
       "rate": "Full Time Member Weekend Rate"
    }, 
    "315001 Presidio Kunstler ": {
-      "invoice#": "315001", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -26411,7 +26136,6 @@
       "rate": "Full Time Member Weekday Rate -- Multi-Room Discount"
    }, 
    "315001-2 Presidio Kunstler": {
-      "invoice#": "315001-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -26570,7 +26294,6 @@
       "rate": "Full Time Member Weekday Rate -- Multi-Room Discount"
    }, 
    "315002 Develop Yourself": {
-      "invoice#": "315002", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -26729,7 +26452,6 @@
       "rate": "Part Time Member Weekend Rate  - Multi Day Discount"
    }, 
    "315002-2 Develop Yourself ": {
-      "invoice#": "315002-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -26888,7 +26610,6 @@
       "rate": "Part Time Member Weekend Rate  - Multi Day Discount"
    }, 
    "315003 EB Church of R Science": {
-      "invoice#": "315003", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -27030,7 +26751,6 @@
       "rate": "Full Time Member Weekend Rate - Founder Sponsorship"
    }, 
    "315004 Oak Int Film Fest": {
-      "invoice#": "315004", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -27180,7 +26900,6 @@
       "rate": "Non Member Weekday Rate -- Founders Partnership"
    }, 
    "315005 LNA_MidLifeCelebration": {
-      "invoice#": "315005", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -27339,7 +27058,6 @@
       "rate": "Full Time Member Weekend Rate - Partnership Discount"
    }, 
    "315005-2 LNA_MidLifeCelebration": {
-      "invoice#": "315005-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -27498,7 +27216,6 @@
       "rate": "Full Time Member Weekend Rate - Partnership Discount"
    }, 
    "315006-2 Empathy in Business": {
-      "invoice#": "315006-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -27648,7 +27365,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "315007 Friends of the Earth": {
-      "invoice#": "315007", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -27790,7 +27506,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "315007-2 Friends of the Earth ": {
-      "invoice#": "315007-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -27932,7 +27647,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "315008 Kapor Center": {
-      "invoice#": "315008", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -28091,7 +27805,6 @@
       "rate": "Full Time Member Weekend Rate -- Full day discount"
    }, 
    "315008-2 Kapor Center": {
-      "invoice#": "315008-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -28250,7 +27963,6 @@
       "rate": "Full Time Member Weekend Rate -- Full day discount"
    }, 
    "315009 Hack The Hood": {
-      "invoice#": "315009", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -28392,7 +28104,6 @@
       "rate": "Full Time Member Weeday Rate"
    }, 
    "315010 Defy Ventures_Admisssion": {
-      "invoice#": "315010", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -28542,7 +28253,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "315011 Cleantech Open": {
-      "invoice#": "315011", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -28692,7 +28402,6 @@
       "rate": "Non Member Weekday Rate - Sponsorhsip"
    }, 
    "315011-2 Cleantech Open": {
-      "invoice#": "315011-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -28842,7 +28551,6 @@
       "rate": "Non Member Weekday Rate - Sponsorhsip"
    }, 
    "315011-2 Cleantech Open paid": {
-      "invoice#": "315011-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -28992,7 +28700,6 @@
       "rate": "Non Member Weekday Rate - Sponsorhsip"
    }, 
    "315012 LaunchPad Africa": {
-      "invoice#": "315012", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -29134,7 +28841,6 @@
       "rate": "Part Time Member Weekend Rate"
    }, 
    "315012-2 LaunchPad Africa": {
-      "invoice#": "315012", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -29276,7 +28982,6 @@
       "rate": "Part Time Member Weekend Rate"
    }, 
    "315013 TeachforAmerica": {
-      "invoice#": "315013", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -29378,7 +29083,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "415002-2 Tech808": {
-      "invoice#": "415002-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -29537,7 +29241,6 @@
       "rate": "Non Member Weekend Rate - Full Day Discount"
    }, 
    "415004-2 Amigos Interview Day": {
-      "invoice#": "415004-2", 
       "items": [
          {
             "DESCRIPTION": "Uptown", 
@@ -29633,7 +29336,6 @@
       "rate": "Full Time Member Weekend Rate - Full Day Discount"
    }, 
    "415005-2 Amigos Orientation ": {
-      "invoice#": "415005-2", 
       "items": [
          {
             "DESCRIPTION": "Uptown", 
@@ -29729,7 +29431,6 @@
       "rate": "Full Time Member Weekend Rate - Half Day Discount"
    }, 
    "415006 CSS Member": {
-      "invoice#": "415006", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -29897,7 +29598,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "415006-2 CSS Member": {
-      "invoice#": "415006-2", 
       "items": [
          {
             "DESCRIPTION": "Compostables (100 cups and 100 plates)", 
@@ -29927,7 +29627,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "415006-3 CSS Member": {
-      "invoice#": "415006-3", 
       "items": [
          {
             "DESCRIPTION": "Compostables (100 cups and 100 plates)", 
@@ -29957,7 +29656,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "415007 Tradeswomen": {
-      "invoice#": "415007", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -30116,7 +29814,6 @@
       "rate": "Part Time Member Weekday Rate -- multi room discount"
    }, 
    "415008 Rockwood Institute": {
-      "invoice#": "415008-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -30258,7 +29955,6 @@
       "rate": "Non Member Weekday Rate"
    }, 
    "415009 Black Folks House": {
-      "invoice#": "415009", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -30417,7 +30113,6 @@
       "rate": "Part Time Member Weekend Rate -- Founders Discount"
    }, 
    "415010 LNArt Old Navy": {
-      "invoice#": "415010", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -30559,7 +30254,6 @@
       "rate": "None Member Weekday Rate"
    }, 
    "415011 Ten Directions": {
-      "invoice#": "415011", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -30709,7 +30403,6 @@
       "rate": "None Member Weekend Rate - Founder Discount"
    }, 
    "415012 Uptima 2.Oakland Demo": {
-      "invoice#": "415012", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -30859,7 +30552,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "415013 Beneficial State FDN": {
-      "invoice#": "415013", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -31009,7 +30701,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "415013-2 Beneficial State FDN": {
-      "invoice#": "415013-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -31177,7 +30868,6 @@
       "rate": "Part Time Member Weekday Rate - New Member Discount"
    }, 
    "415014 CJ Callen": {
-      "invoice#": "415014", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -31327,7 +31017,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "415014-2 CJ Callen": {
-      "invoice#": "415014-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -31477,7 +31166,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "415014-3 CJ Callen": {
-      "invoice#": "415014-3", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -31627,7 +31315,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "415015 Sound of Torture": {
-      "invoice#": "415015", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -31786,7 +31473,6 @@
       "rate": "Part Time Member Weekday Rate - Partnership Discount"
    }, 
    "415016 FVLC Be Brave": {
-      "invoice#": "415016", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -31928,7 +31614,6 @@
       "rate": "Part time Member Weekend Rate"
    }, 
    "415017 Loudspeaker Films": {
-      "invoice#": "415017", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -32070,7 +31755,6 @@
       "rate": "Part Time Member Weekend Rate"
    }, 
    "415017-2 Loudspeaker Films ": {
-      "invoice#": "415017-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -32212,7 +31896,6 @@
       "rate": "Part Time Member Weekend Rate"
    }, 
    "415018 Worksafe": {
-      "invoice#": "415018", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -32354,7 +32037,6 @@
       "rate": "Non Member Weekday Rate"
    }, 
    "415018-2 Worksafe ": {
-      "invoice#": "415018-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -32496,7 +32178,6 @@
       "rate": "Non Member Weekday Rate"
    }, 
    "415019 HERA 10th Anniversary": {
-      "invoice#": "415019", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -32646,7 +32327,6 @@
       "rate": "Non Member Weekday Rate"
    }, 
    "515001 HipHopForChange": {
-      "invoice#": "515001", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -32814,7 +32494,6 @@
       "rate": "Full Time Member Weekend Rate"
    }, 
    "515002 Racial Equitecture": {
-      "invoice#": "515002", 
       "items": [
          {
             "DESCRIPTION": "Gallery", 
@@ -32876,7 +32555,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "512003 Facebook HR": {
-      "invoice#": "512003", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -33044,7 +32722,6 @@
       "rate": "Non  Member Weekday Rate  - Multi Room Discount"
    }, 
    "515004 Youth HUB Pitch Event ": {
-      "invoice#": "515004", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -33194,7 +32871,6 @@
       "rate": "Full Time Member Weekend Rate - Founders Discount"
    }, 
    "515005 PAID Mills College": {
-      "invoice#": "515005", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -33352,7 +33028,6 @@
       "rate": "Part Time Member Weekday Rate"
    }, 
    "515006 CODE2040": {
-      "invoice#": "515006", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -33457,7 +33132,6 @@
       "rate": "Part Time Member Weekend Rate - Full day & Multi room discount"
    }, 
    "615001-2 Praxis": {
-      "invoice#": "615001-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -33607,7 +33281,6 @@
       "rate": "Non Member Weekend Rate"
    }, 
    "615002-2 IHO Whole Person": {
-      "invoice#": "615002-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -33775,7 +33448,6 @@
       "rate": "Full time Member Weekend Rate - Founders Discount"
    }, 
    "615003 Marian Farms": {
-      "invoice#": "615003", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
@@ -33925,7 +33597,6 @@
       "rate": "Full Time Member Weekday Rate"
    }, 
    "615004 BGC Hackathon": {
-      "invoice#": "615004", 
       "items": [
          {
             "DESCRIPTION": "Cancellation Fee", 
@@ -33963,7 +33634,6 @@
       "rate": "Full Time Member Rate -- Partnership Discount"
    }, 
    "615004-2 BGC Hackathon_overtime": {
-      "invoice#": "615004-2", 
       "items": [
          {
             "DESCRIPTION": "IHO Staffing", 
@@ -33993,7 +33663,6 @@
       "rate": ""
    }, 
    "615005-2 Food First": {
-      "invoice#": "615005-2", 
       "items": [
          {
             "DESCRIPTION": "On Broadway", 
