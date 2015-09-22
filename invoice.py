@@ -48,6 +48,9 @@ def parse_sheet(ws, annonymize=False):
     info = {}
     pd.set_option('expand_frame_repr', False)
     sname = ws.title
+    template_pattern = re.comple('template', re.IGNORECASE)
+    if template_pattern.search(sname):
+        return False
 
     # make a dataframe from the current sheet
     df = pd.DataFrame([tuple([cell.value for cell in row]) for row in ws.rows])
@@ -78,26 +81,26 @@ def parse_sheet(ws, annonymize=False):
             info['rate'] = ''
 
 
-        # find index locations of 'bill to', 'title', 'type', 'date' fields
-        sep = df[df[0].str.contains('bill to|title|type',case=False, na=False)].index.tolist()
+        # # find index locations of 'bill to', 'title', 'type', 'date' fields
+        # sep = df[df[0].str.contains('bill to|title|type',case=False, na=False)].index.tolist()
 
-        if len(sep) < 3:
-            info.update({'bill_to':'', 'title':'', 'type':''})
-        else:
-            if annonymize:
-                info.update({'title' : sname,
-                             'type' : df[0][sep[2]+1] }  )
-            else:
-                # Exctract bill_to, title, and type fields
-                info.update({'bill_to' : ', '.join(df[0][sep[0]+1:sep[1]-1].dropna()),
-                             'title' : ', '.join(df[0][sep[1]+1:sep[2]-1].dropna()),
-                             'type' : df[0][sep[2]+1] }  )
+        # if len(sep) < 3:
+        #     info.update({'bill_to':'', 'title':'', 'type':''})
+        # else:
+        #     if annonymize:
+        #         info.update({'title' : sname,
+        #                      'type' : df[0][sep[2]+1] }  )
+        #     else:
+        #         # Exctract bill_to, title, and type fields
+        #         info.update({'bill_to' : ', '.join(df[0][sep[0]+1:sep[1]-1].dropna()),
+        #                      'title' : ', '.join(df[0][sep[1]+1:sep[2]-1].dropna()),
+        #                      'type' : df[0][sep[2]+1] }  )
 
         items = {}
-        sep = df[df[0].str.contains('date',case=False, na=False)].index.tolist()
+        sep = df[df[0].str.contains('^date',case=False, na=False)].index.tolist()
         if sep:
              table_header_row = sep[0]
-        sep = df[df[1].str.contains('^total',case=False, na=False)].index.tolist()
+        sep = df[df[1].str.contains('total',case=False, na=False)].index.tolist()
         if sep:
             last_row = sep[0]
         else:
@@ -110,24 +113,26 @@ def parse_sheet(ws, annonymize=False):
         header = [str(field) for field in header_row[0:last_col+1]]
 
         subsheet = df.iloc[table_header_row+1:last_row+1, 0:last_col+1]#.dropna(how='all', axis = [0,1])
+        header[0] = 'DATE'
+
         subsheet.columns = header
         subsheet = subsheet.reset_index(drop=True)
 
-        if 'DATE OF EVENT' not in header:
-            print("%s:\n%s" % (info['invoice#'], subsheet) )
-        else:
-            for i in subsheet.index:
-                d = subsheet.loc[i, 'DATE OF EVENT']
-                if d:
-                    if isinstance(d, datetime.datetime):
-                        subsheet.loc[i, 'DATE OF EVENT'] = str(d.date())
-                    else:
-                        subsheet.loc[i, 'DATE OF EVENT'] = str(d)
+        # Fill-in DATE column
+        for i in subsheet.index:
+            d = subsheet.loc[i, 'DATE']
+            if d:
+                if isinstance(d, datetime.datetime):
+                    subsheet.loc[i, 'DATE'] = str(d.date())
                 else:
-                    subsheet.loc[i, 'DATE OF EVENT'] = subsheet.loc[i-1, 'DATE OF EVENT']
+                    subsheet.loc[i, 'DATE'] = str(d)
+            else:
+                if i > 0:
+                    subsheet.loc[i, 'DATE'] = subsheet.loc[i-1, 'DATE']
+                else:
+                    print("%s:\n%s" % (info['invoice#'], subsheet) )
 
-            print("%s:\n%s" % (info['invoice#'], subsheet) )
-            info['items'] = subsheet.to_dict('records')
+        info['items'] = subsheet.to_dict('records')
 
         # if df[5][table_header_row] and re.search('discount', df[5][table_header_row], re.IGNORECASE):
         #     discount_col = True
