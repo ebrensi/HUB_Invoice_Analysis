@@ -7,6 +7,7 @@ Created on Mon Aug 17 14:23:20 2015
 
 from openpyxl import load_workbook
 import pandas as pd
+NaN = pd.np.nan
 import re
 import concurrent.futures as futures
 import json
@@ -44,16 +45,18 @@ file_names = ['IHO_OnGoing_InvoiceTemplate.xlsx']#,
 #                ]
 
 
-def parse_sheet(ws, annonymize=False):
+def parse_sheet(ws):
     info = {}
     pd.set_option('expand_frame_repr', False)
     sname = ws.title
-    template_pattern = re.comple('template', re.IGNORECASE)
+
+    template_pattern = re.compile('template|quotes', re.IGNORECASE)
     if template_pattern.search(sname):
-        return False
+        return False, False
 
     # make a dataframe from the current sheet
-    df = pd.DataFrame([tuple([cell.value for cell in row]) for row in ws.rows])
+    df = pd.DataFrame([tuple([cell.value for cell in row]) for row in ws.rows]).dropna(how='all', axis=[0,1])
+    df = df.reset_index(drop=True)
 
     if any(df):
         # get the invoice number from the sheet content, if it's there
@@ -81,22 +84,7 @@ def parse_sheet(ws, annonymize=False):
             info['rate'] = ''
 
 
-        # # find index locations of 'bill to', 'title', 'type', 'date' fields
-        # sep = df[df[0].str.contains('bill to|title|type',case=False, na=False)].index.tolist()
-
-        # if len(sep) < 3:
-        #     info.update({'bill_to':'', 'title':'', 'type':''})
-        # else:
-        #     if annonymize:
-        #         info.update({'title' : sname,
-        #                      'type' : df[0][sep[2]+1] }  )
-        #     else:
-        #         # Exctract bill_to, title, and type fields
-        #         info.update({'bill_to' : ', '.join(df[0][sep[0]+1:sep[1]-1].dropna()),
-        #                      'title' : ', '.join(df[0][sep[1]+1:sep[2]-1].dropna()),
-        #                      'type' : df[0][sep[2]+1] }  )
-
-        items = {}
+        # Determine upper & lower boundaries for the item subtable
         sep = df[df[0].str.contains('^date',case=False, na=False)].index.tolist()
         if sep:
              table_header_row = sep[0]
@@ -112,11 +100,16 @@ def parse_sheet(ws, annonymize=False):
         last_col = next(i for i, j in reversed(list(enumerate(header_row))) if j)
         header = [str(field) for field in header_row[0:last_col+1]]
 
-        subsheet = df.iloc[table_header_row+1:last_row+1, 0:last_col+1]#.dropna(how='all', axis = [0,1])
+        subsheet = df.iloc[table_header_row+1:last_row+1, 0:last_col+1]
         header[0] = 'DATE'
 
         subsheet.columns = header
-        subsheet = subsheet.reset_index(drop=True)
+
+
+        if not subsheet['DATE'].iloc[0]:
+             subsheet['DATE'].iloc[0] = '?'
+
+        subsheet = subsheet.dropna(how='all',axis=[0,1]).reset_index(drop=True)
 
         # Fill-in DATE column
         for i in subsheet.index:
@@ -130,44 +123,22 @@ def parse_sheet(ws, annonymize=False):
                 if i > 0:
                     subsheet.loc[i, 'DATE'] = subsheet.loc[i-1, 'DATE']
                 else:
-                    print("%s:\n%s" % (info['invoice#'], subsheet) )
+                    subsheet.loc[i, 'DATE'] = "unknown"
+        items = subsheet.to_dict("records")
 
-        info['items'] = subsheet.to_dict('records')
+        info['items'] = items
 
-        # if df[5][table_header_row] and re.search('discount', df[5][table_header_row], re.IGNORECASE):
-        #     discount_col = True
-        # else:
-        #     discount_col = False
-
-        # date = ''
-        # for i in range(table_header_row+1, last_row):
-        #     if df[0][i]:
-        #         maybe_date = pd.to_datetime(str(df[0][i]), coerce=True)
-        #         if maybe_date:
-        #             date = str(maybe_date.date())
-        #             items[date] = {}
-
-        #     # if the amount field is not empty
-        #     if df[2][i]:
-        #         description = df[1][i]
-        #         other = {'amount':df[2][i], 'hours':df[3][i], 'subtotal':df[4][i], 'discount':''}
-        #         if discount_col and df[5][i]:
-        #             other['discount'] = df[5][i]
-
-        #         if date:
-        #             items[date][description] = other
-        #         else:
-        #             items[''] = {}
-        #             items[''][description] = other
-        # info['items'] = items
-
-    return info
+        subsheet['RATE'] = info['rate']
+        subsheet['invoice#'] = info['invoice#']
+        subsheet['SHEET'] = sname
+        # subsheet = subsheet[['SHEET','invoice#']+header+['RATE']]
+    return info, subsheet
 
 
 
 ## *******************************
 
-def xlsx2json(file_names, annonymize=True):
+def xlsx2json(file_names):
     worksheets = []
 
     start_time = time.time()
@@ -180,16 +151,25 @@ def xlsx2json(file_names, annonymize=True):
 
     sheet_names = reversed([ws.title for ws in worksheets])
     invoices = OrderedDict.fromkeys(sheet_names)
-
+    dfs = []
     start_time = time.time()
     for ws in worksheets:
-        # select one invoice sheet from the workbook
-        invoices[ws.title] = parse_sheet(ws, annonymize)
+        invoice_dict, invoice_df = parse_sheet(ws)
+        if invoice_dict:
+            invoices[ws.title] = invoice_dict
+            dfs.append(invoice_df)
+            print(ws.title)
+        else:
+            # if nothing was parsed from this invoice then remove it's key from 'invoices'
+            invoices.pop(ws.title, None)
+
+#        df = pd.concat(dfs, ignore_index=True)
+
 
     elapsed_string = str(datetime.timedelta(seconds=time.time()-start_time))
     print('Finished in %s' % elapsed_string)
 
-    return invoices
+    return invoices, dfs
 
 # This function produces a list of dictionaries, each entry one item from a nested invoice dictionary
 def flatten_dict(invoices):
@@ -198,7 +178,7 @@ def flatten_dict(invoices):
         if invoices[title]:
             c = invoices[title].copy()
             items = c.pop('items')
-            for date in items:
+            for item in items:
                 c['date'] = date
                 for description, item in items[date].items():
                     c2 = c.copy()
@@ -214,7 +194,7 @@ def flatten_dict(invoices):
 
 # Read in the original Excel workbooks and create the invoices.json file
 if not os.path.isfile('invoices.json'):
-    invoices = xlsx2json(file_names, annonymize=True)
+    invoices, df = xlsx2json(file_names)
     with open('invoices.json','w') as out_file:
         out_file.write(json.dumps(invoices, indent=3))
 else:
