@@ -38,15 +38,15 @@ def find(patt):
             return None
     return search
 
-file_names = ['IHO_OnGoing_InvoiceTemplate.xlsx',
-               '2015 OnGoing InvoiceTemplate.xlsx']
+file_names = ['IHO_OnGoing_InvoiceTemplate.xlsx']#,
+              # '2015 OnGoing InvoiceTemplate.xlsx']
              #'IHO_OnGoing_QuoteTemplate.xlsx'
 #                ]
 
 
 def parse_sheet(ws, annonymize=False):
     info = {}
-
+    pd.set_option('expand_frame_repr', False)
     sname = ws.title
 
     # make a dataframe from the current sheet
@@ -106,16 +106,19 @@ def parse_sheet(ws, annonymize=False):
 
         # # we might get data by column instead of row.
         header_row = df.iloc[table_header_row].tolist()
-        last_col = next(i for i, j in reversed(list(enumerate(d))) if j)
-        header = header_row[0:last_col]
-        print(header)
+        last_col = next(i for i, j in reversed(list(enumerate(header_row))) if j)
+        header = header_row[0:last_col+1]
 
-        subsheet = df.iloc[table_header_row:last_row].dropna(how='all', axis = [0,1])
+        subsheet = df.iloc[table_header_row+1:last_row+1, 0:last_col+1]#.dropna(how='all', axis = [0,1])
+        # print("%s:\n%s\n%s" % (info['invoice#'], header, subsheet) )
 
-        if df[5][table_header_row] and re.search('discount', df[5][table_header_row], re.IGNORECASE):
-            discount_col = True
-        else:
-            discount_col = False
+        subsheet.columns = header
+        print("%s:\n%s" % (info['invoice#'], subsheet) )
+
+        # if df[5][table_header_row] and re.search('discount', df[5][table_header_row], re.IGNORECASE):
+        #     discount_col = True
+        # else:
+        #     discount_col = False
 
         date = ''
         for i in range(table_header_row+1, last_row):
