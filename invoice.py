@@ -59,19 +59,19 @@ def parse_sheet(ws):
     df = df.reset_index(drop=True)
 
     if any(df):
-        # get the invoice number from the sheet content, if it's there
-        # otherwise, try to exctract it from the sheet name
-        patt = re.compile('invoice #?(.*)', re.IGNORECASE)
-        tags = df.dropna(how='all', axis=[0,1]).applymap(find(patt)).dropna(how='all', axis=[0,1])
-        tags_list = flatten(tags.values.tolist())
-        if tags_list and bool(tags_list[0]):
-            info['invoice#'] = tags_list[0].group(1).strip()
-        else:
-            match = re.search('(\d+-?\d*) ', sname)
-            if match:
-                info['invoice#'] = match.group(1).rstrip('.').strip()
-            else:
-                info['invoice#'] = sname.strip()
+        # # get the invoice number from the sheet content, if it's there
+        # # otherwise, try to exctract it from the sheet name
+        # patt = re.compile('invoice #?(.*)', re.IGNORECASE)
+        # tags = df.dropna(how='all', axis=[0,1]).applymap(find(patt)).dropna(how='all', axis=[0,1])
+        # tags_list = flatten(tags.values.tolist())
+        # if tags_list and bool(tags_list[0]):
+        #     info['invoice#'] = tags_list[0].group(1).strip()
+        # else:
+        #     match = re.search('(\d+-?\d*) ', sname)
+        #     if match:
+        #         info['invoice#'] = match.group(1).rstrip('.').strip()
+        #     else:
+        #         info['invoice#'] = sname.strip()
 
 
         # find the cell that contains rate information and parse it
@@ -179,12 +179,9 @@ def flatten_dict(invoices):
             c = invoices[title].copy()
             items = c.pop('items')
             for item in items:
-                c['date'] = date
-                for description, item in items[date].items():
-                    c2 = c.copy()
-                    c2['description'] = description
-                    c2.update(item)
-                    result.append(c2)
+                c2 = c.copy()
+                c2.update(item)
+                result.append(c2)
     return result
 
 
@@ -200,7 +197,7 @@ if not os.path.isfile('invoices.json'):
 else:
     with open('invoices.json','r') as in_file:
         invoices = json.load(in_file)
-
+"""
 # Transform json data into a flat table
 if not os.path.isfile('invoice_items_flat.csv'):
     df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna(how='all')
@@ -262,3 +259,4 @@ df.set_index(['title','date']).to_excel('invoice_items_flat_cleaned.xls')
 # grouped = df.groupby(['title','date'])
 
 
+"""
