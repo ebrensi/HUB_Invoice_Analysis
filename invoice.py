@@ -110,15 +110,20 @@ def parse_sheet(ws, annonymize=False):
         header = header_row[0:last_col+1]
 
         subsheet = df.iloc[table_header_row+1:last_row+1, 0:last_col+1]#.dropna(how='all', axis = [0,1])
-        # print("%s:\n%s\n%s" % (info['invoice#'], header, subsheet) )
-
         subsheet.columns = header
+
+        subsheet = subsheet.reset_index(drop=True)
+        for i in subsheet.index:
+            if not subsheet.loc[i, 'DATE OF EVENT']:
+                subsheet.loc[i, 'DATE OF EVENT'] = subsheet.loc[i-1, 'DATE OF EVENT']
+
+
         print("%s:\n%s" % (info['invoice#'], subsheet) )
 
-        # if df[5][table_header_row] and re.search('discount', df[5][table_header_row], re.IGNORECASE):
-        #     discount_col = True
-        # else:
-        #     discount_col = False
+        if df[5][table_header_row] and re.search('discount', df[5][table_header_row], re.IGNORECASE):
+            discount_col = True
+        else:
+            discount_col = False
 
         date = ''
         for i in range(table_header_row+1, last_row):
