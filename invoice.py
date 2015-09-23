@@ -294,10 +294,14 @@ for day_duration in day_duration_classes:
     day_duration_mask = df['rate'].str.contains(day_duration_classes[day_duration], case=False, na=False)
     df.loc[day_duration_mask,'duration'] = day_duration
 
+df['discount'] = None
+for discount in discount_classes:
+    discount_mask = df['rate'].str.contains(discount_classes[discount], case=False, na=False)
+    df.loc[discount_mask,'discount'] = discount
 
 
-
-df = df[['sheet','DATE','item-type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate','membership','day-type']]
+df = df[['sheet','DATE','item-type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
+            'rate','membership','day-type','duration','discount']]
 
 df.set_index(['sheet','DATE']).to_excel('invoice_items_prepped.xlsx')
 
