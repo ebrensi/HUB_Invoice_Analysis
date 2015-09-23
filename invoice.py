@@ -25,7 +25,7 @@ service_classes = {'setup/breakdown':'set[-| ]?up', 'staffing':'staff|manager', 
                     'janitorial':'janitorial|waste|cleaning' }
 
 member_classes = {'part-time': 'part[-| ]?time', 'full-time':'full[ |-]?time|full member',
-                    'non-member':'none?[ |-]member'}
+                    'non-member':'none?[ |-]member', 'org-connect':'Org'}
 
 day_type_classes  =  {'weekend': 'weekend', 'weekday':'weekday|wkday'}
 
