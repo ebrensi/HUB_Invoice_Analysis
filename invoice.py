@@ -190,6 +190,7 @@ else:
 if not os.path.isfile('invoice_items_flat.csv'):
     df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna(how='all')
     df.to_csv('invoice_items_flat.csv',index=False,  encoding='utf-8')
+    df.set_index(['sheet','DATE']).to_excel('invoice_items_flat.xlsx')
 else:
     df = pd.read_csv('invoice_items_flat.csv', encoding='utf-8')
 
@@ -210,34 +211,30 @@ for col_name in [' TOTAL', 'ESTIMATE TOTAL', 'ESTIMATED TOTAL']:
 
 df = df[['sheet','DATE','DESCRIPTION','AMOUNT','HOURS','SUBTOTAL','DISCOUNT','TOTAL','rate']]
 
-# output a multi-index excel file for inspection
-df.set_index(['sheet','DATE']).to_excel('invoice_items_flat.xlsx')
-
-
-"""
 
 ## clean up numeric columns
+
 # first we take care of implicit full-discount (amounts labeled 'waved', 'comped', 'included')
-no_charge_amount = df['amount'].str.contains("waved|comped|included", case=False, na=False)
-no_charge_subtot = df['subtotal'].str.contains("waved|comped|included", case=False, na=False)
+no_charge_amount = df['AMOUNT'].str.contains("waved|comped|included", case=False, na=False)
+no_charge_subtot = df['SUBTOTAL'].str.contains("waved|comped|included", case=False, na=False)
 no_charge = no_charge_amount | no_charge_subtot
-df.loc[no_charge,['amount','subtotal']] = 0
-df.loc[no_charge, 'discount'] = 1
+df.loc[no_charge,['AMOUNT','SUBTOTAL']] = 0
+df.loc[no_charge, 'DISCOUNT'] = 1
 
-# We'll need 'hours' field to be numeric too.
-#  convert any 'flat fee' indicators to 1 so that the amount identifies with subtotal.
-df['hours'].loc[df['hours'].str.contains('flat', case=False, na=False)] = 1
 
-# convert all 'amount' and 'subtotal' values to floats (anything non-numeric becomes NaN)
-df[['amount','subtotal','hours']] = df[['amount','subtotal','hours']].convert_objects(convert_numeric=True)
+#  convert any 'flat fee' indicators to 1 so that the AMOUNT identifies with SUBTOTAL.
+df['HOURS'].loc[df['HOURS'].str.contains('flat', case=False, na=False)] = 1
 
-# drop rows where both 'amount' and 'subtotal' are non-numeric
-df = df[~df[['amount','subtotal']].isnull().all(axis=1)]
+# convert all 'AMOUNT' and 'SUBTOTAL' values to floats (anything non-numeric becomes NaN)
+df[['AMOUNT','SUBTOTAL','HOURS']] = df[['AMOUNT','SUBTOTAL','HOURS']].convert_objects(convert_numeric=True)
+
+# # drop rows where both 'AMOUNT' and 'SUBTOTAL' are non-numeric
+# df = df[~df[['AMOUNT','SUBTOTAL']].isnull().all(axis=1)]
 
 # fill in missing subtotal values.  We need these values for determining income.
 
 # output a multi-index excel file for inspection
-df.set_index(['title','date']).to_excel('invoice_items_flat_cleaned.xls')
+df.set_index(['sheet','DATE']).to_excel('invoice_items_flat_cleaned.xlsx')
 
 
 
@@ -257,5 +254,3 @@ df.set_index(['title','date']).to_excel('invoice_items_flat_cleaned.xls')
 # rooms = room_classes.keys()
 # grouped = df.groupby(['title','date'])
 
-
-"""
