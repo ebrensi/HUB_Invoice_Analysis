@@ -289,6 +289,13 @@ for day_type in day_type_classes:
     day_type_mask = df['rate'].str.contains(day_type_classes[day_type], case=False, na=False)
     df.loc[day_type_mask,'day-type'] = day_type
 
+df['duration'] = None
+for day_duration in day_duration_classes:
+    day_duration_mask = df['rate'].str.contains(day_duration_classes[day_duration], case=False, na=False)
+    df.loc[day_duration_mask,'duration'] = day_duration
+
+
+
 
 df = df[['sheet','DATE','item-type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate','membership','day-type']]
 
