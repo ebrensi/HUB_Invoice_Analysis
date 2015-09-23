@@ -21,11 +21,14 @@ room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingleto
                  'meditation':'meditation', 'kitchen':'kitchen', 'meridian':'meridian', 'east_oak':'east',
                  'west_oak':'west', 'up':'uptown', 'down':'downtown'}
 
+service_classes = {'setup/breakdown':'set[-| ]?up', 'staffing':'staff|manager', 'A/V':'A/V|technician',
+                    'janitorial':'janitorial|waste|cleaning' }
+
 rate_classes = {'ptm': 'part[-| ]?time', 'ftm':'full[ |-]?time|full member', 'nm':'none?[ |-]member',
                     'wkn': 'weekend', 'wkd':'weekday|wkday', 'wth':'with'}
 
-discount_classes = {'fdd':'Full[-| ]?day', 'mrd':'Multi[-| ]?Room', 'pd':'Partnership',
-                        'fd':'Founder', 'rcd':'Returning[-| ]?client', 'hdd':'Half[-| ]?Day'}
+discount_classes = {'full-day':'Full[-| ]?day', 'multi-room':'Multi[-| ]?Room', 'partnership':'Partnership',
+                        'founder':'Founder', 'returnng-client':'Returning[-| ]?client', 'half-day':'Half[-| ]?Day'}
 
 
 def flatten(l):
@@ -199,8 +202,8 @@ else:
 df['DATE'].update(df['DATE OF EVENT'])
 # df = df.drop('DATE OF EVENT', axis=1)
 
-for col_name in ['ESTIMATED HOURS', 'HOURS/UNITS']:
-    df['HOURS'].update(df[col_name])
+for col_name in ['ESTIMATED HOURS', 'HOURS']:
+    df['HOURS/UNITS'].update(df[col_name])
     # df = df.drop(col_name, axis=1)
 
 for col_name in [' TOTAL', 'ESTIMATE TOTAL', 'ESTIMATED TOTAL']:
@@ -209,7 +212,7 @@ for col_name in [' TOTAL', 'ESTIMATE TOTAL', 'ESTIMATED TOTAL']:
 
 # df = df.drop('DONATION', axis=1)
 
-df = df[['sheet','DATE','DESCRIPTION','AMOUNT','HOURS','SUBTOTAL','DISCOUNT','TOTAL','rate']]
+df = df[['sheet','DATE','DESCRIPTION','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate']]
 
 
 ## clean up numeric columns
@@ -226,21 +229,21 @@ df.loc[no_charge, 'DISCOUNT'] = 1
 
 
 #  convert any 'flat fee' indicators to 1 so that the AMOUNT identifies with SUBTOTAL.
-df['HOURS'].loc[df['HOURS'].str.contains('flat', case=False, na=False)] = 1
+df['HOURS/UNITS'].loc[df['HOURS/UNITS'].str.contains('flat', case=False, na=False)] = 1
 
 # convert all 'AMOUNT' and 'SUBTOTAL' values to floats (anything non-numeric becomes NaN)
-df[['AMOUNT','SUBTOTAL','HOURS','DISCOUNT','TOTAL']] = df[['AMOUNT','SUBTOTAL','HOURS','DISCOUNT','TOTAL']].convert_objects(convert_numeric=True)
+df[['AMOUNT','SUBTOTAL','HOURS/UNITS','DISCOUNT','TOTAL']] = df[['AMOUNT','SUBTOTAL','HOURS/UNITS','DISCOUNT','TOTAL']].convert_objects(convert_numeric=True)
 
-#  drop rows where 'AMOUNT', 'HOURS', SUBTOTAL', 'TOTAL' are all empty or zero
-isnull = df[['AMOUNT','SUBTOTAL','HOURS','TOTAL']].isnull()
-iszero = df[['AMOUNT','SUBTOTAL','HOURS','TOTAL']] == 0
+#  drop rows where 'AMOUNT', 'HOURS/UNITS', SUBTOTAL', 'TOTAL' are all empty or zero
+isnull = df[['AMOUNT','SUBTOTAL','HOURS/UNITS','TOTAL']].isnull()
+iszero = df[['AMOUNT','SUBTOTAL','HOURS/UNITS','TOTAL']] == 0
 is_either = (isnull | iszero).all(axis=1)
 df = df[~is_either]
 
 # fill in missing subtotal values.  We need these values for determining income.
-# If AMOUNT and HOURS are both non-empty then compute SUBTOTAL = AMOUNT * HOURS
-notnull = df[['AMOUNT','HOURS']].notnull().all(axis=1)
-df.loc[notnull, 'SUBTOTAL'] = df['AMOUNT'] * df['HOURS']
+# If AMOUNT and HOURS/UNITS are both non-empty then compute SUBTOTAL = AMOUNT * HOURS/UNITS
+notnull = df[['AMOUNT','HOURS/UNITS']].notnull().all(axis=1)
+df.loc[notnull, 'SUBTOTAL'] = df['AMOUNT'] * df['HOURS/UNITS']
 
 
 # output a multi-index excel file for inspection
@@ -248,16 +251,42 @@ df.set_index(['sheet','DATE']).to_excel('invoice_items_flat_cleaned.xlsx')
 
 
 
+# Now we classify items into standard categories
+df['item-type'] = None
+df['item'] = None
+
+
 # # Assoicate items with rate, room, half/full-day, and discount-type
-# for rate in rate_classes:
-#     df['rate_'+rate] =  df['rate'].str.contains(rate_classes[rate], case=False, na=False)
 
-# for room in room_classes:
-    # df[room] =  df['description'].str.contains(room_classes[room], case=False, na=False)
+for room in room_classes:
+    this_room_mask = df['DESCRIPTION'].str.contains(room_classes[room], case=False, na=False)
+    df.loc[this_room_mask,'item-type'] = 'room'
+    df.loc[this_room_mask,'item'] = room
+
+for service in service_classes:
+    this_service_mask = df['DESCRIPTION'].str.contains(service_classes[service], case=False, na=False)
+    df.loc[this_service_mask,'item-type'] = 'service'
+    df.loc[this_service_mask,'item'] = service
+
+this_total_mask = df['DESCRIPTION'].str.contains('total', case=False, na=False)
+df.loc[this_total_mask,'item-type'] = 'total'
+df.loc[this_total_mask,'item'] = None
+
+other_mask = df['item-type'].isnull()
+df.loc[other_mask,'item-type'] = 'other'
+df.loc[other_mask,'item'] = df.loc[other_mask,'DESCRIPTION']
 
 
-# for discount in discount_classes:
-#     df[discount] =  df['rate'].str.contains(discount_classes[discount], case=False, na=False)
+
+df['discount-type'] = None
+for discount in discount_classes:
+    this_discount_mask = df['rate'].str.contains(discount_classes[discount], case=False, na=False)
+    df.loc[this_discount_mask,'discount-type'] = discount
+
+
+df = df[['sheet','DATE','item-type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate','discount-type']]
+
+df.set_index(['sheet','DATE']).to_excel('invoice_items_prepped.xlsx')
 
 
 
