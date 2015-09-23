@@ -229,12 +229,19 @@ df.loc[no_charge, 'DISCOUNT'] = 1
 df['HOURS'].loc[df['HOURS'].str.contains('flat', case=False, na=False)] = 1
 
 # convert all 'AMOUNT' and 'SUBTOTAL' values to floats (anything non-numeric becomes NaN)
-df[['AMOUNT','SUBTOTAL','HOURS']] = df[['AMOUNT','SUBTOTAL','HOURS']].convert_objects(convert_numeric=True)
+df[['AMOUNT','SUBTOTAL','HOURS','DISCOUNT','TOTAL']] = df[['AMOUNT','SUBTOTAL','HOURS','DISCOUNT','TOTAL']].convert_objects(convert_numeric=True)
 
-# # drop rows where both 'AMOUNT' and 'SUBTOTAL' are non-numeric
-# df = df[~df[['AMOUNT','SUBTOTAL']].isnull().all(axis=1)]
+#  drop rows where 'AMOUNT', 'HOURS', SUBTOTAL', 'TOTAL' are all empty or zero
+isnull = df[['AMOUNT','SUBTOTAL','HOURS','TOTAL']].isnull()
+iszero = df[['AMOUNT','SUBTOTAL','HOURS','TOTAL']] == 0
+is_either = (isnull | iszero).all(axis=1)
+df = df[~is_either]
 
 # fill in missing subtotal values.  We need these values for determining income.
+# If AMOUNT and HOURS are both non-empty then compute SUBTOTAL = AMOUNT * HOURS
+notnull = df[['AMOUNT','HOURS']].notnull().all(axis=1)
+df.loc[notnull, 'SUBTOTAL'] = df['AMOUNT'] * df['HOURS']
+
 
 # output a multi-index excel file for inspection
 df.set_index(['sheet','DATE']).to_excel('invoice_items_flat_cleaned.xlsx')
@@ -246,7 +253,7 @@ df.set_index(['sheet','DATE']).to_excel('invoice_items_flat_cleaned.xlsx')
 #     df['rate_'+rate] =  df['rate'].str.contains(rate_classes[rate], case=False, na=False)
 
 # for room in room_classes:
-#     df[room] =  df['description'].str.contains(room_classes[room], case=False, na=False)
+    # df[room] =  df['description'].str.contains(room_classes[room], case=False, na=False)
 
 
 # for discount in discount_classes:
