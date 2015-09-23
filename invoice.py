@@ -24,11 +24,13 @@ room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingleto
 service_classes = {'setup/breakdown':'set[-| ]?up', 'staffing':'staff|manager', 'A/V':'A/V|technician',
                     'janitorial':'janitorial|waste|cleaning' }
 
-rate_classes = {'ptm': 'part[-| ]?time', 'ftm':'full[ |-]?time|full member', 'nm':'none?[ |-]member',
-                    'wkn': 'weekend', 'wkd':'weekday|wkday', 'wth':'with'}
+member_classes = {'part-time': 'part[-| ]?time', 'full-time':'full[ |-]?time|full member',
+                    'non-member':'none?[ |-]member', 'founder':'Founder'}
+
+day_classes    =  {'weekend': 'weekend', 'weekday':'weekday|wkday'}
 
 discount_classes = {'full-day':'Full[-| ]?day', 'multi-room':'Multi[-| ]?Room', 'partnership':'Partnership',
-                        'founder':'Founder', 'returnng-client':'Returning[-| ]?client', 'half-day':'Half[-| ]?Day'}
+                     'returnng-client':'Returning[-| ]?client', 'half-day':'Half[-| ]?Day'}
 
 
 def flatten(l):
@@ -251,12 +253,9 @@ df.set_index(['sheet','DATE']).to_excel('invoice_items_flat_cleaned.xlsx')
 
 
 
-# Now we classify items into standard categories
+##  Classify items into standard categories: 'room', 'service', 'total', 'other'
 df['item-type'] = None
 df['item'] = None
-
-
-# # Assoicate items with rate, room, half/full-day, and discount-type
 
 for room in room_classes:
     this_room_mask = df['DESCRIPTION'].str.contains(room_classes[room], case=False, na=False)
@@ -277,14 +276,14 @@ df.loc[other_mask,'item-type'] = 'other'
 df.loc[other_mask,'item'] = df.loc[other_mask,'DESCRIPTION']
 
 
+## classify RATE info from sheet into discount-type and member-type
+df['membership'] = None
+for member_type in member_classes:
+    member_mask = df['rate'].str.contains(member_classes[member_type], case=False, na=False)
+    df.loc[member_mask,'membership'] = member_type
 
-df['discount-type'] = None
-for discount in discount_classes:
-    this_discount_mask = df['rate'].str.contains(discount_classes[discount], case=False, na=False)
-    df.loc[this_discount_mask,'discount-type'] = discount
 
-
-df = df[['sheet','DATE','item-type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate','discount-type']]
+df = df[['sheet','DATE','item-type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate','membership']]
 
 df.set_index(['sheet','DATE']).to_excel('invoice_items_prepped.xlsx')
 
