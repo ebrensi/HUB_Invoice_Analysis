@@ -93,7 +93,6 @@ def parse_sheet(ws):
         header = [str(field) for field in header_row[0:last_col+1]]
 
         subsheet = df.iloc[table_header_row+1:last_row+1, 0:last_col+1]
-        # header[0] = 'DATE'
         date_col_name = header[0]
         subsheet.columns = header
 
@@ -119,9 +118,7 @@ def parse_sheet(ws):
         items = subsheet.to_dict("records")
         info['items'] = items
 
-        # subsheet['RATE'] = info['rate']
-        # subsheet['SHEET'] = sname
-    return info#, subsheet
+    return info
 
 
 
@@ -152,13 +149,14 @@ def xlsx2json(file_names):
             # if nothing was parsed from this invoice then remove it's key from 'invoices'
             invoices.pop(ws.title, None)
 
-#        df = pd.concat(dfs, ignore_index=True)
 
 
     elapsed_string = str(datetime.timedelta(seconds=time.time()-start_time))
     print('Finished in %s' % elapsed_string)
 
     return invoices
+
+
 
 # This function produces a list of dictionaries, each entry one item from a nested invoice dictionary
 def flatten_dict(invoices):
@@ -167,7 +165,7 @@ def flatten_dict(invoices):
         if invoices[title]:
             c = invoices[title].copy()
             items = c.pop('items')
-            c['SHEET'] = title
+            c['sheet'] = title
             for item in items:
                 c2 = c.copy()
                 c2.update(item)
@@ -198,18 +196,22 @@ else:
 
 # df is a raw flat table.  First we join equivalent columns
 df['DATE'].update(df['DATE OF EVENT'])
-df = df.drop('DATE OF EVENT', axis=1)
+# df = df.drop('DATE OF EVENT', axis=1)
 
 for col_name in ['ESTIMATED HOURS', 'HOURS/UNITS']:
     df['HOURS'].update(df[col_name])
-    df = df.drop(col_name, axis=1)
+    # df = df.drop(col_name, axis=1)
 
 for col_name in [' TOTAL', 'ESTIMATE TOTAL', 'ESTIMATED TOTAL']:
     df['TOTAL'].update(df[col_name])
-    df = df.drop(col_name, axis=1)
+    # df = df.drop(col_name, axis=1)
+
+# df = df.drop('DONATION', axis=1)
+
+df = df[['sheet','DATE','DESCRIPTION','AMOUNT','HOURS','SUBTOTAL','DISCOUNT','TOTAL','rate']]
 
 # output a multi-index excel file for inspection
-df.set_index(['SHEET','DATE']).to_excel('invoice_items_flat.xlsx')
+df.set_index(['sheet','DATE']).to_excel('invoice_items_flat.xlsx')
 
 
 """
