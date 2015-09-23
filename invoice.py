@@ -52,14 +52,14 @@ def parse_sheet(ws):
 
     template_pattern = re.compile('template|quotes', re.IGNORECASE)
     if template_pattern.search(sname):
-        return False, False
+        return False
 
     invoice_num_match = re.match('^(\d+)',sname)
 
     # exclude invoices with no invoice# or invoice# < 2035
     if (not invoice_num_match) or (int(invoice_num_match.group(1)) < 2035) :
         print("\texcluding '%s'" % (sname))
-        return False, False
+        return False
 
     # make a dataframe from the current sheet
     df = pd.DataFrame([tuple([cell.value for cell in row]) for row in ws.rows]).dropna(how='all', axis=[0,1])
@@ -93,36 +93,35 @@ def parse_sheet(ws):
         header = [str(field) for field in header_row[0:last_col+1]]
 
         subsheet = df.iloc[table_header_row+1:last_row+1, 0:last_col+1]
-        header[0] = 'DATE'
-
+        # header[0] = 'DATE'
+        date_col_name = header[0]
         subsheet.columns = header
 
 
-        if not subsheet['DATE'].iloc[0]:
-             subsheet['DATE'].iloc[0] = '?'
+        if not subsheet[date_col_name].iloc[0]:
+             subsheet[date_col_name].iloc[0] = '?'
 
         subsheet = subsheet.dropna(how='all',axis=[0,1]).reset_index(drop=True)
 
         # Fill-in DATE column
         for i in subsheet.index:
-            d = subsheet.loc[i, 'DATE']
+            d = subsheet.loc[i, date_col_name]
             if d:
                 if isinstance(d, datetime.datetime):
-                    subsheet.loc[i, 'DATE'] = str(d.date())
+                    subsheet.loc[i, date_col_name] = str(d.date())
                 else:
-                    subsheet.loc[i, 'DATE'] = str(d)
+                    subsheet.loc[i, date_col_name] = str(d)
             else:
                 if i > 0:
-                    subsheet.loc[i, 'DATE'] = subsheet.loc[i-1, 'DATE']
+                    subsheet.loc[i, date_col_name] = subsheet.loc[i-1, date_col_name]
                 else:
-                    subsheet.loc[i, 'DATE'] = "unknown"
+                    subsheet.loc[i, date_col_name] = "unknown"
         items = subsheet.to_dict("records")
-
         info['items'] = items
 
-        subsheet['RATE'] = info['rate']
-        subsheet['SHEET'] = sname
-    return info, subsheet
+        # subsheet['RATE'] = info['rate']
+        # subsheet['SHEET'] = sname
+    return info#, subsheet
 
 
 
@@ -141,13 +140,13 @@ def xlsx2json(file_names):
 
     sheet_names = reversed([ws.title for ws in worksheets])
     invoices = OrderedDict.fromkeys(sheet_names)
-    dfs = []
+    # dfs = []
     start_time = time.time()
     for ws in worksheets:
-        invoice_dict, invoice_df = parse_sheet(ws)
+        invoice_dict = parse_sheet(ws)
         if invoice_dict:
             invoices[ws.title] = invoice_dict
-            dfs.append(invoice_df)
+            # dfs.append(invoice_df)
             print(ws.title)
         else:
             # if nothing was parsed from this invoice then remove it's key from 'invoices'
@@ -159,7 +158,7 @@ def xlsx2json(file_names):
     elapsed_string = str(datetime.timedelta(seconds=time.time()-start_time))
     print('Finished in %s' % elapsed_string)
 
-    return invoices, dfs
+    return invoices
 
 # This function produces a list of dictionaries, each entry one item from a nested invoice dictionary
 def flatten_dict(invoices):
@@ -182,7 +181,7 @@ def flatten_dict(invoices):
 
 # Read in the original Excel workbooks and create the invoices.json file
 if not os.path.isfile('invoices.json'):
-    invoices, df = xlsx2json(file_names)
+    invoices = xlsx2json(file_names)
     with open('invoices.json','w') as out_file:
         out_file.write(json.dumps(invoices, indent=3))
 else:
@@ -192,22 +191,21 @@ else:
 # Transform json data into a flat table
 if not os.path.isfile('invoice_items_flat.csv'):
     df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna(how='all')
-
-    # # sort entries by invoice number
-    # sort_by_invoice_num = df['title'].str.extract('(\d+)').dropna().astype(int).order().index
-    # df = df.loc[sort_by_invoice_num]
-
-    # fields = ['title','date','description','amount','hours','subtotal','discount','rate']
-    # df = df[fields]
-
-    # output a multi-index excel file for inspection
-    df.set_index(['SHEET','DATE']).to_excel('invoice_items_flat.xlsx')
-
     df.to_csv('invoice_items_flat.csv',index=False,  encoding='utf-8')
 else:
     df = pd.read_csv('invoice_items_flat.csv', encoding='utf-8')
 
+
+# df is a raw flat table.  First we join equivalent columns
+df['DATE'].update(df['DATE OF EVENT'])
+df = df.drop('DATE OF EVENT',axis=1)
+
+# output a multi-index excel file for inspection
+df.set_index(['SHEET','DATE']).to_excel('invoice_items_flat.xlsx')
+
+
 """
+
 ## clean up numeric columns
 # first we take care of implicit full-discount (amounts labeled 'waved', 'comped', 'included')
 no_charge_amount = df['amount'].str.contains("waved|comped|included", case=False, na=False)
