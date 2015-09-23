@@ -198,7 +198,15 @@ else:
 
 # df is a raw flat table.  First we join equivalent columns
 df['DATE'].update(df['DATE OF EVENT'])
-df = df.drop('DATE OF EVENT',axis=1)
+df = df.drop('DATE OF EVENT', axis=1)
+
+for col_name in ['ESTIMATED HOURS', 'HOURS/UNITS']:
+    df['HOURS'].update(df[col_name])
+    df = df.drop(col_name, axis=1)
+
+for col_name in [' TOTAL', 'ESTIMATE TOTAL', 'ESTIMATED TOTAL']:
+    df['TOTAL'].update(df[col_name])
+    df = df.drop(col_name, axis=1)
 
 # output a multi-index excel file for inspection
 df.set_index(['SHEET','DATE']).to_excel('invoice_items_flat.xlsx')
