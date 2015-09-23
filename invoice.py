@@ -215,10 +215,13 @@ df = df[['sheet','DATE','DESCRIPTION','AMOUNT','HOURS','SUBTOTAL','DISCOUNT','TO
 ## clean up numeric columns
 
 # first we take care of implicit full-discount (amounts labeled 'waved', 'comped', 'included')
-no_charge_amount = df['AMOUNT'].str.contains("waved|comped|included", case=False, na=False)
-no_charge_subtot = df['SUBTOTAL'].str.contains("waved|comped|included", case=False, na=False)
-no_charge = no_charge_amount | no_charge_subtot
-df.loc[no_charge,['AMOUNT','SUBTOTAL']] = 0
+no_charge_indicators = "waved|comped|included|member"
+no_charge_amount = df['AMOUNT'].str.contains(no_charge_indicators, case=False, na=False)
+no_charge_subtot = df['SUBTOTAL'].str.contains(no_charge_indicators, case=False, na=False)
+no_charge_tot = df['TOTAL'].str.contains(no_charge_indicators, case=False, na=False)
+
+no_charge = no_charge_amount | no_charge_subtot | no_charge_tot
+df.loc[no_charge,['AMOUNT','SUBTOTAL','TOTAL']] = 0
 df.loc[no_charge, 'DISCOUNT'] = 1
 
 
