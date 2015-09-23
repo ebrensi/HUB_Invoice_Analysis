@@ -25,12 +25,14 @@ service_classes = {'setup/breakdown':'set[-| ]?up', 'staffing':'staff|manager', 
                     'janitorial':'janitorial|waste|cleaning' }
 
 member_classes = {'part-time': 'part[-| ]?time', 'full-time':'full[ |-]?time|full member',
-                    'non-member':'none?[ |-]member', 'founder':'Founder'}
+                    'non-member':'none?[ |-]member'}
 
-day_classes    =  {'weekend': 'weekend', 'weekday':'weekday|wkday'}
+day_type_classes  =  {'weekend': 'weekend', 'weekday':'weekday|wkday'}
 
-discount_classes = {'full-day':'Full[-| ]?day', 'multi-room':'Multi[-| ]?Room', 'partnership':'Partnership',
-                     'returnng-client':'Returning[-| ]?client', 'half-day':'Half[-| ]?Day'}
+day_duration_classes = {'full-day':'Full[-| ]?day',  'half-day':'Half[-| ]?Day'}
+
+discount_classes = { 'multi-room':'Multi[-| ]?Room', 'founder':'Founder','partnership':'Partnership',
+                     'returnng-client':'Returning[-| ]?client'}
 
 
 def flatten(l):
@@ -282,8 +284,13 @@ for member_type in member_classes:
     member_mask = df['rate'].str.contains(member_classes[member_type], case=False, na=False)
     df.loc[member_mask,'membership'] = member_type
 
+df['day-type'] = None
+for day_type in day_type_classes:
+    day_type_mask = df['rate'].str.contains(day_type_classes[day_type], case=False, na=False)
+    df.loc[day_type_mask,'day-type'] = day_type
 
-df = df[['sheet','DATE','item-type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate','membership']]
+
+df = df[['sheet','DATE','item-type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate','membership','day-type']]
 
 df.set_index(['sheet','DATE']).to_excel('invoice_items_prepped.xlsx')
 
