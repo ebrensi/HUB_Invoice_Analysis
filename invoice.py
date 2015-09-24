@@ -27,7 +27,7 @@ service_classes = {'setup/breakdown':'set[-| ]?up', 'staffing':'staff|manager', 
 member_classes = {'part-time': 'part[-| ]?time|Part Ttime', 'full-time':'full[ |-]?time|full member',
                     'non-member':'none?[ |-]member', 'org-connect':'Org'}
 
-day_type_classes  =  {'weekend': 'weekend', 'weekday':'weekday|wkday', 'holiday':'holiday'}
+day_type_classes  =  {'weekend': 'weekend', 'weekday':'weekday|wkday'}
 
 day_duration_classes = {'full-day':'Full[-| ]?day',  'half-day':'Half[-| ]?Day'}
 
@@ -40,6 +40,7 @@ discount_classes = { 'multi-room':'Multi[-| ]?Room', 'multi-day':'Multi[-| ]?day
 # Full Time Member Weekend Rate - Sponsorship Discount
 # WITH EVENT
 # Full Time Member Weekday Rate  - WITH event sponsorship
+# Non Member Weekday Rate -- Holiday Rate
 
 
 def flatten(l):
