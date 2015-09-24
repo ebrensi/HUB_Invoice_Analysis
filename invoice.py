@@ -24,15 +24,22 @@ room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingleto
 service_classes = {'setup/breakdown':'set[-| ]?up', 'staffing':'staff|manager', 'A/V':'A/V|technician',
                     'janitorial':'janitorial|waste|cleaning' }
 
-member_classes = {'part-time': 'part[-| ]?time', 'full-time':'full[ |-]?time|full member',
+member_classes = {'part-time': 'part[-| ]?time|Part Ttime', 'full-time':'full[ |-]?time|full member',
                     'non-member':'none?[ |-]member', 'org-connect':'Org'}
 
-day_type_classes  =  {'weekend': 'weekend', 'weekday':'weekday|wkday'}
+day_type_classes  =  {'weekend': 'weekend', 'weekday':'weekday|wkday', 'holiday':'holiday'}
 
 day_duration_classes = {'full-day':'Full[-| ]?day',  'half-day':'Half[-| ]?Day'}
 
-discount_classes = { 'multi-room':'Multi[-| ]?Room', 'founder':'Founder','partnership':'Partnership',
-                     'returnng-client':'Returning[-| ]?client'}
+discount_classes = { 'multi-room':'Multi[-| ]?Room', 'multi-day':'Multi[-| ]?day','multi-event':'Multi[-| ]?event', 'founder':'Founder','partnership':'Partner',
+                     'returning-client':'Returning[-| ]?client', 'sponsorship':'sponsor', 'Reoccuring':'Reo?ccuring'}
+# Non-Member Weekday Rate - IHO partial sponsor
+# Full Member Weekday Rate - 50/50 Rev Share
+# Part Time Member Weekend Rate -- IHO Sponsorship
+# Non Member Weekday Rate - Sharon Cornu Credit Applied
+# Full Time Member Weekend Rate - Sponsorship Discount
+# WITH EVENT
+# Full Time Member Weekday Rate  - WITH event sponsorship
 
 
 def flatten(l):
