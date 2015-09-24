@@ -18,8 +18,8 @@ from collections import OrderedDict
 #from tqdm import *
 
 room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingletown', 'omi':'gallery|omi',
-                 'meditation':'meditation', 'kitchen':'kitchen', 'meridian':'meridian', 'east_oak':'east',
-                 'west_oak':'west', 'up':'uptown', 'down':'downtown'}
+                 'meditation':'meditation', 'kitchen':'kitchen', 'meridian':'meridian', 'east-oak':'east',
+                 'west-oak':'west', 'uptown':'uptown', 'downtown':'downtown'}
 
 service_classes = {'setup/breakdown':'set[-| ]?up', 'staffing':'staff|manager', 'A/V':'A/V|technician',
                     'janitorial':'janitorial|waste|cleaning' }
