@@ -33,14 +33,15 @@ day_duration_classes = {'full-day':'Full[-| ]?day',  'half-day':'Half[-| ]?Day'}
 
 discount_classes = { 'multi-room':'Multi[-| ]?Room', 'multi-day':'Multi[-| ]?day','multi-event':'Multi[-| ]?event', 'founder':'Founder','partnership':'Partner',
                      'returning-client':'Returning[-| ]?client', 'sponsorship':'sponsor', 'Reoccuring':'Reo?ccuring'}
-# Non-Member Weekday Rate - IHO partial sponsor
-# Full Member Weekday Rate - 50/50 Rev Share
-# Part Time Member Weekend Rate -- IHO Sponsorship
-# Non Member Weekday Rate - Sharon Cornu Credit Applied
-# Full Time Member Weekend Rate - Sponsorship Discount
-# WITH EVENT
-# Full Time Member Weekday Rate  - WITH event sponsorship
+
+# 115014 Debby Irving :  Full Member Weekday Rate - 50/50 Rev Share
+# 2115 John Chiang : Non Member Weekday Rate - Sharon Cornu Credit Applied
+# 2106 LNA_WATER : WITH EVENT
+# 2181 BALANCE : Full Time Member Weekday Rate  - WITH event sponsorship
+# 2151 B Labs : Non-member weekday; Discount Rate for IHO WITH event
+# 2089 Vegan Soul Sunday : WITH event rate
 # Non Member Weekday Rate -- Holiday Rate
+# 2190 Kerusso Music Group : Non Member Weekday Rate -- Holiday Rate
 
 
 def flatten(l):
@@ -309,7 +310,7 @@ for discount in discount_classes:
 
 
 df = df[['sheet','DATE','item-type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
-            'rate','membership','day-type','duration','discount']]
+            'membership','day-type','duration','discount']]
 
 df.set_index(['sheet','DATE']).to_excel('invoice_items_prepped.xlsx')
 
