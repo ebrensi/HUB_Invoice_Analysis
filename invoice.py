@@ -194,128 +194,134 @@ def flatten_dict(invoices):
 ### ************************************
 
 # Read in the original Excel workbooks and create the invoices.json file
-if not os.path.isfile('invoices.json'):
+#  or load 'invoices.json' if it exists
+if os.path.isfile('invoices.json'):
+    with open('invoices.json','r') as in_file:
+        invoices = json.load(in_file)
+else:
     invoices = xlsx2json(file_names)
     with open('invoices.json','w') as out_file:
         out_file.write(json.dumps(invoices, indent=3))
-else:
-    with open('invoices.json','r') as in_file:
-        invoices = json.load(in_file)
 
-# Transform json data into a flat table
-if not os.path.isfile('invoice_items_flat.csv'):
+
+# Transform json data into a flat table and save as csv file
+#   or load  'invoice_items_flat.csv' if it exists.
+if os.path.isfile('invoice_items_flat.csv'):
+    df = pd.read_csv('invoice_items_flat.csv', encoding='utf-8')
+else:
     df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna(how='all')
     df.to_csv('invoice_items_flat.csv',index=False,  encoding='utf-8')
-    df.set_index(['sheet','DATE']).to_excel('invoice_items_flat.xlsx')
+
+# Clean up raw flattened data into the basic columns we want
+fname = 'invoice_items_flat_cleaned'
+if os.path.isfile(fname+'.csv'):
+    df = pd.read_csv(fname+'.csv', encoding='utf-8')
 else:
-    df = pd.read_csv('invoice_items_flat.csv', encoding='utf-8')
+    # df is a raw flat table.  First we join equivalent columns
+    df['DATE'].update(df['DATE OF EVENT'])
+
+    for col_name in ['ESTIMATED HOURS', 'HOURS']:
+        df['HOURS/UNITS'].update(df[col_name])
+
+    for col_name in [' TOTAL', 'ESTIMATE TOTAL', 'ESTIMATED TOTAL']:
+        df['TOTAL'].update(df[col_name])
 
 
-# df is a raw flat table.  First we join equivalent columns
-df['DATE'].update(df['DATE OF EVENT'])
-# df = df.drop('DATE OF EVENT', axis=1)
-
-for col_name in ['ESTIMATED HOURS', 'HOURS']:
-    df['HOURS/UNITS'].update(df[col_name])
-    # df = df.drop(col_name, axis=1)
-
-for col_name in [' TOTAL', 'ESTIMATE TOTAL', 'ESTIMATED TOTAL']:
-    df['TOTAL'].update(df[col_name])
-    # df = df.drop(col_name, axis=1)
-
-# df = df.drop('DONATION', axis=1)
-
-df = df[['sheet','DATE','DESCRIPTION','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate']]
+    df = df[['sheet','DATE','DESCRIPTION','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate']]
 
 
-## clean up numeric columns
+    ## clean up numeric columns
 
-# first we take care of implicit full-discount (amounts labeled 'waved', 'comped', 'included')
-no_charge_indicators = "waved|comped|included|member"
-no_charge_amount = df['AMOUNT'].str.contains(no_charge_indicators, case=False, na=False)
-no_charge_subtot = df['SUBTOTAL'].str.contains(no_charge_indicators, case=False, na=False)
-no_charge_tot = df['TOTAL'].str.contains(no_charge_indicators, case=False, na=False)
+    # first we take care of implicit full-discount (amounts labeled 'waved', 'comped', 'included')
+    no_charge_indicators = "waved|comped|included|member"
+    no_charge_amount = df['AMOUNT'].str.contains(no_charge_indicators, case=False, na=False)
+    no_charge_subtot = df['SUBTOTAL'].str.contains(no_charge_indicators, case=False, na=False)
+    no_charge_tot = df['TOTAL'].str.contains(no_charge_indicators, case=False, na=False)
 
-no_charge = no_charge_amount | no_charge_subtot | no_charge_tot
-df.loc[no_charge,['AMOUNT','SUBTOTAL','TOTAL']] = 0
-df.loc[no_charge, 'DISCOUNT'] = 1
-
-
-#  convert any 'flat fee' indicators to 1 so that the AMOUNT identifies with SUBTOTAL.
-df['HOURS/UNITS'].loc[df['HOURS/UNITS'].str.contains('flat', case=False, na=False)] = 1
-
-# convert all 'AMOUNT' and 'SUBTOTAL' values to floats (anything non-numeric becomes NaN)
-df[['AMOUNT','SUBTOTAL','HOURS/UNITS','DISCOUNT','TOTAL']] = df[['AMOUNT','SUBTOTAL','HOURS/UNITS','DISCOUNT','TOTAL']].convert_objects(convert_numeric=True)
-
-#  drop rows where 'AMOUNT', 'HOURS/UNITS', SUBTOTAL', 'TOTAL' are all empty or zero
-isnull = df[['AMOUNT','SUBTOTAL','HOURS/UNITS','TOTAL']].isnull()
-iszero = df[['AMOUNT','SUBTOTAL','HOURS/UNITS','TOTAL']] == 0
-is_either = (isnull | iszero).all(axis=1)
-df = df[~is_either]
-
-# fill in missing subtotal values.  We need these values for determining income.
-# If AMOUNT and HOURS/UNITS are both non-empty then compute SUBTOTAL = AMOUNT * HOURS/UNITS
-notnull = df[['AMOUNT','HOURS/UNITS']].notnull().all(axis=1)
-df.loc[notnull, 'SUBTOTAL'] = df['AMOUNT'] * df['HOURS/UNITS']
+    no_charge = no_charge_amount | no_charge_subtot | no_charge_tot
+    df.loc[no_charge,['AMOUNT','SUBTOTAL','TOTAL']] = 0
+    df.loc[no_charge, 'DISCOUNT'] = 1
 
 
-# output a multi-index excel file for inspection
-df.set_index(['sheet','DATE']).to_excel('invoice_items_flat_cleaned.xlsx')
+    #  convert any 'flat fee' indicators to 1 so that the AMOUNT identifies with SUBTOTAL.
+    df['HOURS/UNITS'].loc[df['HOURS/UNITS'].str.contains('flat', case=False, na=False)] = 1
+
+    # convert all 'AMOUNT' and 'SUBTOTAL' values to floats (anything non-numeric becomes NaN)
+    df[['AMOUNT','SUBTOTAL','HOURS/UNITS','DISCOUNT','TOTAL']] = df[['AMOUNT','SUBTOTAL','HOURS/UNITS','DISCOUNT','TOTAL']].convert_objects(convert_numeric=True)
+
+    #  drop rows where 'AMOUNT', 'HOURS/UNITS', SUBTOTAL', 'TOTAL' are all empty or zero
+    isnull = df[['AMOUNT','SUBTOTAL','HOURS/UNITS','TOTAL']].isnull()
+    iszero = df[['AMOUNT','SUBTOTAL','HOURS/UNITS','TOTAL']] == 0
+    is_either = (isnull | iszero).all(axis=1)
+    df = df[~is_either]
+
+    # fill in missing subtotal values.  We need these values for determining income.
+    # If AMOUNT and HOURS/UNITS are both non-empty then compute SUBTOTAL = AMOUNT * HOURS/UNITS
+    notnull = df[['AMOUNT','HOURS/UNITS']].notnull().all(axis=1)
+    df.loc[notnull, 'SUBTOTAL'] = df['AMOUNT'] * df['HOURS/UNITS']
+
+    # write flattened data before we classify everything
+    df.to_csv(fname+'.csv', index=False,  encoding='utf-8')
 
 
 
-##  Classify items into standard categories: 'room', 'service', 'total', 'other'
-df['item-type'] = None
-df['item'] = None
+fname = 'invoice_items_prepped'
+if os.path.isfile(fname+'.csv'):
+    df = pd.read_csv(fname+'.csv', encoding='utf-8')
+else:
 
-for room in room_classes:
-    this_room_mask = df['DESCRIPTION'].str.contains(room_classes[room], case=False, na=False)
-    df.loc[this_room_mask,'item-type'] = 'room'
-    df.loc[this_room_mask,'item'] = room
+    ##  Classify items into standard categories: 'room', 'service', 'total', 'other'
+    df['item-type'] = None
+    df['item'] = None
 
-for service in service_classes:
-    this_service_mask = df['DESCRIPTION'].str.contains(service_classes[service], case=False, na=False)
-    df.loc[this_service_mask,'item-type'] = 'service'
-    df.loc[this_service_mask,'item'] = service
+    for room in room_classes:
+        this_room_mask = df['DESCRIPTION'].str.contains(room_classes[room], case=False, na=False)
+        df.loc[this_room_mask,'item-type'] = 'room'
+        df.loc[this_room_mask,'item'] = room
 
-this_total_mask = df['DESCRIPTION'].str.contains('total', case=False, na=False)
-df.loc[this_total_mask,'item-type'] = 'total'
-df.loc[this_total_mask,'item'] = None
+    for service in service_classes:
+        this_service_mask = df['DESCRIPTION'].str.contains(service_classes[service], case=False, na=False)
+        df.loc[this_service_mask,'item-type'] = 'service'
+        df.loc[this_service_mask,'item'] = service
 
-other_mask = df['item-type'].isnull()
-df.loc[other_mask,'item-type'] = 'other'
-df.loc[other_mask,'item'] = df.loc[other_mask,'DESCRIPTION']
+    this_total_mask = df['DESCRIPTION'].str.contains('total', case=False, na=False)
+    df.loc[this_total_mask,'item-type'] = 'total'
+    df.loc[this_total_mask,'item'] = None
 
-
-## classify RATE info from sheet into discount-type and member-type
-df['membership'] = None
-for member_type in member_classes:
-    member_mask = df['rate'].str.contains(member_classes[member_type], case=False, na=False)
-    df.loc[member_mask,'membership'] = member_type
-
-df['day-type'] = None
-for day_type in day_type_classes:
-    day_type_mask = df['rate'].str.contains(day_type_classes[day_type], case=False, na=False)
-    df.loc[day_type_mask,'day-type'] = day_type
-
-df['duration'] = None
-for day_duration in day_duration_classes:
-    day_duration_mask = df['rate'].str.contains(day_duration_classes[day_duration], case=False, na=False)
-    df.loc[day_duration_mask,'duration'] = day_duration
-
-df['discount'] = None
-for discount in discount_classes:
-    discount_mask = df['rate'].str.contains(discount_classes[discount], case=False, na=False)
-    df.loc[discount_mask,'discount'] = discount
+    other_mask = df['item-type'].isnull()
+    df.loc[other_mask,'item-type'] = 'other'
+    df.loc[other_mask,'item'] = df.loc[other_mask,'DESCRIPTION']
 
 
-df = df[['sheet','DATE','item-type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
-            'membership','day-type','duration','discount']]
+    ## classify RATE info from sheet into discount-type and member-type
+    df['membership'] = None
+    for member_type in member_classes:
+        member_mask = df['rate'].str.contains(member_classes[member_type], case=False, na=False)
+        df.loc[member_mask,'membership'] = member_type
 
-df.set_index(['sheet','DATE']).to_excel('invoice_items_prepped.xlsx')
+    df['day-type'] = None
+    for day_type in day_type_classes:
+        day_type_mask = df['rate'].str.contains(day_type_classes[day_type], case=False, na=False)
+        df.loc[day_type_mask,'day-type'] = day_type
+
+    df['duration'] = None
+    for day_duration in day_duration_classes:
+        day_duration_mask = df['rate'].str.contains(day_duration_classes[day_duration], case=False, na=False)
+        df.loc[day_duration_mask,'duration'] = day_duration
+
+    df['discount'] = None
+    for discount in discount_classes:
+        discount_mask = df['rate'].str.contains(discount_classes[discount], case=False, na=False)
+        df.loc[discount_mask,'discount'] = discount
+
+
+    df = df[['sheet','DATE','item-type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
+                'membership','day-type','duration','discount']]
+
+    df.to_csv(fname+'.csv', index=False,  encoding='utf-8')
+    df.set_index(['sheet','DATE']).to_excel(fname+'.xlsx')
 
 
 
 # rooms = room_classes.keys()
 # grouped = df.groupby(['title','date'])
-
