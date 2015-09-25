@@ -331,10 +331,13 @@ else:
             df.loc[mask, 'TOTAL'] = df.loc[mask, 'SUBTOTAL'] * (1 - df.loc[mask, 'DISCOUNT'])
 
 
+    #  Fill-in missing DISCOUNT entries with zero
+    df.loc[df['DISCOUNT'].isnull() & (df['item-type'] != 'total'), 'DISCOUNT'] = 0
+
     df = df[['sheet','DATE','item-type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
                 'membership','day-type','duration','discount']]
 
-    df.to_csv(fname+'.csv', index=False,  encoding='utf-8')
+    # df.to_csv(fname+'.csv', index=False,  encoding='utf-8')
     df.to_excel(fname+'.xlsx')
 
 fields = ['sheet','DATE','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
