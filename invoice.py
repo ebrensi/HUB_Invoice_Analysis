@@ -8,6 +8,8 @@ Created on Mon Aug 17 14:23:20 2015
 from openpyxl import load_workbook
 import pandas as pd
 NaN = pd.np.nan
+#pd.set_option('expand_frame_repr', False)
+
 import re
 import concurrent.futures as futures
 import json
@@ -15,7 +17,9 @@ import time
 import datetime
 import os.path
 from collections import OrderedDict
-#from tqdm import *
+
+exclusions = [ {'sheet':'2188 BGC_volunteertraining', 'AMOUNT':'855'},
+                {'sheet':'2041 Bryant Terry'} ]
 
 room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingletown', 'omi':'gallery|omi',
                  'meditation':'meditation', 'kitchen':'kitchen', 'meridian':'meridian', 'east-oak':'east',
@@ -153,13 +157,12 @@ def xlsx2json(file_names):
 
     sheet_names = reversed([ws.title for ws in worksheets])
     invoices = OrderedDict.fromkeys(sheet_names)
-    # dfs = []
+
     start_time = time.time()
     for ws in worksheets:
         invoice_dict = parse_sheet(ws)
         if invoice_dict:
             invoices[ws.title] = invoice_dict
-            # dfs.append(invoice_df)
             print(ws.title)
         else:
             # if nothing was parsed from this invoice then remove it's key from 'invoices'
@@ -314,6 +317,28 @@ else:
         discount_mask = df['rate'].str.contains(discount_classes[discount], case=False, na=False)
         df.loc[discount_mask,'discount'] = discount
 
+    # Manually cut out some bad entries.  Sorry, this is a hack to deal with stuff I can't automate.
+
+
+    # Fill-in missing hours and discounts for room rentals where these values are implied by a multi-room
+    #   deal, particularly when DESCRIPTION field contains 'Entire ...'
+    fields = ['HOURS/UNITS','DISCOUNT']
+    multi_room_item_mask =  df['item'].str.contains('entire', na=False, case=False)
+    for multi_room_item in df[multi_room_item_mask].iterrows():
+        item = multi_room_item[1].copy()
+        if pd.np.isnan(item['DISCOUNT']):
+            item['DISCOUNT'] = 0
+        mask = (df['sheet'] == item['sheet']) & (df['item-type'] == 'room') & df['HOURS/UNITS'].isnull()
+        if mask.any():
+            print item
+            for field in fields:
+                df.loc[mask, field] = item[field]
+
+            df.loc[mask, 'SUBTOTAL'] = df.loc[mask, 'AMOUNT'] * df.loc[mask, 'HOURS/UNITS']
+
+            df.loc[mask, 'TOTAL'] = df.loc[mask, 'SUBTOTAL'] * (1 - df.loc[mask, 'DISCOUNT'])
+            print(df[mask])
+
 
     df = df[['sheet','DATE','item-type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
                 'membership','day-type','duration','discount']]
@@ -321,7 +346,3 @@ else:
     df.to_csv(fname+'.csv', index=False,  encoding='utf-8')
     df.set_index(['sheet','DATE']).to_excel(fname+'.xlsx')
 
-
-
-# rooms = room_classes.keys()
-# grouped = df.groupby(['title','date'])
