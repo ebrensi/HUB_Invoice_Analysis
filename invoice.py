@@ -222,8 +222,9 @@ else:
     for col_name in [' TOTAL', 'ESTIMATE TOTAL', 'ESTIMATED TOTAL']:
         df['TOTAL'].update(df[col_name])
 
+    cancellations = df['sheet'].str.contains('cancel', na=False, case=False)
 
-    df = df[['sheet','DATE','DESCRIPTION','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate']]
+    df = df[['sheet','DATE','DESCRIPTION','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate']][~cancellations]
 
 
     ## clean up numeric columns
@@ -310,7 +311,6 @@ else:
         discount_mask = df['rate'].str.contains(discount_classes[discount], case=False, na=False)
         df.loc[discount_mask,'discount'] = discount
 
-    # Manually cut out some bad entries.  Sorry, this is a hack to deal with stuff I can't automate.
 
 
     # Fill-in missing hours and discounts for room rentals where these values are implied by a multi-room
@@ -342,4 +342,4 @@ else:
 
 fields = ['sheet','DATE','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
                 'membership','day-type','duration','discount']
-df[fields][df['item-type']=='room'].sort('item').set_index(['sheet','DATE']).to_excel('invoice_data.xlsx')
+df[fields][df['item-type']=='room'].sort(['item','HOURS/UNITS']).to_excel('invoice_data.xlsx',index=False)
