@@ -344,3 +344,5 @@ else:
     df.to_csv(fname+'.csv', index=False,  encoding='utf-8')
     df.to_excel(fname+'.xlsx')
 
+df[['sheet','DATE','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
+                'membership','day-type','duration','discount']][df['item-type']=='room'].sort('item').to_excel('invoice_data.xlsx')
