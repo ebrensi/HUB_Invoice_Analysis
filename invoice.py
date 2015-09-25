@@ -207,19 +207,12 @@ else:
         out_file.write(json.dumps(invoices, indent=3))
 
 
-# Transform json data into a flat table and save as csv file
-#   or load  'invoice_items_flat.csv' if it exists.
-if os.path.isfile('invoice_items_flat.csv'):
-    df = pd.read_csv('invoice_items_flat.csv', encoding='utf-8')
-else:
-    df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna(how='all')
-    df.to_csv('invoice_items_flat.csv',index=False,  encoding='utf-8')
-
 # Clean up raw flattened data into the basic columns we want
 fname = 'invoice_items_flat_cleaned'
 if os.path.isfile(fname+'.csv'):
     df = pd.read_csv(fname+'.csv', encoding='utf-8')
 else:
+    df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna(how='all')
     # df is a raw flat table.  First we join equivalent columns
     df['DATE'].update(df['DATE OF EVENT'])
 
@@ -323,7 +316,7 @@ else:
     # Fill-in missing hours and discounts for room rentals where these values are implied by a multi-room
     #   deal, particularly when DESCRIPTION field contains 'Entire ...'
     fields = ['HOURS/UNITS','DISCOUNT']
-    multi_room_item_mask =  df['item'].str.contains('entire', na=False, case=False)
+    multi_room_item_mask =  df['item'].str.contains('entire|level|rentals', na=False, case=False)
     for multi_room_item in df[multi_room_item_mask].iterrows():
         item = multi_room_item[1].copy()
         if pd.np.isnan(item['DISCOUNT']):
@@ -344,5 +337,6 @@ else:
     df.to_csv(fname+'.csv', index=False,  encoding='utf-8')
     df.to_excel(fname+'.xlsx')
 
-df[['sheet','DATE','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
-                'membership','day-type','duration','discount']][df['item-type']=='room'].sort('item').to_excel('invoice_data.xlsx')
+fields = ['sheet','DATE','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
+                'membership','day-type','duration','discount']
+df[fields][df['item-type']=='room'].sort('item').set_index(['sheet','DATE']).to_excel('invoice_data.xlsx')
