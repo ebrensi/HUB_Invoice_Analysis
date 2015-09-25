@@ -330,19 +330,17 @@ else:
             item['DISCOUNT'] = 0
         mask = (df['sheet'] == item['sheet']) & (df['item-type'] == 'room') & df['HOURS/UNITS'].isnull()
         if mask.any():
-            print item
             for field in fields:
                 df.loc[mask, field] = item[field]
 
             df.loc[mask, 'SUBTOTAL'] = df.loc[mask, 'AMOUNT'] * df.loc[mask, 'HOURS/UNITS']
 
             df.loc[mask, 'TOTAL'] = df.loc[mask, 'SUBTOTAL'] * (1 - df.loc[mask, 'DISCOUNT'])
-            print(df[mask])
 
 
     df = df[['sheet','DATE','item-type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
                 'membership','day-type','duration','discount']]
 
     df.to_csv(fname+'.csv', index=False,  encoding='utf-8')
-    df.set_index(['sheet','DATE']).to_excel(fname+'.xlsx')
+    df.to_excel(fname+'.xlsx')
 
