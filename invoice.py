@@ -36,7 +36,7 @@ day_type_classes  =  {'weekend': 'weekend', 'weekday':'weekday|wkday'}
 day_duration_classes = {'full-day':'Full[-| ]?day',  'half-day':'Half[-| ]?Day'}
 
 discount_classes = { 'multi-room':'Multi[-| ]?Room', 'multi-day':'Multi[-| ]?day','multi-event':'Multi[-| ]?event', 'founder':'Founder','partnership':'Partner',
-                     'returning-client':'Returning[-| ]?client', 'sponsorship':'sponsor', 'Reoccuring':'Reo?ccuring'}
+                     'returning-client':'Returning[-| ]?client', 'sponsorship':'sponsor', 'reoccuring':'reo?ccuring'}
 
 # 115014 Debby Irving :  Full Member Weekday Rate - 50/50 Rev Share
 # 2115 John Chiang : Non Member Weekday Rate - Sharon Cornu Credit Applied
@@ -268,25 +268,25 @@ if os.path.isfile(fname+'.csv'):
 else:
 
     ##  Classify items into standard categories: 'room', 'service', 'total', 'other'
-    df['item-type'] = None
+    df['item_type'] = None
     df['item'] = None
 
     for room in room_classes:
         this_room_mask = df['DESCRIPTION'].str.contains(room_classes[room], case=False, na=False)
-        df.loc[this_room_mask,'item-type'] = 'room'
+        df.loc[this_room_mask,'item_type'] = 'room'
         df.loc[this_room_mask,'item'] = room
 
     for service in service_classes:
         this_service_mask = df['DESCRIPTION'].str.contains(service_classes[service], case=False, na=False)
-        df.loc[this_service_mask,'item-type'] = 'service'
+        df.loc[this_service_mask,'item_type'] = 'service'
         df.loc[this_service_mask,'item'] = service
 
     this_total_mask = df['DESCRIPTION'].str.contains('total', case=False, na=False)
-    df.loc[this_total_mask,'item-type'] = 'total'
+    df.loc[this_total_mask,'item_type'] = 'total'
     df.loc[this_total_mask,'item'] = None
 
-    other_mask = df['item-type'].isnull()
-    df.loc[other_mask,'item-type'] = 'other'
+    other_mask = df['item_type'].isnull()
+    df.loc[other_mask,'item_type'] = 'other'
     df.loc[other_mask,'item'] = df.loc[other_mask,'DESCRIPTION']
 
 
@@ -296,17 +296,17 @@ else:
         member_mask = df['rate'].str.contains(member_classes[member_type], case=False, na=False)
         df.loc[member_mask,'membership'] = member_type
 
-    df['day-type'] = None
+    df['day_type'] = None
     for day_type in day_type_classes:
         day_type_mask = df['rate'].str.contains(day_type_classes[day_type], case=False, na=False)
-        df.loc[day_type_mask,'day-type'] = day_type
+        df.loc[day_type_mask,'day_type'] = day_type
 
     df['duration'] = None
     for day_duration in day_duration_classes:
         day_duration_mask = df['rate'].str.contains(day_duration_classes[day_duration], case=False, na=False)
         df.loc[day_duration_mask,'duration'] = day_duration
 
-    df['discount'] = None
+    df['discount_type'] = None
     for discount in discount_classes:
         discount_mask = df['rate'].str.contains(discount_classes[discount], case=False, na=False)
         df.loc[discount_mask,'discount'] = discount
@@ -321,7 +321,7 @@ else:
         item = multi_room_item[1].copy()
         if pd.np.isnan(item['DISCOUNT']):
             item['DISCOUNT'] = 0
-        mask = (df['sheet'] == item['sheet']) & (df['item-type'] == 'room') & df['HOURS/UNITS'].isnull()
+        mask = (df['sheet'] == item['sheet']) & (df['item_type'] == 'room') & df['HOURS/UNITS'].isnull()
         if mask.any():
             for field in fields:
                 df.loc[mask, field] = item[field]
@@ -332,14 +332,14 @@ else:
 
 
     #  Fill-in missing DISCOUNT entries with zero
-    df.loc[df['DISCOUNT'].isnull() & (df['item-type'] != 'total'), 'DISCOUNT'] = 0
+    df.loc[df['DISCOUNT'].isnull() & (df['item_type'] != 'total'), 'DISCOUNT'] = 0
 
-    df = df[['sheet','DATE','item-type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
-                'membership','day-type','duration','discount']]
+    df = df[['sheet','DATE','item_type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
+                'membership','day_type','duration','discount']]
 
     # df.to_csv(fname+'.csv', index=False,  encoding='utf-8')
     df.to_excel(fname+'.xlsx')
 
 fields = ['sheet','DATE','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
-                'membership','day-type','duration','discount']
-df[fields][df['item-type']=='room'].sort(['item','HOURS/UNITS']).to_excel('invoice_data.xlsx',index=False)
+                'membership','day_type','duration','discount']
+df[fields][df['item_type']=='room'].sort(['item','HOURS/UNITS']).to_excel('invoice_data.xlsx',index=False)
