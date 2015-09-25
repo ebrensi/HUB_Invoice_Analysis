@@ -309,7 +309,7 @@ else:
     df['discount_type'] = None
     for discount in discount_classes:
         discount_mask = df['rate'].str.contains(discount_classes[discount], case=False, na=False)
-        df.loc[discount_mask,'discount'] = discount
+        df.loc[discount_mask,'discount_type'] = discount
 
 
 
@@ -335,11 +335,11 @@ else:
     df.loc[df['DISCOUNT'].isnull() & (df['item_type'] != 'total'), 'DISCOUNT'] = 0
 
     df = df[['sheet','DATE','item_type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
-                'membership','day_type','duration','discount']]
+                'membership','day_type','duration','discount_type']]
 
     # df.to_csv(fname+'.csv', index=False,  encoding='utf-8')
     df.to_excel(fname+'.xlsx')
 
 fields = ['sheet','DATE','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
-                'membership','day_type','duration','discount']
+                'membership','discount_type','day_type','duration']
 df[fields][df['item_type']=='room'].sort(['item','HOURS/UNITS']).to_excel('invoice_data.xlsx',index=False)
