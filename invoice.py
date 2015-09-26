@@ -18,12 +18,15 @@ import datetime
 import os.path
 from collections import OrderedDict
 
-exclusions = [ {'sheet':'2188 BGC_volunteertraining', 'AMOUNT':'855'},
+# ignore invoices
+INVOICE_NUM_CUTOFF = 2035
+
+exclusions = [{'sheet':'2188 BGC_volunteertraining', 'AMOUNT':'855'},
                 {'sheet':'2041 Bryant Terry'} ]
 
 room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingletown', 'omi':'gallery|omi',
                  'meditation':'meditation', 'kitchen':'kitchen', 'meridian':'meridian', 'east-oak':'east',
-                 'west-oak':'west', 'uptown':'uptown', 'downtown':'downtown'}
+                 'west-oak':'west', 'uptown':'uptown', 'downtown':'downtown', 'courtyard':'courtyard'}
 
 service_classes = {'setup/breakdown':'set[-| ]?up', 'staffing':'staff|manager', 'A/V':'A/V|technician',
                     'janitorial':'janitorial|waste|cleaning' }
@@ -64,7 +67,7 @@ file_names = ['IHO_OnGoing_InvoiceTemplate.xlsx',
              #'IHO_OnGoing_QuoteTemplate.xlsx'
 #                ]
 
-
+## Extract relevant data from one invoice worksheet and return it as a dict
 def parse_sheet(ws):
     info = {}
     pd.set_option('expand_frame_repr', False)
@@ -72,13 +75,6 @@ def parse_sheet(ws):
 
     template_pattern = re.compile('template|quotes', re.IGNORECASE)
     if template_pattern.search(sname):
-        return False
-
-    invoice_num_match = re.match('^(\d+)',sname)
-
-    # exclude invoices with no invoice# or invoice# < 2035
-    if (not invoice_num_match) or (int(invoice_num_match.group(1)) < 2035) :
-        print("\texcluding '%s'" % (sname))
         return False
 
     # make a dataframe from the current sheet
@@ -143,7 +139,8 @@ def parse_sheet(ws):
 
 
 ## *******************************
-
+# Import a workbook of invoice sheets and store relevant data for every invoice as a
+#   record in a json dictionary.
 def xlsx2json(file_names):
     worksheets = []
 
@@ -213,6 +210,15 @@ if os.path.isfile(fname+'.csv'):
     df = pd.read_csv(fname+'.csv', encoding='utf-8')
 else:
     df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna(how='all')
+
+    # exclude invoices with no invoice# or invoice# < INVOICE_NUM_CUTOFF
+    invoice_num = df['sheet'].str.extract('(\d+)').str.strip().astype(float)
+    # print(invoice_num.isnull().tolist())
+    exclude_mask = invoice_num.isnull() |  (invoice_num < INVOICE_NUM_CUTOFF)
+    print("Excluding \n%s" % (df['sheet'][exclude_mask].tolist()) )
+    df = df.drop(exclude_mask)
+    # exit()
+
     # df is a raw flat table.  First we join equivalent columns
     df['DATE'].update(df['DATE OF EVENT'])
 
@@ -246,9 +252,9 @@ else:
     # convert all 'AMOUNT' and 'SUBTOTAL' values to floats (anything non-numeric becomes NaN)
     df[['AMOUNT','SUBTOTAL','HOURS/UNITS','DISCOUNT','TOTAL']] = df[['AMOUNT','SUBTOTAL','HOURS/UNITS','DISCOUNT','TOTAL']].convert_objects(convert_numeric=True)
 
-    #  drop rows where 'AMOUNT', 'HOURS/UNITS', SUBTOTAL', 'TOTAL' are all empty or zero
-    isnull = df[['AMOUNT','SUBTOTAL','HOURS/UNITS','TOTAL']].isnull()
-    iszero = df[['AMOUNT','SUBTOTAL','HOURS/UNITS','TOTAL']] == 0
+    #  drop rows where 'SUBTOTAL', 'DISCOUNT','TOTAL' are all empty or zero
+    isnull = df[['SUBTOTAL','DISCOUNT','TOTAL']].isnull()
+    iszero = df[['SUBTOTAL','DISCOUNT','TOTAL']] == 0
     is_either = (isnull | iszero).all(axis=1)
     df = df[~is_either]
 
@@ -314,11 +320,13 @@ else:
 
 
     # Fill-in missing hours and discounts for room rentals where these values are implied by a multi-room
-    #   deal, particularly when DESCRIPTION field contains 'Entire ...'
+    #   deal, particularly when DESCRIPTION field contains certain keywords like 'Entire ...'
     fields = ['HOURS/UNITS','DISCOUNT']
     multi_room_item_mask =  df['item'].str.contains('entire|level|rentals', na=False, case=False)
+    idx_to_drop = []
     for multi_room_item in df[multi_room_item_mask].iterrows():
         item = multi_room_item[1].copy()
+        item_idx = multi_room_item[0]
         if pd.np.isnan(item['DISCOUNT']):
             item['DISCOUNT'] = 0
         mask = (df['sheet'] == item['sheet']) & (df['item_type'] == 'room') & df['HOURS/UNITS'].isnull()
@@ -326,20 +334,41 @@ else:
             for field in fields:
                 df.loc[mask, field] = item[field]
 
+            idx_to_drop.append(item_idx)
             df.loc[mask, 'SUBTOTAL'] = df.loc[mask, 'AMOUNT'] * df.loc[mask, 'HOURS/UNITS']
-
             df.loc[mask, 'TOTAL'] = df.loc[mask, 'SUBTOTAL'] * (1 - df.loc[mask, 'DISCOUNT'])
+
+    df = df.drop(idx_to_drop)
 
 
     #  Fill-in missing DISCOUNT entries with zero
     df.loc[df['DISCOUNT'].isnull() & (df['item_type'] != 'total'), 'DISCOUNT'] = 0
 
+
+    # Fill-in SUBTOTAL for items with TOTAL but no SUBTOTAL (taking DISCOUNT into consideration)
+    no_subtot = df['TOTAL'].notnull() & (df['TOTAL'] != 0) & df['SUBTOTAL'].isnull() & (df['item_type'] != 'total')
+    df.loc[no_subtot, 'SUBTOTAL'] = df['TOTAL'][no_subtot] / (1 - df['DISCOUNT'][no_subtot] )
+
+
+    #sheets = df['sheet'][df['SUBTOTAL'].isnull() & (df['item_type'] != 'total')].unique()
+    #df[df['sheet'].isin(sheets)].set_index(['sheet','DATE']).to_excel('fill-ins.xlsx')
+
+
+
+    # # Fill-in empty SUBTOTAL field in 'total' items
+    # null_tot_mask = (df['item_type'] == 'total') & df['SUBTOTAL'].isnull()
+    # df_null_tots = df[null_tot_mask]
+
     df = df[['sheet','DATE','item_type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
-                'membership','day_type','duration','discount_type']]
+                'membership','discount_type','day_type','duration']]
+
 
     # df.to_csv(fname+'.csv', index=False,  encoding='utf-8')
-    df.to_excel(fname+'.xlsx')
-
-fields = ['sheet','DATE','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
+    df.to_excel(fname+'.xlsx', index=False)
+    fields = ['sheet','DATE','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
                 'membership','discount_type','day_type','duration']
-df[fields][df['item_type']=='room'].sort(['item','HOURS/UNITS']).to_excel('invoice_data.xlsx',index=False)
+
+    # df[fields][df['item_type']=='room'].sort(['item','HOURS/UNITS']).to_excel('room_data.xlsx',index=False)
+
+
+
