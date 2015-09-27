@@ -207,8 +207,8 @@ else:
 # Clean up raw flattened data into the basic columns we want
 fname = 'invoice_items_flat_cleaned'
 
-if os.path.isfile(fname+'.csv'):
-    df = pd.read_csv(fname+'.csv', encoding='utf-8')
+if os.path.isfile(fname+'.xlsx'):
+    df = pd.read_excel(fname+'.xlsx', encoding='utf-8')
 else:
     df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna(how='all')
 
@@ -336,9 +336,9 @@ else:
     multi_room_item_mask =  df['item'].str.contains('entire|level|rentals', na=False, case=False)
     idx_to_drop = []
 
-    for multi_room_item in df[multi_room_item_mask].iterrows():
-        item = multi_room_item[1].copy()
-        item_idx = multi_room_item[0]
+    for item_idx, item in df[multi_room_item_mask].iterrows():
+        # item = multi_room_item[1].copy()
+        # item_idx = multi_room_item[0]
 
         # if pd.np.isnan(item['DISCOUNT']):  # If there is no numerical discount, set it to zero
         #     item['DISCOUNT'] = 0
@@ -390,8 +390,18 @@ else:
     df = df[~mask]
 
 
-    # # Fill-in empty SUBTOTAL field in 'total' items
-    # tot_mask = (df['item_type'] == 'total')
+    ## Manually compute SUBTOTAL and TOTAL fields in 'total' items
+    tots = [0,0]
+    for idx, row in df.iterrows():
+        if row['item_type'] == 'total':
+            df.loc[idx, ['SUBTOTAL','TOTAL']] = tots
+            tots = [0,0]
+        else:
+            if pd.np.isnan(row['SUBTOTAL']):
+                tots[0] += row['SUBTOTAL']
+            if pd.np.isnan(row['TOTAL']):
+                tots[1] += row['TOTAL']
+
 
 
     df = df[['sheet','DATE','item_type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
@@ -404,11 +414,18 @@ else:
                 'membership','discount_type','day_type','duration']
 
 
+
+
+
 # df[fields][df['item_type'] !='total'].sort(['item','HOURS/UNITS']).to_excel('room_data.xlsx',index=False)
 
-orig = df[['sheet','DATE','SUBTOTAL']][df['item_type'] == 'total'].set_index(['sheet','DATE']).sort_index()
-orig.columns = ['SUBTOTAL (orig)']
-totaled = pd.DataFrame(df.query('item_type != "total"').groupby(['sheet','DATE'])['SUBTOTAL'].sum())
-both = totaled.join(orig)
-both.to_excel('subtots.xlsx')
+# orig = df[['sheet','DATE','SUBTOTAL']][df['item_type'] == 'total'].set_index(['sheet','DATE']).sort_index()
+# orig.loc[orig['SUBTOTAL'].isnull(), 'SUBTOTAL'] = 'blank'
+# orig.columns = ['SUBTOTAL (orig)']
+# totaled = pd.DataFrame(df.query('item_type != "total"').groupby(['sheet','DATE'])['SUBTOTAL'].sum())
+# both = totaled.join(orig)
+# both.to_excel('subtots.xlsx')
+
+
+
 
