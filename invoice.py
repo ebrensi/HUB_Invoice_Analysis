@@ -216,7 +216,7 @@ else:
     invoice_num = df['sheet'].str.extract('(\d+)').str.strip().astype(float)
     exclude_mask = invoice_num.isnull() |  (invoice_num < INVOICE_NUM_CUTOFF)
     # print("Excluding \n%s" % (df['sheet'][exclude_mask].tolist()) )
-    df = df.drop(exclude_mask)
+    df = df[~exclude_mask]
 
 
     # Exclude cancellation invoices
