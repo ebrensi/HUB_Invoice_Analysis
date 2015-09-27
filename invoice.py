@@ -403,9 +403,12 @@ else:
     fields = ['sheet','DATE','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
                 'membership','discount_type','day_type','duration']
 
-"""
+
 # df[fields][df['item_type'] !='total'].sort(['item','HOURS/UNITS']).to_excel('room_data.xlsx',index=False)
+
 orig = df[['sheet','DATE','SUBTOTAL']][df['item_type'] == 'total'].set_index(['sheet','DATE']).sort_index()
+orig.columns = ['SUBTOTAL (orig)']
 totaled = pd.DataFrame(df.query('item_type != "total"').groupby(['sheet','DATE'])['SUBTOTAL'].sum())
 both = totaled.join(orig)
-"""
+both.to_excel('subtots.xlsx')
+
