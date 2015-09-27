@@ -1,3 +1,4 @@
+
 # -*- coding: utf-8 -*-
 """
 Created on Mon Aug 17 14:23:20 2015
@@ -11,7 +12,6 @@ NaN = pd.np.nan
 #pd.set_option('expand_frame_repr', False)
 
 import re
-import concurrent.futures as futures
 import json
 import time
 import datetime
@@ -39,7 +39,8 @@ day_type_classes  =  {'weekend': 'weekend', 'weekday':'weekday|wkday'}
 day_duration_classes = {'full-day':'Full[-| ]?day',  'half-day':'Half[-| ]?Day'}
 
 discount_classes = { 'multi-room':'Multi[-| ]?Room', 'multi-day':'Multi[-| ]?day','multi-event':'Multi[-| ]?event', 'founder':'Founder','partnership':'Partner',
-                     'returning-client':'Returning[-| ]?client', 'sponsorship':'sponsor', 'reoccuring':'reo?ccuring'}
+                     'returning-client':'Returning[-| ]?client', 'sponsorship':'sponsor', 'reoccuring':'reo?ccuring',
+                     'WITH':'WITH|share'}
 
 # 115014 Debby Irving :  Full Member Weekday Rate - 50/50 Rev Share
 # 2115 John Chiang : Non Member Weekday Rate - Sharon Cornu Credit Applied
@@ -211,6 +212,7 @@ if os.path.isfile(fname+'.xlsx'):
     df = pd.read_excel(fname+'.xlsx', encoding='utf-8')
 else:
     df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna(how='all')
+    # df.to_excel('raw_flat_table.xlsx')
 
     # exclude invoices with no invoice# or invoice# < INVOICE_NUM_CUTOFF
     invoice_num = df['sheet'].str.extract('(\d+)').str.strip().astype(float)
@@ -233,6 +235,12 @@ else:
 
     for col_name in [' TOTAL', 'ESTIMATE TOTAL', 'ESTIMATED TOTAL']:
         df['TOTAL'].update(df[col_name])
+
+    df['DISCOUNT'].update(df['DONATION'])
+
+
+    # mask = df['OCCURANCE'].notnull()
+    # df.loc[mask, 'HOURS/UNITS'] = df.loc[mask, 'HOURS/UNITS'] * df[mask, 'OCCURANCE']
 
     df = df[['sheet','DATE','DESCRIPTION','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate']]
 
@@ -337,19 +345,9 @@ else:
     idx_to_drop = []
 
     for item_idx, item in df[multi_room_item_mask].iterrows():
-        # item = multi_room_item[1].copy()
-        # item_idx = multi_room_item[0]
-
-        # if pd.np.isnan(item['DISCOUNT']):  # If there is no numerical discount, set it to zero
-        #     item['DISCOUNT'] = 0
         associated_rooms = (df['sheet'] == item['sheet']) & (df['item_type'] == 'room') & df['TOTAL'].isnull()
 
         if associated_rooms.any():
-            # print('Multi-room item:')
-            # print(df[['sheet','DATE','DESCRIPTION']].loc[item_idx])
-            # print('\tis associated with:')
-            # print(df[['DESCRIPTION']][mask])
-            # print
 
             for field in ['HOURS/UNITS','DISCOUNT']:
                 df.loc[associated_rooms, field] = item[field]
@@ -390,16 +388,20 @@ else:
     df = df[~mask]
 
 
+
+
     ## Manually compute SUBTOTAL and TOTAL fields in 'total' items
     tots = [0,0]
     for idx, row in df.iterrows():
         if row['item_type'] == 'total':
             df.loc[idx, ['SUBTOTAL','TOTAL']] = tots
+            if tots[1] != 0:
+                df.loc[idx, 'DISCOUNT'] = 1 - tots[1]/tots[0]
             tots = [0,0]
         else:
-            if pd.np.isnan(row['SUBTOTAL']):
+            if not pd.np.isnan(row['SUBTOTAL']):
                 tots[0] += row['SUBTOTAL']
-            if pd.np.isnan(row['TOTAL']):
+            if not pd.np.isnan(row['TOTAL']):
                 tots[1] += row['TOTAL']
 
 
@@ -408,24 +410,8 @@ else:
                 'membership','discount_type','day_type','duration']]
 
 
-    # df.to_csv(fname+'.csv', index=False,  encoding='utf-8')
     df.to_excel(fname+'.xlsx', index=False)
-    fields = ['sheet','DATE','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
-                'membership','discount_type','day_type','duration']
 
 
 
-
-
-# df[fields][df['item_type'] !='total'].sort(['item','HOURS/UNITS']).to_excel('room_data.xlsx',index=False)
-
-# orig = df[['sheet','DATE','SUBTOTAL']][df['item_type'] == 'total'].set_index(['sheet','DATE']).sort_index()
-# orig.loc[orig['SUBTOTAL'].isnull(), 'SUBTOTAL'] = 'blank'
-# orig.columns = ['SUBTOTAL (orig)']
-# totaled = pd.DataFrame(df.query('item_type != "total"').groupby(['sheet','DATE'])['SUBTOTAL'].sum())
-# both = totaled.join(orig)
-# both.to_excel('subtots.xlsx')
-
-
-
-
+##   *********** ANALYSIS *******************

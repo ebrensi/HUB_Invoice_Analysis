@@ -3615,6 +3615,1378 @@
       ], 
       "rate": "Non Member Weekend Rate"
    }, 
+   "2000. Movement Generation": {
+      "items": [
+         {
+            "DATE": "2013-09-19", 
+            "AMOUNT": 250, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "2013-09-19", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2013-09-19", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2013-09-19", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee/Tea Bar"
+         }, 
+         {
+            "DATE": "2013-09-19", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2013-09-19", 
+            "AMOUNT": 250, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2001. BALLE": {
+      "items": [
+         {
+            "DATE": "2013-10-07", 
+            "AMOUNT": 200, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "2013-10-07", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2013-10-07", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2013-10-07", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee/Tea Bar"
+         }, 
+         {
+            "DATE": "2013-10-07", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2013-10-07", 
+            "AMOUNT": 200, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2007. Pac +": {
+      "items": [
+         {
+            "DATE": "2013-10-30", 
+            "AMOUNT": 600, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "2013-10-30", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2013-10-30", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2013-10-30", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee/Tea Bar"
+         }, 
+         {
+            "DATE": "2013-10-30", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2013-10-30", 
+            "AMOUNT": 600, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2009. Exponent Partners": {
+      "items": [
+         {
+            "DATE": "2013-11-07", 
+            "AMOUNT": 350, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "2013-11-07", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2013-11-07", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2013-11-07", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee/Tea Bar"
+         }, 
+         {
+            "DATE": "2013-11-07", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2013-11-07", 
+            "AMOUNT": 350, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2010. Equator Coffee": {
+      "items": [
+         {
+            "DATE": "2013-11-04", 
+            "AMOUNT": 90, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "2013-11-04", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2013-11-04", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2013-11-04", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee/Tea Bar"
+         }, 
+         {
+            "DATE": "2013-11-04", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2013-11-04", 
+            "AMOUNT": 90, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2008. Feastly": {
+      "items": [
+         {
+            "DATE": "2013-11-15", 
+            "AMOUNT": 250, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "2013-11-15", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2013-11-15", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2013-11-15", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee/Tea Bar"
+         }, 
+         {
+            "DATE": "2013-11-15", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2013-11-15", 
+            "AMOUNT": 250, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2011. Ebony Brown": {
+      "items": [
+         {
+            "DATE": "2013-12-22", 
+            "AMOUNT": 125, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "2013-12-22", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2013-12-22", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2013-12-22", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee/Tea Bar"
+         }, 
+         {
+            "DATE": "2013-12-22", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2013-12-22", 
+            "AMOUNT": 125, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2012. GenUp": {
+      "items": [
+         {
+            "DATE": "2013-12-22", 
+            "AMOUNT": 250, 
+            "DESCRIPTION": "Venue Rental from 6:30pm to 11:00pm"
+         }, 
+         {
+            "DATE": "2013-12-22", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2013-12-22", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2013-12-22", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee/Tea Bar"
+         }, 
+         {
+            "DATE": "2013-12-22", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2013-12-22", 
+            "AMOUNT": 250, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2013. Culture Strike": {
+      "items": [
+         {
+            "DATE": "2013-12-07", 
+            "AMOUNT": 400, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "2013-12-07", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2013-12-07", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2013-12-07", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee/Tea Bar"
+         }, 
+         {
+            "DATE": "2013-12-07", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2013-12-07", 
+            "AMOUNT": 400, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2014. Gabriel Crane": {
+      "items": [
+         {
+            "DATE": "2013-12-09", 
+            "AMOUNT": 35, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "2013-12-09", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2013-12-09", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2013-12-09", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee/Tea Bar"
+         }, 
+         {
+            "DATE": "2013-12-09", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2013-12-09", 
+            "AMOUNT": 35, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": "educed rate for pro bono staffing"
+   }, 
+   "2015. PatternDynamics": {
+      "items": [
+         {
+            "DATE": "2014-01-18", 
+            "AMOUNT": 1125, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "2014-01-18", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2014-01-18", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2014-01-18", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee/Tea Bar"
+         }, 
+         {
+            "DATE": "2014-01-18", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2014-01-18", 
+            "AMOUNT": 1125, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2016. Institute Golden Gate": {
+      "items": [
+         {
+            "DATE": "2014-03-13", 
+            "AMOUNT": 780, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "2014-03-13", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2014-03-13", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2014-03-13", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee/Tea Bar"
+         }, 
+         {
+            "DATE": "2014-03-13", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2014-03-13", 
+            "AMOUNT": 780, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": "Member Rate $260/hr"
+   }, 
+   "2017. Start Up Weekend Hack": {
+      "items": [
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": 2750, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee/Tea Bar"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": 2750, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2018. Start Up Weekend Recept": {
+      "items": [
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": 3000, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee/Tea Bar"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": 3000, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2019. Late Nite in the Dark3-22": {
+      "items": [
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": 250, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee/Tea Bar"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": 250, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2020. Late Nite in the Dark4-26": {
+      "items": [
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": 250, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee/Tea Bar"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": 250, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2021 Late Nite in the Dark5-17": {
+      "items": [
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": 250, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee/Tea Bar"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": 250, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2022 Steve Spiker Open Oakland": {
+      "items": [
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": 650, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": 40, 
+            "DESCRIPTION": "Usage of Coffee/Tea Bar"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2/7-9 2014", 
+            "AMOUNT": 690, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2023 Siegal Campaign Kickoff": {
+      "items": [
+         {
+            "DATE": "3/27 2014", 
+            "AMOUNT": 1237.5, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "3/27 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "3/27 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "3/27 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee Bar"
+         }, 
+         {
+            "DATE": "3/27 2014", 
+            "AMOUNT": 100, 
+            "DESCRIPTION": "Large party cleaning fee"
+         }, 
+         {
+            "DATE": "3/27 2014", 
+            "AMOUNT": 60, 
+            "DESCRIPTION": "A/V Person $20/hr"
+         }, 
+         {
+            "DATE": "3/27 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "3/27 2014", 
+            "AMOUNT": 1397.5, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2024 The Amauta Foundation": {
+      "items": [
+         {
+            "DATE": "3/15 2014", 
+            "AMOUNT": 363, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "3/15 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "3/15 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "3/15 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee Bar"
+         }, 
+         {
+            "DATE": "3/15 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Large party cleaning fee"
+         }, 
+         {
+            "DATE": "3/15 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "A/V Person $20/hr"
+         }, 
+         {
+            "DATE": "3/15 2014", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "3/15 2014", 
+            "AMOUNT": 363, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2025 Self Help Fed Credit Union": {
+      "items": [
+         {
+            "DATE": "2014-04-15", 
+            "AMOUNT": 525, 
+            "DESCRIPTION": "Venue Rental"
+         }, 
+         {
+            "DATE": "2014-04-15", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2014-04-15", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2014-04-15", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Usage of Coffee Bar"
+         }, 
+         {
+            "DATE": "2014-04-15", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Large party cleaning fee"
+         }, 
+         {
+            "DATE": "2014-04-15", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "A/V Person $20/hr"
+         }, 
+         {
+            "DATE": "2014-04-15", 
+            "AMOUNT": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2014-04-15", 
+            "AMOUNT": 525, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2026 Northgate": {
+      "items": [
+         {
+            "DATE": "2014-03-29", 
+            "HOURS": 4, 
+            "AMOUNT": 1100, 
+            "DESCRIPTION": "Venue Rental "
+         }, 
+         {
+            "DATE": "2014-03-29", 
+            "HOURS": null, 
+            "AMOUNT": 0, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2014-03-29", 
+            "HOURS": null, 
+            "AMOUNT": 0, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2014-03-29", 
+            "HOURS": null, 
+            "AMOUNT": 0, 
+            "DESCRIPTION": "Usage of Coffee Bar"
+         }, 
+         {
+            "DATE": "2014-03-29", 
+            "HOURS": null, 
+            "AMOUNT": 0, 
+            "DESCRIPTION": "Large party cleaning fee"
+         }, 
+         {
+            "DATE": "2014-03-29", 
+            "HOURS": 5, 
+            "AMOUNT": 150, 
+            "DESCRIPTION": "A/V Person $30/hr"
+         }, 
+         {
+            "DATE": "2014-03-29", 
+            "HOURS": null, 
+            "AMOUNT": 0, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2014-03-29", 
+            "HOURS": null, 
+            "AMOUNT": 0, 
+            "DESCRIPTION": null
+         }, 
+         {
+            "DATE": "2014-03-29", 
+            "HOURS": null, 
+            "AMOUNT": 1250, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2027 ULI": {
+      "items": [
+         {
+            "DATE": "2014-03-18", 
+            "HOURS": null, 
+            "AMOUNT": 0, 
+            "DESCRIPTION": "Venue Rental "
+         }, 
+         {
+            "DATE": "2014-03-18", 
+            "HOURS": 2, 
+            "AMOUNT": 50, 
+            "DESCRIPTION": "IHO Staffing"
+         }, 
+         {
+            "DATE": "2014-03-18", 
+            "HOURS": null, 
+            "AMOUNT": 0, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2014-03-18", 
+            "HOURS": null, 
+            "AMOUNT": 0, 
+            "DESCRIPTION": "Usage of Coffee Bar"
+         }, 
+         {
+            "DATE": "2014-03-18", 
+            "HOURS": null, 
+            "AMOUNT": 0, 
+            "DESCRIPTION": "Large party cleaning fee"
+         }, 
+         {
+            "DATE": "2014-03-18", 
+            "HOURS": null, 
+            "AMOUNT": 0, 
+            "DESCRIPTION": "A/V Staffing"
+         }, 
+         {
+            "DATE": "2014-03-18", 
+            "HOURS": null, 
+            "AMOUNT": 0, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2014-03-18", 
+            "HOURS": null, 
+            "AMOUNT": 0, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2014-03-18", 
+            "HOURS": null, 
+            "AMOUNT": 0, 
+            "DESCRIPTION": null
+         }, 
+         {
+            "DATE": "2014-03-18", 
+            "HOURS": null, 
+            "AMOUNT": 50, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2028 The Ever Forward Club": {
+      "items": [
+         {
+            "DATE": "2014-03-20", 
+            "HOURS": 3, 
+            "AMOUNT": 140, 
+            "TOTAL": 420, 
+            "DESCRIPTION": "Venue Rental "
+         }, 
+         {
+            "DATE": "2014-03-20", 
+            "HOURS": 3, 
+            "AMOUNT": 25, 
+            "TOTAL": 75, 
+            "DESCRIPTION": "Set up/Break down"
+         }, 
+         {
+            "DATE": "2014-03-20", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2014-03-20", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Usage of Coffee Bar"
+         }, 
+         {
+            "DATE": "2014-03-20", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Large party cleaning fee"
+         }, 
+         {
+            "DATE": "2014-03-20", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "A/V Staffing"
+         }, 
+         {
+            "DATE": "2014-03-20", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2014-03-20", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2014-03-20", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": null
+         }, 
+         {
+            "DATE": "2014-03-20", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 495, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2029 Higher Circle Education": {
+      "items": [
+         {
+            "DATE": "2014-02-11", 
+            "HOURS": 3, 
+            "AMOUNT": 75, 
+            "TOTAL": 225, 
+            "DESCRIPTION": "Venue Rental "
+         }, 
+         {
+            "DATE": "2014-02-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Set up/Break down"
+         }, 
+         {
+            "DATE": "2014-02-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2014-02-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Usage of Coffee Bar"
+         }, 
+         {
+            "DATE": "2014-02-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Large party cleaning fee"
+         }, 
+         {
+            "DATE": "2014-02-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "A/V Staffing"
+         }, 
+         {
+            "DATE": "2014-02-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2014-02-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2014-02-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": null
+         }, 
+         {
+            "DATE": "2014-02-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 225, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2030 Higher Circle SuRu": {
+      "items": [
+         {
+            "DATE": "2014-02-25", 
+            "HOURS": 3, 
+            "AMOUNT": 90, 
+            "TOTAL": 270, 
+            "DESCRIPTION": "Venue Rental "
+         }, 
+         {
+            "DATE": "2014-02-25", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Set up/Break down"
+         }, 
+         {
+            "DATE": "2014-02-25", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2014-02-25", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Usage of Coffee Bar"
+         }, 
+         {
+            "DATE": "2014-02-25", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Large party cleaning fee"
+         }, 
+         {
+            "DATE": "2014-02-25", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "A/V Staffing"
+         }, 
+         {
+            "DATE": "2014-02-25", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2014-02-25", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2014-02-25", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": null
+         }, 
+         {
+            "DATE": "2014-02-25", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 270, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2031 Planting Justice Decoloniz": {
+      "items": [
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": 2, 
+            "AMOUNT": 70, 
+            "TOTAL": 140, 
+            "DESCRIPTION": "Venue Rental "
+         }, 
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Set up/Break down"
+         }, 
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Usage of Coffee Bar"
+         }, 
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Large party cleaning fee"
+         }, 
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "A/V Staffing"
+         }, 
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": null
+         }, 
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 140, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2032 Planting Justice Soiree": {
+      "items": [
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": 4, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Venue Rental "
+         }, 
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Set up/Break down"
+         }, 
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Usage of Coffee Bar"
+         }, 
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": null, 
+            "AMOUNT": 100, 
+            "TOTAL": 100, 
+            "DESCRIPTION": "Large party cleaning fee"
+         }, 
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": 4, 
+            "AMOUNT": 30, 
+            "TOTAL": 120, 
+            "DESCRIPTION": "A/V Staffing"
+         }, 
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": null
+         }, 
+         {
+            "DATE": "2014-04-11", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 220, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2033 Integral Alignment": {
+      "items": [
+         {
+            "DATE": "2014-03-25", 
+            "HOURS": 4, 
+            "AMOUNT": 32.5, 
+            "TOTAL": 130, 
+            "DESCRIPTION": "Venue Rental "
+         }, 
+         {
+            "DATE": "2014-03-25", 
+            "HOURS": 1, 
+            "AMOUNT": 25, 
+            "TOTAL": 25, 
+            "DESCRIPTION": "Set up/Break down"
+         }, 
+         {
+            "DATE": "2014-03-25", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Security"
+         }, 
+         {
+            "DATE": "2014-03-25", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Usage of Coffee Bar"
+         }, 
+         {
+            "DATE": "2014-03-25", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Large party cleaning fee"
+         }, 
+         {
+            "DATE": "2014-03-25", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "A/V Staffing"
+         }, 
+         {
+            "DATE": "2014-03-25", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Catering"
+         }, 
+         {
+            "DATE": "2014-03-25", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "2014-03-25", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 0, 
+            "DESCRIPTION": null
+         }, 
+         {
+            "DATE": "2014-03-25", 
+            "HOURS": null, 
+            "AMOUNT": null, 
+            "TOTAL": 155, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
+   "2034 Sungevity Org Membership": {
+      "items": [
+         {
+            "DATE": "4/14-10/14", 
+            "TOTAL": 300, 
+            "AMOUNT": 50, 
+            "MONTHS": 6, 
+            "DESCRIPTION": "Org Connect Membership"
+         }, 
+         {
+            "DATE": "4/14-10/14", 
+            "TOTAL": 0, 
+            "AMOUNT": null, 
+            "MONTHS": null, 
+            "DESCRIPTION": "Other"
+         }, 
+         {
+            "DATE": "4/14-10/14", 
+            "TOTAL": 0, 
+            "AMOUNT": null, 
+            "MONTHS": null, 
+            "DESCRIPTION": null
+         }, 
+         {
+            "DATE": "4/14-10/14", 
+            "TOTAL": 300, 
+            "AMOUNT": null, 
+            "MONTHS": null, 
+            "DESCRIPTION": "Total"
+         }
+      ], 
+      "rate": ""
+   }, 
    "2035 Sungevity Event": {
       "items": [
          {
