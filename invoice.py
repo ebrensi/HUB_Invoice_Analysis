@@ -206,6 +206,7 @@ else:
 
 # Clean up raw flattened data into the basic columns we want
 fname = 'invoice_items_flat_cleaned'
+
 if os.path.isfile(fname+'.csv'):
     df = pd.read_csv(fname+'.csv', encoding='utf-8')
 else:
@@ -213,13 +214,18 @@ else:
 
     # exclude invoices with no invoice# or invoice# < INVOICE_NUM_CUTOFF
     invoice_num = df['sheet'].str.extract('(\d+)').str.strip().astype(float)
-    # print(invoice_num.isnull().tolist())
     exclude_mask = invoice_num.isnull() |  (invoice_num < INVOICE_NUM_CUTOFF)
-    print("Excluding \n%s" % (df['sheet'][exclude_mask].tolist()) )
+    # print("Excluding \n%s" % (df['sheet'][exclude_mask].tolist()) )
     df = df.drop(exclude_mask)
-    # exit()
 
-    # df is a raw flat table.  First we join equivalent columns
+
+    # Exclude cancellation invoices
+    cancellations = df['sheet'].str.contains('cancel', na=False, case=False)
+    df = df[~cancellations]
+
+
+
+    # Join equivalent columns
     df['DATE'].update(df['DATE OF EVENT'])
 
     for col_name in ['ESTIMATED HOURS', 'HOURS']:
@@ -228,52 +234,22 @@ else:
     for col_name in [' TOTAL', 'ESTIMATE TOTAL', 'ESTIMATED TOTAL']:
         df['TOTAL'].update(df[col_name])
 
-    cancellations = df['sheet'].str.contains('cancel', na=False, case=False)
-
-    df = df[['sheet','DATE','DESCRIPTION','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate']][~cancellations]
+    df = df[['sheet','DATE','DESCRIPTION','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate']]
 
 
-    ## clean up numeric columns
-
-    # first we take care of implicit full-discount (amounts labeled 'waved', 'comped', 'included')
-    no_charge_indicators = "waved|comped|included|member"
-    no_charge_amount = df['AMOUNT'].str.contains(no_charge_indicators, case=False, na=False)
-    no_charge_subtot = df['SUBTOTAL'].str.contains(no_charge_indicators, case=False, na=False)
-    no_charge_tot = df['TOTAL'].str.contains(no_charge_indicators, case=False, na=False)
-
-    no_charge = no_charge_amount | no_charge_subtot | no_charge_tot
-    df.loc[no_charge,['AMOUNT','SUBTOTAL','TOTAL']] = 0
-    df.loc[no_charge, 'DISCOUNT'] = 1
 
 
-    #  convert any 'flat fee' indicators to 1 so that the AMOUNT identifies with SUBTOTAL.
-    df['HOURS/UNITS'].loc[df['HOURS/UNITS'].str.contains('flat', case=False, na=False)] = 1
-
-    # convert all 'AMOUNT' and 'SUBTOTAL' values to floats (anything non-numeric becomes NaN)
-    df[['AMOUNT','SUBTOTAL','HOURS/UNITS','DISCOUNT','TOTAL']] = df[['AMOUNT','SUBTOTAL','HOURS/UNITS','DISCOUNT','TOTAL']].convert_objects(convert_numeric=True)
-
-    #  drop rows where 'SUBTOTAL', 'DISCOUNT','TOTAL' are all empty or zero
-    isnull = df[['SUBTOTAL','DISCOUNT','TOTAL']].isnull()
-    iszero = df[['SUBTOTAL','DISCOUNT','TOTAL']] == 0
+    #  drop rows where 'AMOUNT', 'SUBTOTAL', 'DISCOUNT','TOTAL' are all empty or zero
+    isnull = df[['AMOUNT','SUBTOTAL','DISCOUNT','TOTAL']].isnull()
+    iszero = df[['AMOUNT','SUBTOTAL','DISCOUNT','TOTAL']] == 0
     is_either = (isnull | iszero).all(axis=1)
     df = df[~is_either]
 
-    # fill in missing subtotal values.  We need these values for determining income.
-    # If AMOUNT and HOURS/UNITS are both non-empty then compute SUBTOTAL = AMOUNT * HOURS/UNITS
-    notnull = df[['AMOUNT','HOURS/UNITS']].notnull().all(axis=1)
-    df.loc[notnull, 'SUBTOTAL'] = df['AMOUNT'] * df['HOURS/UNITS']
-
-    # write flattened data before we classify everything
-    df.to_csv(fname+'.csv', index=False,  encoding='utf-8')
 
 
 
-fname = 'invoice_items_prepped'
-if os.path.isfile(fname+'.csv'):
-    df = pd.read_csv(fname+'.csv', encoding='utf-8')
-else:
-
-    ##  Classify items into standard categories: 'room', 'service', 'total', 'other'
+    ##  Parse DESCRIPTION field into 'item_type' and 'item'
+    ##  and Classify items into standard categories: 'room', 'service', 'total', 'other'
     df['item_type'] = None
     df['item'] = None
 
@@ -296,7 +272,8 @@ else:
     df.loc[other_mask,'item'] = df.loc[other_mask,'DESCRIPTION']
 
 
-    ## classify RATE info from sheet into discount-type and member-type
+
+    ## Parse RATE field from sheet into discount-type, day-type, and member-type
     df['membership'] = None
     for member_type in member_classes:
         member_mask = df['rate'].str.contains(member_classes[member_type], case=False, na=False)
@@ -319,30 +296,84 @@ else:
 
 
 
+
+
+    ## Convert numeric field data to numbers and fill-in as much missing information as possible
+
+    # first we set values labeled 'waved', 'comped', 'included' to zero
+    no_charge_indicators = "waved|comped|included|member"
+
+    no_charge_amount = df['AMOUNT'].str.contains(no_charge_indicators, case=False, na=False)
+    df.loc[no_charge_amount,'AMOUNT'] = 0
+
+    no_charge_subtot = df['SUBTOTAL'].str.contains(no_charge_indicators, case=False, na=False)
+    df.loc[no_charge_subtot,'SUBTOTAL'] = 0
+
+    no_charge_tot = df['TOTAL'].str.contains(no_charge_indicators, case=False, na=False)
+    df.loc[no_charge_tot,'TOTAL'] = 0
+
+    #  Set DISCOUNT to 1 for any waived fees
+    all_no_charge = no_charge_amount | no_charge_subtot | no_charge_tot
+    df.loc[all_no_charge, 'DISCOUNT'] = 1
+
+    # If no discount-type is indicated then make an indication
+    no_discount_type_indicated = df['discount_type'].isnull()
+    df.loc[(all_no_charge & no_discount_type_indicated), 'discount_type'] = 'waived'
+
+    #  convert any 'flat fee' indicators to 1 so that the AMOUNT identifies with SUBTOTAL
+    df['HOURS/UNITS'].loc[df['HOURS/UNITS'].str.contains('flat', case=False, na=False)] = 1
+
+
+
+    # convert all numeric field values to floats (anything non-numeric becomes NaN)
+    NUMERIC_FIELDS = ['AMOUNT','SUBTOTAL','HOURS/UNITS','DISCOUNT','TOTAL']
+    df[NUMERIC_FIELDS] = df[NUMERIC_FIELDS].convert_objects(convert_numeric=True)
+
+
+
     # Fill-in missing hours and discounts for room rentals where these values are implied by a multi-room
     #   deal, particularly when DESCRIPTION field contains certain keywords like 'Entire ...'
-    fields = ['HOURS/UNITS','DISCOUNT']
     multi_room_item_mask =  df['item'].str.contains('entire|level|rentals', na=False, case=False)
     idx_to_drop = []
+
     for multi_room_item in df[multi_room_item_mask].iterrows():
         item = multi_room_item[1].copy()
         item_idx = multi_room_item[0]
-        if pd.np.isnan(item['DISCOUNT']):
-            item['DISCOUNT'] = 0
-        mask = (df['sheet'] == item['sheet']) & (df['item_type'] == 'room') & df['HOURS/UNITS'].isnull()
-        if mask.any():
-            for field in fields:
-                df.loc[mask, field] = item[field]
+
+        # if pd.np.isnan(item['DISCOUNT']):  # If there is no numerical discount, set it to zero
+        #     item['DISCOUNT'] = 0
+        associated_rooms = (df['sheet'] == item['sheet']) & (df['item_type'] == 'room') & df['TOTAL'].isnull()
+
+        if associated_rooms.any():
+            # print('Multi-room item:')
+            # print(df[['sheet','DATE','DESCRIPTION']].loc[item_idx])
+            # print('\tis associated with:')
+            # print(df[['DESCRIPTION']][mask])
+            # print
+
+            for field in ['HOURS/UNITS','DISCOUNT']:
+                df.loc[associated_rooms, field] = item[field]
 
             idx_to_drop.append(item_idx)
-            df.loc[mask, 'SUBTOTAL'] = df.loc[mask, 'AMOUNT'] * df.loc[mask, 'HOURS/UNITS']
-            df.loc[mask, 'TOTAL'] = df.loc[mask, 'SUBTOTAL'] * (1 - df.loc[mask, 'DISCOUNT'])
+            # df.loc[mask, 'SUBTOTAL'] = df.loc[mask, 'AMOUNT'] * df.loc[mask, 'HOURS/UNITS']
+            # df.loc[mask, 'TOTAL'] = df.loc[mask, 'SUBTOTAL'] * (1 - df.loc[mask, 'DISCOUNT'])
 
+    print('dropping multi-room items %s' % str(idx_to_drop))
     df = df.drop(idx_to_drop)
 
 
-    #  Fill-in missing DISCOUNT entries with zero
+    # fill in missing subtotal values.  We need these values for determining income.
+    # If AMOUNT and HOURS/UNITS are both non-empty then compute SUBTOTAL = AMOUNT * HOURS/UNITS
+    notnull = df[['AMOUNT','HOURS/UNITS']].notnull().all(axis=1)
+    df.loc[notnull, 'SUBTOTAL'] = df.loc[notnull, 'AMOUNT'] * df.loc[notnull, 'HOURS/UNITS']
+
+
+    #  Fill-in all missing DISCOUNT entries with zero
     df.loc[df['DISCOUNT'].isnull() & (df['item_type'] != 'total'), 'DISCOUNT'] = 0
+
+    # Fill-in all missing TOTAL for items with non-empty SUBTOTAL
+    no_tot = df['TOTAL'].isnull() & df['SUBTOTAL'].notnull() & (df['item_type'] != 'total')
+    df.loc[no_tot, 'TOTAL'] = df.loc[no_tot, 'SUBTOTAL'] * (1 - df.loc[no_tot, 'DISCOUNT'])
 
 
     # Fill-in SUBTOTAL for items with TOTAL but no SUBTOTAL (taking DISCOUNT into consideration)
@@ -350,14 +381,9 @@ else:
     df.loc[no_subtot, 'SUBTOTAL'] = df['TOTAL'][no_subtot] / (1 - df['DISCOUNT'][no_subtot] )
 
 
-    #sheets = df['sheet'][df['SUBTOTAL'].isnull() & (df['item_type'] != 'total')].unique()
-    #df[df['sheet'].isin(sheets)].set_index(['sheet','DATE']).to_excel('fill-ins.xlsx')
-
-
-
     # # Fill-in empty SUBTOTAL field in 'total' items
-    # null_tot_mask = (df['item_type'] == 'total') & df['SUBTOTAL'].isnull()
-    # df_null_tots = df[null_tot_mask]
+    # tot_mask = (df['item_type'] == 'total')
+
 
     df = df[['sheet','DATE','item_type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
                 'membership','discount_type','day_type','duration']]
@@ -368,7 +394,9 @@ else:
     fields = ['sheet','DATE','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
                 'membership','discount_type','day_type','duration']
 
-    # df[fields][df['item_type']=='room'].sort(['item','HOURS/UNITS']).to_excel('room_data.xlsx',index=False)
-
-
-
+"""
+# df[fields][df['item_type'] !='total'].sort(['item','HOURS/UNITS']).to_excel('room_data.xlsx',index=False)
+orig = df[['sheet','DATE','SUBTOTAL']][df['item_type'] == 'total'].set_index(['sheet','DATE']).sort_index()
+totaled = pd.DataFrame(df.query('item_type != "total"').groupby(['sheet','DATE'])['SUBTOTAL'].sum())
+both = totaled.join(orig)
+"""
