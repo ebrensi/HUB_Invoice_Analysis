@@ -377,8 +377,17 @@ else:
 
 
     # Fill-in SUBTOTAL for items with TOTAL but no SUBTOTAL (taking DISCOUNT into consideration)
-    no_subtot = df['TOTAL'].notnull() & (df['TOTAL'] != 0) & df['SUBTOTAL'].isnull() & (df['item_type'] != 'total')
+    no_subtot = df['TOTAL'].notnull() & df['SUBTOTAL'].isnull() & (df['item_type'] != 'total')
     df.loc[no_subtot, 'SUBTOTAL'] = df['TOTAL'][no_subtot] / (1 - df['DISCOUNT'][no_subtot] )
+
+
+
+    # Eliminate items with no SUBTOTAL, DISCOUNT, nor TOTAL
+    mask = (df['TOTAL'].isnull() | (df['TOTAL'] == 0) )\
+            & (df['SUBTOTAL'].isnull() | (df['SUBTOTAL'] == 0) )\
+            & (df['DISCOUNT'].isnull() | (df['DISCOUNT'] == 0) )
+
+    df = df[~mask]
 
 
     # # Fill-in empty SUBTOTAL field in 'total' items
