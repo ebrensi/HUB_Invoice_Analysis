@@ -425,6 +425,16 @@ else:
 
 
 ##   *********** ANALYSIS *******************
-fields = ['sheet','DATE','SUBTOTAL','TOTAL','membership','discount_type','day_type','duration']
-tots = df[fields][df['item_type'] == 'total']
+# Our queries will return sheets, so we want to be able to index by sheet
+df_sheets = df.set_index('sheet')
+df_tots = df_sheets.query('item_type == "total"')
+
+# df_tots.mean() is mean income w and w/o discount
+
+# The following is a subset of df consisting of only invoices containing item
+def df_query(query):
+    return df_sheets.loc[df_sheets.query(query).index].reset_index()
+
+# This gives the max num of HOURS of any item in each invoice
+# df.groupby('sheet')['HOURS/UNITS'].max()
 
