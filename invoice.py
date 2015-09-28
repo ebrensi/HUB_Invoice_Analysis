@@ -22,9 +22,6 @@ from collections import OrderedDict
 # ignore invoices
 INVOICE_NUM_CUTOFF = 2035
 
-exclusions = [{'sheet':'2188 BGC_volunteertraining', 'AMOUNT':'855'},
-                {'sheet':'2041 Bryant Terry'} ]
-
 room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingle[-| ]?town|mezzanine', 'omi':'gallery|omi',
                  'meditation':'meditation', 'kitchen':'kitchen', 'meridian':'meridian', 'east-oak':'east',
                  'west-oak':'west', 'uptown':'uptown', 'downtown':'downtown', 'courtyard':'courtyard'}
@@ -184,7 +181,7 @@ def flatten_dict(invoices):
         if invoices[title]:
             c = invoices[title].copy()
             items = c.pop('items')
-            c['sheet'] = title
+            c['invoice'] = title
             for item in items:
                 c2 = c.copy()
                 c2.update(item)
@@ -217,14 +214,14 @@ else:
     # df.to_excel('raw_flat_table.xlsx')
 
     # exclude invoices with no invoice# or invoice# < INVOICE_NUM_CUTOFF
-    invoice_num = df['sheet'].str.extract('(\d+)').str.strip().astype(float)
+    invoice_num = df['invoice'].str.extract('(\d+)').str.strip().astype(float)
     exclude_mask = invoice_num.isnull() |  (invoice_num < INVOICE_NUM_CUTOFF)
-    # print("Excluding \n%s" % (df['sheet'][exclude_mask].tolist()) )
+    # print("Excluding \n%s" % (df['invoice'][exclude_mask].tolist()) )
     df = df[~exclude_mask]
 
 
     # Exclude cancellation invoices
-    cancellations = df['sheet'].str.contains('cancel', na=False, case=False)
+    cancellations = df['invoice'].str.contains('cancel', na=False, case=False)
     df = df[~cancellations]
 
 
@@ -244,7 +241,7 @@ else:
     # mask = df['OCCURANCE'].notnull()
     # df.loc[mask, 'HOURS/UNITS'] = df.loc[mask, 'HOURS/UNITS'] * df[mask, 'OCCURANCE']
 
-    df = df[['sheet','DATE','DESCRIPTION','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate']]
+    df = df[['invoice','DATE','DESCRIPTION','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate']]
 
 
 
@@ -347,7 +344,7 @@ else:
     idx_to_drop = []
 
     for item_idx, item in df[multi_room_item_mask].iterrows():
-        associated_rooms = (df['sheet'] == item['sheet']) & (df['item_type'] == 'room') & df['TOTAL'].isnull()
+        associated_rooms = (df['invoice'] == item['invoice']) & (df['item_type'] == 'room') & df['TOTAL'].isnull()
 
         if associated_rooms.any():
 
@@ -408,13 +405,13 @@ else:
 
 
 
-    df = df[['sheet','DATE','item_type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
+    df = df[['invoice','DATE','item_type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
                 'membership','discount_type','day_type','duration']]
 
     # # An attempt to set column widths in output Excel spreadsheet
     # excel_writer = StyleFrame.ExcelWriter(fname+'.xlsx')
     # sf = StyleFrame(df)
-    # for col in ['sheet', 'DATE']:
+    # for col in ['invoice', 'DATE']:
     #     width = int(df[col].str.len().max())
     #     sf.set_column_width(col, width)
     # sf.to_excel(excel_writer=excel_writer)
@@ -425,16 +422,18 @@ else:
 
 
 ##   *********** ANALYSIS *******************
-# Our queries will return sheets, so we want to be able to index by sheet
-df_sheets = df.set_index('sheet')
-df_tots = df_sheets.query('item_type == "total"')
+df_invoices = df.set_index('invoice')
+df_tots = df_invoices.query('item_type == "total"')
 
 # df_tots.mean() is mean income w and w/o discount
 
-# The following is a subset of df consisting of only invoices containing item
+# The following is a subset of df consisting of only invoices containing a given query
 def df_query(query):
-    return df_sheets.loc[df_sheets.query(query).index].reset_index()
+    return df_invoices.loc[df_invoices.query(query).index].reset_index()
 
 # This gives the max num of HOURS of any item in each invoice
-# df.groupby('sheet')['HOURS/UNITS'].max()
+# df.groupby('invoice')['HOURS/UNITS'].max()
+
+##  Line items for only rooms, not including other associated invoice items
+df_rooms = df_invoices.query('item_type == "room"').drop(['item_type'],axis=1).sort('item')
 
