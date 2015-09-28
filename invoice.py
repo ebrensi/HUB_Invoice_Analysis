@@ -28,8 +28,9 @@ room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingleto
                  'meditation':'meditation', 'kitchen':'kitchen', 'meridian':'meridian', 'east-oak':'east',
                  'west-oak':'west', 'uptown':'uptown', 'downtown':'downtown', 'courtyard':'courtyard'}
 
-service_classes = {'setup/breakdown':'set[-| ]?up', 'staffing':'staff|manager', 'A/V':'A/V|technician',
-                    'janitorial':'janitorial|waste|cleaning' }
+service_classes = {'setup/breakdown':'set[-| ]?up|pre[-| ]?event|post[-| ]?event',
+                    'staffing':'staff|manager','A/V':'A/V|technician|sound',
+                    'janitorial':'janitorial|waste|cleaning', 'drinks':'coffee|wine', 'compostables':'compost' }
 
 member_classes = {'part-time': 'part[-| ]?time|Part Ttime', 'full-time':'full[ |-]?time|full member',
                     'non-member':'none?[ |-]member', 'org-connect':'Org'}
@@ -415,3 +416,6 @@ else:
 
 
 ##   *********** ANALYSIS *******************
+fields = ['sheet','DATE','SUBTOTAL','TOTAL','membership','discount_type','day_type','duration']
+tots = df[fields][df['item_type'] == 'total']
+
