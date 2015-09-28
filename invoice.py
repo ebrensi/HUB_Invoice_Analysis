@@ -24,7 +24,7 @@ INVOICE_NUM_CUTOFF = 2035
 exclusions = [{'sheet':'2188 BGC_volunteertraining', 'AMOUNT':'855'},
                 {'sheet':'2041 Bryant Terry'} ]
 
-room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingletown', 'omi':'gallery|omi',
+room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingle[-| ]?town|mezzanine', 'omi':'gallery|omi',
                  'meditation':'meditation', 'kitchen':'kitchen', 'meridian':'meridian', 'east-oak':'east',
                  'west-oak':'west', 'uptown':'uptown', 'downtown':'downtown', 'courtyard':'courtyard'}
 
@@ -419,3 +419,4 @@ else:
 fields = ['sheet','DATE','SUBTOTAL','TOTAL','membership','discount_type','day_type','duration']
 tots = df[fields][df['item_type'] == 'total']
 
+def contains_room(room)
