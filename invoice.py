@@ -7,6 +7,7 @@ Created on Mon Aug 17 14:23:20 2015
 """
 
 from openpyxl import load_workbook
+from StyleFrame import StyleFrame
 import pandas as pd
 NaN = pd.np.nan
 #pd.set_option('expand_frame_repr', False)
@@ -207,7 +208,7 @@ else:
 
 
 # Clean up raw flattened data into the basic columns we want
-fname = 'invoice_items_flat_cleaned'
+fname = 'invoice_data'
 
 if os.path.isfile(fname+'.xlsx'):
     df = pd.read_excel(fname+'.xlsx', encoding='utf-8')
@@ -410,6 +411,14 @@ else:
     df = df[['sheet','DATE','item_type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
                 'membership','discount_type','day_type','duration']]
 
+    # # An attempt to set column widths in output Excel spreadsheet
+    # excel_writer = StyleFrame.ExcelWriter(fname+'.xlsx')
+    # sf = StyleFrame(df)
+    # for col in ['sheet', 'DATE']:
+    #     width = int(df[col].str.len().max())
+    #     sf.set_column_width(col, width)
+    # sf.to_excel(excel_writer=excel_writer)
+    # excel_writer.save()
 
     df.to_excel(fname+'.xlsx', index=False)
 
@@ -419,4 +428,3 @@ else:
 fields = ['sheet','DATE','SUBTOTAL','TOTAL','membership','discount_type','day_type','duration']
 tots = df[fields][df['item_type'] == 'total']
 
-def contains_room(room)
