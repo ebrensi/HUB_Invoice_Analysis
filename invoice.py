@@ -229,8 +229,9 @@ else:
     # Join equivalent columns
     df['DATE'].update(df['DATE OF EVENT'])
 
+    df = df.rename(columns={'HOURS/UNITS': 'HOURS_UNITS'})
     for col_name in ['ESTIMATED HOURS', 'HOURS']:
-        df['HOURS/UNITS'].update(df[col_name])
+        df['HOURS_UNITS'].update(df[col_name])
 
     for col_name in [' TOTAL', 'ESTIMATE TOTAL', 'ESTIMATED TOTAL']:
         df['TOTAL'].update(df[col_name])
@@ -239,9 +240,9 @@ else:
 
 
     # mask = df['OCCURANCE'].notnull()
-    # df.loc[mask, 'HOURS/UNITS'] = df.loc[mask, 'HOURS/UNITS'] * df[mask, 'OCCURANCE']
+    # df.loc[mask, 'HOURS_UNITS'] = df.loc[mask, 'HOURS_UNITS'] * df[mask, 'OCCURANCE']
 
-    df = df[['invoice','DATE','DESCRIPTION','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate']]
+    df = df[['invoice','DATE','DESCRIPTION','AMOUNT','HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate']]
 
 
 
@@ -328,12 +329,12 @@ else:
     df.loc[(all_no_charge & no_discount_type_indicated), 'discount_type'] = 'waived'
 
     #  convert any 'flat fee' indicators to 1 so that the AMOUNT identifies with SUBTOTAL
-    df['HOURS/UNITS'].loc[df['HOURS/UNITS'].str.contains('flat', case=False, na=False)] = 1
+    df['HOURS_UNITS'].loc[df['HOURS_UNITS'].str.contains('flat', case=False, na=False)] = 1
 
 
 
     # convert all numeric field values to floats (anything non-numeric becomes NaN)
-    NUMERIC_FIELDS = ['AMOUNT','SUBTOTAL','HOURS/UNITS','DISCOUNT','TOTAL']
+    NUMERIC_FIELDS = ['AMOUNT','SUBTOTAL','HOURS_UNITS','DISCOUNT','TOTAL']
     df[NUMERIC_FIELDS] = df[NUMERIC_FIELDS].convert_objects(convert_numeric=True)
 
 
@@ -348,11 +349,11 @@ else:
 
         if associated_rooms.any():
 
-            for field in ['HOURS/UNITS','DISCOUNT']:
+            for field in ['HOURS_UNITS','DISCOUNT']:
                 df.loc[associated_rooms, field] = item[field]
 
             idx_to_drop.append(item_idx)
-            # df.loc[mask, 'SUBTOTAL'] = df.loc[mask, 'AMOUNT'] * df.loc[mask, 'HOURS/UNITS']
+            # df.loc[mask, 'SUBTOTAL'] = df.loc[mask, 'AMOUNT'] * df.loc[mask, 'HOURS_UNITS']
             # df.loc[mask, 'TOTAL'] = df.loc[mask, 'SUBTOTAL'] * (1 - df.loc[mask, 'DISCOUNT'])
 
     print('dropping multi-room items %s' % str(idx_to_drop))
@@ -360,9 +361,9 @@ else:
 
 
     # fill in missing subtotal values.  We need these values for determining income.
-    # If AMOUNT and HOURS/UNITS are both non-empty then compute SUBTOTAL = AMOUNT * HOURS/UNITS
-    notnull = df[['AMOUNT','HOURS/UNITS']].notnull().all(axis=1)
-    df.loc[notnull, 'SUBTOTAL'] = df.loc[notnull, 'AMOUNT'] * df.loc[notnull, 'HOURS/UNITS']
+    # If AMOUNT and HOURS_UNITS are both non-empty then compute SUBTOTAL = AMOUNT * HOURS_UNITS
+    notnull = df[['AMOUNT','HOURS_UNITS']].notnull().all(axis=1)
+    df.loc[notnull, 'SUBTOTAL'] = df.loc[notnull, 'AMOUNT'] * df.loc[notnull, 'HOURS_UNITS']
 
 
     #  Fill-in all missing DISCOUNT entries with zero
@@ -405,7 +406,7 @@ else:
 
 
 
-    df = df[['invoice','DATE','item_type','item','AMOUNT','HOURS/UNITS','SUBTOTAL','DISCOUNT','TOTAL',
+    df = df[['invoice','DATE','item_type','item','AMOUNT','HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL',
                 'membership','discount_type','day_type','duration']]
 
     # # An attempt to set column widths in output Excel spreadsheet
@@ -423,7 +424,8 @@ else:
 
 ##   *********** ANALYSIS *******************
 df_invoices = df.set_index('invoice')
-df_tots = df_invoices.query('item_type == "total"')
+tot_fields = ['DATE','SUBTOTAL','DISCOUNT','TOTAL','membership','discount_type','day_type','duration']
+df_tots = df_invoices.query('item_type == "total"')[tot_fields]
 
 # df_tots.mean() is mean income w and w/o discount
 
@@ -432,7 +434,7 @@ def df_query(query):
     return df_invoices.loc[df_invoices.query(query).index].reset_index()
 
 # This gives the max num of HOURS of any item in each invoice
-# df.groupby('invoice')['HOURS/UNITS'].max()
+# df.groupby('invoice')['HOURS_UNITS'].max()
 
 ##  Line items for only rooms, not including other associated invoice items
 df_rooms = df_invoices.query('item_type == "room"').drop(['item_type'],axis=1).sort('item')
