@@ -67,6 +67,8 @@ file_names = ['IHO_OnGoing_InvoiceTemplate.xlsx',
               '2015 OnGoing InvoiceTemplate.xlsx']
              #'IHO_OnGoing_QuoteTemplate.xlsx'
 #                ]
+date_pat = re.compile('(\d{4}-\d{2}-\d{2})')
+rate_pat = re.compile('(.*rate.*)', re.IGNORECASE)
 
 ## Extract relevant data from one invoice worksheet and return it as a dict
 def parse_sheet(ws):
