@@ -22,9 +22,10 @@ from collections import OrderedDict
 # ignore invoices
 INVOICE_NUM_CUTOFF = 2035
 
-room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingle[-| ]?town|mezzanine', 'omi':'gallery|omi',
-                 'meditation':'meditation', 'kitchen':'kitchen', 'meridian':'meridian', 'east-oak':'east',
-                 'west-oak':'west', 'uptown':'uptown', 'downtown':'downtown', 'courtyard':'courtyard'}
+room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingle[-| ]?town|mezzanine',
+                'omi':'gallery|omi','meditation':'meditation', 'kitchen':'kitchen', 'meridian':'meridian',
+                'east-oak':'east','west-oak':'west', 'uptown':'uptown', 'downtown':'downtown',
+                'courtyard':'courtyard'}
 
 service_classes = {'setup/breakdown':'set[-| ]?up|pre[-| ]?event|post[-| ]?event',
                     'staffing':'staff|manager','A/V':'A/V|technician|sound',
@@ -69,8 +70,7 @@ file_names = ['IHO_OnGoing_InvoiceTemplate.xlsx',
 
 ## Extract relevant data from one invoice worksheet and return it as a dict
 def parse_sheet(ws):
-    info = {}
-    pd.set_option('expand_frame_repr', False)
+    info = {'rate':'', 'invoice_date':''}
     sname = ws.title.strip()
 
     template_pattern = re.compile('template|quotes', re.IGNORECASE)
@@ -82,14 +82,27 @@ def parse_sheet(ws):
     df = df.reset_index(drop=True)
 
     if any(df):
-        # find the cell that contains rate information and parse it
-        patt = re.compile('.*(rate:| rate).*', re.IGNORECASE)
-        tags = df.dropna(how='all', axis=[0,1]).applymap(find(patt)).dropna(how='all', axis=[0,1])
-        tags_list = flatten(tags.values.tolist())
-        if tags_list:
-            info['rate'] = tags_list[0].group(0).lstrip('RATE:').strip()
-        else:
-            info['rate'] = ''
+        for col_name in reversed(df.columns):
+            col_str = df[col_name].astype(unicode).str
+            if not info['invoice_date']:
+                date_cell = col_str.extract(date_pat).dropna()
+                if len(date_cell) > 0:
+                    info['invoice_date'] = date_cell.iloc[0]
+
+            elif not info['rate']:
+                rate_cell = col_str.extract(rate_pat).dropna()
+                if len(rate_cell) > 0:
+                    info['rate'] = rate_cell.iloc[0]
+                    break
+
+        # # find the cell that contains rate information and parse it
+        # patt = re.compile('.*(rate:| rate).*', re.IGNORECASE)
+        # tags = df.dropna(how='all', axis=[0,1]).applymap(find(patt)).dropna(how='all', axis=[0,1])
+        # tags_list = flatten(tags.values.tolist())
+        # if tags_list:
+        #     info['rate'] = tags_list[0].group(0).lstrip('RATE:').strip()
+        # else:
+        #     info['rate'] = ''
 
 
         # Determine upper & lower boundaries for the item subtable
