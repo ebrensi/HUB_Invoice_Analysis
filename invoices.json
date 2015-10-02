@@ -173,7 +173,7 @@
             "SUBTOTAL": 2310
          }
       ], 
-      "rate": "RATE: RATE: Full Time Member Weekday Rate -\u00ad\u2010 Full Day Rental ", 
+      "rate": "Full Time Member Weekday Rate -\u00ad\u2010 Full Day Rental", 
       "invoice_date": "2015-06-30"
    }, 
    "715001 WPC": {
@@ -341,7 +341,7 @@
             "SUBTOTAL": 2545
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate - Multi Room Discount", 
+      "rate": "Full Time Member Weekend Rate - Multi Room Discount", 
       "invoice_date": "2015-07-07"
    }, 
    "715002 Bike East Bay": {
@@ -509,7 +509,7 @@
             "SUBTOTAL": 2820
          }
       ], 
-      "rate": "RATE: Non-member Weekday Rate - Marketing Partner Discount", 
+      "rate": "Non-member Weekday Rate - Marketing Partner Discount", 
       "invoice_date": "2015-07-14"
    }, 
    "715003-2 National Poetry Slam": {
@@ -677,7 +677,7 @@
             "SUBTOTAL": 2022.5
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate - Partnership Discount", 
+      "rate": "Part Time Member Weekend Rate - Partnership Discount", 
       "invoice_date": "2015-07-28"
    }, 
    "715004-2 BART": {
@@ -845,7 +845,7 @@
             "SUBTOTAL": 485
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate - Founder Discount", 
+      "rate": "Non Member Weekday Rate - Founder Discount", 
       "invoice_date": "2015-07-24"
    }, 
    "715004-2 PAID_BART ": {
@@ -1013,7 +1013,7 @@
             "SUBTOTAL": 485
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate - Founder Discount", 
+      "rate": "Non Member Weekday Rate - Founder Discount", 
       "invoice_date": "2015-08-03"
    }, 
    "715005 Paycation Launch": {
@@ -1181,7 +1181,7 @@
             "SUBTOTAL": 1180
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate  - Founder Discount", 
+      "rate": "Full Time Member Weekend Rate  - Founder Discount", 
       "invoice_date": "2015-07-17"
    }, 
    "715006 BeThePeace": {
@@ -1349,7 +1349,7 @@
             "SUBTOTAL": 2192.5
          }
       ], 
-      "rate": "RATE: Part Member Weekend Rate - Multi Room Discount", 
+      "rate": "Part Member Weekend Rate - Multi Room Discount", 
       "invoice_date": "2015-07-20"
    }, 
    "715007 Pecha Kucha": {
@@ -1517,7 +1517,7 @@
             "SUBTOTAL": 1385
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate - Founder Discount", 
+      "rate": "Full Time Member Weekday Rate - Founder Discount", 
       "invoice_date": "2015-07-21"
    }, 
    "715008 Ada Initiative": {
@@ -1667,7 +1667,7 @@
             "SUBTOTAL": 690
          }
       ], 
-      "rate": "RATE: Part Time Member Wkday Rate  - Offering Broadway ($295/hr) at the Atrium", 
+      "rate": "Part Time Member Wkday Rate  - Offering Broadway ($295/hr) at the Atrium", 
       "invoice_date": "2015-07-22"
    }, 
    "715008-2 Ada Initiative": {
@@ -1817,7 +1817,7 @@
             "SUBTOTAL": 705.05
          }
       ], 
-      "rate": "RATE: Part Time Member Wkday Rate  - Offering Broadway ($295/hr) at the Atrium", 
+      "rate": "Part Time Member Wkday Rate  - Offering Broadway ($295/hr) at the Atrium", 
       "invoice_date": "2015-08-07"
    }, 
    "715009 HacktheHood": {
@@ -1985,7 +1985,7 @@
             "SUBTOTAL": 1290
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2015-07-22"
    }, 
    "715010 TriNet": {
@@ -2135,7 +2135,7 @@
             "SUBTOTAL": 1610
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate", 
+      "rate": "Non Member Weekday Rate", 
       "invoice_date": "2015-07-24"
    }, 
    "715011 Food Craft Institute": {
@@ -2285,7 +2285,7 @@
             "SUBTOTAL": 1410
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate", 
+      "rate": "Non Member Weekday Rate", 
       "invoice_date": "2015-07-27"
    }, 
    "715012 Urban Beauty Inc": {
@@ -2453,7 +2453,7 @@
             "SUBTOTAL": 3818.88
          }
       ], 
-      "rate": "RATE: Non Member Wkend Rate - Discounts for: Multi-room, Fullday, & Founders disc.", 
+      "rate": "Non Member Wkend Rate - Discounts for: Multi-room, Fullday, & Founders disc.", 
       "invoice_date": "2015-07-29"
    }, 
    "715013 Dinner Lab": {
@@ -2603,7 +2603,7 @@
             "SUBTOTAL": 1535
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate ", 
+      "rate": "Non Member Weekend Rate", 
       "invoice_date": "2015-07-31"
    }, 
    "715013-2 Dinner Lab": {
@@ -2753,7 +2753,7 @@
             "SUBTOTAL": 1707.5
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate ", 
+      "rate": "Non Member Weekend Rate", 
       "invoice_date": "2015-08-04"
    }, 
    "715014 Uptima Coop Challenge": {
@@ -2921,7 +2921,7 @@
             "SUBTOTAL": 1327.5
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate - Sponsorship Discount", 
+      "rate": "Full Time Member Weekend Rate - Sponsorship Discount", 
       "invoice_date": "2015-07-31"
    }, 
    "815001 SELC Fall Celebration": {
@@ -3071,7 +3071,7 @@
             "SUBTOTAL": 980
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2015-08-06"
    }, 
    "815002 Occur Award Dinner": {
@@ -3248,7 +3248,7 @@
             "SUBTOTAL": null
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate - Returning client discount", 
+      "rate": "Non Member Weekday Rate - Returning client discount", 
       "invoice_date": "2015-08-07"
    }, 
    "815003 Piedmont": {
@@ -3416,7 +3416,7 @@
             "SUBTOTAL": 2477.5
          }
       ], 
-      "rate": "RATE: Part Time Weekend Rate - Multi Room Discount", 
+      "rate": "Part Time Weekend Rate - Multi Room Discount", 
       "invoice_date": "2015-08-07"
    }, 
    "815004 Raz vocal productions ": {
@@ -3485,7 +3485,7 @@
             "SUBTOTAL": 2580
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate - Multi Day Discount", 
+      "rate": "Part Time Member Weekend Rate - Multi Day Discount", 
       "invoice_date": "2015-08-10"
    }, 
    "815005 Oak Food Policy Council": {
@@ -3635,7 +3635,7 @@
             "SUBTOTAL": 1545
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate", 
+      "rate": "Non Member Weekend Rate", 
       "invoice_date": "2015-08-10"
    }, 
    "2000. Movement Generation": {
@@ -10404,7 +10404,7 @@
             "SUBTOTAL": 1030
          }
       ], 
-      "rate": "RATE: WITH EVENT", 
+      "rate": "WITH EVENT", 
       "invoice_date": "2014-08-01"
    }, 
    "2107 Fall Wine Event": {
@@ -10563,7 +10563,7 @@
             "SUBTOTAL": 1570
          }
       ], 
-      "rate": "RATE: Non-Member Weekend Rate - Reoccuring event discount", 
+      "rate": "Non-Member Weekend Rate - Reoccuring event discount", 
       "invoice_date": "2014-08-05"
    }, 
    "2108 SexyHuman": {
@@ -10722,7 +10722,7 @@
             "SUBTOTAL": 245
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Evening Rate", 
+      "rate": "Part Time Member Weekday Evening Rate", 
       "invoice_date": "2014-08-05"
    }, 
    "2109 Meridian University": {
@@ -10840,7 +10840,7 @@
             "SUBTOTAL": 835
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate", 
+      "rate": "Full Time Member Weekend Rate", 
       "invoice_date": "2014-08-06"
    }, 
    "2110 Akili Dada Concert": {
@@ -11008,7 +11008,7 @@
             "SUBTOTAL": 1439
          }
       ], 
-      "rate": "RATE: No-Member Weekday Rate - Part-time member discount applied", 
+      "rate": "No-Member Weekday Rate - Part-time member discount applied", 
       "invoice_date": "2014-08-06"
    }, 
    "2111 HACK THE HOOD GRAD": {
@@ -11167,7 +11167,7 @@
             "SUBTOTAL": 710
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2014-08-06"
    }, 
    "2112 Women 2.0": {
@@ -11326,7 +11326,7 @@
             "SUBTOTAL": 965
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate - Partner Discount", 
+      "rate": "Non Member Weekday Rate - Partner Discount", 
       "invoice_date": "2014-08-08"
    }, 
    "2113 ThirdThursday_Sept": {
@@ -11542,7 +11542,7 @@
             "SUBTOTAL": 855
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2014-08-08"
    }, 
    "2115 John Chiang": {
@@ -11683,7 +11683,7 @@
             "SUBTOTAL": 405
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate - Sharon Cornu Credit Applied", 
+      "rate": "Non Member Weekday Rate - Sharon Cornu Credit Applied", 
       "invoice_date": "2014-08-19"
    }, 
    "2116 movement strategy center": {
@@ -11777,7 +11777,7 @@
             "SUBTOTAL": 160
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2014-08-20"
    }, 
    "2117 SELC": {
@@ -12187,7 +12187,7 @@
             "SUBTOTAL": 825
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2014-08-19"
    }, 
    "2119 ImapctSocial_NewArtsAxis": {
@@ -12211,7 +12211,7 @@
             "DESCRIPTION": "Total"
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2014-08-19"
    }, 
    "2119 ImpactSocial_BAVC": {
@@ -12235,7 +12235,7 @@
             "DESCRIPTION": "Total"
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2014-08-19"
    }, 
    "2119 ImpactSocial_activevoice": {
@@ -12259,7 +12259,7 @@
             "DESCRIPTION": "Total"
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2014-08-19"
    }, 
    "2120 OneLifeInstitute": {
@@ -12385,7 +12385,7 @@
             "SUBTOTAL": 1075
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate - Founder Discount", 
+      "rate": "Full Time Member Weekday Rate - Founder Discount", 
       "invoice_date": "2014-08-22"
    }, 
    "2121 OakMetroChamberofCommerce": {
@@ -12526,7 +12526,7 @@
             "SUBTOTAL": 1345
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate - Founder Discount", 
+      "rate": "Full Time Member Weekday Rate - Founder Discount", 
       "invoice_date": "2014-08-25"
    }, 
    "2122 EastBayRentalHousingAssoc": {
@@ -12652,7 +12652,7 @@
             "SUBTOTAL": 1235
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate", 
+      "rate": "Non Member Weekday Rate", 
       "invoice_date": "2014-08-26"
    }, 
    "2122 EBayRentalHousing_Member": {
@@ -12778,7 +12778,7 @@
             "SUBTOTAL": 1025
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2014-08-26"
    }, 
    "2123 Peers": {
@@ -12904,7 +12904,7 @@
             "SUBTOTAL": 820
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate", 
+      "rate": "Full Time Member Weekend Rate", 
       "invoice_date": "2014-08-26"
    }, 
    "2123 Peers_Cancellation Fee": {
@@ -13075,7 +13075,7 @@
             "SUBTOTAL": 3125
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate - multi room discount", 
+      "rate": "Part Time Member Weekend Rate - multi room discount", 
       "invoice_date": "2014-08-28"
    }, 
    "2125 OpenOak_LeaderRetreat": {
@@ -13201,7 +13201,7 @@
             "SUBTOTAL": 425
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate", 
+      "rate": "Full Time Member Weekend Rate", 
       "invoice_date": "2014-08-28"
    }, 
    "2083 Nat Poetry Slam_cleaning": {
@@ -13347,7 +13347,7 @@
             "SUBTOTAL": 150
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate ", 
+      "rate": "Full Time Member Weekend Rate", 
       "invoice_date": "2014-09-03"
    }, 
    "2127 Planetary Advocates": {
@@ -13475,7 +13475,7 @@
             "SUBTOTAL": 1300
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate ", 
+      "rate": "Full Time Member Weekend Rate", 
       "invoice_date": "2014-09-05"
    }, 
    "2129 Women 2.0_2nd": {
@@ -13634,7 +13634,7 @@
             "SUBTOTAL": 965
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate - Partner Discount", 
+      "rate": "Non Member Weekday Rate - Partner Discount", 
       "invoice_date": "2014-09-04"
    }, 
    "2130 ULI": {
@@ -13768,7 +13768,7 @@
             "SUBTOTAL": 440
          }
       ], 
-      "rate": "RATE: Full Time Weekday Rate", 
+      "rate": "Full Time Weekday Rate", 
       "invoice_date": "2014-09-08"
    }, 
    "2131 Black Elected Officials": {
@@ -13983,7 +13983,7 @@
             "SUBTOTAL": 1500
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate", 
+      "rate": "Non Member Weekday Rate", 
       "invoice_date": "2014-09-10"
    }, 
    "2135 BeyondCultureofSeparation": {
@@ -14117,7 +14117,7 @@
             "SUBTOTAL": 1360
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2014-09-11"
    }, 
    "2136 OCCUR": {
@@ -14243,7 +14243,7 @@
             "SUBTOTAL": 1262.5
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate", 
+      "rate": "Non Member Weekday Rate", 
       "invoice_date": "2014-09-12"
    }, 
    "2136 OCCUR_withAV": {
@@ -14361,7 +14361,7 @@
             "SUBTOTAL": 1397.5
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate", 
+      "rate": "Non Member Weekday Rate", 
       "invoice_date": "2014-09-12"
    }, 
    "2137 Bay Bucks": {
@@ -14439,7 +14439,7 @@
             "SUBTOTAL": 2110
          }
       ], 
-      "rate": "Full Time Member Rate ", 
+      "rate": "Full Time Member Rate", 
       "invoice_date": "2014-09-12"
    }, 
    "2137 Bay Bucks_Final": {
@@ -14526,7 +14526,7 @@
             "SUBTOTAL": 1700
          }
       ], 
-      "rate": "Full Time Member Rate ", 
+      "rate": "Full Time Member Rate", 
       "invoice_date": "2014-10-16"
    }, 
    "2138 Linda Curtis": {
@@ -14644,7 +14644,7 @@
             "SUBTOTAL": 202.5
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate", 
+      "rate": "Non Member Weekday Rate", 
       "invoice_date": "2014-09-17"
    }, 
    "2138 Linda Curtis_Rev1": {
@@ -14762,7 +14762,7 @@
             "SUBTOTAL": 202.5
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate", 
+      "rate": "Non Member Weekday Rate", 
       "invoice_date": "2014-09-17"
    }, 
    "2139 Feng Shui School_Oct": {
@@ -14804,7 +14804,7 @@
             "SUBTOTAL": 810
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate -- Multi-Day Discount", 
+      "rate": "Full Time Member Weekday Rate -- Multi-Day Discount", 
       "invoice_date": "2014-09-19"
    }, 
    "2140 Feng Shui School_Nov": {
@@ -14846,7 +14846,7 @@
             "SUBTOTAL": 1125
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate -- Multi-Day Discount", 
+      "rate": "Full Time Member Weekday Rate -- Multi-Day Discount", 
       "invoice_date": "2014-09-19"
    }, 
    "2141 Feng Shui School_Dec": {
@@ -14879,7 +14879,7 @@
             "SUBTOTAL": 630
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate -- Multi-Day Discount", 
+      "rate": "Full Time Member Weekday Rate -- Multi-Day Discount", 
       "invoice_date": "2014-09-19"
    }, 
    "2142 Feng Shui School_Jan": {
@@ -14912,7 +14912,7 @@
             "SUBTOTAL": 1589
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate -- Multi-Day Discount", 
+      "rate": "Full Time Member Weekday Rate -- Multi-Day Discount", 
       "invoice_date": "2014-09-19"
    }, 
    "2143 Feng Shui School_Feb": {
@@ -14945,7 +14945,7 @@
             "SUBTOTAL": 1281
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate -- Multi-Day Discount", 
+      "rate": "Full Time Member Weekday Rate -- Multi-Day Discount", 
       "invoice_date": "2014-09-19"
    }, 
    "2144 Feng Shui School_March": {
@@ -14969,7 +14969,7 @@
             "SUBTOTAL": 630
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate -- Multi-Day Discount", 
+      "rate": "Full Time Member Weekday Rate -- Multi-Day Discount", 
       "invoice_date": "2014-09-19"
    }, 
    "2145 Beyond the Culture_Sept": {
@@ -14999,7 +14999,7 @@
             "SUBTOTAL": 112.5
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2014-09-19"
    }, 
    "2146 Beyond the Culture_Oct": {
@@ -15053,7 +15053,7 @@
             "SUBTOTAL": 450
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2014-09-19"
    }, 
    "2147 Beyond the Culture_Nov": {
@@ -15099,7 +15099,7 @@
             "SUBTOTAL": 337.5
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2014-09-19"
    }, 
    "2147 OakChamberofComme_fine": {
@@ -15376,7 +15376,7 @@
             "SUBTOTAL": 792.5
          }
       ], 
-      "rate": "RATE: None Member Weekday Rate", 
+      "rate": "None Member Weekday Rate", 
       "invoice_date": "2014-09-02"
    }, 
    "2151 B Labs": {
@@ -15436,7 +15436,7 @@
             "SUBTOTAL": 770
          }
       ], 
-      "rate": "RATE: Non-member weekday; Discount Rate for IHO WITH event", 
+      "rate": "Non-member weekday; Discount Rate for IHO WITH event", 
       "invoice_date": "2014-09-22"
    }, 
    "2152 Bootcamp_BusinessInn_pt2": {
@@ -15687,7 +15687,7 @@
             "SUBTOTAL": 990
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate - Partner discount", 
+      "rate": "Non Member Weekday Rate - Partner discount", 
       "invoice_date": "2014-09-23"
    }, 
    "2155 Bay Localize": {
@@ -15813,7 +15813,7 @@
             "SUBTOTAL": 1740
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate", 
+      "rate": "Non Member Weekend Rate", 
       "invoice_date": "2014-09-23"
    }, 
    "2156 HERA_ScotchTasting": {
@@ -15947,7 +15947,7 @@
             "SUBTOTAL": 265
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate", 
+      "rate": "Non Member Weekday Rate", 
       "invoice_date": "2014-10-01"
    }, 
    "2157 Thomas Huebl_BAI": {
@@ -16088,7 +16088,7 @@
             "SUBTOTAL": 1355
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate - partner event discount", 
+      "rate": "Non Member Weekday Rate - partner event discount", 
       "invoice_date": "2014-10-01"
    }, 
    "2158 Rosenberg Foundation Event": {
@@ -16222,7 +16222,7 @@
             "SUBTOTAL": 1087.5
          }
       ], 
-      "rate": "RATE: None Member Weekday Rate", 
+      "rate": "None Member Weekday Rate", 
       "invoice_date": "2014-10-01"
    }, 
    "2158 Rosenberg_Cancellation": {
@@ -16392,7 +16392,7 @@
             "SUBTOTAL": 1260
          }
       ], 
-      "rate": "RATE: None Member Weekday Rate - Partner Discount", 
+      "rate": "None Member Weekday Rate - Partner Discount", 
       "invoice_date": "2014-10-01"
    }, 
    "2160 BK Publishers_LockedDown": {
@@ -16526,7 +16526,7 @@
             "SUBTOTAL": 862
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate", 
+      "rate": "Non Member Weekday Rate", 
       "invoice_date": "2014-11-03"
    }, 
    "2160 OPEN": {
@@ -16636,7 +16636,7 @@
             "SUBTOTAL": 710
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate ", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2014-10-06"
    }, 
    "2161 Amigos_HostTraining": {
@@ -16754,7 +16754,7 @@
             "SUBTOTAL": 650
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate ", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2014-10-09"
    }, 
    "2162 Housing Consortium": {
@@ -16872,7 +16872,7 @@
             "SUBTOTAL": 1351
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2014-10-16"
    }, 
    "2163 Kaiser Emergency Dept": {
@@ -16982,7 +16982,7 @@
             "SUBTOTAL": 1812.5
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate ", 
+      "rate": "Part Time Member Weekend Rate", 
       "invoice_date": "2014-10-20"
    }, 
    "2163 Kaiser Emergency Dept_Rev1": {
@@ -17092,7 +17092,7 @@
             "SUBTOTAL": 2812.5
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate ", 
+      "rate": "Part Time Member Weekend Rate", 
       "invoice_date": "2014-10-20"
    }, 
    "2164 Tides ": {
@@ -17206,7 +17206,7 @@
             "SUBTOTAL": 1155
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate ", 
+      "rate": "Non Member Weekday Rate", 
       "invoice_date": "2014-10-23"
    }, 
    "2165 Marie Bernardo": {
@@ -17308,7 +17308,7 @@
             "SUBTOTAL": 2525
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate ", 
+      "rate": "Non Member Weekend Rate", 
       "invoice_date": "2014-10-23"
    }, 
    "2165 Marie Bernardo_Rev1": {
@@ -17410,7 +17410,7 @@
             "SUBTOTAL": 2945
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate ", 
+      "rate": "Non Member Weekend Rate", 
       "invoice_date": "2014-10-23"
    }, 
    "2166 SustainAbility RoundTable": {
@@ -17536,7 +17536,7 @@
             "SUBTOTAL": 265
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2014-10-24"
    }, 
    "2167 Sandra Lawson": {
@@ -17668,7 +17668,7 @@
             "SUBTOTAL": 2640
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate ", 
+      "rate": "Non Member Weekend Rate", 
       "invoice_date": "2014-10-28"
    }, 
    "2168 PPGBA_OnBroadway": {
@@ -17786,7 +17786,7 @@
             "SUBTOTAL": 925
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate ", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2014-10-29"
    }, 
    "2169 Red Door Group": {
@@ -17909,7 +17909,7 @@
             "SUBTOTAL": 2405
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate - Multi-Room Discount ", 
+      "rate": "Non Member Weekday Rate - Multi-Room Discount", 
       "invoice_date": "2014-11-04"
    }, 
    "2170 Alameda Health Services": {
@@ -18041,7 +18041,7 @@
             "SUBTOTAL": 2032.5
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate - Multi-Room Discount", 
+      "rate": "Non Member Weekday Rate - Multi-Room Discount", 
       "invoice_date": "2014-11-04"
    }, 
    "2171 Courtney Ruby for Mayor": {
@@ -18151,7 +18151,7 @@
             "SUBTOTAL": 945
          }
       ], 
-      "rate": "RATE: Full Time Office Member Weekday Rate ", 
+      "rate": "Full Time Office Member Weekday Rate", 
       "invoice_date": "2014-11-04"
    }, 
    "2172 Lajones & Associates": {
@@ -18261,7 +18261,7 @@
             "SUBTOTAL": 1575
          }
       ], 
-      "rate": "RATE: Part time Member Weekday Rate ", 
+      "rate": "Part time Member Weekday Rate", 
       "invoice_date": "2014-11-04"
    }, 
    "2172_Rev1 Lajones & Associates": {
@@ -18371,7 +18371,7 @@
             "SUBTOTAL": 1125
          }
       ], 
-      "rate": "RATE: Part time Member Weekday Rate ", 
+      "rate": "Part time Member Weekday Rate", 
       "invoice_date": "2014-11-07"
    }, 
    "2173 EvolutionLeadership_Fedor": {
@@ -18494,7 +18494,7 @@
             "SUBTOTAL": 480
          }
       ], 
-      "rate": "RATE:Full Time Member Weekend Rate -- Full Day Discount", 
+      "rate": "Full Time Member Weekend Rate -- Full Day Discount", 
       "invoice_date": "2014-11-03"
    }, 
    "2174 CARE Strategies": {
@@ -18604,7 +18604,7 @@
             "SUBTOTAL": 192.5
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2014-10-29"
    }, 
    "2175 ACOE_meeting": {
@@ -18714,7 +18714,7 @@
             "SUBTOTAL": null
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate ", 
+      "rate": "Non Member Weekend Rate", 
       "invoice_date": "2014-11-10"
    }, 
    "2175 ACOE_meeting_rev1": {
@@ -18837,7 +18837,7 @@
             "SUBTOTAL": null
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate - Multi Event Rental Discount", 
+      "rate": "Non Member Weekend Rate - Multi Event Rental Discount", 
       "invoice_date": "2014-11-10"
    }, 
    "2176 ACOE_Synergy Day": {
@@ -18960,7 +18960,7 @@
             "SUBTOTAL": 2182
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate  - Full Day Discount", 
+      "rate": "Non Member Weekend Rate  - Full Day Discount", 
       "invoice_date": "2014-11-11"
    }, 
    "2177 ACOE_Apprentice Training": {
@@ -19083,7 +19083,7 @@
             "SUBTOTAL": 2182
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate  - Full Day Discount", 
+      "rate": "Non Member Weekend Rate  - Full Day Discount", 
       "invoice_date": "2014-11-11"
    }, 
    "2178 ACOE_Synergy Day (2)": {
@@ -19193,7 +19193,7 @@
             "SUBTOTAL": 1155
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate ", 
+      "rate": "Non Member Weekend Rate", 
       "invoice_date": "2014-11-11"
    }, 
    "2179 ACOE_ILSP Retreat": {
@@ -19303,7 +19303,7 @@
             "SUBTOTAL": 2090
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate ", 
+      "rate": "Non Member Weekend Rate", 
       "invoice_date": "2014-11-11"
    }, 
    "2180 Sandra Lawson_PTmember": {
@@ -19435,7 +19435,7 @@
             "SUBTOTAL": 2260
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate ", 
+      "rate": "Part Time Member Weekend Rate", 
       "invoice_date": "2014-11-11"
    }, 
    "2181 BALANCE": {
@@ -19594,7 +19594,7 @@
             "SUBTOTAL": 1335
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate  - WITH event sponsorship", 
+      "rate": "Full Time Member Weekday Rate  - WITH event sponsorship", 
       "invoice_date": "2014-11-11"
    }, 
    "2182 Diversity Challenge": {
@@ -19744,7 +19744,7 @@
             "SUBTOTAL": 2470
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate -- Multi-Room Discount", 
+      "rate": "Non Member Weekday Rate -- Multi-Room Discount", 
       "invoice_date": "2014-11-06"
    }, 
    "2182 Diversity Challenge_Rev1": {
@@ -19894,7 +19894,7 @@
             "SUBTOTAL": 2545
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate -- Multi-Room Discount", 
+      "rate": "Non Member Weekday Rate -- Multi-Room Discount", 
       "invoice_date": "2014-12-09"
    }, 
    "2183 LNA_Fertile": {
@@ -20053,7 +20053,7 @@
             "SUBTOTAL": 1490
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate - Partnership Discount", 
+      "rate": "Full Time Member Weekend Rate - Partnership Discount", 
       "invoice_date": "2014-11-19"
    }, 
    "2184 Konda Mason_warmcoat": {
@@ -20221,7 +20221,7 @@
             "SUBTOTAL": 2245
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate - Founder discount", 
+      "rate": "Non Member Weekday Rate - Founder discount", 
       "invoice_date": "2014-11-20"
    }, 
    "2185 YEP": {
@@ -20362,7 +20362,7 @@
             "SUBTOTAL": 970
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate ", 
+      "rate": "Non Member Weekend Rate", 
       "invoice_date": "2014-11-05"
    }, 
    "2186 Kiwan": {
@@ -20464,7 +20464,7 @@
             "SUBTOTAL": null
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate ", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2014-11-24"
    }, 
    "2187 AlterConf": {
@@ -20606,7 +20606,7 @@
             "SUBTOTAL": null
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate ", 
+      "rate": "Non Member Weekend Rate", 
       "invoice_date": "2014-11-24"
    }, 
    "2187-2 AlterConf_AV": {
@@ -20628,7 +20628,7 @@
             "SUBTOTAL": null
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate ", 
+      "rate": "Non Member Weekend Rate", 
       "invoice_date": "2015-01-22"
    }, 
    "2187-3 AlterConf_Compost": {
@@ -20658,7 +20658,7 @@
             "SUBTOTAL": null
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate ", 
+      "rate": "Non Member Weekend Rate", 
       "invoice_date": "2015-01-22"
    }, 
    "2188 BGC_volunteertraining": {
@@ -20800,7 +20800,7 @@
             "SUBTOTAL": null
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate ", 
+      "rate": "Full Time Member Weekend Rate", 
       "invoice_date": "2014-11-25"
    }, 
    "2189 BGC_volunteertraining_2": {
@@ -20934,7 +20934,7 @@
             "SUBTOTAL": 290
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2014-11-25"
    }, 
    "2190 Kerusso Music Group": {
@@ -21052,7 +21052,7 @@
             "SUBTOTAL": 3310
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate -- Holiday Rate", 
+      "rate": "Non Member Weekday Rate -- Holiday Rate", 
       "invoice_date": "2014-11-26"
    }, 
    "2191 SFJazz_OPC": {
@@ -21154,7 +21154,7 @@
             "SUBTOTAL": 150
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate ", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2014-12-04"
    }, 
    "2191_Rev1 SFJazz_OPC": {
@@ -21256,7 +21256,7 @@
             "SUBTOTAL": 150
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate ", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2015-01-21"
    }, 
    "2192 Josh Healey": {
@@ -21397,7 +21397,7 @@
             "SUBTOTAL": 1100
          }
       ], 
-      "rate": "RATE: Part Ttime Member Weekday Rate", 
+      "rate": "Part Ttime Member Weekday Rate", 
       "invoice_date": "2014-12-04"
    }, 
    "2193 Rosenberg Foundation": {
@@ -21531,7 +21531,7 @@
             "SUBTOTAL": 1087.5
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate", 
+      "rate": "Non Member Weekday Rate", 
       "invoice_date": "2014-12-05"
    }, 
    "2193_Rev1 Rosenberg Foundation": {
@@ -21665,7 +21665,7 @@
             "SUBTOTAL": 1207.5
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate", 
+      "rate": "Non Member Weekday Rate", 
       "invoice_date": "2015-01-06"
    }, 
    "2194 AAMA_Report Out": {
@@ -21815,7 +21815,7 @@
             "SUBTOTAL": 2490
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate -- Partnership", 
+      "rate": "Non Member Weekday Rate -- Partnership", 
       "invoice_date": "2014-12-05"
    }, 
    "2194-2 AAMA_Report Out_AV": {
@@ -21979,7 +21979,7 @@
             "SUBTOTAL": 172.5
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate", 
+      "rate": "Non Member Weekday Rate", 
       "invoice_date": "2014-12-09"
    }, 
    "2196 Tuux.it": {
@@ -22138,7 +22138,7 @@
             "SUBTOTAL": 542.5
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate --Partner Discount", 
+      "rate": "Non Member Weekend Rate --Partner Discount", 
       "invoice_date": "2014-12-10"
    }, 
    "2196-2 Tuux.it": {
@@ -22297,7 +22297,7 @@
             "SUBTOTAL": 732.5
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate --Partner Discount", 
+      "rate": "Non Member Weekend Rate --Partner Discount", 
       "invoice_date": "2015-01-29"
    }, 
    "2197 Beyond Sep_SeriesII_March": {
@@ -22351,7 +22351,7 @@
             "SUBTOTAL": 540
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2014-12-12"
    }, 
    "2198 Beyond Sep_SeriesII_April": {
@@ -22405,7 +22405,7 @@
             "SUBTOTAL": 540
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2014-12-12"
    }, 
    "2199 Redwood Day School": {
@@ -22546,7 +22546,7 @@
             "SUBTOTAL": 5437.5
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate - Multi room discount", 
+      "rate": "Non Member Weekend Rate - Multi room discount", 
       "invoice_date": "2014-12-15"
    }, 
    "2199-2 Redwood Day School": {
@@ -22714,7 +22714,7 @@
             "SUBTOTAL": 5082.5
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate - Multi room discount", 
+      "rate": "Non Member Weekend Rate - Multi room discount", 
       "invoice_date": "2015-04-22"
    }, 
    "2199 Redwood Day School_Damage": {
@@ -22877,7 +22877,7 @@
             "SUBTOTAL": 2035
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate -- IHO Sponsorship", 
+      "rate": "Part Time Member Weekend Rate -- IHO Sponsorship", 
       "invoice_date": "2014-12-23"
    }, 
    "2201 SF Noir": {
@@ -23027,7 +23027,7 @@
             "SUBTOTAL": 2150
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate -- Partnership Discount", 
+      "rate": "Non Member Weekday Rate -- Partnership Discount", 
       "invoice_date": "2014-12-26"
    }, 
    "115001-2 P2R Graduation": {
@@ -23177,7 +23177,7 @@
             "SUBTOTAL": 1260
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate", 
+      "rate": "Full Time Member Weekend Rate", 
       "invoice_date": "2015-01-02"
    }, 
    "115001-3 P2R Graduation": {
@@ -23327,7 +23327,7 @@
             "SUBTOTAL": 1149.32
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate", 
+      "rate": "Full Time Member Weekend Rate", 
       "invoice_date": "2015-03-18"
    }, 
    "115002 LNA_Storytelling": {
@@ -23486,7 +23486,7 @@
             "SUBTOTAL": 1490
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate - Partnership Discount", 
+      "rate": "Full Time Member Weekend Rate - Partnership Discount", 
       "invoice_date": "2014-11-19"
    }, 
    "115003 YouthHUB_IHO Holiday": {
@@ -23654,7 +23654,7 @@
             "SUBTOTAL": 1705.13
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate -- Partner Discount", 
+      "rate": "Full Time Member Weekday Rate -- Partner Discount", 
       "invoice_date": "2015-01-08"
    }, 
    "115004 KQED": {
@@ -23813,7 +23813,7 @@
             "SUBTOTAL": 2207.5
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate -- Partnership Discount", 
+      "rate": "Non Member Weekend Rate -- Partnership Discount", 
       "invoice_date": "2015-01-09"
    }, 
    "115005 Friends of Parks&Rec": {
@@ -23963,7 +23963,7 @@
             "SUBTOTAL": 3087.5
          }
       ], 
-      "rate": "RATE: Part-time Member Weekday Rate -- Multi-Room Discount", 
+      "rate": "Part-time Member Weekday Rate -- Multi-Room Discount", 
       "invoice_date": "2015-01-20"
    }, 
    "115005-2 Friends of Parks&Rec": {
@@ -24113,7 +24113,7 @@
             "SUBTOTAL": 2910
          }
       ], 
-      "rate": "RATE: Part-time Member Weekday Rate -- Multi-Room Discount", 
+      "rate": "Part-time Member Weekday Rate -- Multi-Room Discount", 
       "invoice_date": "2015-03-03"
    }, 
    "115005-4 Friends of Parks&R ": {
@@ -24263,7 +24263,7 @@
             "SUBTOTAL": 3132.5
          }
       ], 
-      "rate": "RATE: Part-time Member Weekday Rate -- Multi-Room Discount", 
+      "rate": "Part-time Member Weekday Rate -- Multi-Room Discount", 
       "invoice_date": "2015-04-27"
    }, 
    "215001 CPD Gala": {
@@ -24405,7 +24405,7 @@
             "SUBTOTAL": 960
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2015-01-09"
    }, 
    "215002-2 CPD Gala Damage": {
@@ -24603,7 +24603,7 @@
             "SUBTOTAL": 1290
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate - Founders Discount", 
+      "rate": "Non Member Weekday Rate - Founders Discount", 
       "invoice_date": "2015-01-14"
    }, 
    "215002-2 Equitable Origin": {
@@ -24771,7 +24771,7 @@
             "SUBTOTAL": 1490
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate - Founders Discount", 
+      "rate": "Non Member Weekday Rate - Founders Discount", 
       "invoice_date": "2015-01-29"
    }, 
    "415001 Agents of Change": {
@@ -24921,7 +24921,7 @@
             "SUBTOTAL": 1070
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate - Partner Discount", 
+      "rate": "Full Time Member Weekday Rate - Partner Discount", 
       "invoice_date": "2015-01-14"
    }, 
    "415001-2 Agents of Change ": {
@@ -24951,7 +24951,7 @@
             "SUBTOTAL": 50
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate - Partner Discount", 
+      "rate": "Full Time Member Weekday Rate - Partner Discount", 
       "invoice_date": "2015-05-12"
    }, 
    " 215003 Forward Together": {
@@ -25011,7 +25011,7 @@
             "SUBTOTAL": 1817.5
          }
       ], 
-      "rate": "RATE: Part-time Member Weekend Rate -- Multi Day Discount", 
+      "rate": "Part-time Member Weekend Rate -- Multi Day Discount", 
       "invoice_date": "2014-12-08"
    }, 
    "115007 Inn Oakland Town Hall": {
@@ -25161,7 +25161,7 @@
             "SUBTOTAL": 800
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2015-02-03"
    }, 
    "115007-2 Inn Oakland Town Hall": {
@@ -25191,7 +25191,7 @@
             "SUBTOTAL": 200
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2015-02-03"
    }, 
    "115008 Beyond Separation ": {
@@ -25341,7 +25341,7 @@
             "SUBTOTAL": 150
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate - Partnership discount", 
+      "rate": "Full Time Member Weekday Rate - Partnership discount", 
       "invoice_date": "2015-01-20"
    }, 
    "115009  Warthogs Youth Rugby": {
@@ -25509,7 +25509,7 @@
             "SUBTOTAL": 2765
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate", 
+      "rate": "Part Time Member Weekend Rate", 
       "invoice_date": "2015-01-22"
    }, 
    "115009-2  Warthogs Youth Rugby": {
@@ -25677,7 +25677,7 @@
             "SUBTOTAL": 3515
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate", 
+      "rate": "Part Time Member Weekend Rate", 
       "invoice_date": "2015-03-05"
    }, 
    "115010 Stephen Busby": {
@@ -25819,7 +25819,7 @@
             "SUBTOTAL": 440
          }
       ], 
-      "rate": "RATE: Full Time  Member Weekday Rate -- 2 Hours Complementary", 
+      "rate": "Full Time  Member Weekday Rate -- 2 Hours Complementary", 
       "invoice_date": "2015-01-26"
    }, 
    "115011 Defy Ventures": {
@@ -25969,7 +25969,7 @@
             "SUBTOTAL": 932.5
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate", 
+      "rate": "Non Member Weekday Rate", 
       "invoice_date": "2015-01-26"
    }, 
    "115012-2 Habitry": {
@@ -26029,7 +26029,7 @@
             "SUBTOTAL": 2498
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate -- Multi Day Discount", 
+      "rate": "Part Time Member Weekend Rate -- Multi Day Discount", 
       "invoice_date": "2015-06-22"
    }, 
    "115013 Youth Speaks_Olympics": {
@@ -26179,7 +26179,7 @@
             "SUBTOTAL": 1342.5
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate ", 
+      "rate": "Part Time Member Weekend Rate", 
       "invoice_date": "2015-01-27"
    }, 
    "115013-2 Youth Speaks_Olympics ": {
@@ -26329,7 +26329,7 @@
             "SUBTOTAL": 802.5
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate ", 
+      "rate": "Part Time Member Weekend Rate", 
       "invoice_date": "2015-05-21"
    }, 
    "115014 Debby Irving": {
@@ -26471,7 +26471,7 @@
             "SUBTOTAL": 580
          }
       ], 
-      "rate": "RATE: Full Member Weekday Rate - 50/50 Rev Share", 
+      "rate": "Full Member Weekday Rate - 50/50 Rev Share", 
       "invoice_date": "2015-01-28"
    }, 
    "115015 SustainAbility RoundTbl": {
@@ -26589,7 +26589,7 @@
             "SUBTOTAL": 280
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2015-01-28"
    }, 
    "115016 Music for the People Ent": {
@@ -26748,7 +26748,7 @@
             "SUBTOTAL": 2580
          }
       ], 
-      "rate": "RATE: Non-Member Weekend Rate - Partnership discount", 
+      "rate": "Non-Member Weekend Rate - Partnership discount", 
       "invoice_date": "2015-01-30"
    }, 
    "215004 Design Thinking": {
@@ -26916,7 +26916,7 @@
             "SUBTOTAL": 830
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2014-12-31"
    }, 
    "215004-2 Design Thinking ": {
@@ -27075,7 +27075,7 @@
             "SUBTOTAL": 532.5
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2015-02-11"
    }, 
    "215005 BE PRESENT": {
@@ -27216,7 +27216,7 @@
             "SUBTOTAL": 1992.5
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate - Partnership Discount", 
+      "rate": "Non Member Weekday Rate - Partnership Discount", 
       "invoice_date": "2015-02-04"
    }, 
    "215006 BGC Comm Meeting": {
@@ -27375,7 +27375,7 @@
             "SUBTOTAL": 1040
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate - Partner Discount", 
+      "rate": "Full Time Member Weekday Rate - Partner Discount", 
       "invoice_date": "2015-02-05"
    }, 
    "215006-2 BGC Comm Meeting_AV": {
@@ -27534,7 +27534,7 @@
             "SUBTOTAL": 1220
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate - Partner Discount", 
+      "rate": "Full Time Member Weekday Rate - Partner Discount", 
       "invoice_date": "2015-02-23"
    }, 
    "215007 Life is Loving": {
@@ -27684,7 +27684,7 @@
             "SUBTOTAL": 1422.5
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate", 
+      "rate": "Part Time Member Weekend Rate", 
       "invoice_date": "2015-02-10"
    }, 
    "215007-2 Life is Loving ": {
@@ -27852,7 +27852,7 @@
             "SUBTOTAL": 1422.5
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate - Founders Discount", 
+      "rate": "Part Time Member Weekend Rate - Founders Discount", 
       "invoice_date": "2015-02-11"
    }, 
    "215008 YBCA #BLM": {
@@ -28011,7 +28011,7 @@
             "SUBTOTAL": 2635
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate  - Founder Discount", 
+      "rate": "Non Member Weekday Rate  - Founder Discount", 
       "invoice_date": "2015-02-11"
    }, 
    "215009 CIIS ": {
@@ -28161,7 +28161,7 @@
             "SUBTOTAL": 2200
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate", 
+      "rate": "Part Time Member Weekend Rate", 
       "invoice_date": "2015-02-11"
    }, 
    "215009-2 CIIS Cancel": {
@@ -28341,7 +28341,7 @@
             "SUBTOTAL": 1580
          }
       ], 
-      "rate": "RATE: Part-time Member Weekday Rate", 
+      "rate": "Part-time Member Weekday Rate", 
       "invoice_date": "2015-02-12"
    }, 
    "215010-2 Ever Forward Club": {
@@ -28500,7 +28500,7 @@
             "SUBTOTAL": 1580
          }
       ], 
-      "rate": "RATE: Part-time Member Weekday Rate", 
+      "rate": "Part-time Member Weekday Rate", 
       "invoice_date": "2015-02-12"
    }, 
    "215011 Kaiser HNS Grad": {
@@ -28659,7 +28659,7 @@
             "SUBTOTAL": 2832.5
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate - Half Day Discount", 
+      "rate": "Non Member Weekend Rate - Half Day Discount", 
       "invoice_date": "2015-02-18"
    }, 
    "215011-2 Kaiser HNS Grad": {
@@ -28831,7 +28831,7 @@
             "SUBTOTAL": 830
          }
       ], 
-      "rate": "RATE:  Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2015-02-18"
    }, 
    "215013 GlobalGirl Media": {
@@ -28990,7 +28990,7 @@
             "SUBTOTAL": 1445
          }
       ], 
-      "rate": "RATE:  Full Time Member Weekend Rate - Founder Discount", 
+      "rate": "Full Time Member Weekend Rate - Founder Discount", 
       "invoice_date": "2015-03-03"
    }, 
    "215013-2 GlobalGirl Media ": {
@@ -29149,7 +29149,7 @@
             "SUBTOTAL": 1457.5
          }
       ], 
-      "rate": "RATE:  Full Time Member Weekend Rate - Founder Discount", 
+      "rate": "Full Time Member Weekend Rate - Founder Discount", 
       "invoice_date": "2015-03-10"
    }, 
    "215014 OneLife IHO Collab ": {
@@ -29290,7 +29290,7 @@
             "SUBTOTAL": 1695
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate - Partnership Discount", 
+      "rate": "Non Member Weekend Rate - Partnership Discount", 
       "invoice_date": "2015-02-20"
    }, 
    "215014-2 OneLife IHO Collab": {
@@ -29431,7 +29431,7 @@
             "SUBTOTAL": 1495
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate - Partnership Discount", 
+      "rate": "Non Member Weekend Rate - Partnership Discount", 
       "invoice_date": "2015-02-20"
    }, 
    "215015 Oakland Institute": {
@@ -29581,7 +29581,7 @@
             "SUBTOTAL": 1965
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate ", 
+      "rate": "Non Member Weekend Rate", 
       "invoice_date": "2015-02-20"
    }, 
    "215015-2 Oakland Institute ": {
@@ -29731,7 +29731,7 @@
             "SUBTOTAL": 2267.5
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate ", 
+      "rate": "Non Member Weekend Rate", 
       "invoice_date": "2015-02-20"
    }, 
    "215015-3 Oakland Institute ": {
@@ -29753,7 +29753,7 @@
             "SUBTOTAL": 15
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate ", 
+      "rate": "Non Member Weekend Rate", 
       "invoice_date": "2015-05-07"
    }, 
    "215016 Youth Business USA": {
@@ -29887,7 +29887,7 @@
             "SUBTOTAL": 595
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate ", 
+      "rate": "Full Time Member Weekend Rate", 
       "invoice_date": "2015-02-24"
    }, 
    "315001 Presidio Kunstler ": {
@@ -30046,7 +30046,7 @@
             "SUBTOTAL": 1397.5
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate -- Multi-Room Discount", 
+      "rate": "Full Time Member Weekday Rate -- Multi-Room Discount", 
       "invoice_date": "2015-03-03"
    }, 
    "315001-2 Presidio Kunstler": {
@@ -30205,7 +30205,7 @@
             "SUBTOTAL": 1435
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate -- Multi-Room Discount", 
+      "rate": "Full Time Member Weekday Rate -- Multi-Room Discount", 
       "invoice_date": "2015-04-01"
    }, 
    "315002 Develop Yourself": {
@@ -30364,7 +30364,7 @@
             "SUBTOTAL": 8217.5
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate  - Multi Day Discount", 
+      "rate": "Part Time Member Weekend Rate  - Multi Day Discount", 
       "invoice_date": "2015-03-05"
    }, 
    "315002-2 Develop Yourself ": {
@@ -30523,7 +30523,7 @@
             "SUBTOTAL": 6164
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate  - Multi Day Discount", 
+      "rate": "Part Time Member Weekend Rate  - Multi Day Discount", 
       "invoice_date": "2015-03-24"
    }, 
    "315003 EB Church of R Science": {
@@ -30665,7 +30665,7 @@
             "SUBTOTAL": 1755
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate - Founder Sponsorship", 
+      "rate": "Full Time Member Weekend Rate - Founder Sponsorship", 
       "invoice_date": "2015-03-06"
    }, 
    "315004 Oak Int Film Fest": {
@@ -30815,7 +30815,7 @@
             "SUBTOTAL": 657.5
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate -- Founders Partnership", 
+      "rate": "Non Member Weekday Rate -- Founders Partnership", 
       "invoice_date": "2015-03-11"
    }, 
    "315005 LNA_MidLifeCelebration": {
@@ -30974,7 +30974,7 @@
             "SUBTOTAL": 1490
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate - Partnership Discount", 
+      "rate": "Full Time Member Weekend Rate - Partnership Discount", 
       "invoice_date": "2015-03-17"
    }, 
    "315005-2 LNA_MidLifeCelebration": {
@@ -31133,7 +31133,7 @@
             "SUBTOTAL": 1475
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate - Partnership Discount", 
+      "rate": "Full Time Member Weekend Rate - Partnership Discount", 
       "invoice_date": "2015-04-01"
    }, 
    "315006-2 Empathy in Business": {
@@ -31283,7 +31283,7 @@
             "SUBTOTAL": 240
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2015-03-20"
    }, 
    "315007 Friends of the Earth": {
@@ -31425,7 +31425,7 @@
             "SUBTOTAL": 877.5
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2015-03-17"
    }, 
    "315007-2 Friends of the Earth ": {
@@ -31567,7 +31567,7 @@
             "SUBTOTAL": 1010
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2015-04-07"
    }, 
    "315008 Kapor Center": {
@@ -31726,7 +31726,7 @@
             "SUBTOTAL": 3230
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate -- Full day discount", 
+      "rate": "Full Time Member Weekend Rate -- Full day discount", 
       "invoice_date": "2015-03-19"
    }, 
    "315008-2 Kapor Center": {
@@ -31885,7 +31885,7 @@
             "SUBTOTAL": 3090
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate -- Full day discount", 
+      "rate": "Full Time Member Weekend Rate -- Full day discount", 
       "invoice_date": "2015-04-28"
    }, 
    "315009 Hack The Hood": {
@@ -32027,7 +32027,7 @@
             "SUBTOTAL": 1290
          }
       ], 
-      "rate": "RATE: Full Time Member Weeday Rate", 
+      "rate": "Full Time Member Weeday Rate", 
       "invoice_date": "2015-03-20"
    }, 
    "315010 Defy Ventures_Admisssion": {
@@ -32177,7 +32177,7 @@
             "SUBTOTAL": 795
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2015-03-23"
    }, 
    "315011 Cleantech Open": {
@@ -32327,7 +32327,7 @@
             "SUBTOTAL": 1235
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate - Sponsorhsip", 
+      "rate": "Non Member Weekday Rate - Sponsorhsip", 
       "invoice_date": "2015-03-25"
    }, 
    "315011-2 Cleantech Open": {
@@ -32477,7 +32477,7 @@
             "SUBTOTAL": 1259
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate - Sponsorhsip", 
+      "rate": "Non Member Weekday Rate - Sponsorhsip", 
       "invoice_date": "2015-04-16"
    }, 
    "315011-2 Cleantech Open paid": {
@@ -32627,7 +32627,7 @@
             "SUBTOTAL": 1259
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate - Sponsorhsip", 
+      "rate": "Non Member Weekday Rate - Sponsorhsip", 
       "invoice_date": "2015-04-16"
    }, 
    "315012 LaunchPad Africa": {
@@ -32769,7 +32769,7 @@
             "SUBTOTAL": 1440
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate", 
+      "rate": "Part Time Member Weekend Rate", 
       "invoice_date": "2015-03-25"
    }, 
    "315012-2 LaunchPad Africa": {
@@ -32911,7 +32911,7 @@
             "SUBTOTAL": 1735
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate", 
+      "rate": "Part Time Member Weekend Rate", 
       "invoice_date": "2015-04-29"
    }, 
    "315013 TeachforAmerica": {
@@ -33013,7 +33013,7 @@
             "SUBTOTAL": 135
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2015-03-30"
    }, 
    "415002-2 Tech808": {
@@ -33172,7 +33172,7 @@
             "SUBTOTAL": 5640
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate - Full Day Discount", 
+      "rate": "Non Member Weekend Rate - Full Day Discount", 
       "invoice_date": "2015-07-16"
    }, 
    "415004-2 Amigos Interview Day": {
@@ -33268,7 +33268,7 @@
             "SUBTOTAL": 555
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate - Full Day Discount", 
+      "rate": "Full Time Member Weekend Rate - Full Day Discount", 
       "invoice_date": "2015-05-22"
    }, 
    "415005-2 Amigos Orientation ": {
@@ -33364,7 +33364,7 @@
             "SUBTOTAL": 460
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate - Half Day Discount", 
+      "rate": "Full Time Member Weekend Rate - Half Day Discount", 
       "invoice_date": "2015-05-22"
    }, 
    "415006 CSS Member": {
@@ -33532,7 +33532,7 @@
             "SUBTOTAL": 810
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2015-04-06"
    }, 
    "415006-2 CSS Member": {
@@ -33562,7 +33562,7 @@
             "SUBTOTAL": 28.53
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2015-06-01"
    }, 
    "415006-3 CSS Member": {
@@ -33592,7 +33592,7 @@
             "SUBTOTAL": 35.36
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2015-06-03"
    }, 
    "415007 Tradeswomen": {
@@ -33751,7 +33751,7 @@
             "SUBTOTAL": 2530
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate -- multi room discount", 
+      "rate": "Part Time Member Weekday Rate -- multi room discount", 
       "invoice_date": "2015-04-07"
    }, 
    "415008 Rockwood Institute": {
@@ -33893,7 +33893,7 @@
             "SUBTOTAL": 1537.5
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate", 
+      "rate": "Non Member Weekday Rate", 
       "invoice_date": "2015-06-26"
    }, 
    "415009 Black Folks House": {
@@ -34052,7 +34052,7 @@
             "SUBTOTAL": 410
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate -- Founders Discount ", 
+      "rate": "Part Time Member Weekend Rate -- Founders Discount", 
       "invoice_date": "2015-04-10"
    }, 
    "415010 LNArt Old Navy": {
@@ -34194,7 +34194,7 @@
             "SUBTOTAL": 1365
          }
       ], 
-      "rate": "RATE: None Member Weekday Rate", 
+      "rate": "None Member Weekday Rate", 
       "invoice_date": "2015-04-10"
    }, 
    "415011 Ten Directions": {
@@ -34344,7 +34344,7 @@
             "SUBTOTAL": 1437.5
          }
       ], 
-      "rate": "RATE: None Member Weekend Rate - Founder Discount", 
+      "rate": "None Member Weekend Rate - Founder Discount", 
       "invoice_date": "2015-04-16"
    }, 
    "415012 Uptima 2.Oakland Demo": {
@@ -34494,7 +34494,7 @@
             "SUBTOTAL": 845
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2015-04-16"
    }, 
    "415013 Beneficial State FDN": {
@@ -34644,7 +34644,7 @@
             "SUBTOTAL": 180
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2015-04-20"
    }, 
    "415013-2 Beneficial State FDN": {
@@ -34812,7 +34812,7 @@
             "SUBTOTAL": 180
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate - New Member Discount", 
+      "rate": "Part Time Member Weekday Rate - New Member Discount", 
       "invoice_date": "2015-05-12"
    }, 
    "415014 CJ Callen": {
@@ -34962,7 +34962,7 @@
             "SUBTOTAL": 392.5
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2015-04-21"
    }, 
    "415014-2 CJ Callen": {
@@ -35112,7 +35112,7 @@
             "SUBTOTAL": 407.5
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2015-04-21"
    }, 
    "415014-3 CJ Callen": {
@@ -35262,7 +35262,7 @@
             "SUBTOTAL": 452.5
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2015-04-21"
    }, 
    "415015 Sound of Torture": {
@@ -35421,7 +35421,7 @@
             "SUBTOTAL": 1205
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate - Partnership Discount", 
+      "rate": "Part Time Member Weekday Rate - Partnership Discount", 
       "invoice_date": "2015-04-24"
    }, 
    "415016 FVLC Be Brave": {
@@ -35563,7 +35563,7 @@
             "SUBTOTAL": 1750
          }
       ], 
-      "rate": "RATE: Part time Member Weekend Rate ", 
+      "rate": "Part time Member Weekend Rate", 
       "invoice_date": "2015-04-27"
    }, 
    "415017 Loudspeaker Films": {
@@ -35705,7 +35705,7 @@
             "SUBTOTAL": 1151.49
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate", 
+      "rate": "Part Time Member Weekend Rate", 
       "invoice_date": "2015-04-28"
    }, 
    "415017-2 Loudspeaker Films ": {
@@ -35847,7 +35847,7 @@
             "SUBTOTAL": 1271.49
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate", 
+      "rate": "Part Time Member Weekend Rate", 
       "invoice_date": "2015-05-06"
    }, 
    "415018 Worksafe": {
@@ -35989,7 +35989,7 @@
             "SUBTOTAL": 1290
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate ", 
+      "rate": "Non Member Weekday Rate", 
       "invoice_date": "2015-04-28"
    }, 
    "415018-2 Worksafe ": {
@@ -36131,7 +36131,7 @@
             "SUBTOTAL": 1477.5
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate ", 
+      "rate": "Non Member Weekday Rate", 
       "invoice_date": "2015-05-18"
    }, 
    "415019 HERA 10th Anniversary": {
@@ -36281,7 +36281,7 @@
             "SUBTOTAL": 1967.5
          }
       ], 
-      "rate": "RATE: Non Member Weekday Rate", 
+      "rate": "Non Member Weekday Rate", 
       "invoice_date": "2015-04-29"
    }, 
    "515001 HipHopForChange": {
@@ -36449,7 +36449,7 @@
             "SUBTOTAL": 2597.5
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate", 
+      "rate": "Full Time Member Weekend Rate", 
       "invoice_date": "2015-05-01"
    }, 
    "515002 Racial Equitecture": {
@@ -36511,7 +36511,7 @@
             "SUBTOTAL": 1050
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2015-05-05"
    }, 
    "512003 Facebook HR": {
@@ -36679,7 +36679,7 @@
             "SUBTOTAL": 1530
          }
       ], 
-      "rate": "RATE: Non  Member Weekday Rate  - Multi Room Discount", 
+      "rate": "Non  Member Weekday Rate  - Multi Room Discount", 
       "invoice_date": "2015-05-12"
    }, 
    "515004 Youth HUB Pitch Event ": {
@@ -36829,7 +36829,7 @@
             "SUBTOTAL": 3945.8
          }
       ], 
-      "rate": "RATE: Full Time Member Weekend Rate - Founders Discount", 
+      "rate": "Full Time Member Weekend Rate - Founders Discount", 
       "invoice_date": "2015-05-19"
    }, 
    "515005 PAID Mills College": {
@@ -36987,7 +36987,7 @@
             "SUBTOTAL": null
          }
       ], 
-      "rate": "RATE: Part Time Member Weekday Rate", 
+      "rate": "Part Time Member Weekday Rate", 
       "invoice_date": "2015-08-06"
    }, 
    "515006 CODE2040": {
@@ -37092,7 +37092,7 @@
             "SUBTOTAL": 1222.5
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate - Full day & Multi room discount", 
+      "rate": "Part Time Member Weekend Rate - Full day & Multi room discount", 
       "invoice_date": "2015-05-26"
    }, 
    "615001-2 Praxis": {
@@ -37242,7 +37242,7 @@
             "SUBTOTAL": 2380
          }
       ], 
-      "rate": "RATE: Non Member Weekend Rate", 
+      "rate": "Non Member Weekend Rate", 
       "invoice_date": "2015-07-07"
    }, 
    "615002-2 IHO Whole Person": {
@@ -37410,7 +37410,7 @@
             "SUBTOTAL": 3126.25
          }
       ], 
-      "rate": "RATE: Full time Member Weekend Rate - Founders Discount", 
+      "rate": "Full time Member Weekend Rate - Founders Discount", 
       "invoice_date": "2015-06-08"
    }, 
    "615003 Marian Farms": {
@@ -37560,7 +37560,7 @@
             "SUBTOTAL": 1140
          }
       ], 
-      "rate": "RATE: Full Time Member Weekday Rate ", 
+      "rate": "Full Time Member Weekday Rate", 
       "invoice_date": "2015-06-03"
    }, 
    "615004 BGC Hackathon": {
@@ -37598,7 +37598,7 @@
             "SUBTOTAL": 200
          }
       ], 
-      "rate": "RATE: Full Time Member Rate -- Partnership Discount", 
+      "rate": "Full Time Member Rate -- Partnership Discount", 
       "invoice_date": "2015-06-09"
    }, 
    "615004-2 BGC Hackathon_overtime": {
@@ -37787,7 +37787,7 @@
             "SUBTOTAL": 1997.5
          }
       ], 
-      "rate": "RATE: Part Time Member Weekend Rate - multi room discount", 
+      "rate": "Part Time Member Weekend Rate - multi room discount", 
       "invoice_date": "2015-08-11"
    }
 }

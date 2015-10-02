@@ -63,9 +63,9 @@ def find(patt):
             return None
     return search
 
-file_names = ['IHO_OnGoing_InvoiceTemplate.xlsx',
-              '2015 OnGoing InvoiceTemplate.xlsx']
-             #'IHO_OnGoing_QuoteTemplate.xlsx'
+file_names = ['original_data/IHO_OnGoing_InvoiceTemplate.xlsx',
+              'original_data/2015 OnGoing InvoiceTemplate.xlsx']
+             #'original_data/IHO_OnGoing_QuoteTemplate.xlsx'
 #                ]
 date_pat = re.compile('(\d{4}-\d{2}-\d{2})')
 rate_pat = re.compile('(.*rate.*)', re.IGNORECASE)
@@ -84,6 +84,9 @@ def parse_sheet(ws):
     df = df.reset_index(drop=True)
 
     if any(df):
+        # We will search search DataFrame df by column, from the last column to first
+        #   since we know that wwhat we're looking for is on the right side.  we're looking for a date (invoice_date),
+        #   and a cell that has text of the form "RATE: XXXX" where XXX is some words describing the rate charged for this event.
         for col_name in reversed(df.columns):
             col_str = df[col_name].astype(unicode).str
             if not info['invoice_date']:
@@ -94,17 +97,8 @@ def parse_sheet(ws):
             elif not info['rate']:
                 rate_cell = col_str.extract(rate_pat).dropna()
                 if len(rate_cell) > 0:
-                    info['rate'] = rate_cell.iloc[0]
+                    info['rate'] = rate_cell.iloc[0].replace('RATE:','').strip()
                     break
-
-        # # find the cell that contains rate information and parse it
-        # patt = re.compile('.*(rate:| rate).*', re.IGNORECASE)
-        # tags = df.dropna(how='all', axis=[0,1]).applymap(find(patt)).dropna(how='all', axis=[0,1])
-        # tags_list = flatten(tags.values.tolist())
-        # if tags_list:
-        #     info['rate'] = tags_list[0].group(0).lstrip('RATE:').strip()
-        # else:
-        #     info['rate'] = ''
 
 
         # Determine upper & lower boundaries for the item subtable
