@@ -249,9 +249,9 @@ else:
 
 
     # mask = df['OCCURANCE'].notnull()
-    # df.loc[mask, 'HOURS_UNITS'] = df.loc[mask, 'HOURS_UNITS'] * df[mask, 'OCCURANCE']
+    # df.loc[mask, 'HOURS_UNITS'] = df.loc[mask, 'HOURS_UNITS'].astype(float) * df[mask, 'OCCURANCE'].astype(float)
 
-    df = df[['invoice','DATE','DESCRIPTION','AMOUNT','HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate']]
+    df = df[['invoice','invoice_date','DATE','DESCRIPTION','AMOUNT','HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate']]
 
 
 
@@ -415,7 +415,7 @@ else:
 
 
 
-    df = df[['invoice','DATE','item_type','item','AMOUNT','HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL',
+    df = df[['invoice','invoice_date','DATE','item_type','item','AMOUNT','HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL',
                 'membership','discount_type','day_type','duration']]
 
     # # An attempt to set column widths in output Excel spreadsheet
