@@ -156,7 +156,7 @@ def xlsx2json(file_names):
     start_time = time.time()
     for fname in file_names:
         print('Loading %s' % fname)
-        wb = load_workbook(fname, data_only=True)
+        wb = load_workbook(fname, True)
         worksheets.extend(wb.worksheets)
     elapsed_string = str(datetime.timedelta(seconds=time.time()-start_time))
     print('workbooks loaded in %s' % elapsed_string)
