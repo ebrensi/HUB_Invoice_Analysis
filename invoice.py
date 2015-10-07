@@ -7,7 +7,7 @@ Created on Mon Aug 17 14:23:20 2015
 """
 
 from openpyxl import load_workbook
-from StyleFrame import StyleFrame
+# from StyleFrame import StyleFrame
 import pandas as pd
 NaN = pd.np.nan
 #pd.set_option('expand_frame_repr', False)
