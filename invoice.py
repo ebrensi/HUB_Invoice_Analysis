@@ -1,13 +1,13 @@
-
+#! python3
 # -*- coding: utf-8 -*-
 """
 Created on Mon Aug 17 14:23:20 2015
 
 @author: Efrem
 """
+# check out dedupe
 
 from openpyxl import load_workbook
-# from StyleFrame import StyleFrame
 import pandas as pd
 NaN = pd.np.nan
 #pd.set_option('expand_frame_repr', False)
@@ -80,7 +80,7 @@ def parse_sheet(ws):
         return False
 
     # make a dataframe from the current sheet
-    df = pd.DataFrame([tuple([cell.value for cell in row]) for row in ws.rows]).dropna(how='all', axis=[0,1])
+    df = pd.DataFrame([tuple([cell.internal_value for cell in row]) for row in ws.iter_rows()]).dropna(how='all', axis=[0,1])
     df = df.reset_index(drop=True)
 
     if any(df):
@@ -88,7 +88,7 @@ def parse_sheet(ws):
         #   since we know that wwhat we're looking for is on the right side.  we're looking for a date (invoice_date),
         #   and a cell that has text of the form "RATE: XXXX" where XXX is some words describing the rate charged for this event.
         for col_name in reversed(df.columns):
-            col_str = df[col_name].astype(unicode).str
+            col_str = df[col_name].str
             if not info['invoice_date']:
                 date_cell = col_str.extract(date_pat).dropna()
                 if len(date_cell) > 0:
@@ -417,15 +417,6 @@ else:
 
     df = df[['invoice','invoice_date','DATE','item_type','item','AMOUNT','HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL',
                 'membership','discount_type','day_type','duration']]
-
-    # # An attempt to set column widths in output Excel spreadsheet
-    # excel_writer = StyleFrame.ExcelWriter(fname+'.xlsx')
-    # sf = StyleFrame(df)
-    # for col in ['invoice', 'DATE']:
-    #     width = int(df[col].str.len().max())
-    #     sf.set_column_width(col, width)
-    # sf.to_excel(excel_writer=excel_writer)
-    # excel_writer.save()
 
     df.to_excel(fname+'.xlsx', index=False)
 
