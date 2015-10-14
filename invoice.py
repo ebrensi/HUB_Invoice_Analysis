@@ -435,8 +435,9 @@ df_rooms_only['day'] = (df_rooms_only['HOURS_UNITS'] < 5.5).map({True:'Half', Fa
 
 grouped_by_room = df_rooms_only.groupby(['item','day','membership','discount_type'])
 
-grouped_by_room['HOURS_UNITS','SUBTOTAL','TOTAL'].sum().to_excel('rooms_only_sum.xlsx')
-grouped_by_room['AMOUNT','HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL'].mean().to_excel('rooms_only_avg.xlsx')
+## Output Room rental summaries as Excel sheets
+# grouped_by_room['HOURS_UNITS','SUBTOTAL','TOTAL'].sum().to_excel('rooms_only_sum.xlsx')
+# grouped_by_room['AMOUNT','HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL'].mean().to_excel('rooms_only_avg.xlsx')
 
 
 """
