@@ -319,19 +319,21 @@ else:
     ## Convert numeric field data to numbers and fill-in as much missing information as possible
 
     # first we set values labeled 'waved', 'comped', 'included' to zero
-    no_charge_indicators = "waved|comped|included|member"
+    no_charge_indicators = "wai?ved|comped|included|member"
 
     no_charge_amount = df['AMOUNT'].str.contains(no_charge_indicators, case=False, na=False)
-    df.loc[no_charge_amount,'AMOUNT'] = 0
+    # df.loc[no_charge_amount,'AMOUNT'] = 0
 
     no_charge_subtot = df['SUBTOTAL'].str.contains(no_charge_indicators, case=False, na=False)
-    df.loc[no_charge_subtot,'SUBTOTAL'] = 0
+    # df.loc[no_charge_subtot,'SUBTOTAL'] = 0
 
     no_charge_tot = df['TOTAL'].str.contains(no_charge_indicators, case=False, na=False)
-    df.loc[no_charge_tot,'TOTAL'] = 0
+    # df.loc[no_charge_tot,'TOTAL'] = 0
+
+    all_no_charge = no_charge_amount | no_charge_subtot | no_charge_tot
+    df.loc[all_no_charge, ['AMOUNT','SUBTOTAL','TOTAL'] ] = 0
 
     #  Set DISCOUNT to 1 for any waived fees
-    all_no_charge = no_charge_amount | no_charge_subtot | no_charge_tot
     df.loc[all_no_charge, 'DISCOUNT'] = 1
 
     # If no discount-type is indicated then make an indication
@@ -363,8 +365,6 @@ else:
                 df.loc[associated_rooms, field] = item[field]
 
             idx_to_drop.append(item_idx)
-            # df.loc[mask, 'SUBTOTAL'] = df.loc[mask, 'AMOUNT'] * df.loc[mask, 'HOURS_UNITS']
-            # df.loc[mask, 'TOTAL'] = df.loc[mask, 'SUBTOTAL'] * (1 - df.loc[mask, 'DISCOUNT'])
 
     print('dropping multi-room items %s' % str(idx_to_drop))
     df = df.drop(idx_to_drop)
