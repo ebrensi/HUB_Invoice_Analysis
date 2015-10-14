@@ -20,7 +20,7 @@ import os.path
 from collections import OrderedDict
 
 # ignore invoices
-INVOICE_NUM_CUTOFF = 2035
+INVOICE_NUM_CUTOFF = 2040
 
 room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingle[-| ]?town|mezzanine',
                 'omi':'gallery|omi','meditation':'meditation', 'kitchen':'kitchen', 'meridian':'meridian',
@@ -41,15 +41,6 @@ day_duration_classes = {'full-day':'Full[-| ]?day',  'half-day':'Half[-| ]?Day'}
 discount_classes = { 'multi-room':'Multi[-| ]?Room', 'multi-day':'Multi[-| ]?day','multi-event':'Multi[-| ]?event', 'founder':'Founder','partnership':'Partner',
                      'returning-client':'Returning[-| ]?client', 'sponsorship':'sponsor', 'reoccuring':'reo?ccuring',
                      'WITH':'WITH|share'}
-
-# 115014 Debby Irving :  Full Member Weekday Rate - 50/50 Rev Share
-# 2115 John Chiang : Non Member Weekday Rate - Sharon Cornu Credit Applied
-# 2106 LNA_WATER : WITH EVENT
-# 2181 BALANCE : Full Time Member Weekday Rate  - WITH event sponsorship
-# 2151 B Labs : Non-member weekday; Discount Rate for IHO WITH event
-# 2089 Vegan Soul Sunday : WITH event rate
-# Non Member Weekday Rate -- Holiday Rate
-# 2190 Kerusso Music Group : Non Member Weekday Rate -- Holiday Rate
 
 
 def flatten(l):
@@ -102,7 +93,8 @@ def parse_sheet(ws):
 
 
         # Determine upper & lower boundaries for the item subtable
-        sep = df[df[0].str.contains('^date',case=False, na=False)].index.tolist()
+        sep = df[df[0].str.contains('^Date',case=False, na=False)].index.tolist()
+        # print('%s : %s' % (sname,sep))
         if sep:
              table_header_row = sep[0]
         sep = df[df[1].str.contains('total',case=False, na=False)].index.tolist()
@@ -156,8 +148,11 @@ def xlsx2json(file_names):
     start_time = time.time()
     for fname in file_names:
         print('Loading %s' % fname)
-        wb = load_workbook(fname, True)
+
+        #   use openpyxl to open workbook
+        wb = load_workbook(fname, True, data_only=True)
         worksheets.extend(wb.worksheets)
+
     elapsed_string = str(datetime.timedelta(seconds=time.time()-start_time))
     print('workbooks loaded in %s' % elapsed_string)
 
