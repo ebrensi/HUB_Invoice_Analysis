@@ -25,7 +25,8 @@ INVOICE_NUM_CUTOFF = 2035
 room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingle[-| ]?town|mezzanine',
                 'omi':'gallery|omi','meditation':'meditation', 'kitchen':'kitchen', 'meridian':'meridian',
                 'east-oak':'east','west-oak':'west', 'uptown':'uptown', 'downtown':'downtown',
-                'courtyard':'courtyard'}
+                #'courtyard':'courtyard'
+                }
 
 service_classes = {'setup/breakdown':'set[-| ]?up|pre[-| ]?event|post[-| ]?event',
                     'staffing':'staff|manager','A/V':'A/V|technician|sound',
@@ -38,9 +39,9 @@ day_type_classes  =  {'weekend': 'weekend', 'weekday':'weekday|wkday'}
 
 day_duration_classes = {'full-day':'Full[-| ]?day',  'half-day':'Half[-| ]?Day'}
 
-discount_classes = { 'multi-room':'Multi[-| ]?Room', 'multi-day':'Multi[-| ]?day','multi-event':'Multi[-| ]?event', 'founder':'Founder','partnership':'Partner',
-                     'returning-client':'Returning[-| ]?client', 'sponsorship':'sponsor', 'reoccuring':'reo?ccuring',
-                     'WITH':'WITH|share'}
+discount_classes = { 'multi-room':'Multi[-| ]?Room', 'multi-day':'Multi[-| ]?day','multi-event':'Multi[-| ]?event', 'founder':'Founder',
+                     'partnership':'Partner|sposor|WITH|share',
+                     'returning-client':'Returning[-| ]?client', 'reoccuring':'reo?ccuring'}
 
 
 def flatten(l):
