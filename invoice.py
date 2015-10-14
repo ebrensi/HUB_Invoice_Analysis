@@ -20,7 +20,7 @@ import os.path
 from collections import OrderedDict
 
 # ignore invoices
-INVOICE_NUM_CUTOFF = 2040
+INVOICE_NUM_CUTOFF = 2035
 
 room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingle[-| ]?town|mezzanine',
                 'omi':'gallery|omi','meditation':'meditation', 'kitchen':'kitchen', 'meridian':'meridian',
@@ -55,7 +55,7 @@ def find(patt):
     return search
 
 file_names = ['original_data/IHO_OnGoing_InvoiceTemplate.xlsx',
-              'original_data/2015 OnGoing InvoiceTemplate.xlsx']
+             'original_data/2015 OnGoing InvoiceTemplate.xlsx']
              #'original_data/IHO_OnGoing_QuoteTemplate.xlsx'
 #                ]
 date_pat = re.compile('(\d{4}-\d{2}-\d{2})')
@@ -79,21 +79,27 @@ def parse_sheet(ws):
         #   since we know that wwhat we're looking for is on the right side.  we're looking for a date (invoice_date),
         #   and a cell that has text of the form "RATE: XXXX" where XXX is some words describing the rate charged for this event.
         for col_name in reversed(df.columns):
-            col_str = df[col_name].str
-            if not info['invoice_date']:
-                date_cell = col_str.extract(date_pat).dropna()
-                if len(date_cell) > 0:
-                    info['invoice_date'] = date_cell.iloc[0]
+            try:
+                col_str = df[col_name].astype(str).str
+            except:
+                pass
+                # print('oops there\'s a problem:')
+                # print(df[col_name])
+            else:
+                if not info['invoice_date']:
+                    date_cell = col_str.extract(date_pat).dropna()
+                    if len(date_cell) > 0:
+                        info['invoice_date'] = date_cell.iloc[0]
 
-            elif not info['rate']:
-                rate_cell = col_str.extract(rate_pat).dropna()
-                if len(rate_cell) > 0:
-                    info['rate'] = rate_cell.iloc[0].replace('RATE:','').strip()
-                    break
+                elif not info['rate']:
+                    rate_cell = col_str.extract(rate_pat).dropna()
+                    if len(rate_cell) > 0:
+                        info['rate'] = rate_cell.iloc[0].replace('RATE:','').strip()
+                        break
 
 
         # Determine upper & lower boundaries for the item subtable
-        sep = df[df[0].str.contains('^Date',case=False, na=False)].index.tolist()
+        sep = df[df[0].str.contains('^date',case=False, na=False)].index.tolist()
         # print('%s : %s' % (sname,sep))
         if sep:
              table_header_row = sep[0]
