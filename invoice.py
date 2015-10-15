@@ -39,9 +39,9 @@ day_type_classes  =  {'weekend': 'weekend', 'weekday':'weekday|wkday'}
 
 day_duration_classes = {'full-day':'Full[-| ]?day',  'half-day':'Half[-| ]?Day'}
 
-discount_classes = { 'multi-room':'Multi[-| ]?Room', 'multi-day':'Multi[-| ]?day','multi-event':'Multi[-| ]?event', 'founder':'Founder',
+discount_classes = { 'multi-room':'Multi[-| ]?Room', 'multi-day':'Multi[-| ]?day','multi-event':'Multi[-| ]?event|reo?ccuring', 'founder':'Founder',
                      'partnership':'Partner|sposor|WITH|share',
-                     'returning-client':'Returning[-| ]?client', 'reoccuring':'reo?ccuring'}
+                     'returning-client':'Returning[-| ]?client'}
 
 
 def flatten(l):
@@ -83,20 +83,22 @@ def parse_sheet(ws):
             try:
                 col_str = df[col_name].astype(str).str
             except:
+                print('\tconverting column \'%s\' to string' % col_name)
+                col_str = df[col_name].astype(str).str
                 pass
                 # print('oops there\'s a problem:')
                 # print(df[col_name])
-            else:
-                if not info['invoice_date']:
-                    date_cell = col_str.extract(date_pat).dropna()
-                    if len(date_cell) > 0:
-                        info['invoice_date'] = date_cell.iloc[0]
 
-                elif not info['rate']:
-                    rate_cell = col_str.extract(rate_pat).dropna()
-                    if len(rate_cell) > 0:
-                        info['rate'] = rate_cell.iloc[0].replace('RATE:','').strip()
-                        break
+            if not info['invoice_date']:
+                date_cell = col_str.extract(date_pat).dropna()
+                if len(date_cell) > 0:
+                    info['invoice_date'] = date_cell.iloc[0]
+
+            elif not info['rate']:
+                rate_cell = col_str.extract(rate_pat).dropna()
+                if len(rate_cell) > 0:
+                    info['rate'] = rate_cell.iloc[0].replace('RATE:','').strip()
+                    break
 
 
         # Determine upper & lower boundaries for the item subtable
@@ -321,15 +323,10 @@ else:
 
     # first we set values labeled 'waved', 'comped', 'included' to zero
     no_charge_indicators = "wai?ved|comped|included|member"
-
     no_charge_amount = df['AMOUNT'].str.contains(no_charge_indicators, case=False, na=False)
-    # df.loc[no_charge_amount,'AMOUNT'] = 0
-
     no_charge_subtot = df['SUBTOTAL'].str.contains(no_charge_indicators, case=False, na=False)
-    # df.loc[no_charge_subtot,'SUBTOTAL'] = 0
-
     no_charge_tot = df['TOTAL'].str.contains(no_charge_indicators, case=False, na=False)
-    # df.loc[no_charge_tot,'TOTAL'] = 0
+
 
     all_no_charge = no_charge_amount | no_charge_subtot | no_charge_tot
     df.loc[all_no_charge, ['AMOUNT','SUBTOTAL','TOTAL'] ] = 0
