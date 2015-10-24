@@ -5,7 +5,6 @@ Created on Mon Aug 17 14:23:20 2015
 
 @author: Efrem
 """
-# check out dedupe
 
 from openpyxl import load_workbook
 import pandas as pd
@@ -72,7 +71,7 @@ def parse_sheet(ws):
         return False
 
     # make a dataframe from the current sheet
-    df = pd.DataFrame([tuple([cell.internal_value for cell in row]) for row in ws.iter_rows()]).dropna(how='all', axis=[0,1])
+    df = pd.DataFrame([tuple([cell.internal_value for cell in row]) for row in ws.rows]).dropna(how='all', axis=[0,1])
     df = df.reset_index(drop=True)
 
     if any(df):
@@ -159,7 +158,7 @@ def xlsx2json(file_names):
         print('Loading %s' % fname)
 
         #   use openpyxl to open workbook
-        wb = load_workbook(fname, True, data_only=True)
+        wb = load_workbook(fname, True, read_only=True, data_only=True)
         worksheets.extend(wb.worksheets)
 
     elapsed_string = str(datetime.timedelta(seconds=time.time()-start_time))
