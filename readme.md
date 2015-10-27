@@ -29,10 +29,10 @@ eg.
 
 
 ### Item Classification
-`invoice.py` first classifies items into item-type (room, service, or other) and rate/discount type.
+[`prep_data.py`](prep_data.py) classifies items into item-type (room, service, or other) and RATE information into rate/discount types.  It also fills as much missing info as possible and computes subtotals.  The result of running `prep_data` is the table `invoice_data`, which contains all invoice items and (sub)totals for each invoice. 
+
 
 ## Analysis
-
-We would like to have quick access to general information about which rooms were rented and at what rates, and what discounts were applied, as well as how much income was reduced by each discount.  For example: What was the average income for renting the Broadway room to a part-time member for a full-day (5.5+ hours) on a weekday?
+First We want to query general information about which rooms were rented and at what rates, and what discounts were applied, as well as how much income was reduced by each discount.  For example: What was the average income for renting the Broadway room to a part-time member for a full-day (5.5+ hours) on a weekday?
 
 We also would like to make queries about package deals.  For example: what was typically the total income for a rental that included the Atrium?
