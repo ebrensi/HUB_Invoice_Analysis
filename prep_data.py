@@ -37,20 +37,6 @@ discount_classes = { 'multi-room':'Multi[-| ]?Room', 'multi-day':'Multi[-| ]?day
                      'returning-client':'Returning[-| ]?client'}
 
 
-# Flatten a list
-def flatten(l):
-    return [item for sublist in l for item in sublist]
-
-
-def find(patt):
-    def search(x):
-        if x:
-            return patt.search(unicode(x))
-        else:
-            return None
-    return search
-
-
 # This function produces a list of dictionaries, each entry one item from a nested invoice dictionary
 def flatten_dict(invoices):
     result = []
@@ -75,7 +61,6 @@ with open('invoices.json','r') as in_file:
     invoices = json.load(in_file)
 
 
-# Clean up raw flattened data into the basic columns we want
 fname = 'invoice_data'
 
 if os.path.isfile(fname+'.xlsx'):
@@ -113,7 +98,7 @@ else:
     # mask = df['OCCURANCE'].notnull()
     # df.loc[mask, 'HOURS_UNITS'] = df.loc[mask, 'HOURS_UNITS'].astype(float) * df[mask, 'OCCURANCE'].astype(float)
 
-    df = df[['invoice','invoice_date','DATE','DESCRIPTION','AMOUNT','HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL','rate']]
+    df = df[['invoice','invoice_date','DATE','DESCRIPTION','AMOUNT','HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL','RATE']]
 
 
 
@@ -155,22 +140,22 @@ else:
     ## Parse RATE field from sheet into discount-type, day-type, and member-type
     df['membership'] = None
     for member_type in member_classes:
-        member_mask = df['rate'].str.contains(member_classes[member_type], case=False, na=False)
+        member_mask = df['RATE'].str.contains(member_classes[member_type], case=False, na=False)
         df.loc[member_mask,'membership'] = member_type
 
     df['day_type'] = None
     for day_type in day_type_classes:
-        day_type_mask = df['rate'].str.contains(day_type_classes[day_type], case=False, na=False)
+        day_type_mask = df['RATE'].str.contains(day_type_classes[day_type], case=False, na=False)
         df.loc[day_type_mask,'day_type'] = day_type
 
     df['duration'] = None
     for day_duration in day_duration_classes:
-        day_duration_mask = df['rate'].str.contains(day_duration_classes[day_duration], case=False, na=False)
+        day_duration_mask = df['RATE'].str.contains(day_duration_classes[day_duration], case=False, na=False)
         df.loc[day_duration_mask,'duration'] = day_duration
 
     df['discount_type'] = None
     for discount in discount_classes:
-        discount_mask = df['rate'].str.contains(discount_classes[discount], case=False, na=False)
+        discount_mask = df['RATE'].str.contains(discount_classes[discount], case=False, na=False)
         df.loc[discount_mask,'discount_type'] = discount
 
 
@@ -203,7 +188,8 @@ else:
 
     # convert all numeric field values to floats (anything non-numeric becomes NaN)
     NUMERIC_FIELDS = ['AMOUNT','SUBTOTAL','HOURS_UNITS','DISCOUNT','TOTAL']
-    df[NUMERIC_FIELDS] = df[NUMERIC_FIELDS].convert_objects(convert_numeric=True)
+    for field in NUMERIC_FIELDS:
+        df[field] = pd.to_numeric(df[field], errors='coerce')
 
 
 
