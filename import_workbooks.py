@@ -3,14 +3,13 @@
 
 from openpyxl import load_workbook
 import pandas as pd
-NaN = pd.np.nan
-
 import re
 import json
 import time
 import datetime
-import os.path
 from collections import OrderedDict
+import concurrent.futures as futures
+
 
 WORKBOOK_FILENAMES = ['original_data/IHO_OnGoing_InvoiceTemplate.xlsx',
                       'original_data/2015 OnGoing InvoiceTemplate.xlsx']
@@ -18,7 +17,7 @@ WORKBOOK_FILENAMES = ['original_data/IHO_OnGoing_InvoiceTemplate.xlsx',
 
 ## Extract relevant data from one invoice worksheet and return it as a dict
 def parse_sheet(ws):
-    info = {'rate':'', 'invoice_date':''}
+    info = OrderedDict.fromkeys(['invoice_date','RATE'])
     sname = ws.title.strip()
 
     template_pattern = re.compile('template|quotes', re.IGNORECASE)
@@ -41,10 +40,10 @@ def parse_sheet(ws):
                 if len(date_cell) > 0:
                     info['invoice_date'] = date_cell.iloc[0]
 
-            elif not info['rate']:
+            elif not info['RATE']:
                 rate_cell = col_str.extract(rate_pat).dropna()
                 if len(rate_cell) > 0:
-                    info['rate'] = rate_cell.iloc[0].replace('RATE:','').strip()
+                    info['RATE'] = rate_cell.iloc[0].replace('RATE:','').strip()
                     break
 
 
