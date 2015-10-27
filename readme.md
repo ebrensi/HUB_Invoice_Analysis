@@ -29,9 +29,10 @@ eg.
 
 
 ### Item Classification
-`invoice.py' first classifies items into item-type (room, service, or other) and rate/discount type.
+`invoice.py` first classifies items into item-type (room, service, or other) and rate/discount type.
 
-### Analysis
+## Analysis
+
 We would like to have quick access to general information about which rooms were rented and at what rates, and what discounts were applied, as well as how much income was reduced by each discount.  For example: What was the average income for renting the Broadway room to a part-time member for a full-day (5.5+ hours) on a weekday?
 
 We also would like to make queries about package deals.  For example: what was typically the total income for a rental that included the Atrium?
