@@ -8,10 +8,10 @@ The data we are working with come from invoices for IHO space bookings.  Each in
 * Each invoice spreadsheet contains a sub-table of items that fees were charged for, including but not limited to: room, setup/clean-up, IHO staff support, audio technician, etc.  Each of these items has an associated fee: either a flat fee, or a rate and number of hours, and subtotal (rate * hours), and sometimes a discount field given as a percentage.
 
 
-Since these invoices contain people's contact information, the original invoices are not included in this repo.  Instead, we include the json file produced by `import_workbooks.py`, which contains all of the invoice info necessary for analysis.
+Since these invoices contain peoples' contact information, the original invoices are not included in this repo.  Instead, we include the json file produced by `import_workbooks.py`, which contains all of the invoice info necessary for analysis.
 
 ### Imported invoice data
-`invoices.json` contains a nested dictionary data structure with sheet-names as keys at the top-level. 
+[`invoices.json`](invoices.json) contains a nested dictionary data structure with sheet-names as keys at the top-level. 
 Each invoice (usually) contains:
 * items that IHO charged money for: typically rooms or other services 
 * RATE info based on the type of renter and day-type: eg.
@@ -34,4 +34,3 @@ Each invoice (usually) contains:
 We would like to have quick access to general information about which rooms were rented and at what rates, and what discounts were applied, as well as how much income was reduced by each discount.  For example: What was the average income for renting the Broadway room to a part-time member for a full-day (5.5+ hours) on a weekday?
 
 We also would like to make queries about package deals.  For example: what was typically the total income for a rental that included the Atrium?
- 
