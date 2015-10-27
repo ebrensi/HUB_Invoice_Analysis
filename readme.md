@@ -14,17 +14,18 @@ Since these invoices contain peoples' contact information, the original invoices
 [`invoices.json`](invoices.json) contains a nested dictionary data structure with sheet-names as keys at the top-level. 
 Each invoice (usually) contains:
 * items that IHO charged money for: typically rooms or other services 
-* RATE info based on the type of renter and day-type: eg.
-  - Non-Member weekend rental
-  - Non-Member weekday
-  - Part-time member weeend, or weekday rental
-  - Full-time member weekend
-  - Full-time member weekday rental
-* rate class info also includes various discounts
-  - Founder Discount
-  - Multi Room Discount
-  - Full Day Discount
-  - Partner Discount
+* RATE info is contained in one cell of the original invoice, and is based on the type of renter and day-type: 
+eg.
+  * Non-Member weekend rental
+  * Non-Member weekday
+  * Part-time member weeend, or weekday rental
+  * Full-time member weekend
+  * Full-time member weekday rental
+  * Discounts:
+    - Founder Discount
+  	- Multi Room Discount
+  	- Full Day Discount
+  	- Partner Discount
 
 
 ### Item Classification
