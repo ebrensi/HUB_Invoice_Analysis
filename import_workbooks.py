@@ -101,6 +101,7 @@ def xlsx2json(file_names):
     worksheets = []
 
     start_time = time.time()
+
     for fname in file_names:
         print('Loading %s' % fname)
 
@@ -115,6 +116,21 @@ def xlsx2json(file_names):
     invoices = OrderedDict.fromkeys(sheet_names)
 
     start_time = time.time()
+
+    with futures.ThreadPoolExecutor(max_workers=3) as executor:
+        jobs = {executor.submit(parse_sheet, ws):ws.title for ws in worksheets} 
+
+        for finished_job in futures.as_completed(jobs):
+            title = jobs[finished_job]
+            invoice_dict = finished_job.result()
+            if invoice_dict:
+                invoices[title] = invoice_dict
+                print(title)
+            else:
+                # if nothing was parsed from this invoice then remove it's key from 'invoices'
+                invoices.pop(ws.title, None)
+
+
     for ws in worksheets:
         invoice_dict = parse_sheet(ws)
         if invoice_dict:

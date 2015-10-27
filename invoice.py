@@ -6,17 +6,11 @@ Created on Mon Aug 17 14:23:20 2015
 @author: Efrem
 """
 
-from openpyxl import load_workbook
 import pandas as pd
 NaN = pd.np.nan
-#pd.set_option('expand_frame_repr', False)
-
 import re
 import json
-import time
-import datetime
 import os.path
-from collections import OrderedDict
 
 # ignore invoices
 INVOICE_NUM_CUTOFF = 2035
