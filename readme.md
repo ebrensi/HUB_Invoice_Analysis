@@ -29,8 +29,8 @@ eg.
 
 
 ### Item Classification
-[`prep_data.py`](prep_data.py) classifies items into item-type (room, service, or other) and RATE information into rate/discount types.  It also fills as much missing info as possible and computes subtotals.  The result of running `prep_data` is the table `invoice_data.csv`, which contains all invoice items and (sub)totals for each invoice.
-![`invoice_data.csv`](invoice_data.csv)
+Next, we classify items into item-type (room, service, or other) and RATE information into rate/discount types.  It also fills as much missing info as possible and computes subtotals.  The result of running `prep_data` is the table [`invoice_data.csv`](invoice_data.csv), which contains all invoice items and (sub)totals for each invoice.
+
 
 
 ## Analysis
