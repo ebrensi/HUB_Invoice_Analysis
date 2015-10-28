@@ -15,6 +15,9 @@ WORKBOOK_FILENAMES = ['original_data/IHO_OnGoing_InvoiceTemplate.xlsx',
                       'original_data/2015 OnGoing InvoiceTemplate.xlsx']
 
 
+
+date_pat = re.compile('(\d{4}-\d{2}-\d{2})')
+rate_pat = re.compile('(.*rate:.*|.*rate.*)', re.IGNORECASE)
 ## Extract relevant data from one invoice worksheet and return it as a dict
 def parse_sheet(ws):
     info = OrderedDict.fromkeys(['invoice_date','RATE'])
@@ -137,8 +140,6 @@ def xlsx2json(file_names):
 ########### 
 
 
-date_pat = re.compile('(\d{4}-\d{2}-\d{2})')
-rate_pat = re.compile('(.*rate.*)', re.IGNORECASE)
 
 invoices = xlsx2json(WORKBOOK_FILENAMES)
 with open('invoices.json','w') as out_file:
