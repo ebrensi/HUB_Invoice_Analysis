@@ -23,9 +23,9 @@ def parse_sheet(ws):
     info = OrderedDict.fromkeys(['invoice_date','RATE'])
     sname = ws.title.strip()
 
-    template_pattern = re.compile('template|quotes', re.IGNORECASE)
-    if template_pattern.search(sname):
-        return False
+    # template_pattern = re.compile('template|quotes', re.IGNORECASE)
+    # if template_pattern.search(sname):
+    #     return False
 
     # make a dataframe from the current sheet
     df = pd.DataFrame([tuple([cell.value for cell in row]) for row in ws.rows]).dropna(how='all', axis=[0,1])
