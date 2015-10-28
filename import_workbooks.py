@@ -100,39 +100,19 @@ def parse_sheet(ws):
 ## *******************************
 # Import a workbook of invoice sheets and store relevant data for every invoice as a
 #   record in a json dictionary.
-def xlsx2json(file_names):
-    worksheets = []
+def import_workbook(workbook_file_name):
 
-    start_time = time.time()
+    #   use openpyxl to open workbook
+    wb = load_workbook(workbook_file_name, read_only=True, data_only=True)
+    worksheets = wb.worksheets
 
-    for fname in file_names:
-        print('Loading %s' % fname)
-
-        #   use openpyxl to open workbook
-        wb = load_workbook(fname, read_only=True, data_only=True)
-        worksheets.extend(wb.worksheets)
-
-    elapsed_string = str(datetime.timedelta(seconds=time.time()-start_time))
-    print('workbooks loaded in %s' % elapsed_string)
-
-    sheet_names = reversed([ws.title for ws in worksheets])
-    invoices = OrderedDict.fromkeys(sheet_names)
-
-    start_time = time.time()
+    invoices = {}
 
     for ws in worksheets:
         invoice_dict = parse_sheet(ws)
         if invoice_dict:
             invoices[ws.title] = invoice_dict
             print(ws.title)
-        else:
-            # if nothing was parsed from this invoice then remove it's key from 'invoices'
-            invoices.pop(ws.title, None)
-
-
-
-    elapsed_string = str(datetime.timedelta(seconds=time.time()-start_time))
-    print('Finished in %s' % elapsed_string)
 
     return invoices
 
@@ -140,7 +120,15 @@ def xlsx2json(file_names):
 ########### 
 
 
+start_time = time.time()
+invoices = {}
 
-invoices = xlsx2json(WORKBOOK_FILENAMES)
+for wb_fname in WORKBOOK_FILENAMES:
+    print('Loading %s' % wb_fname)
+    invoices.update(import_workbook(wb_fname))
+
+elapsed_string = str(datetime.timedelta(seconds=time.time()-start_time))
+print('workbooks loaded in %s' % elapsed_string)
+
 with open('invoices.json','w') as out_file:
     out_file.write(json.dumps(invoices, indent=3))
