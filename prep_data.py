@@ -259,7 +259,7 @@ else:
 
 
     df = df[['invoice','invoice_date','DATE','item_type','item','AMOUNT','HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL',
-                'membership','discount_type','day_type','duration']]
+            'membership','discount_type','day_type','duration']].sort('invoice_date')
 
     # df.to_excel(fname+'.xlsx', index=False)
-    df.to_csv(fname+'.xlsx', index=False)
+    df.to_csv(fname+'.csv', index=False)
