@@ -4,8 +4,7 @@ This repo is for a project at Oakland Impact Hub to determine a better room rent
 
 
 ## Original data
-The data we are working with come from invoices for IHO space bookings.  Each invoice is an Excel worksheet with itemized charges for the room being booked, as well as for other services.  An example invoice is here: 
-![example_invoice](example_invoice.pdf)
+The data we are working with come from invoices for IHO space bookings.  Each invoice is an Excel worksheet with itemized charges for the room being booked, as well as for other services.  An example invoice is here:  [example_invoice](example_invoice.pdf)
 * Each invoice spreadsheet contains a sub-table of items that fees were charged for, including but not limited to: room, setup/clean-up, IHO staff support, audio technician, etc.  Each of these items has an associated fee: either a flat fee, or a rate and number of hours, and subtotal (rate * hours), and sometimes a discount field given as a percentage.
 
 
@@ -30,7 +29,8 @@ eg.
 
 
 ### Item Classification
-[`prep_data.py`](prep_data.py) classifies items into item-type (room, service, or other) and RATE information into rate/discount types.  It also fills as much missing info as possible and computes subtotals.  The result of running `prep_data` is the table `invoice_data`, which contains all invoice items and (sub)totals for each invoice. 
+[`prep_data.py`](prep_data.py) classifies items into item-type (room, service, or other) and RATE information into rate/discount types.  It also fills as much missing info as possible and computes subtotals.  The result of running `prep_data` is the table `invoice_data.csv`, which contains all invoice items and (sub)totals for each invoice.
+![`invoice_data.csv`](invoice_data.csv)
 
 
 ## Analysis
