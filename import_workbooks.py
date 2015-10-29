@@ -18,20 +18,15 @@ WORKBOOK_FILENAMES = ['original_data/IHO_OnGoing_InvoiceTemplate.xlsx',
 
 date_pat = re.compile('(\d{4}-\d{2}-\d{2})')
 rate_pat = re.compile('(.*rate:.*|.*rate.*)', re.IGNORECASE)
+
 ## Extract relevant data from one invoice worksheet and return it as a dict
 def parse_sheet(ws):
     info = OrderedDict.fromkeys(['invoice_date','RATE'])
     sname = ws.title.strip()
 
-<<<<<<< HEAD
     template_pattern = re.compile('template|quote', re.IGNORECASE)
     if template_pattern.search(sname):
         return False
-=======
-    # template_pattern = re.compile('template|quotes', re.IGNORECASE)
-    # if template_pattern.search(sname):
-    #     return False
->>>>>>> master
 
     # make a dataframe from the current sheet
     df = pd.DataFrame([tuple([cell.value for cell in row]) for row in ws.rows]).dropna(how='all', axis=[0,1])
