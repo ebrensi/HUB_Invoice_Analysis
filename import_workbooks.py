@@ -23,9 +23,15 @@ def parse_sheet(ws):
     info = OrderedDict.fromkeys(['invoice_date','RATE'])
     sname = ws.title.strip()
 
+<<<<<<< HEAD
     template_pattern = re.compile('template|quote', re.IGNORECASE)
     if template_pattern.search(sname):
         return False
+=======
+    # template_pattern = re.compile('template|quotes', re.IGNORECASE)
+    # if template_pattern.search(sname):
+    #     return False
+>>>>>>> master
 
     # make a dataframe from the current sheet
     df = pd.DataFrame([tuple([cell.value for cell in row]) for row in ws.rows]).dropna(how='all', axis=[0,1])
@@ -36,7 +42,10 @@ def parse_sheet(ws):
         #   since we know that wwhat we're looking for is on the right side.  we're looking for a date (invoice_date),
         #   and a cell that has text of the form "RATE: XXXX" where XXX is some words describing the rate charged for this event.
         for col_name in reversed(df.columns):
-            col_str = df[col_name].astype(str).str
+            try: 
+                col_str = df[col_name].str
+            except:
+                 col_str = df[col_name].astype(str).str
 
             if not info['invoice_date']:
                 date_cell = col_str.extract(date_pat).dropna()
