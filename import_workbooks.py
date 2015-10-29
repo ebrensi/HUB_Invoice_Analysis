@@ -8,7 +8,7 @@ import json
 import time
 import datetime
 from collections import OrderedDict
-import concurrent.futures as futures
+import concurrent.futures
 
 
 WORKBOOK_FILENAMES = ['original_data/IHO_OnGoing_InvoiceTemplate.xlsx',
@@ -121,11 +121,13 @@ def import_workbook(workbook_file_name):
 
 
 start_time = time.time()
-invoices = {}
+print('Loading workbooks...')
 
-for wb_fname in WORKBOOK_FILENAMES:
-    print('Loading %s' % wb_fname)
-    invoices.update(import_workbook(wb_fname))
+with concurrent.futures.ProcessPoolExecutor() as executor:
+    wb_list = executor.map(import_workbook, WORKBOOK_FILENAMES)
+
+invoices = { inv_title: inv_dict for wb in wb_list for inv_title, inv_dict in wb.items() }
+
 
 elapsed_string = str(datetime.timedelta(seconds=time.time()-start_time))
 print('workbooks loaded in %s' % elapsed_string)
