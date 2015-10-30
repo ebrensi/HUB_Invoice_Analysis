@@ -37,10 +37,7 @@ def parse_sheet(ws):
         #   since we know that wwhat we're looking for is on the right side.  we're looking for a date (invoice_date),
         #   and a cell that has text of the form "RATE: XXXX" where XXX is some words describing the rate charged for this event.
         for col_name in reversed(df.columns):
-            try: 
-                col_str = df[col_name].str
-            except:
-                 col_str = df[col_name].astype(str).str
+            col_str = df[col_name].astype(str).str
 
             if not info['invoice_date']:
                 date_cell = col_str.extract(date_pat).dropna()
