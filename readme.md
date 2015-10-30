@@ -2,6 +2,7 @@
 
 This repo is for a project at Oakland Impact Hub to determine a better room rental pricing scheme.  The current method involves hourly rates tiered by renter type (part-time member,  full-time member, non-member), and various discounts when the price determined using current rates seems too high.  We want a more consistent rate scheme that works without resorting to arbitrary fee-waivers and discounts.
 
+It has been tested on Python 3.4 but probably works with Python 2.x.
 
 ## Original data
 The data we are working with come from invoices for IHO space bookings.  Each invoice is an Excel worksheet with itemized charges for the room being booked, as well as for other services.  An example invoice is here:  [example_invoice](example_invoice.pdf)
