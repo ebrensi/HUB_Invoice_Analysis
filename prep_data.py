@@ -39,6 +39,8 @@ item_classes = {'ROOM':
                              'DRINKS':'coffee|wine',
                              'COMPOSTABLES':'compost'
                             }
+                'TOTAL':
+                            {'total'}
                 }
 
 
@@ -100,16 +102,16 @@ fname = 'invoice_data'
 
 df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna(how='all')
 
-# exclude invoices with no invoice# or invoice# < INVOICE_NUM_CUTOFF
+# exclude invoices with no invoice#, cancellations, or invoice# < INVOICE_NUM_CUTOFF
 invoice_num = df['invoice'].str.extract('(\d+)').str.strip().astype(float)
-exclude_mask = invoice_num.isnull() |  (invoice_num < INVOICE_NUM_CUTOFF)
-# print("Excluding \n%s" % (df['invoice'][exclude_mask].tolist()) )
+cancellations = df['invoice'].str.contains('cancel', na=False, case=False)
+
+exclude_mask = invoice_num.isnull() |  (invoice_num < INVOICE_NUM_CUTOFF) | cancellations
+
+print("Excluding \n%s" % (df['invoice'][exclude_mask].tolist()) )
+
 df = df[~exclude_mask]
 
-
-# Exclude cancellation invoices
-cancellations = df['invoice'].str.contains('cancel', na=False, case=False)
-df = df[~cancellations]
 
 
 
@@ -143,10 +145,17 @@ df = df[~is_either]
 
 
 
-##  Parse DESCRIPTION field into 'item_type' and 'item'
-##  and Classify items into standard categories: 'room', 'service', 'total', 'other'
+## Parse DESCRIPTION field into 'item_type' and 'item'
+##  as defined in the item_class dictionary above
 df['item_type'] = None
 df['item'] = None
+
+for item_class in item_classes: 
+    for item in item_class:
+        this_item_mask = df['DESCRIPTION'].str.contains(item_classes[item_class][item], case=False, na=False)
+        df.loc[this_item_mask,'item_type'] = item_class
+        df.loc[this_item_mask,'item'] = item
+
 
 for room in room_classes:
     this_room_mask = df['DESCRIPTION'].str.contains(room_classes[room], case=False, na=False)
