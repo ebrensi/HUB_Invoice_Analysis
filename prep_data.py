@@ -12,29 +12,52 @@ import re
 import json
 import os.path
 
-# ignore invoices
 INVOICE_NUM_CUTOFF = 2035
 
-room_classes = {'broadway':'broadway', 'atrium':'atrium', 'jingletown':'jingle[-| ]?town|mezzanine',
-                'omi':'gallery|omi','meditation':'meditation', 'kitchen':'kitchen', 'meridian':'meridian',
-                'east-oak':'east','west-oak':'west', 'uptown':'uptown', 'downtown':'downtown',
-                #'courtyard':'courtyard'
+# These are the specs settings for item categories
+
+room_classes = {'BROADWAY':'broadway',
+                'ATRIUM':'atrium',
+                'JINGLETOWN':'jingle[-| ]?town|mezzanine',
+                'OMI':'gallery|omi',
+                'MERIDIAN':'meridian',
+                'EAST_OAK':'east',
+                'WEST_OAK':'west',
+                'UPTOWN':'uptown',
+                'DOWNTOWN':'downtown',
+                'MEDITATION':'meditation',
+                'KITCHEN':'kitchen'
                 }
 
-service_classes = {'setup/breakdown':'set[-| ]?up|pre[-| ]?event|post[-| ]?event',
-                    'staffing':'staff|manager','A/V':'A/V|technician|sound',
-                    'janitorial':'janitorial|waste|cleaning', 'drinks':'coffee|wine', 'compostables':'compost' }
+service_classes = {'SETUP_RESET':'set[-| ]?up|pre[-| ]?event|post[-| ]?event',
+                   'STAFFING':'staff|manager',
+                   'A/V':'A/V|technician|sound',
+                   'JANITORIAL':'janitorial|waste|cleaning',
+                   'DRINKS':'coffee|wine',
+                   'COMPOSTABLES':'compost'
+                 }
 
-member_classes = {'part-time': 'part[-| ]?time|Part Ttime', 'full-time':'full[ |-]?time|full member',
-                    'non-member':'none?[ |-]member', 'org-connect':'Org'}
+member_classes = {'PART-TIME': 'part[-| ]?time',
+                  'FULL-TIME':'full[ |-]?time|full member',
+                  'NON-MEMBER':'none?[ |-]member',
+                  'PARTNER':'Org'
+                 }
 
-day_type_classes  =  {'weekend': 'weekend', 'weekday':'weekday|wkday'}
+day_type_classes  =  {'WEEKEND':'weekend',
+                      'WEEKDAY':'weekday|wkday'
+                     }
 
-day_duration_classes = {'full-day':'Full[-| ]?day',  'half-day':'Half[-| ]?Day'}
+day_duration_classes = {'FULL':'Full[-| ]?day',
+                        'HALF':'Half[-| ]?Day'
+                       }
 
-discount_classes = { 'multi-room':'Multi[-| ]?Room', 'multi-day':'Multi[-| ]?day','multi-event':'Multi[-| ]?event|reo?ccuring', 'founder':'Founder',
-                     'partnership':'Partner|sposor|WITH|share',
-                     'returning-client':'Returning[-| ]?client'}
+discount_classes = { 'MULTIROOM':'Multi[-| ]?Room',
+                     'MULTIDAY':'Multi[-| ]?day',
+                     'REOCURRING':'Multi[-| ]?event|reo?ccuring',
+                     'FOUNDER':'Founder',
+                     'PARTNER':'Partner|sposor|WITH|share',
+                     'RETURNING':'Returning[-| ]?client'
+                   }
 
 
 # This function produces a list of dictionaries, each entry one item from a nested invoice dictionary
