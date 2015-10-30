@@ -15,10 +15,14 @@ import os.path
 
 INVOICE_NUM_CUTOFF = 2035
 
+infile_name = 'invoices.json'
+outfile_name = 'invoice_data'
+
+
 # These are the specs settings for item categories.
 #  We categorize items into item-type, and each item-type is further categorized
-item_classes =
-{
+tot_item_name = 'ITEM_TOT'  # we don't want invoice (sub)total to get confused with TOTAL (item-total) field 
+item_classes = {
     'ROOM': {
              'BROADWAY':'broadway',
              'ATRIUM':'atrium',
@@ -40,16 +44,16 @@ item_classes =
                 'JANITORIAL':'janitorial|waste|cleaning',
                 'DRINKS':'coffee|wine',
                 'COMPOSTABLES':'compost'
-               }
-    'TOTAL': {
+               },
+
+    tot_item_name: {
                None:'total'
              }
 }
 
 
 # This is how we categorize RATE info 
-RATE_classes = 
-{
+RATE_classes = {
     'membership': {
                    'PART-TIME': 'part[-| ]?time',
                    'FULL-TIME':'full[ |-]?time|full member',
@@ -98,11 +102,10 @@ def flatten_dict(invoices):
 ### ************************************
 
 # Read in invoices data from json source
-with open('invoices.json','r') as in_file:
+with open(infile_name,'r') as in_file:
     invoices = json.load(in_file)
 
 
-fname = 'invoice_data'
 
 
 df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna(how='all')
@@ -113,7 +116,7 @@ cancellations = df['invoice'].str.contains('cancel', na=False, case=False)
 
 exclude_mask = invoice_num.isnull() |  (invoice_num < INVOICE_NUM_CUTOFF) | cancellations
 
-print("Excluding \n%s" % (df['invoice'][exclude_mask].tolist()) )
+print("Excluding \n%s" % ( df['invoice'][exclude_mask].unique() ) ) 
 
 df = df[~exclude_mask]
 
@@ -158,7 +161,7 @@ df['item_type'] = None
 df['item'] = None
 
 for item_class in item_classes: 
-    for item in item_class:
+    for item in item_classes[item_class]:
         this_item_mask = df['DESCRIPTION'].str.contains(item_classes[item_class][item], case=False, na=False)
         df.loc[this_item_mask,'item_type'] = item_class
         df.loc[this_item_mask,'item'] = item
@@ -172,10 +175,10 @@ df.loc[other_mask,'item'] = df.loc[other_mask,'DESCRIPTION']
 
 
 
+
 ## Parse RATE field entries into classes as defined in the RATE_classes dictionary
 for RATE_class in RATE_classes:
-    for rate in RATE_class: 
-        # df[RATE_class] = None
+    for rate in RATE_classes[RATE_class]: 
         rate_mask = df['RATE'].str.contains(RATE_classes[RATE_class][rate], case=False, na=False)
         df.loc[rate_mask,RATE_class] = rate
 
@@ -221,7 +224,7 @@ multi_room_item_mask =  df['item'].str.contains('entire|level|rentals', na=False
 idx_to_drop = []
 
 for item_idx, item in df[multi_room_item_mask].iterrows():
-    associated_rooms = (df['invoice'] == item['invoice']) & (df['item_type'] == 'room') & df['TOTAL'].isnull()
+    associated_rooms = (df['invoice'] == item['invoice']) & (df['item_type'] == 'ROOM') & df['TOTAL'].isnull()
 
     if associated_rooms.any():
 
@@ -240,16 +243,18 @@ notnull = df[['AMOUNT','HOURS_UNITS']].notnull().all(axis=1)
 df.loc[notnull, 'SUBTOTAL'] = df.loc[notnull, 'AMOUNT'] * df.loc[notnull, 'HOURS_UNITS']
 
 
+not_tot_type = (df['item_type'] != tot_item_name)
+
 #  Fill-in all missing DISCOUNT entries with zero
-df.loc[df['DISCOUNT'].isnull() & (df['item_type'] != 'total'), 'DISCOUNT'] = 0
+df.loc[df['DISCOUNT'].isnull() & (df['item_type'] != tot_item_name), 'DISCOUNT'] = 0
 
 # Fill-in all missing TOTAL for items with non-empty SUBTOTAL
-no_tot = df['TOTAL'].isnull() & df['SUBTOTAL'].notnull() & (df['item_type'] != 'total')
+no_tot = df['TOTAL'].isnull() & df['SUBTOTAL'].notnull() & not_tot_type
 df.loc[no_tot, 'TOTAL'] = df.loc[no_tot, 'SUBTOTAL'] * (1 - df.loc[no_tot, 'DISCOUNT'])
 
 
 # Fill-in SUBTOTAL for items with TOTAL but no SUBTOTAL (taking DISCOUNT into consideration)
-no_subtot = df['TOTAL'].notnull() & df['SUBTOTAL'].isnull() & (df['item_type'] != 'total')
+no_subtot = df['TOTAL'].notnull() & df['SUBTOTAL'].isnull() & not_tot_type
 df.loc[no_subtot, 'SUBTOTAL'] = df['TOTAL'][no_subtot] / (1 - df['DISCOUNT'][no_subtot] )
 
 
@@ -281,7 +286,7 @@ for idx, row in df.iterrows():
 
 
 df = df[['invoice','invoice_date','DATE','item_type','item','AMOUNT','HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL',
-        'membership','discount_type','day_type','duration']].sort_values(by='invoice_date', ascending=False)
+        'membership','discount_type','day_type','day_dur']].sort_values(by='invoice_date', ascending=False)
 
-# df.to_excel(fname+'.xlsx', index=False)
-df.to_csv(fname+'.csv', index=False)
+# df.to_excel(outfile_name+'.xlsx', index=False)
+df.to_csv(outfile_name+'.csv', index=False)
