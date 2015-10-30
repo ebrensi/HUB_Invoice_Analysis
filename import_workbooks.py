@@ -14,7 +14,7 @@ import concurrent.futures
 WORKBOOK_FILENAMES = ['original_data/IHO_OnGoing_InvoiceTemplate.xlsx',
                       'original_data/2015 OnGoing InvoiceTemplate.xlsx']
 
-
+MAX_ROW_LENGTH = 10
 
 date_pat = re.compile('(\d{4}-\d{2}-\d{2})')
 rate_pat = re.compile('(.*rate:.*|.*rate.*)', re.IGNORECASE)
@@ -29,8 +29,8 @@ def parse_sheet(ws):
         return False
 
     # make a dataframe from the current sheet
-    df = pd.DataFrame([tuple([cell.value for cell in row]) for row in ws.rows]).dropna(how='all', axis=[0,1])
-    df = df.reset_index(drop=True)
+    df = pd.DataFrame([tuple([cell.value for cell in row[:MAX_ROW_LENGTH]]) for row in ws.rows])
+    df = df.dropna(how='all', axis=[0,1]).reset_index(drop=True)
 
     if any(df):
         # We will search search DataFrame df by column, from the last column to first
