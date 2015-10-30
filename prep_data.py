@@ -17,60 +17,65 @@ INVOICE_NUM_CUTOFF = 2035
 
 # These are the specs settings for item categories.
 #  We categorize items into item-type, and each item-type is further categorized
-item_classes = {'ROOM': 
-                        {'BROADWAY':'broadway',
-                        'ATRIUM':'atrium',
-                        'JINGLETOWN':'jingle[-| ]?town|mezzanine',
-                        'OMI':'gallery|omi',
-                        'MERIDIAN':'meridian',
-                        'EAST_OAK':'east',
-                        'WEST_OAK':'west',
-                        'UPTOWN':'uptown',
-                        'DOWNTOWN':'downtown',
-                        'MEDITATION':'meditation',
-                        'KITCHEN':'kitchen'
-                        },
+item_classes =
+{
+    'ROOM': {
+             'BROADWAY':'broadway',
+             'ATRIUM':'atrium',
+             'JINGLETOWN':'jingle[-| ]?town|mezzanine',
+             'OMI':'gallery|omi',
+             'MERIDIAN':'meridian',
+             'EAST_OAK':'east',
+             'WEST_OAK':'west',
+             'UPTOWN':'uptown',
+             'DOWNTOWN':'downtown',
+             'MEDITATION':'meditation',
+             'KITCHEN':'kitchen'
+            },
 
-                'SERVICE':
-                            {'SETUP_RESET':'set[-| ]?up|pre[-| ]?event|post[-| ]?event',
-                             'STAFFING':'staff|manager',
-                             'A/V':'A/V|technician|sound',
-                             'JANITORIAL':'janitorial|waste|cleaning',
-                             'DRINKS':'coffee|wine',
-                             'COMPOSTABLES':'compost'
-                            }
-                'TOTAL':
-                            {'total'}
+    'SERVICE': {
+                'SETUP_RESET':'set[-| ]?up|pre[-| ]?event|post[-| ]?event',
+                'STAFFING':'staff|manager',
+                'A/V':'A/V|technician|sound',
+                'JANITORIAL':'janitorial|waste|cleaning',
+                'DRINKS':'coffee|wine',
+                'COMPOSTABLES':'compost'
+               }
+    'TOTAL': {
+               None:'total'
+             }
+}
+
+
+# This is how we categorize RATE info 
+RATE_classes = 
+{
+    'membership': {
+                   'PART-TIME': 'part[-| ]?time',
+                   'FULL-TIME':'full[ |-]?time|full member',
+                   'NON-MEMBER':'none?[ |-]member',
+                   'PARTNER':'Org'
+                  },
+
+    'day_type': {
+                 'WEEKEND':'weekend',
+                 'WEEKDAY':'weekday|wkday'
+                },
+
+    'day_dur': {
+                'FULL':'Full[-| ]?day',
+                'HALF':'Half[-| ]?Day'
+               },
+
+    'discount_type': {
+                 'MULTIROOM':'Multi[-| ]?Room',
+                 'MULTIDAY':'Multi[-| ]?day',
+                 'REOCURRING':'Multi[-| ]?event|reo?ccuring',
+                 'FOUNDER':'Founder',
+                 'PARTNER':'Partner|sposor|WITH|share',
+                 'RETURNING':'Returning[-| ]?client'
                 }
-
-
-# We categorize RATE info into categories, and further categorize those 
-RATE_classes = {'membership':
-                            {'PART-TIME': 'part[-| ]?time',
-                             'FULL-TIME':'full[ |-]?time|full member',
-                             'NON-MEMBER':'none?[ |-]member',
-                             'PARTNER':'Org'
-                            },
-
-                'day_type':
-                            {'WEEKEND':'weekend',
-                             'WEEKDAY':'weekday|wkday'
-                            },
-
-                'day_dur': 
-                            {'FULL':'Full[-| ]?day',
-                             'HALF':'Half[-| ]?Day'
-                            },
-
-                'discount': 
-                            {'MULTIROOM':'Multi[-| ]?Room',
-                             'MULTIDAY':'Multi[-| ]?day',
-                             'REOCURRING':'Multi[-| ]?event|reo?ccuring',
-                             'FOUNDER':'Founder',
-                             'PARTNER':'Partner|sposor|WITH|share',
-                             'RETURNING':'Returning[-| ]?client'
-                            }
-                }
+}
 
 
 # This function produces a list of dictionaries, each entry one item from a nested invoice dictionary
@@ -145,8 +150,10 @@ df = df[~is_either]
 
 
 
-## Parse DESCRIPTION field into 'item_type' and 'item'
-##  as defined in the item_class dictionary above
+
+
+## Parse DESCRIPTION field entries into 'item_type' and 'item'
+##  as defined in the item_classes dictionary
 df['item_type'] = None
 df['item'] = None
 
@@ -156,47 +163,22 @@ for item_class in item_classes:
         df.loc[this_item_mask,'item_type'] = item_class
         df.loc[this_item_mask,'item'] = item
 
-
-for room in room_classes:
-    this_room_mask = df['DESCRIPTION'].str.contains(room_classes[room], case=False, na=False)
-    df.loc[this_room_mask,'item_type'] = 'room'
-    df.loc[this_room_mask,'item'] = room
-
-for service in service_classes:
-    this_service_mask = df['DESCRIPTION'].str.contains(service_classes[service], case=False, na=False)
-    df.loc[this_service_mask,'item_type'] = 'service'
-    df.loc[this_service_mask,'item'] = service
-
-this_total_mask = df['DESCRIPTION'].str.contains('total', case=False, na=False)
-df.loc[this_total_mask,'item_type'] = 'total'
-df.loc[this_total_mask,'item'] = None
-
+# Remaining items (that were not assigned an item_type) get classified as 'OTHER' 
 other_mask = df['item_type'].isnull()
-df.loc[other_mask,'item_type'] = 'other'
+df.loc[other_mask,'item_type'] = 'OTHER'
 df.loc[other_mask,'item'] = df.loc[other_mask,'DESCRIPTION']
 
 
 
-## Parse RATE field from sheet into discount-type, day-type, and member-type
-df['membership'] = None
-for member_type in member_classes:
-    member_mask = df['RATE'].str.contains(member_classes[member_type], case=False, na=False)
-    df.loc[member_mask,'membership'] = member_type
 
-df['day_type'] = None
-for day_type in day_type_classes:
-    day_type_mask = df['RATE'].str.contains(day_type_classes[day_type], case=False, na=False)
-    df.loc[day_type_mask,'day_type'] = day_type
 
-df['duration'] = None
-for day_duration in day_duration_classes:
-    day_duration_mask = df['RATE'].str.contains(day_duration_classes[day_duration], case=False, na=False)
-    df.loc[day_duration_mask,'duration'] = day_duration
+## Parse RATE field entries into classes as defined in the RATE_classes dictionary
+for RATE_class in RATE_classes:
+    for rate in RATE_class: 
+        # df[RATE_class] = None
+        rate_mask = df['RATE'].str.contains(RATE_classes[RATE_class][rate], case=False, na=False)
+        df.loc[rate_mask,RATE_class] = rate
 
-df['discount_type'] = None
-for discount in discount_classes:
-    discount_mask = df['RATE'].str.contains(discount_classes[discount], case=False, na=False)
-    df.loc[discount_mask,'discount_type'] = discount
 
 
 
