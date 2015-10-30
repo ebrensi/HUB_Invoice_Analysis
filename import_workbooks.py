@@ -9,6 +9,7 @@ import time
 import datetime
 from collections import OrderedDict
 import concurrent.futures
+import sys
 
 
 WORKBOOK_FILENAMES = ['original_data/IHO_OnGoing_InvoiceTemplate.xlsx',
@@ -121,17 +122,22 @@ def import_workbook(workbook_file_name):
 ########### 
 
 
-start_time = time.time()
-print('Loading workbooks...')
+def main(argv):
+    start_time = time.time()
+    print('Loading workbooks...')
 
-with concurrent.futures.ProcessPoolExecutor() as executor:
-    wb_list = executor.map(import_workbook, WORKBOOK_FILENAMES)
+    with concurrent.futures.ProcessPoolExecutor() as executor:
+        wb_list = executor.map(import_workbook, WORKBOOK_FILENAMES)
 
-invoices = { inv_title: inv_dict for wb in wb_list for inv_title, inv_dict in wb.items() }
+    invoices = { inv_title: inv_dict for wb in wb_list for inv_title, inv_dict in wb.items() }
 
 
-elapsed_string = str(datetime.timedelta(seconds=time.time()-start_time))
-print('workbooks loaded in %s' % elapsed_string)
+    elapsed_string = str(datetime.timedelta(seconds=time.time()-start_time))
+    print('workbooks loaded in %s' % elapsed_string)
 
-with open('invoices.json','w') as out_file:
-    out_file.write(json.dumps(invoices, indent=3))
+    with open('invoices.json','w') as out_file:
+        out_file.write(json.dumps(invoices, indent=3))
+
+
+if __name__ == "__main__":
+    main(sys.argv)
