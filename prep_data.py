@@ -139,6 +139,9 @@ for field in FIELD_CLASSES:
     df[field] = pd.concat(data_to_merge).reindex_like(df)
 
 
+
+
+
 # mask = df['OCCURANCE'].notnull()
 # df.loc[mask, 'HOURS_UNITS'] = df.loc[mask, 'HOURS_UNITS'].astype(float) * df[mask, 'OCCURANCE'].astype(float)
 
