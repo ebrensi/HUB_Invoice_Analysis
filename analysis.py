@@ -13,15 +13,6 @@ NaN = pd.np.nan
 df = pd.read_csv('invoice_data.csv')
 
 
-categorical_data = [
- 'item_type','item','membership','discount_type','day_type','day_dur'
-]
-
-# for col in categorical_data:
-#     df[col] = df[col].astype('category')
-
-
-
 
 ##   *********** ANALYSIS *******************
 df_invoices = df.set_index(['invoice','DATE'])
