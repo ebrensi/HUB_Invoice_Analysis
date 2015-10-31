@@ -227,14 +227,15 @@ for item_idx, item in df[multi_room_item_mask].iterrows():
     associated_rooms = (df['invoice'] == item['invoice']) & (df['item_type'] == 'ROOM') & df['TOTAL'].isnull()
 
     if associated_rooms.any():
-
         for field in ['HOURS_UNITS','DISCOUNT']:
             df.loc[associated_rooms, field] = item[field]
 
         idx_to_drop.append(item_idx)
 
-print('dropping multi-room items %s' % str(idx_to_drop))
+print('\nDropping multi-room items \n%s' % df.loc[idx_to_drop,['invoice','invoice_date','DESCRIPTION']])
 df = df.drop(idx_to_drop)
+
+
 
 
 # fill in missing subtotal values.  We need these values for determining income.
@@ -263,6 +264,9 @@ df.loc[no_subtot, 'SUBTOTAL'] = df['TOTAL'][no_subtot] / (1 - df['DISCOUNT'][no_
 mask = (df['TOTAL'].isnull() | (df['TOTAL'] == 0) )\
         & (df['SUBTOTAL'].isnull() | (df['SUBTOTAL'] == 0) )\
         & (df['DISCOUNT'].isnull() | (df['DISCOUNT'] == 0) )
+
+print('\nDropping items with no SUBTOTAL, DISCOUNT, or TOTAL: \n%s'\
+         % df[['invoice','invoice_date','DESCRIPTION']][mask])
 
 df = df[~mask]
 
