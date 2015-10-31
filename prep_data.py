@@ -51,6 +51,9 @@ item_classes = {
              }
 }
 
+# This is so that when we sort by item_type, item-total is last for each invoice 
+ITEM_CLASS_SORT_ORDER = ['ROOM','SERVICE','OTHER',tot_item_name]
+
 
 # This is how we categorize RATE info 
 RATE_classes = {
@@ -177,8 +180,8 @@ other_mask = df['item_type'].isnull()
 df.loc[other_mask,'item_type'] = 'OTHER'
 df.loc[other_mask,'item'] = df.loc[other_mask,'DESCRIPTION']
 
-
-
+# Set item_type as categorical and set sort order as specified by ITEM_CLASS_SORT_ORDER
+df['item_type'] = df['item_type'].astype('category',categories=ITEM_CLASS_SORT_ORDER, ordered=True)
 
 
 
@@ -317,8 +320,8 @@ df['day_type2'].fillna('?')
 
 
 df = df[['invoice','invoice_date','DATE','item_type','item','AMOUNT','HOURS_UNITS',
-        'SUBTOTAL','DISCOUNT','TOTAL','membership','discount_type',
-        'day_type','day_type2','day_dur']].sort_values(by=['invoice_date','invoice'], ascending=False)
+         'SUBTOTAL','DISCOUNT','TOTAL','membership','discount_type', 'day_type',
+         'day_type2','day_dur']].sort_values(by=['invoice_date','invoice','item_type'], ascending=False)
 
 # df.to_excel(outfile_name+'.xlsx', index=False)
 df.to_csv(outfile_name+'.csv', index=False)
