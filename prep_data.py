@@ -289,6 +289,18 @@ for idx, row in df.iterrows():
 
 
 
+
+
+# Indicate if membership is unknown
+df['membership'] = df['membership'].fillna('N/S')
+
+# if a DISCOUNT is nonzero but no discount-type is indicated, give it a type
+unknown_discount = df['discount_type'].isnull() & df['DISCOUNT'] > 0 
+df.loc[unknown_discount,'discount_type'] = 'N/S'
+df['discount_type'] = df['discount_type'].fillna('NONE')
+
+
+
 df = df[['invoice','invoice_date','DATE','item_type','item','AMOUNT','HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL',
         'membership','discount_type','day_type','day_dur']].sort_values(by='invoice_date', ascending=False)
 
