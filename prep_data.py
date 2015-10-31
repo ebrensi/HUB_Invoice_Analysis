@@ -51,7 +51,8 @@ item_classes = {
              }
 }
 
-# This is so that when we sort by item_type, item-total is last for each invoice 
+# This is so that when we sort by item_type, item-total is last for each invoice
+# It must be reversed because we will be sorting by descending order 
 ITEM_CLASS_SORT_ORDER = ['ROOM','SERVICE','OTHER',tot_item_name]
 
 
@@ -148,7 +149,8 @@ for field in FIELD_CLASSES:
 # mask = df['OCCURANCE'].notnull()
 # df.loc[mask, 'HOURS_UNITS'] = df.loc[mask, 'HOURS_UNITS'].astype(float) * df[mask, 'OCCURANCE'].astype(float)
 
-df = df[['invoice','invoice_date','DATE','DESCRIPTION','AMOUNT','HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL','RATE']]
+df = df[['invoice','invoice_date','DATE','DESCRIPTION','AMOUNT',
+         'HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL','RATE']]
 
 
 
@@ -180,9 +182,8 @@ other_mask = df['item_type'].isnull()
 df.loc[other_mask,'item_type'] = 'OTHER'
 df.loc[other_mask,'item'] = df.loc[other_mask,'DESCRIPTION']
 
-# Set item_type as categorical and set sort order as specified by ITEM_CLASS_SORT_ORDER
-df['item_type'] = df['item_type'].astype('category',categories=ITEM_CLASS_SORT_ORDER, ordered=True)
-
+# # Set item_type as categorical and set sort order as specified by ITEM_CLASS_SORT_ORDER
+df.loc[:,'item_type'] = df.loc[:,'item_type'].astype('category',categories=ITEM_CLASS_SORT_ORDER[::-1], ordered=True)
 
 
 ## Parse RATE field entries into classes as defined in the RATE_classes dictionary
