@@ -282,7 +282,7 @@ df = df[~mask]
 ## Manually compute SUBTOTAL and TOTAL fields in 'total' items
 tots = [0,0]
 for idx, row in df.iterrows():
-    if row['item_type'] == 'total':
+    if row['item_type'] == tot_item_name:
         df.loc[idx, ['SUBTOTAL','TOTAL']] = tots
         if tots[1] != 0:
             df.loc[idx, 'DISCOUNT'] = 1 - tots[1]/tots[0]
