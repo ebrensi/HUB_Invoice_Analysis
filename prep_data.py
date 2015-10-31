@@ -11,7 +11,7 @@ NaN = pd.np.nan
 import re
 import json
 import os.path
-
+import sys
 
 INVOICE_NUM_CUTOFF = 2035
 
@@ -214,8 +214,8 @@ def main(argv):
     df.loc[all_no_charge, 'DISCOUNT'] = 1
 
     # If no discount-type is indicated then make an indication
-    no_discount_type_indicated = df['discount_type'].isnull()
-    df.loc[(all_no_charge & no_discount_type_indicated), 'discount_type'] = 'waived'
+    # no_discount_type_indicated = df['discount_type'].isnull()
+    # df.loc[(all_no_charge & no_discount_type_indicated), 'discount_type'] = 'waived'
 
     #  convert any 'flat fee' indicators to 1 so that the AMOUNT identifies with SUBTOTAL
     df['HOURS_UNITS'].loc[df['HOURS_UNITS'].str.contains('flat', case=False, na=False)] = 1
@@ -303,11 +303,11 @@ def main(argv):
 
 
     # Indicate if membership is unknown
-    df['membership'] = df['membership'].fillna('N/S')
+    df['membership'] = df['membership'].fillna('?MEMBER?')
 
     # if a DISCOUNT is nonzero but no discount-type is indicated, give it a type
     unknown_discount = df['discount_type'].isnull() & df['DISCOUNT'] > 0 
-    df.loc[unknown_discount,'discount_type'] = 'N/S'
+    df.loc[unknown_discount,'discount_type'] = '?DISCOUNT?'
     df['discount_type'] = df['discount_type'].fillna('NONE')
 
 
