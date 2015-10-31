@@ -82,6 +82,16 @@ RATE_classes = {
 }
 
 
+# The data we read in have different fields that correspond to the same thing
+#  Here we specify equivalence classes 
+FIELD_CLASSES = {
+    'DATE' : ['DATE', 'DATE OF EVENT', 'DATES OF EVENT'],
+    'HOURS_UNITS' : ['ESTIMATED HOURS', 'HOURS', 'HOURS/UNITS'],
+    'TOTAL' : ['TOTAL',' TOTAL', 'ESTIMATE TOTAL', 'ESTIMATED TOTAL'],
+    'DISCOUNT': ['DISCOUNT','DONATION']
+}
+
+
 # This function produces a list of dictionaries, each entry one item from a nested invoice dictionary
 def flatten_dict(invoices):
     result = []
@@ -123,17 +133,10 @@ df = df[~exclude_mask]
 
 
 
-# Join equivalent columns
-df['DATE'].update(df['DATE OF EVENT'])
-
-df = df.rename(columns={'HOURS/UNITS': 'HOURS_UNITS'})
-for col_name in ['ESTIMATED HOURS', 'HOURS']:
-    df['HOURS_UNITS'].update(df[col_name])
-
-for col_name in [' TOTAL', 'ESTIMATE TOTAL', 'ESTIMATED TOTAL']:
-    df['TOTAL'].update(df[col_name])
-
-df['DISCOUNT'].update(df['DONATION'])
+# Join equivalent columns as specified in FIELD_CLASSES 
+for field in FIELD_CLASSES:
+    data_to_merge = [df[col_name].dropna() for col_name in FIELD_CLASSES[field]] 
+    df[field] = pd.concat(data_to_merge).reindex_like(df)
 
 
 # mask = df['OCCURANCE'].notnull()
