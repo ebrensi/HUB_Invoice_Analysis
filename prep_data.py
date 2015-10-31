@@ -301,8 +301,17 @@ df['discount_type'] = df['discount_type'].fillna('NONE')
 
 
 
+# Determine if event date is a weekday or weekend
+datetimes = pd.to_datetime(df['DATE'], errors='coerce')
+weekend_ind = datetimes.dt.dayofweek >= 5
+df.loc[weekend_ind, 'day_type2'] = 'weekend'
+df.loc[~weekend_ind & datetimes.notnull(), 'day_type2'] = 'weekday'
+df['day_type2'].fillna('?')
+
+
+
 df = df[['invoice','invoice_date','DATE','item_type','item','AMOUNT','HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL',
-        'membership','discount_type','day_type','day_dur']].sort_values(by='invoice_date', ascending=False)
+        'membership','discount_type','day_type','day_type2','day_dur']].sort_values(by='invoice_date', ascending=False)
 
 # df.to_excel(outfile_name+'.xlsx', index=False)
 df.to_csv(outfile_name+'.csv', index=False)
