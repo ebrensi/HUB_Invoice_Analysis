@@ -316,8 +316,9 @@ df['day_type2'].fillna('?')
 
 
 
-df = df[['invoice','invoice_date','DATE','item_type','item','AMOUNT','HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL',
-        'membership','discount_type','day_type','day_type2','day_dur']].sort_values(by='invoice_date', ascending=False)
+df = df[['invoice','invoice_date','DATE','item_type','item','AMOUNT','HOURS_UNITS',
+        'SUBTOTAL','DISCOUNT','TOTAL','membership','discount_type',
+        'day_type','day_type2','day_dur']].sort_values(by=['invoice_date','invoice'], ascending=False)
 
 # df.to_excel(outfile_name+'.xlsx', index=False)
 df.to_csv(outfile_name+'.csv', index=False)
