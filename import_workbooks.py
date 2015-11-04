@@ -15,8 +15,6 @@ import sys
 WORKBOOK_FILENAMES = ['original_data/IHO_OnGoing_InvoiceTemplate.xlsx',
                       'original_data/2015 OnGoing InvoiceTemplate.xlsx']
 
-FOO = 12
-
 MAX_ROW_LENGTH = 10
 
 date_pat = re.compile('(\d{4}-\d{2}-\d{2})')
