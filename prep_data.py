@@ -6,6 +6,9 @@ Created on Mon Aug 17 14:23:20 2015
 @author: Efrem
 """
 
+# this is a comment to show a change with Git
+
+
 import pandas as pd
 NaN = pd.np.nan
 import re
