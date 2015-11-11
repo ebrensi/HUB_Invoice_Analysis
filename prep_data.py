@@ -318,17 +318,23 @@ def main(argv):
     # Determine if event date is a weekday or weekend
     datetimes = pd.to_datetime(df['DATE'], errors='coerce')
     weekend_ind = datetimes.dt.dayofweek >= 5
-    df.loc[weekend_ind, 'day_type2'] = 'weekend'
-    df.loc[~weekend_ind & datetimes.notnull(), 'day_type2'] = 'weekday'
-    df['day_type2'].fillna('?')
+    df.loc[weekend_ind, 'day_type2'] = 'WEEKEND'
+    df.loc[~weekend_ind & datetimes.notnull(), 'day_type2'] = 'WEEKDAY'
+    
+    day_type_not_given = df['day_type'].isnull()
+    df.loc[day_type_not_given, 'day_type'] = df.loc[day_type_not_given, 'day_type2']
 
+    # df['day_type'].fillna('?')
+
+    # df['day_dur2'] = (df['HOURS_UNITS'] < 5.5).map({True:'Half', False:'Full'})
 
 
     df = df[['invoice','invoice_date','DATE','item_type','item','AMOUNT','HOURS_UNITS',
              'SUBTOTAL','DISCOUNT','TOTAL','membership','discount_type', 'day_type',
-             'day_type2','day_dur']].sort_values(by=['invoice_date','invoice','item_type'], ascending=False)
+             'day_dur']]\
+             .sort_values(by=['invoice_date','invoice','item_type'], ascending=False)
 
-    # df.to_excel(outfile_name+'.xlsx', index=False)
+    # df.set_index(['invoice','invoice_date','DATE']).to_excel(outfile_name+'.xlsx', index=False)
     df.to_csv(outfile_name+'.csv', index=False)
 
 
