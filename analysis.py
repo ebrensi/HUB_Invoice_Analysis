@@ -20,7 +20,7 @@ def to_nice_csv(df, filename):
     for col_name in df.index.names:
         x.loc[:,col_name] = x.loc[:,col_name].drop_duplicates() 
     
-    x.to_csv(filename,index=False)
+    x.to_csv(filename,index=False, float_format='%5.2f')
 
 
 
