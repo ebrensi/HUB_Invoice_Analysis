@@ -38,3 +38,14 @@ eg.
 First We want to query general information about which rooms were rented and at what rates, and what discounts were applied, as well as how much income was reduced by each discount.  For example: What was the average income for renting the Broadway room to a part-time member for a full-day (5.5+ hours) on a weekday?
 
 We also would like to make queries about package deals.  For example: what was typically the total income for a rental that included the Atrium?
+
+### Summaries
+Here is some summary info.
+
+####  Rooms only...
+For now I'm limiting the output to one room too keep the table simple.
+[Averages](rooms_only_avg.csv)
+[Totals](rooms_only_sum.csv)
+
+This was created as a piot table:
+[Experimental combo](rooms_only_pivot.csv)
