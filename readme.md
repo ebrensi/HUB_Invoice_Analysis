@@ -44,7 +44,9 @@ Here is some summary info.
 
 ####  Rooms only...
 For now I'm limiting the output to one room too keep the table simple.
+
 [Averages](rooms_only_avg.csv)
+
 [Totals](rooms_only_sum.csv)
 
 This was created as a piot table:

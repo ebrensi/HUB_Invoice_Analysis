@@ -1,4 +1,4 @@
-#! python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 This is the analysis script for the IHO venue pricing project
@@ -15,11 +15,10 @@ NaN = pd.np.nan
 # The csv file produced is only meant to be viewed by a human.
 def to_nice_csv(df, filename):
     x = df.reset_index()
-    # mask = df.index.to_series().duplicated()
-    # x.loc[mask.values, df.index.names] = ''
-    for col_name in df.index.names:
-        x.loc[:,col_name] = x.loc[:,col_name].drop_duplicates() 
-    
+    cols = df.index.names
+    mask = (x[cols] == x[cols].shift())    
+    x.loc[:,cols] = x[cols].mask(mask, '')
+
     x.to_csv(filename,index=False, float_format='%5.2f')
 
 
@@ -37,16 +36,12 @@ df_invoices = df.set_index(['invoice','DATE'])
 df_rooms_only = df.query('item_type == "ROOM"').drop(['item_type'], axis=1)
 
 
-
 # We'll specify only certain rooms to simplify the output for now
 selected_rooms = ['BROADWAY']
 df_rooms_only = df_rooms_only[df_rooms_only['item'].isin(selected_rooms)]
 
 
-
-df_rooms_only['day'] = (df_rooms_only['HOURS_UNITS'] < 5.5).map({True:'Half', False:'Full'})
-
-grouped_by_room = df_rooms_only.groupby(['item','day','membership','discount_type'])
+grouped_by_room = df_rooms_only.groupby(['item','membership','discount_type'])
 
 g1 = grouped_by_room['HOURS_UNITS','SUBTOTAL','TOTAL'].sum()
 
@@ -59,7 +54,7 @@ to_nice_csv( grouped_by_room['AMOUNT','HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL
 
 # Try an alternative method of aggregation
 table = pd.pivot_table(df_rooms_only,
-                        index=['item','day','membership','discount_type'],
+                        index=['item','day_type','membership','discount_type'],
                         values=['SUBTOTAL','TOTAL'],
                         aggfunc=[pd.np.sum, pd.np.mean], fill_value=0 ) 
 
