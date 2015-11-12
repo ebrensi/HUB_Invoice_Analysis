@@ -1,4 +1,4 @@
-#! python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Created on Mon Aug 17 14:23:20 2015
@@ -37,7 +37,8 @@ item_classes = {
              'UPTOWN':'uptown',
              'DOWNTOWN':'downtown',
              'MEDITATION':'meditation',
-             'KITCHEN':'kitchen'
+             'KITCHEN':'kitchen',
+             'PATIO':'patio'
             },
 
     'SERVICE': {
@@ -62,9 +63,9 @@ ITEM_CLASS_SORT_ORDER = ['ROOM','SERVICE','OTHER',tot_item_name]
 # This is how we categorize RATE info 
 RATE_classes = {
     'membership': {
-                   'PART': 'part[-| ]?time',
-                   'FULL':'full[ |-]?time|full member',
-                   'NON':'none?[ |-]member',
+                   'PART_TIME': 'part[-| ]?time',
+                   'FULL_TIME':'full[ |-]?time|full member',
+                   'NON_MEMBER':'none?[ |-]member',
                    'FRIEND':'Org'
                   },
 
@@ -74,16 +75,16 @@ RATE_classes = {
                 },
 
     'day_dur': {
-                'FULL':'Full[-| ]?day',
-                'HALF':'Half[-| ]?Day'
+                'FULL_DAY':'Full[-| ]?day',
+                'HALF_DAY':'Half[-| ]?Day'
                },
 
     'discount_type': {
-                 'MULTIROOM':'Multi[-| ]?Room',
-                 'MULTIDAY':'Multi[-| ]?day',
+                 'MULTI_ROOM':'Multi[-| ]?Room',
+                 'MULTI_DAY':'Multi[-| ]?day',
                  'REOCURRING':'Multi[-| ]?event|reo?ccuring',
                  'FOUNDER':'Founder',
-                 'PARTNER':'Partner|sposor|WITH|share',
+                 'FRIEND':'Partner|sposor|WITH|share',
                  'RETURNING':'Returning[-| ]?client'
                 }
 }
@@ -306,11 +307,11 @@ def main(argv):
 
 
     # Indicate if membership is unknown
-    df['membership'] = df['membership'].fillna('?MEMBER?')
+    df['membership'] = df['membership'].fillna('NA')
 
     # if a DISCOUNT is nonzero but no discount-type is indicated, give it a type
     unknown_discount = df['discount_type'].isnull() & df['DISCOUNT'] > 0 
-    df.loc[unknown_discount,'discount_type'] = '?DISCOUNT?'
+    df.loc[unknown_discount,'discount_type'] = 'NA'
     df['discount_type'] = df['discount_type'].fillna('NONE')
 
 
@@ -327,7 +328,7 @@ def main(argv):
 
 
     # We want to mark (every line-item in) any invoice that contains a room rental >= 5.5 hours as Full-Day
-
+    # df['']
     # df['day_dur2'] = (df['HOURS_UNITS'] < 5.5).map({True:'HALF', False:'FULL'})
 
 
@@ -338,7 +339,7 @@ def main(argv):
 
 
     # df.set_index(['invoice','invoice_date','DATE']).to_excel(outfile_name+'.xlsx', index=False)
-    df.to_csv(outfile_name+'.csv', index=False)
+    df.to_csv(outfile_name+'.csv', index=False, float_format='%6.2f')
 
 
 
