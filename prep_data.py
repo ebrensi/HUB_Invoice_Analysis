@@ -62,10 +62,10 @@ ITEM_CLASS_SORT_ORDER = ['ROOM','SERVICE','OTHER',tot_item_name]
 # This is how we categorize RATE info 
 RATE_classes = {
     'membership': {
-                   'PART-TIME': 'part[-| ]?time',
-                   'FULL-TIME':'full[ |-]?time|full member',
-                   'NON-MEMBER':'none?[ |-]member',
-                   'PARTNER':'Org'
+                   'PART': 'part[-| ]?time',
+                   'FULL':'full[ |-]?time|full member',
+                   'NON':'none?[ |-]member',
+                   'FRIEND':'Org'
                   },
 
     'day_type': {
@@ -321,18 +321,21 @@ def main(argv):
     df.loc[weekend_ind, 'day_type2'] = 'WEEKEND'
     df.loc[~weekend_ind & datetimes.notnull(), 'day_type2'] = 'WEEKDAY'
     
+    # Replace missing day_type entries with determined day type in day_type2
     day_type_not_given = df['day_type'].isnull()
     df.loc[day_type_not_given, 'day_type'] = df.loc[day_type_not_given, 'day_type2']
 
-    # df['day_type'].fillna('?')
 
-    # df['day_dur2'] = (df['HOURS_UNITS'] < 5.5).map({True:'Half', False:'Full'})
+    # We want to mark (every line-item in) any invoice that contains a room rental >= 5.5 hours as Full-Day
+
+    # df['day_dur2'] = (df['HOURS_UNITS'] < 5.5).map({True:'HALF', False:'FULL'})
 
 
     df = df[['invoice','invoice_date','DATE','item_type','item','AMOUNT','HOURS_UNITS',
              'SUBTOTAL','DISCOUNT','TOTAL','membership','discount_type', 'day_type',
              'day_dur']]\
              .sort_values(by=['invoice_date','invoice','item_type'], ascending=False)
+
 
     # df.set_index(['invoice','invoice_date','DATE']).to_excel(outfile_name+'.xlsx', index=False)
     df.to_csv(outfile_name+'.csv', index=False)
