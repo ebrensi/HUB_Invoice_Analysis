@@ -1,4 +1,4 @@
-#! python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 from openpyxl import load_workbook
@@ -119,7 +119,8 @@ def import_workbook(workbook_file_name):
     return invoices
 
 
-########### 
+
+
 
 
 def main(argv):
