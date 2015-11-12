@@ -12,7 +12,7 @@ NaN = pd.np.nan
 # This is a little function to output an easier-to-read csv file
 #  for a multi-indexed DataFrame.  It eliminates duplicated index entries
 #  along index columns. 
-# The csv file produced is only meant to be viewed by a human.
+# The csv file produced is meant to be used for viewing by humans.
 def to_nice_csv(df, filename):
     x = df.reset_index()
     cols = df.index.names
@@ -56,7 +56,7 @@ to_nice_csv( grouped_by_room['AMOUNT','HOURS_UNITS','SUBTOTAL','DISCOUNT','TOTAL
 table = pd.pivot_table(df_rooms_only,
                         index=['item','day_type','membership','discount_type'],
                         values=['SUBTOTAL','TOTAL'],
-                        aggfunc=[pd.np.sum, pd.np.mean], fill_value=0 ) 
+                        aggfunc=[pd.np.sum, pd.np.mean, lambda x: len(x.unique())], fill_value=0 ) 
 
 to_nice_csv( table, 'rooms_only_pivot.csv')
 
