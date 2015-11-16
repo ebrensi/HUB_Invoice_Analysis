@@ -63,8 +63,8 @@ def parse_sheet(ws):
 
         if sep:
             table_header_row = sep[0]
-        sep = df[df[1].str.contains('total',
-                                    case=False, na=False)].index.tolist()
+        sep = (df[df[1].str.contains('total', case=False, na=False)]
+               .index.tolist())
         if sep:
             last_row = sep[0]
         else:
