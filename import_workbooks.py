@@ -20,9 +20,10 @@ MAX_ROW_LENGTH = 10
 date_pat = re.compile('(\d{4}-\d{2}-\d{2})')
 rate_pat = re.compile('(.*rate:.*|.*rate.*)', re.IGNORECASE)
 
-## Extract relevant data from one invoice worksheet and return it as a dict
+
+# Extract relevant data from one invoice worksheet and return it as a dict
 def parse_sheet(ws):
-    info = OrderedDict.fromkeys(['invoice_date','RATE'])
+    info = OrderedDict.fromkeys(['invoice_date', 'RATE'])
     sname = ws.title.strip()
 
     template_pattern = re.compile('template|quote', re.IGNORECASE)
@@ -30,13 +31,17 @@ def parse_sheet(ws):
         return False
 
     # make a dataframe from the current sheet
-    df = pd.DataFrame([tuple([cell.value for cell in row[:MAX_ROW_LENGTH]]) for row in ws.rows])
-    df = df.dropna(how='all', axis=[0,1]).reset_index(drop=True)
+    df = pd.DataFrame([tuple([cell.value for cell in row[:MAX_ROW_LENGTH]])
+                       for row in ws.rows])
+
+    df = df.dropna(how='all', axis=[0, 1]).reset_index(drop=True)
 
     if any(df):
-        # We will search search DataFrame df by column, from the last column to first
-        #   since we know that wwhat we're looking for is on the right side.  we're looking for a date (invoice_date),
-        #   and a cell that has text of the form "RATE: XXXX" where XXX is some words describing the rate charged for this event.
+        # We will search search DataFrame df by column, from the last column
+        #  to the first, since we know that what we're looking for is
+        #  on the right side.  we're looking for a date (invoice_date),
+        #  and a cell that has text of the form "RATE: XXXX" where XXX
+        #  is some words describing the rate charged for this event.
         for col_name in reversed(df.columns):
             col_str = df[col_name].astype(str).str
 
@@ -48,36 +53,39 @@ def parse_sheet(ws):
             elif not info['RATE']:
                 rate_cell = col_str.extract(rate_pat).dropna()
                 if len(rate_cell) > 0:
-                    info['RATE'] = rate_cell.iloc[0].replace('RATE:','').strip()
+                    info['RATE'] = (rate_cell.iloc[0]
+                                    .replace('RATE:', '').strip())
                     break
 
-
         # Determine upper & lower boundaries for the item subtable
-        sep = df[df[0].str.contains('^date',case=False, na=False)].index.tolist()
+        sep = df[df[0].str.contains('^date',
+                                    case=False, na=False)].index.tolist()
 
         if sep:
-             table_header_row = sep[0]
-        sep = df[df[1].str.contains('total',case=False, na=False)].index.tolist()
+            table_header_row = sep[0]
+        sep = df[df[1].str.contains('total',
+                                    case=False, na=False)].index.tolist()
         if sep:
             last_row = sep[0]
         else:
             last_row = len(df)
 
-
         # grab the items sub-table into a DataFrame
         header_row = df.iloc[table_header_row].tolist()
-        last_col = next(i for i, j in reversed(list(enumerate(header_row))) if j)
+        last_col = next(i for i, j
+                        in reversed(list(enumerate(header_row)))
+                        if j)
         header = [str(field) for field in header_row[0:last_col+1]]
 
         subsheet = df.iloc[table_header_row+1:last_row+1, 0:last_col+1]
         date_col_name = header[0]
         subsheet.columns = header
 
-
         if not subsheet[date_col_name].iloc[0]:
-             subsheet[date_col_name].iloc[0] = '?'
+            subsheet[date_col_name].iloc[0] = '?'
 
-        subsheet = subsheet.dropna(how='all',axis=[0,1]).reset_index(drop=True)
+        subsheet = subsheet.dropna(how='all',
+                                   axis=[0, 1]).reset_index(drop=True)
 
         # Fill-in DATE column
         for i in subsheet.index:
@@ -89,19 +97,20 @@ def parse_sheet(ws):
                     subsheet.loc[i, date_col_name] = str(d)
             else:
                 if i > 0:
-                    subsheet.loc[i, date_col_name] = subsheet.loc[i-1, date_col_name]
+                    subsheet.loc[i, date_col_name] = \
+                     subsheet.loc[i-1, date_col_name]
                 else:
                     subsheet.loc[i, date_col_name] = "unknown"
+
         items = subsheet.to_dict(orient="records")
         info['items'] = items
 
     return info
 
 
-
-## *******************************
-# Import a workbook of invoice sheets and store relevant data for every invoice as a
-#   record in a json dictionary.
+# *******************************
+# Import a workbook of invoice sheets and store relevant data
+#   for every invoice as a record in a json dictionary.
 def import_workbook(workbook_file_name):
 
     #   use openpyxl to open workbook
@@ -119,10 +128,6 @@ def import_workbook(workbook_file_name):
     return invoices
 
 
-
-
-
-
 def main(argv):
     start_time = time.time()
     print('Loading workbooks...')
@@ -130,13 +135,14 @@ def main(argv):
     with concurrent.futures.ProcessPoolExecutor() as executor:
         wb_list = executor.map(import_workbook, WORKBOOK_FILENAMES)
 
-    invoices = { inv_title: inv_dict for wb in wb_list for inv_title, inv_dict in wb.items() }
-
+    invoices = {inv_title: inv_dict
+                for wb in wb_list
+                for inv_title, inv_dict in wb.items()}
 
     elapsed_string = str(datetime.timedelta(seconds=time.time()-start_time))
     print('workbooks loaded in %s' % elapsed_string)
 
-    with open('invoices.json','w') as out_file:
+    with open('invoices.json', 'w') as out_file:
         out_file.write(json.dumps(invoices, indent=3))
 
 
