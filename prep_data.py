@@ -22,32 +22,32 @@ tot_item_name = 'ITEM_TOT'
 
 item_classes = {
     'ROOM': {
-             'BROADWAY': 'broadway',
-             'ATRIUM': 'atrium',
-             'JINGLETOWN': 'jingle[-| ]?town|mezzanine',
-             'OMI': 'gallery|omi',
-             'MERIDIAN': 'meridian',
-             'EAST_OAK': 'east',
-             'WEST_OAK': 'west',
-             'UPTOWN': 'uptown',
-             'DOWNTOWN': 'downtown',
-             'MEDITATION': 'meditation',
-             'KITCHEN': 'kitchen',
-             'PATIO': 'patio'
-            },
+        'BROADWAY': 'broadway',
+        'ATRIUM': 'atrium',
+        'JINGLETOWN': 'jingle[-| ]?town|mezzanine',
+        'OMI': 'gallery|omi',
+        'MERIDIAN': 'meridian',
+        'EAST_OAK': 'east',
+        'WEST_OAK': 'west',
+        'UPTOWN': 'uptown',
+        'DOWNTOWN': 'downtown',
+        'MEDITATION': 'meditation',
+        'KITCHEN': 'kitchen',
+        'PATIO': 'patio'
+    },
 
     'SERVICE': {
-                'SETUP_RESET': 'set[-| ]?up|pre[-| ]?event|post[-| ]?event',
-                'STAFFING': 'staff|manager',
-                'A/V': 'A/V|technician|sound',
-                'JANITORIAL': 'janitorial|waste|cleaning',
-                'DRINKS': 'coffee|wine',
-                'COMPOSTABLES': 'compost'
-               },
+        'SETUP_RESET': 'set[-| ]?up|pre[-| ]?event|post[-| ]?event',
+        'STAFFING': 'staff|manager',
+        'A/V': 'A/V|technician|sound',
+        'JANITORIAL': 'janitorial|waste|cleaning',
+        'DRINKS': 'coffee|wine',
+        'COMPOSTABLES': 'compost'
+    },
 
     tot_item_name: {
-               None: 'total'
-             }
+        None: 'total'
+    }
 }
 
 # This is so that when we sort by item_type, item-total is last for each invoice
@@ -58,30 +58,30 @@ ITEM_CLASS_SORT_ORDER = ['ROOM', 'SERVICE', 'OTHER', tot_item_name]
 # This is how we categorize RATE info
 RATE_classes = {
     'membership': {
-                   'PART_TIME': 'part[-| ]?time',
-                   'FULL_TIME': 'full[ |-]?time|full member',
-                   'NON_MEMBER': 'none?[ |-]member',
-                   'FRIEND': 'Org'
-                  },
+        'PART_TIME': 'part[-| ]?time',
+        'FULL_TIME': 'full[ |-]?time|full member',
+        'NON_MEMBER': 'none?[ |-]member',
+        'FRIEND': 'Org'
+    },
 
     'day_type': {
-                 'WEEKEND': 'weekend',
-                 'WEEKDAY': 'weekday|wkday'
-                },
+        'WEEKEND': 'weekend',
+        'WEEKDAY': 'weekday|wkday'
+    },
 
     'day_dur': {
-                'FULL_DAY': 'Full[-| ]?day',
-                'HALF_DAY': 'Half[-| ]?Day'
-               },
+        'FULL_DAY': 'Full[-| ]?day',
+        'HALF_DAY': 'Half[-| ]?Day'
+    },
 
     'discount_type': {
-                 'MULTI_ROOM': 'Multi[-| ]?Room',
-                 'MULTI_DAY': 'Multi[-| ]?day',
-                 'REOCURRING': 'Multi[-| ]?event|reo?ccuring',
-                 'FOUNDER': 'Founder',
-                 'FRIEND': 'Partner|sposor|WITH|share',
-                 'RETURNING': 'Returning[-| ]?client'
-                }
+        'MULTI_ROOM': 'Multi[-| ]?Room',
+        'MULTI_DAY': 'Multi[-| ]?day',
+        'REOCURRING': 'Multi[-| ]?event|reo?ccuring',
+        'FOUNDER': 'Founder',
+        'FRIEND': 'Partner|sposor|WITH|share',
+        'RETURNING': 'Returning[-| ]?client'
+    }
 }
 
 
@@ -122,7 +122,7 @@ def main(argv):
                       ).drop_duplicates().dropna(how='all')
 
     # exclude invoices with no invoice#, cancellations,
-    #   or invoice# < INVOICE_NUM_CUTOFF
+    # or invoice# < INVOICE_NUM_CUTOFF
     invoice_num = df['invoice'].str.extract('(\d+)').str.strip().astype(float)
     cancellations = df['invoice'].str.contains('cancel', na=False, case=False)
 
@@ -173,10 +173,10 @@ def main(argv):
     # Set item_type as categorical and set sort order
     #   as specified by ITEM_CLASS_SORT_ORDER
     df.loc[:, 'item_type'] = (
-            df.loc[:, 'item_type']
-            .astype('category',
-                    categories=ITEM_CLASS_SORT_ORDER[::-1],
-                    ordered=True))
+        df.loc[:, 'item_type']
+        .astype('category',
+                categories=ITEM_CLASS_SORT_ORDER[::-1],
+                ordered=True))
 
     # Parse RATE field entries into classes
     #   as defined in the RATE_classes dictionary
@@ -284,7 +284,7 @@ def main(argv):
         if row['item_type'] == tot_item_name:
             df.loc[idx, ['SUBTOTAL', 'TOTAL']] = tots
             if tots[1] != 0:
-                df.loc[idx, 'DISCOUNT'] = 1 - tots[1]/tots[0]
+                df.loc[idx, 'DISCOUNT'] = 1 - tots[1] / tots[0]
             tots = [0, 0]
         else:
             if not pd.np.isnan(row['SUBTOTAL']):
@@ -310,14 +310,6 @@ def main(argv):
     no_day_type = df['day_type'].isnull()
     df.loc[no_day_type, 'day_type'] = df.loc[no_day_type, 'day_type2']
 
-    d = (df[['invoice', 'DATE', 'item_type']]
-         .query("item_type=='ROOM'").duplicated())
-
-    # We want to mark (every line-item in) any invoice that
-    #  contains a room rental >= 5.5 hours as Full-Day
-    # df['']
-    # df['day_dur2'] = (df['HOURS_UNITS'] < 5.5).map({True:'HALF', False:'FULL'})
-
     df = (df[['invoice', 'invoice_date', 'DATE', 'item_type', 'item', 'AMOUNT',
               'HOURS_UNITS', 'SUBTOTAL', 'DISCOUNT', 'TOTAL', 'membership',
               'discount_type', 'day_type',
@@ -325,7 +317,40 @@ def main(argv):
           .sort_values(by=['invoice_date', 'invoice', 'item_type'],
                        ascending=False))
 
-    df.to_csv(outfile_name+'.csv', index=False, float_format='%6.2f')
+    df.to_csv(outfile_name + '.csv', index=False, float_format='%6.2f')
+
+    # --- Whole-invoice classifications: ---
+
+    # inv_spec is to deal with a little confusion about whether we want to
+    #  group by invoice (which can contain multiple event dates)
+    #  or by date within each invoice as well.
+    inv_spec = ['invoice', 'DATE']
+
+    rooms_by_invoice = (df.query("item_type=='ROOM'")
+                        .groupby(inv_spec, sort=False))
+
+    services_by_invoice = (df.query("item_type=='SERVICE'")
+                           .groupby(inv_spec, sort=False))
+
+    setup_by_invoice = (df.query("item=='SETUP_RESET'")
+                        .groupby(inv_spec, sort=False))
+
+    # Here we determine the overall length of time allotted for each "event"
+
+    # max number of hours that a room was rented for each event
+    event_room_hours = rooms_by_invoice['HOURS_UNITS'].max()
+
+    # total amout of setup/reset time for each event
+    event_setup_hours = setup_by_invoice['HOURS_UNITS'].sum()
+
+    total_event_hours = event_room_hours + event_setup_hours
+
+    # Number of rooms rented for each event
+    event_num_rooms = rooms_by_invoice['item'].count()
+
+    by_event = pd.DataFrame([event_num_rooms, total_event_hours]).T
+    by_event.columns = ['# rooms', 'hours']
+    by_event.to_csv('by_event.csv')
 
 
 if __name__ == "__main__":
