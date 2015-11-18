@@ -58,8 +58,8 @@ def parse_sheet(ws):
                     break
 
         # Determine upper & lower boundaries for the item subtable
-        sep = df[df[0].str.contains('^date',
-                                    case=False, na=False)].index.tolist()
+        sep = (df[df[0].str.contains('^date', case=False, na=False)]
+               .index.tolist())
 
         if sep:
             table_header_row = sep[0]
@@ -75,9 +75,9 @@ def parse_sheet(ws):
         last_col = next(i for i, j
                         in reversed(list(enumerate(header_row)))
                         if j)
-        header = [str(field) for field in header_row[0:last_col+1]]
+        header = [str(field) for field in header_row[0:last_col + 1]]
 
-        subsheet = df.iloc[table_header_row+1:last_row+1, 0:last_col+1]
+        subsheet = df.iloc[table_header_row + 1:last_row + 1, 0:last_col + 1]
         date_col_name = header[0]
         subsheet.columns = header
 
@@ -97,13 +97,12 @@ def parse_sheet(ws):
                     subsheet.loc[i, date_col_name] = str(d)
             else:
                 if i > 0:
-                    subsheet.loc[i, date_col_name] = \
-                     subsheet.loc[i-1, date_col_name]
+                    subsheet.loc[i, date_col_name] =    \
+                        subsheet.loc[i - 1, date_col_name]
                 else:
                     subsheet.loc[i, date_col_name] = "unknown"
 
-        items = subsheet.to_dict(orient="records")
-        info['items'] = items
+        info['items'] = subsheet.to_dict(orient="records")
 
     return info
 
@@ -139,7 +138,7 @@ def main(argv):
                 for wb in wb_list
                 for inv_title, inv_dict in wb.items()}
 
-    elapsed_string = str(datetime.timedelta(seconds=time.time()-start_time))
+    elapsed_string = str(datetime.timedelta(seconds=time.time() - start_time))
     print('workbooks loaded in %s' % elapsed_string)
 
     with open('invoices.json', 'w') as out_file:
