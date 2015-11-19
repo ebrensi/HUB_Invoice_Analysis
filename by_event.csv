@@ -2,6 +2,7 @@ invoice,DATE,# rooms,hours
  215003 Forward Together,2014-02-20,1.0,6.0
 1015001-2 Str Urb Dev Alliance,2015-10-26,1.0,4.0
 1015002 OPC,2015-12-06,2.0,5.5
+1015002-2 OPC,2015-12-06,3.0,8.0
 1015003 Oakland High,2015-10-17,1.0,
 1015004 Jenn Bomze_Parttime,2016-02-20,2.0,6.5
 1015005-2 Better Vt PreSeed,2015-12-09,1.0,4.5
@@ -14,12 +15,19 @@ invoice,DATE,# rooms,hours
 1015011 Captricity,2015-12-10,1.0,7.0
 1015012 Youth HUB Pitch Event ,2016-05-14,4.0,8.0
 1015013 BUILD AtirumBroad,2015-12-03,2.0,4.0
-1115001 ACLU_2rooms_Memb,2015-12-13,2.0,10.0
+1115001 ACLU_2rooms_Memb,2015-12-13,2.0,7.0
 1115002 Know Yourself ,2015-11-21,1.0,5.5
 1115003 Lisa Chacon,2015-11-08,1.0,
 1115003-2 Lisa Chacon,2015-11-08,1.0,
+1115003-3 Lisa Chacon ,2015-11-08,1.0,
 1115004 HacktheHood Open House,2011-12-07,2.0,4.5
 1115005 SoleSpace,2011-11-20,1.0,4.5
+1115006 theREGISTRY_AAEN Mixer,2016-12-17,2.0,6.0
+1115007 Senior Shower Project,2015-12-02,1.0,5.0
+1115008 Sonia Bat Mitzvah,2017-04-29,3.0,8.0
+1115009 Main Source ptMem,2016-03-19,6.0,11.5
+1115010 Big West Rotaract,2016-07-22,1.0,7.5
+1115011 K+S Engagement Party,2016-01-02,1.0,5.0
 115001-2 P2R Graduation,2015-03-21,1.0,5.5
 115001-3 P2R Graduation,2015-03-21,1.0,4.5
 115002 LNA_Storytelling,2015-01-16,1.0,6.5
@@ -57,7 +65,6 @@ invoice,DATE,# rooms,hours
 2050 Bootcamp_BusinessInn_pt1,2014-05-28,1.0,4.5
 2051 Vital Systems,2014-06-05,1.0,4.5
 2052 Oak Food Policy Council,2014-05-03,1.0,4.5
-2053 Global Solutions Party,2014-05-01,,
 2054 Tessa Finlev,2014-05-06,1.0,6.0
 2055 United Roots_Revised,2014-05-24,5.0,10.5
 2056 VIN12 Spring_Revised,2014-05-10,4.0,5.5
@@ -195,7 +202,7 @@ invoice,DATE,# rooms,hours
 2159 LIfe is Living,2014-10-10,1.0,5.5
 2160 BK Publishers_LockedDown,2014-11-04,1.0,4.0
 2160 OPEN,2014-10-08,1.0,4.0
-2161 Amigos_HostTraining,2014-11-19,1.0,6.0
+2161 Amigos_HostTraining,2014-11-19,1.0,4.0
 2162 Housing Consortium,2014-10-30,1.0,5.0
 2163 Kaiser Emergency Dept,2014-12-06,1.0,7.5
 2163 Kaiser Emergency Dept_Rev1,2014-12-06,2.0,7.5
@@ -269,11 +276,12 @@ invoice,DATE,# rooms,hours
 315011 Cleantech Open,2015-04-21,1.0,5.0
 315011-2 Cleantech Open,2015-04-21,1.0,5.0
 315011-2 Cleantech Open paid,2015-04-21,1.0,5.0
-315012 LaunchPad Africa,2015-05-16,1.0,7.5
-315012-2 LaunchPad Africa,2015-05-16,1.0,8.5
+315012 LaunchPad Africa,2015-05-16,1.0,5.5
+315012-2 LaunchPad Africa,2015-05-16,1.0,6.5
 315013 TeachforAmerica,2015-04-14,1.0,
 415001 Agents of Change,2015-04-08,1.0,4.0
-415002-2 Tech808,2015-08-15,2.0,12.0
+415002-3 Tech808,2015-08-15,2.0,12.0
+415002-4 Tech808,2015-08-15,2.0,12.0
 415004-2 Amigos Interview Day,2015-04-11,1.0,
 415005-2 Amigos Orientation ,2015-04-25,1.0,
 415006 CSS Member,2015-06-04,1.0,4.0
@@ -290,7 +298,7 @@ invoice,DATE,# rooms,hours
 415014-3 CJ Callen,2015-04-15,2.0,
 415015 Sound of Torture,2015-05-05,1.0,5.0
 415016 FVLC Be Brave,2015-09-18,1.0,7.0
-415017 Loudspeaker Films,2015-05-09,1.0,6.5
+415017 Loudspeaker Films,2015-05-09,1.0,4.5
 415017-2 Loudspeaker Films ,2015-05-09,1.0,4.5
 415018 Worksafe,2015-05-21,1.0,4.0
 415018-2 Worksafe ,2015-05-21,1.0,4.5
@@ -305,14 +313,16 @@ invoice,DATE,# rooms,hours
 515004 Youth HUB Pitch Event ,2015-05-23,4.0,8.0
 515005 PAID Mills College,2015-06-03,1.0,4.0
 515006 CODE2040,2015-05-29,1.0,4.5
-615001-2 Praxis,2015-10-23,1.0,7.0
+615001-3 Praxis,2015-10-23,3.0,7.0
 615002-2 IHO Whole Person,2015-06-07,4.0,12.25
 615003 Marian Farms,2015-06-23,1.0,5.0
 615004 BGC Hackathon,2015-06-19,,
-615005-2 Food First,2015-10-16,2.0,5.5
+615005-4 Food First,2015-10-16,1.0,5.5
 615006 BaseCamp,2015-07-10,,
 715001 WPC,2011-11-12,2.0,7.0
+715001-2 WPC ,2015-11-13,2.0,7.0
 715002 Bike East Bay,2015-11-12,2.0,6.0
+715002-2 Bike East Bay,2015-11-12,3.0,13.0
 715003-2 National Poetry Slam,2015-08-14,1.0,6.5
 715004-2 BART,2015-07-27,1.0,3.0
 715004-2 PAID_BART ,2015-07-27,1.0,3.0
@@ -328,7 +338,7 @@ invoice,DATE,# rooms,hours
 715012-3 Urban Beauty Inc,2015-11-15,3.0,9.0
 715013 Dinner Lab,2015-08-08,1.0,7.0
 715013-2 Dinner Lab,2015-08-08,1.0,7.5
-715014 Uptima Coop Challenge,2015-10-09,1.0,9.0
+715014 Uptima Coop Challenge,2015-10-09,1.0,7.0
 815001-2 SELC Fall Celebration,2015-11-19,1.0,4.5
 815002 Occur Award Dinner,2015-10-15,1.0,4.5
 815002-2 Occur Award Dinner ,2015-10-15,3.0,8.0
@@ -336,6 +346,7 @@ invoice,DATE,# rooms,hours
 815003-2 Piedmont,2015-11-07,2.0,11.0
 815003-3 Piedmont,2015-11-07,2.0,11.5
 815003-4 Piedmont,2015-11-07,2.0,11.5
+815003-5 Piedmont,2015-11-07,2.0,11.5
 815004 Raz vocal productions ,2015-09-26,1.0,10.0
 815004-2 Raz vocal production,2015-09-26,1.0,10.0
 815005 Oak Food Policy Council,2015-11-01,1.0,5.0
@@ -349,11 +360,13 @@ invoice,DATE,# rooms,hours
 815012 Laura Futransky,2015-08-28,1.0,5.5
 815013 Prep2Prep,2015-08-29,1.0,5.5
 815014 Dancin Power,2015-03-26,1.0,7.0
+815015 David Cody,9/15/15-11/22/15,1.0,
 815016 Forward Together,2015-09-15,2.0,4.5
 915001 Johnson Bar Mitzvah,2015-03-12,1.0,7.0
 915002 Teach for America Oak,2015-10-01,1.0,4.0
 915003 USF,2015-11-18,1.0,4.0
-915004 Redwood Day School,2016-04-02,4.0,12.5
+915003-2 USF,2015-11-18,1.0,4.0
+915004 Redwood Day School,2016-04-02,4.0,10.5
 915005 Better Ventures,2015-09-29,1.0,4.5
 915006-2 EB College Fund_Memb,2015-10-21,1.0,3.5
 915007 Nancy Skinner,2015-10-07,1.0,3.0
