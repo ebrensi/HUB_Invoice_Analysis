@@ -9,16 +9,32 @@ import time
 import datetime
 from collections import OrderedDict
 import concurrent.futures
-import sys
 
 
-WORKBOOK_FILENAMES = ['original_data/IHO_OnGoing_InvoiceTemplate.xlsx',
-                      'original_data/2015 OnGoing InvoiceTemplate.xlsx']
+WORKBOOK_FILES = ['./Invoices/IHO_OnGoing_InvoiceTemplate.xlsx',
+                  './Invoices/2015 OnGoing InvoiceTemplate.xlsx']
 
 MAX_ROW_LENGTH = 10
 
-date_pat = re.compile('(\d{4}-\d{2}-\d{2})')
-rate_pat = re.compile('(.*rate:.*|.*rate.*)', re.IGNORECASE)
+
+# ***********************************************************************
+# Import a workbook of invoice sheets and store relevant data
+#   for every invoice as a record in a json dictionary.
+def import_workbook(workbook_file_name):
+
+    #   use openpyxl to open workbook
+    wb = load_workbook(workbook_file_name, read_only=True, data_only=True)
+    worksheets = wb.worksheets
+
+    invoices = {}
+
+    for ws in worksheets:
+        invoice_dict = parse_sheet(ws)
+        if invoice_dict:
+            invoices[ws.title] = invoice_dict
+            print(ws.title)
+
+    return invoices
 
 
 # Extract relevant data from one invoice worksheet and return it as a dict
@@ -46,12 +62,16 @@ def parse_sheet(ws):
             col_str = df[col_name].astype(str).str
 
             if not info['invoice_date']:
-                date_cell = col_str.extract(date_pat).dropna()
+                date_cell = col_str.extract('(\d{4}-\d{2}-\d{2})').dropna()
                 if len(date_cell) > 0:
                     info['invoice_date'] = date_cell.iloc[0]
 
             elif not info['RATE']:
-                rate_cell = col_str.extract(rate_pat).dropna()
+                rate_cell = (
+                    col_str
+                    .extract('(.*rate:.*|.*rate.*)', flags=re.IGNORECASE)
+                    .dropna())
+
                 if len(rate_cell) > 0:
                     info['RATE'] = (rate_cell.iloc[0]
                                     .replace('RATE:', '').strip())
@@ -107,32 +127,13 @@ def parse_sheet(ws):
     return info
 
 
-# *******************************
-# Import a workbook of invoice sheets and store relevant data
-#   for every invoice as a record in a json dictionary.
-def import_workbook(workbook_file_name):
-
-    #   use openpyxl to open workbook
-    wb = load_workbook(workbook_file_name, read_only=True, data_only=True)
-    worksheets = wb.worksheets
-
-    invoices = {}
-
-    for ws in worksheets:
-        invoice_dict = parse_sheet(ws)
-        if invoice_dict:
-            invoices[ws.title] = invoice_dict
-            print(ws.title)
-
-    return invoices
-
-
-def main(argv):
+# ****************************************************************************
+def main():
     start_time = time.time()
     print('Loading workbooks...')
 
     with concurrent.futures.ProcessPoolExecutor() as executor:
-        wb_list = executor.map(import_workbook, WORKBOOK_FILENAMES)
+        wb_list = executor.map(import_workbook, WORKBOOK_FILES)
 
     invoices = {inv_title: inv_dict
                 for wb in wb_list
@@ -146,4 +147,4 @@ def main(argv):
 
 
 if __name__ == "__main__":
-    main(sys.argv)
+    main()

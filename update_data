@@ -1,0 +1,11 @@
+#!/bin/bash
+
+python import_workbooks.py
+python prep_data.py
+
+git add invoices.json
+git add invoice_data.csv
+git add by_event.csv
+
+git commit -m"updated invoice data $(date)"
+git push origin master
