@@ -7,7 +7,7 @@ python import_workbooks.py
 python prep_data.py
 
 # generate stats
-python analysis
+python analysis.py
 
 
 # update the json source and csv files
