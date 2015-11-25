@@ -23,34 +23,45 @@ def to_nice_csv(df, filename):
 
 
 # Read data into a dataframe
-df = pd.read_csv('invoice_data.csv')
-
-df_invoices = df.set_index(['invoice', 'DATE'])
+df = pd.read_csv('IHO_event_invoice_line_items.csv')
 
 # Line items for only rooms, not including other associated invoice items
-df_rooms_only = df.query('item_type == "ROOM"').drop(['item_type'], axis=1)
+df_rooms_only = (df.query('item_type == "ROOM"')
+                 .drop(['item_type'], axis=1)
+                 .rename(columns={'item': 'room'}))
 
 
 # We'll specify only certain rooms to simplify the output for now
-selected_rooms = ['BROADWAY']
-df_rooms_only = df_rooms_only[df_rooms_only['item'].isin(selected_rooms)]
+# selected_rooms = ['BROADWAY']
+# df_rooms_only = df_rooms_only[df_rooms_only['item'].isin(selected_rooms)]
 
 
-grouped_by_room = df_rooms_only.groupby(['item', 'membership', 'discount_type'])
-
-g1 = grouped_by_room['HOURS_UNITS', 'SUBTOTAL', 'TOTAL'].sum()
+grouped_by_room = (df_rooms_only
+                   .groupby(['room', 'membership', 'discount_type']))
 
 # Output Room rental summaries
-to_nice_csv(grouped_by_room['HOURS_UNITS', 'SUBTOTAL', 'TOTAL']
-            .sum(), 'rooms_only_sum.csv')
+room_sums = grouped_by_room['HOURS_UNITS', 'SUBTOTAL', 'TOTAL'].sum()
+room_sums['EFF_RATE'] = (room_sums['TOTAL'] /
+                         room_sums['HOURS_UNITS'])
+to_nice_csv(room_sums, 'IHO_pricing_rooms_only_sum.csv')
 
-to_nice_csv(grouped_by_room['AMOUNT',
-                            'HOURS_UNITS',
-                            'SUBTOTAL',
-                            'DISCOUNT',
-                            'TOTAL']
-            .mean(), 'rooms_only_avg.csv')
+room_means = grouped_by_room['AMOUNT',
+                             'HOURS_UNITS',
+                             'SUBTOTAL',
+                             'DISCOUNT',
+                             'TOTAL'].mean()
+room_means['EFF_RATE'] = (room_means['TOTAL'] /
+                          room_means['HOURS_UNITS'])
 
+
+to_nice_csv(room_means, 'IHO_pricing_rooms_only_avg.csv')
+
+
+to_nice_csv(room_means[["AMOUNT", "EFF_RATE"]],
+            'IHO_pricing_effective_room_rates.csv')
+
+
+"""
 # Try an alternative method of aggregation
 table = pd.pivot_table(df_rooms_only,
                        index=['item', 'day_type',
@@ -59,24 +70,21 @@ table = pd.pivot_table(df_rooms_only,
                        aggfunc=[pd.np.sum, pd.np.mean,
                                 lambda x: len(x.unique())], fill_value=0)
 
-to_nice_csv(table, 'rooms_only_pivot.csv')
-
-# Things to add later
+to_nice_csv(table, 'IHO_pricing_rooms_only_pivot.csv')
 """
-# The overall length of time for each (invoice,DATE)
-event_hours = df.groupby(['invoice','DATE'])['HOURS_UNITS'].max()
 
-tot_fields = ['HOURS_UNITS', 'SUBTOTAL', 'DISCOUNT', 'TOTAL', 'membership',
-              'discount_type','day_type','duration']
-df_tots = df_invoices.query('item_type == "total"')[tot_fields]
-# df_tots2 = (df.query('item_type == "total"')
-              .groupby(['invoice','DATE'])[tot_fields])
+# Now do the same thing for services
+df_services_only = (df.query('item_type == "SERVICE"')
+                    .drop(['item_type'], axis=1)
+                    .rename(columns={'item': 'service'}))
 
-# df_tots['HOURS_UNITS'] = event_hours
+grouped_by_service = (df_services_only
+                      .groupby(['service', 'membership', 'discount_type']))
 
-# print df_tots
-# df_tots = df_tots['HOURS_UNITS'].update(event_hours)
-# print df_tots
+table = pd.pivot_table(df_services_only,
+                       index=['service', 'day_type',
+                              'membership', 'discount_type'],
+                       values=['SUBTOTAL', 'TOTAL'],
+                       aggfunc=[pd.np.sum, pd.np.mean], fill_value=0)
 
-# df_tots.mean() is mean income w and w/o discount
-"""
+to_nice_csv(table, 'IHO_pricing_services_only.csv')

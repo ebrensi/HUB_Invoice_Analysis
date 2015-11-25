@@ -10,10 +10,10 @@ import datetime
 from collections import OrderedDict
 import concurrent.futures
 
-
 WORKBOOK_FILES = ['./Invoices/IHO_OnGoing_InvoiceTemplate.xlsx',
                   './Invoices/2015 OnGoing InvoiceTemplate.xlsx']
 
+json_outfile_fname = 'IHO_event_invoices.json'
 MAX_ROW_LENGTH = 10
 
 
@@ -142,7 +142,7 @@ def main():
     elapsed_string = str(datetime.timedelta(seconds=time.time() - start_time))
     print('workbooks loaded in %s' % elapsed_string)
 
-    with open('invoices.json', 'w') as out_file:
+    with open(json_outfile_fname, 'w') as out_file:
         out_file.write(json.dumps(invoices, indent=3))
 
 

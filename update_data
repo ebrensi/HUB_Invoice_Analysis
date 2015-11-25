@@ -12,7 +12,7 @@ python analysis
 
 # update the json source and csv files
 # and push them to the Github repo
-git add invoices.json
+git add *.json
 git add *.csv
 git commit -m"updated invoice data $(date)"
 git push origin master

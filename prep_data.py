@@ -8,16 +8,15 @@ Created on Mon Aug 17 14:23:20 2015
 
 import pandas as pd
 import json
-import sys
 
 NaN = pd.np.nan
 INVOICE_NUM_CUTOFF = 2035
-EXCLUSIONS = []
+EXCLUSIONS = {}
 
 
-infile_name = 'invoices.json'
-outfile_name = 'invoice_data'
-
+infile_name = 'IHO_event_invoices.json'
+outfile_name = 'IHO_event_invoice_line_items'
+by_event_fname = 'IHO_event_invoice_summaries'
 
 # These are the specs for item categories.
 tot_item_name = 'ITEM_TOT'
@@ -390,7 +389,7 @@ by_event.rename(columns=rules, inplace=True)
 
 by_event['LENGTH'] = (by_event['HOURS']
                       .map(lambda x: "FULL" if x >= 5.5 else "HALF"))
-by_event.to_csv('by_event.csv', index=False, float_format='%6.2f')
+by_event.to_csv(by_event_fname + '.csv', index=False, float_format='%6.2f')
 
 
 # if __name__ == "__main__":

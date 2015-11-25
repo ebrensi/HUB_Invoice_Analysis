@@ -48,5 +48,3 @@ For now I'm limiting the output to one room too keep the table simple.
 
 [Totals](rooms_only_sum.csv)
 
-This was created as a piot table:
-[Experimental combo](rooms_only_pivot.csv)
