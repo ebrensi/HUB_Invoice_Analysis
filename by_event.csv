@@ -15,7 +15,7 @@ invoice,DATE,# rooms,hours
 1015011 Captricity,2015-12-10,1.0,7.0
 1015012 Youth HUB Pitch Event ,2016-05-14,4.0,8.0
 1015013 BUILD AtirumBroad,2015-12-03,2.0,4.0
-1115001 ACLU_2rooms_Memb,2015-12-13,2.0,10.0
+1115001 ACLU_2rooms_Memb,2015-12-13,2.0,7.0
 1115002 Know Yourself ,2015-11-21,1.0,5.5
 1115003 Lisa Chacon,2015-11-08,1.0,
 1115003-2 Lisa Chacon,2015-11-08,1.0,
@@ -65,7 +65,6 @@ invoice,DATE,# rooms,hours
 2050 Bootcamp_BusinessInn_pt1,2014-05-28,1.0,4.5
 2051 Vital Systems,2014-06-05,1.0,4.5
 2052 Oak Food Policy Council,2014-05-03,1.0,4.5
-2053 Global Solutions Party,2014-05-01,,
 2054 Tessa Finlev,2014-05-06,1.0,6.0
 2055 United Roots_Revised,2014-05-24,5.0,10.5
 2056 VIN12 Spring_Revised,2014-05-10,4.0,5.5
@@ -203,7 +202,7 @@ invoice,DATE,# rooms,hours
 2159 LIfe is Living,2014-10-10,1.0,5.5
 2160 BK Publishers_LockedDown,2014-11-04,1.0,4.0
 2160 OPEN,2014-10-08,1.0,4.0
-2161 Amigos_HostTraining,2014-11-19,1.0,6.0
+2161 Amigos_HostTraining,2014-11-19,1.0,4.0
 2162 Housing Consortium,2014-10-30,1.0,5.0
 2163 Kaiser Emergency Dept,2014-12-06,1.0,7.5
 2163 Kaiser Emergency Dept_Rev1,2014-12-06,2.0,7.5
@@ -277,8 +276,8 @@ invoice,DATE,# rooms,hours
 315011 Cleantech Open,2015-04-21,1.0,5.0
 315011-2 Cleantech Open,2015-04-21,1.0,5.0
 315011-2 Cleantech Open paid,2015-04-21,1.0,5.0
-315012 LaunchPad Africa,2015-05-16,1.0,7.5
-315012-2 LaunchPad Africa,2015-05-16,1.0,8.5
+315012 LaunchPad Africa,2015-05-16,1.0,5.5
+315012-2 LaunchPad Africa,2015-05-16,1.0,6.5
 315013 TeachforAmerica,2015-04-14,1.0,
 415001 Agents of Change,2015-04-08,1.0,4.0
 415002-3 Tech808,2015-08-15,2.0,12.0
@@ -299,7 +298,7 @@ invoice,DATE,# rooms,hours
 415014-3 CJ Callen,2015-04-15,2.0,
 415015 Sound of Torture,2015-05-05,1.0,5.0
 415016 FVLC Be Brave,2015-09-18,1.0,7.0
-415017 Loudspeaker Films,2015-05-09,1.0,6.5
+415017 Loudspeaker Films,2015-05-09,1.0,4.5
 415017-2 Loudspeaker Films ,2015-05-09,1.0,4.5
 415018 Worksafe,2015-05-21,1.0,4.0
 415018-2 Worksafe ,2015-05-21,1.0,4.5
@@ -339,7 +338,7 @@ invoice,DATE,# rooms,hours
 715012-3 Urban Beauty Inc,2015-11-15,3.0,9.0
 715013 Dinner Lab,2015-08-08,1.0,7.0
 715013-2 Dinner Lab,2015-08-08,1.0,7.5
-715014 Uptima Coop Challenge,2015-10-09,1.0,9.0
+715014 Uptima Coop Challenge,2015-10-09,1.0,7.0
 815001-2 SELC Fall Celebration,2015-11-19,1.0,4.5
 815002 Occur Award Dinner,2015-10-15,1.0,4.5
 815002-2 Occur Award Dinner ,2015-10-15,3.0,8.0
