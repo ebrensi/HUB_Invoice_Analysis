@@ -1,11 +1,18 @@
 #!/bin/bash
 
+# Import workbooks
 python import_workbooks.py
+
+# clean and classify data into categories
 python prep_data.py
 
-git add invoices.json
-git add invoice_data.csv
-git add by_event.csv
+# generate stats
+python analysis
 
+
+# update the json source and csv files
+# and push them to the Github repo
+git add invoices.json
+git add *.csv
 git commit -m"updated invoice data $(date)"
 git push origin master
