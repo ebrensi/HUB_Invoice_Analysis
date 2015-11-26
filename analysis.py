@@ -24,6 +24,9 @@ def to_nice_csv(df, filename):
 
 # Read data into a dataframe
 df = pd.read_csv('IHO_event_invoice_line_items.csv')
+discounted = df['discount_type'] != 'NONE'
+df.loc[discounted, 'discount_type'] = 'DISCOUNT'
+df.loc[~discounted, 'discount_type'] = 'NO_DISCOUNT'
 
 # Line items for only rooms, not including other associated invoice items
 df_rooms_only = (df.query('item_type == "ROOM"')
@@ -39,11 +42,17 @@ df_rooms_only = (df.query('item_type == "ROOM"')
 grouped_by_room = (df_rooms_only
                    .groupby(['room', 'membership', 'discount_type']))
 
+room_counts = grouped_by_room['room'].count()
+room_counts.name = 'count'
+
 # Output Room rental summaries
 room_sums = grouped_by_room['HOURS_UNITS', 'SUBTOTAL', 'TOTAL'].sum()
+
 room_sums['EFF_RATE'] = (room_sums['TOTAL'] /
                          room_sums['HOURS_UNITS'])
-to_nice_csv(room_sums, 'IHO_pricing_rooms_only_sum.csv')
+
+to_nice_csv(pd.concat([room_sums, room_counts], axis=1),
+            'IHO_pricing_rooms_only_sum.csv')
 
 room_means = grouped_by_room['AMOUNT',
                              'HOURS_UNITS',
@@ -54,7 +63,8 @@ room_means['EFF_RATE'] = (room_means['TOTAL'] /
                           room_means['HOURS_UNITS'])
 
 
-to_nice_csv(room_means, 'IHO_pricing_rooms_only_avg.csv')
+to_nice_csv(pd.concat([room_means, room_counts], axis=1),
+            'IHO_pricing_rooms_only_avg.csv')
 
 
 to_nice_csv(room_means[["AMOUNT", "EFF_RATE"]],
