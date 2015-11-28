@@ -17,6 +17,8 @@ df = (pd.read_csv(LINE_ITEMS_FNAME + '.csv')
 df_inv = (pd.read_csv(INVOICE_SUMMARIES_FNAME + '.csv')
           .set_index(['invoice', 'DATE']))
 
+# set length field of df to
+df.loc[:, 'day_dur'] = df_inv.loc[df.index, 'LENGTH']
 
 discounted = df['discount_type'] != 'NONE'
 df.loc[discounted, 'discount_type'] = 'DISCOUNT'
@@ -27,9 +29,13 @@ df_rooms_only = (df.query('item_type == "ROOM"')
                  .drop(['item_type'], axis=1)
                  .rename(columns={'item': 'room'}))
 
+multindex = ['day_dur',
+             'day_type',
+             'membership',
+             'discount_type']
 
 grouped_by_room = (df_rooms_only
-                   .groupby(['room', 'membership', 'discount_type']))
+                   .groupby(['room'] + multindex))
 
 room_counts = grouped_by_room['room'].count()
 room_counts.name = 'count'
@@ -78,7 +84,7 @@ df_services_only = (df.query('item_type == "SERVICE"')
                     .rename(columns={'item': 'service'}))
 
 grouped_by_service = (df_services_only
-                      .groupby(['service', 'membership', 'discount_type']))
+                      .groupby(['service'] + multindex))
 
 table = pd.pivot_table(df_services_only,
                        index=['service', 'day_type',
