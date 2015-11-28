@@ -310,22 +310,25 @@ df.loc[no_day_type, 'day_type'] = df.loc[no_day_type, 'day_type2']
 df = df.sort_values(by=['invoice_date', 'invoice', 'item_type'],
                     ascending=False)
 
-df[['invoice',
-    'invoice_date',
-    'DATE',
-    'item_type',
-    'item',
-    'AMOUNT',
-    'HOURS_UNITS',
-    'SUBTOTAL',
-    'DISCOUNT',
-    'TOTAL',
-    'membership',
-    'discount_type',
-    'day_type',
-    'day_dur']].to_csv(LINE_ITEMS_FNAME + '.csv',
-                       index=False,
-                       float_format='%6.2f')
+line_item_fields = ['invoice',
+                    'invoice_date',
+                    'DATE',
+                    'item_type',
+                    'item',
+                    'AMOUNT',
+                    'HOURS_UNITS',
+                    'SUBTOTAL',
+                    'DISCOUNT',
+                    'TOTAL',
+                    'membership',
+                    'discount_type',
+                    'day_type',
+                    'day_dur']
+
+df[line_item_fields].to_csv(LINE_ITEMS_FNAME + '.csv',
+                            index=False,
+                            float_format='%6.2f')
+
 
 # --- Whole-invoice classifications: ---
 
@@ -386,6 +389,9 @@ by_event['LENGTH'] = (by_event['HOURS']
 by_event.to_csv(
     INVOICE_SUMMARIES_FNAME + '.csv', index=False, float_format='%6.2f')
 
+# Put tables into MySQL
+to_mySQL(df[line_item_fields], 'line_items')
+to_mySQL(by_event, 'invoice_summaries')
 
 # if __name__ == "__main__":
 #     main(sys.argv)

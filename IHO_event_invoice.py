@@ -2,6 +2,7 @@
 
 # common defs IHO invoice project
 import pandas as pd
+import sqlalchemy
 
 NaN = pd.np.nan
 WORKBOOK_FILES = ['./Invoices/IHO_OnGoing_InvoiceTemplate.xlsx',
@@ -23,3 +24,11 @@ def to_nice_csv(df, filename):
     x.loc[:, cols] = x[cols].mask(mask, '')
 
     x.to_csv(filename, index=False, float_format='%5.2f')
+
+
+# Put DataFrame into MySQL table
+def to_mySQL(df, table_name):
+    uri = "mysql+pymysql://root:password@localhost/IHO_venue_rentals"
+    db = sqlalchemy.create_engine(uri)
+    with db.connect() as conn, conn.begin():
+        df.to_sql(table_name, conn, if_exists='replace')
