@@ -6,17 +6,11 @@ Created on Mon Aug 17 14:23:20 2015
 @author: Efrem
 """
 
-import pandas as pd
+from IHO_event_invoice import *
 import json
 
-NaN = pd.np.nan
 INVOICE_NUM_CUTOFF = 2035
 EXCLUSIONS = {}
-
-
-infile_name = 'IHO_event_invoices.json'
-outfile_name = 'IHO_event_invoice_line_items'
-by_event_fname = 'IHO_event_invoice_summaries'
 
 # These are the specs for item categories.
 tot_item_name = 'ITEM_TOT'
@@ -116,7 +110,7 @@ def flatten_dict(invoices):
 # def main(argv):
 
 # Read in invoices data from json source
-with open(infile_name, 'r') as in_file:
+with open(JSON_DATA_FNAME, 'r') as in_file:
     invoices = json.load(in_file)
 
 df = pd.DataFrame(flatten_dict(invoices)
@@ -329,7 +323,7 @@ df[['invoice',
     'membership',
     'discount_type',
     'day_type',
-    'day_dur']].to_csv(outfile_name + '.csv',
+    'day_dur']].to_csv(LINE_ITEMS_FNAME + '.csv',
                        index=False,
                        float_format='%6.2f')
 
@@ -389,7 +383,8 @@ by_event.rename(columns=rules, inplace=True)
 
 by_event['LENGTH'] = (by_event['HOURS']
                       .map(lambda x: "FULL" if x >= 5.5 else "HALF"))
-by_event.to_csv(by_event_fname + '.csv', index=False, float_format='%6.2f')
+by_event.to_csv(
+    INVOICE_SUMMARIES_FNAME + '.csv', index=False, float_format='%6.2f')
 
 
 # if __name__ == "__main__":

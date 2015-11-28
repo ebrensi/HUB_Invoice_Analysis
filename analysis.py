@@ -1,29 +1,23 @@
 #!/usr/bin/env python3
+
+from IHO_event_invoice import *
+
 # -*- coding: utf-8 -*-
 """
 This is the analysis script for the IHO venue pricing project
 
 """
 
-import pandas as pd
-NaN = pd.np.nan
+
+# Read line-item data into a dataframe
+df = (pd.read_csv(LINE_ITEMS_FNAME + '.csv')
+      .set_index(['invoice', 'DATE']))
+
+# invoice summary data
+df_inv = (pd.read_csv(INVOICE_SUMMARIES_FNAME + '.csv')
+          .set_index(['invoice', 'DATE']))
 
 
-# This is a little function to output an easier-to-read csv file
-#  for a multi-indexed DataFrame.  It eliminates duplicated index entries
-#  along index columns.
-# The csv file produced is meant to be used for viewing by humans.
-def to_nice_csv(df, filename):
-    x = df.reset_index()
-    cols = df.index.names
-    mask = (x[cols] == x[cols].shift())
-    x.loc[:, cols] = x[cols].mask(mask, '')
-
-    x.to_csv(filename, index=False, float_format='%5.2f')
-
-
-# Read data into a dataframe
-df = pd.read_csv('IHO_event_invoice_line_items.csv')
 discounted = df['discount_type'] != 'NONE'
 df.loc[discounted, 'discount_type'] = 'DISCOUNT'
 df.loc[~discounted, 'discount_type'] = 'NO_DISCOUNT'
@@ -32,11 +26,6 @@ df.loc[~discounted, 'discount_type'] = 'NO_DISCOUNT'
 df_rooms_only = (df.query('item_type == "ROOM"')
                  .drop(['item_type'], axis=1)
                  .rename(columns={'item': 'room'}))
-
-
-# We'll specify only certain rooms to simplify the output for now
-# selected_rooms = ['BROADWAY']
-# df_rooms_only = df_rooms_only[df_rooms_only['item'].isin(selected_rooms)]
 
 
 grouped_by_room = (df_rooms_only
