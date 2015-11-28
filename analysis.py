@@ -17,8 +17,9 @@ df = (pd.read_csv(LINE_ITEMS_FNAME + '.csv')
 df_inv = (pd.read_csv(INVOICE_SUMMARIES_FNAME + '.csv')
           .set_index(['invoice', 'DATE']))
 
-# set length field of df to
-df.loc[:, 'day_dur'] = df_inv.loc[df.index, 'LENGTH']
+
+class_fields = ['membership', 'discount_type', 'day_type', 'day_dur']
+df = df.join(df_inv[class_fields])
 
 discounted = df['discount_type'] != 'NONE'
 df.loc[discounted, 'discount_type'] = 'DISCOUNT'
@@ -65,18 +66,6 @@ to_nice_csv(pd.concat([room_means, room_counts], axis=1),
 to_nice_csv(room_means[["AMOUNT", "EFF_RATE"]],
             'IHO_pricing_effective_room_rates.csv')
 
-
-"""
-# Try an alternative method of aggregation
-table = pd.pivot_table(df_rooms_only,
-                       index=['item', 'day_type',
-                              'membership', 'discount_type'],
-                       values=['SUBTOTAL', 'TOTAL'],
-                       aggfunc=[pd.np.sum, pd.np.mean,
-                                lambda x: len(x.unique())], fill_value=0)
-
-to_nice_csv(table, 'IHO_pricing_rooms_only_pivot.csv')
-"""
 
 # Now do the same thing for services
 df_services_only = (df.query('item_type == "SERVICE"')

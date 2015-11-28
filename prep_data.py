@@ -37,7 +37,8 @@ item_classes = {
         'A/V': 'A/V|technician|sound',
         'JANITORIAL': 'janitorial|waste|cleaning',
         'DRINKS': 'coffee|wine',
-        'COMPOSTABLES': 'compost'
+        'COMPOSTABLES': 'compost',
+        'SECURITY': 'security'
     },
 
     tot_item_name: {
@@ -319,11 +320,7 @@ line_item_fields = ['invoice',
                     'HOURS_UNITS',
                     'SUBTOTAL',
                     'DISCOUNT',
-                    'TOTAL',
-                    'membership',
-                    'discount_type',
-                    'day_type',
-                    'day_dur']
+                    'TOTAL']
 
 df[line_item_fields].to_csv(LINE_ITEMS_FNAME + '.csv',
                             index=False,
@@ -384,8 +381,9 @@ by_event = (pd.concat([event_num_rooms,
 rules = {'item': '# ROOMS', 'HOURS_UNITS': 'HOURS'}
 by_event.rename(columns=rules, inplace=True)
 
-by_event['LENGTH'] = (by_event['HOURS']
-                      .map(lambda x: "FULL" if x >= 5.5 else "HALF"))
+by_event['day_dur'] = (by_event['HOURS']
+                       .map(lambda x: "FULL_DAY" if x >= 5.5
+                            else "PARTIAL_DAY"))
 by_event.to_csv(
     INVOICE_SUMMARIES_FNAME + '.csv', index=False, float_format='%6.2f')
 

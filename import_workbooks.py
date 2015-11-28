@@ -141,7 +141,7 @@ def main():
     elapsed_string = str(datetime.timedelta(seconds=time.time() - start_time))
     print('workbooks loaded in %s' % elapsed_string)
 
-    with open(JSON_OUTFILE_FNAME, 'w') as out_file:
+    with open(JSON_DATA_FNAME, 'w') as out_file:
         out_file.write(json.dumps(invoices, indent=3))
 
 
