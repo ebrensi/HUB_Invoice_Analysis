@@ -17,8 +17,8 @@ tot_item_name = 'ITEM_TOT'
 
 item_classes = {
     'ROOM': {
-        'BROADWAY': 'broadway',
         'ATRIUM': 'atrium',
+        'BROADWAY': 'broadway',
         'JINGLETOWN': 'jingle[-| ]?town|mezzanine',
         'OMI': 'gallery|omi',
         'MERIDIAN': 'meridian',
@@ -367,23 +367,43 @@ total_event_income['REDUCTION'] = (1 -
                                    total_event_income['TOTAL'] /
                                    total_event_income['SUBTOTAL'])
 
+
 # Number of rooms rented for each event
 event_num_rooms = rooms_by_invoice['item'].count()
 
-other_fields = ['invoice_date', 'membership', 'discount_type', 'day_type']
+
+other_fields = ['invoice_date', 'membership',
+                'discount_type', 'day_type', 'day_dur']
 by_event = (pd.concat([event_num_rooms,
                        total_event_hours,
                        total_event_income,
-                       rooms_by_invoice[other_fields].first()], axis=1)
-            .reset_index()
-            .sort_values(by=['invoice_date', 'invoice'], ascending=False))
+                       rooms_by_invoice[other_fields].first()], axis=1))
 
 rules = {'item': '# ROOMS', 'HOURS_UNITS': 'HOURS'}
 by_event.rename(columns=rules, inplace=True)
 
+# Add a partial/full day specifier column to event summary table
 by_event['day_dur'] = (by_event['HOURS']
                        .map(lambda x: "FULL_DAY" if x >= 5.5
                             else "PARTIAL_DAY"))
+
+
+# Add a column with list of rooms used for each event,
+#  abbreviated by first letter
+def room_list(room_series):
+    return ",".join(room_series
+                    .drop_duplicates()
+                    .str[0]
+                    .sort_values()
+                    .tolist())
+
+by_event['rooms'] = rooms_by_invoice['item'].agg(room_list)
+
+by_event = (by_event
+            .reset_index()
+            .sort_values(by=['invoice_date', 'invoice'], ascending=False))
+
+# Save the event summaries table to csv
 by_event.to_csv(
     INVOICE_SUMMARIES_FNAME + '.csv', index=False, float_format='%6.2f')
 
