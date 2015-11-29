@@ -401,17 +401,15 @@ def room_list(room_series):
 
 by_event['rooms'] = rooms_by_invoice['item'].agg(room_list)
 
-by_event = (by_event
-            .reset_index()
-            .sort_values(by=['invoice_date', 'invoice'], ascending=False))
+by_event = by_event.sort_index(ascending=False)
 
 # Save the event summaries table to csv
 by_event.to_csv(
-    INVOICE_SUMMARIES_FNAME + '.csv', index=False, float_format='%6.2f')
+    INVOICE_SUMMARIES_FNAME + '.csv', float_format='%6.2f')
 
 # Put tables into MySQL
 to_mySQL(df[line_item_fields], 'line_items')
-to_mySQL(by_event, 'invoice_summaries')
+to_mySQL(by_event.reset_index(), 'invoice_summaries')
 
 # if __name__ == "__main__":
 #     main(sys.argv)
