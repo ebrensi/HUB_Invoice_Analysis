@@ -8,6 +8,7 @@ Created on Mon Aug 17 14:23:20 2015
 
 from IHO_event_invoice import *
 import json
+# import re
 
 INVOICE_NUM_CUTOFF = 2035
 EXCLUSIONS = {}
@@ -298,15 +299,15 @@ unknown_discount = df['discount_type'].isnull() & df['DISCOUNT'] > 0
 df.loc[unknown_discount, 'discount_type'] = 'NA'
 df['discount_type'] = df['discount_type'].fillna('NONE')
 
-# Determine if event date is a weekday or weekend
-datetimes = pd.to_datetime(df['DATE'], errors='coerce')
-weekend_ind = datetimes.dt.dayofweek >= 5
-df.loc[weekend_ind, 'day_type2'] = 'WEEKEND'
-df.loc[~weekend_ind & datetimes.notnull(), 'day_type2'] = 'WEEKDAY'
+# df['DATE'][event_date.isnull()].str.split('&|-')
 
-# Replace missing day_type entries with determined day type in day_type2
-no_day_type = df['day_type'].isnull()
-df.loc[no_day_type, 'day_type'] = df.loc[no_day_type, 'day_type2']
+# Replace missing day_type entries with day type determined by date
+event_date = pd.to_datetime(df['DATE'].where(df['day_type'].isnull()),
+                            errors='coerce')
+weekend_ind = event_date.dt.dayofweek >= 5
+df.loc[weekend_ind, 'day_type'] = 'WEEKEND'
+df.loc[~weekend_ind & event_date.notnull(), 'day_type'] = 'WEEKDAY'
+
 
 df = df.sort_values(by=['invoice_date', 'invoice', 'item_type'],
                     ascending=False)
