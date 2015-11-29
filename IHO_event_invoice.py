@@ -31,4 +31,4 @@ def to_mySQL(df, table_name):
     uri = "mysql+pymysql://root:password@localhost/IHO_venue_rentals"
     db = sqlalchemy.create_engine(uri)
     with db.connect() as conn, conn.begin():
-        df.to_sql(table_name, conn, if_exists='replace')
+        df.to_sql(table_name, conn, index=True, if_exists='replace')
