@@ -30,6 +30,9 @@ df_rooms_only = (df.query('item_type == "ROOM"')
                  .drop(['item_type'], axis=1)
                  .rename(columns={'item': 'room'}))
 
+df_rooms_only['EFF_RATE'] = (df_rooms_only['TOTAL'] /
+                             df_rooms_only['HOURS_UNITS'])
+
 multindex = ['day_dur',
              'day_type',
              'membership',
@@ -44,19 +47,16 @@ room_counts.name = 'count'
 # Output Room rental summaries
 room_sums = grouped_by_room['HOURS_UNITS', 'SUBTOTAL', 'TOTAL'].sum()
 
-room_sums['EFF_RATE'] = (room_sums['TOTAL'] /
-                         room_sums['HOURS_UNITS'])
-
 to_nice_csv(pd.concat([room_sums, room_counts], axis=1),
             'IHO_pricing_rooms_only_sum.csv')
+
 
 room_means = grouped_by_room['AMOUNT',
                              'HOURS_UNITS',
                              'SUBTOTAL',
                              'DISCOUNT',
-                             'TOTAL'].mean()
-room_means['EFF_RATE'] = (room_means['TOTAL'] /
-                          room_means['HOURS_UNITS'])
+                             'TOTAL',
+                             'EFF_RATE'].mean()
 
 
 to_nice_csv(pd.concat([room_means, room_counts], axis=1),
