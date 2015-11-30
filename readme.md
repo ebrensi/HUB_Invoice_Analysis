@@ -19,7 +19,7 @@ Each invoice (usually) contains:
 * items that IHO charged money for: typically rooms or other services
 * RATE info is contained in one cell of the original invoice, and is based on the type of renter and day-type:
 eg.
-  * Non-Member, Part-time, or Full-time member, or IHO 'partner'
+  * Non-Member, Part-time, or Full-time member, or IHO 'friend'
   * Weekday, or Weekend rental
   * Discounts:
     - Founder Discount

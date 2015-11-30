@@ -13,10 +13,23 @@ LINE_ITEMS_FNAME = 'IHO_event_invoice_line_items'
 INVOICE_SUMMARIES_FNAME = 'IHO_event_invoice_summaries'
 
 
+# Define item class field names
+ROOM = 'ROOM'
+SERVICE = 'SERVICE'
+ITEM_TOT = 'ITEM_TOT'
+OTHER = 'OTHER'
+
+# RATE classifier field names
+member_class = 'membership'
+day_type = 'day_type'
+day_dur = 'day_dur'
+discount_type = 'discount_type'
 # This is a little function to output an easier-to-read csv file
 #  for a multi-indexed DataFrame.  It eliminates duplicated index entries
 #  along index columns.
 # The csv file produced is meant to be used for viewing by humans.
+
+
 def to_nice_csv(df, filename):
     x = df.reset_index()
     cols = df.index.names
