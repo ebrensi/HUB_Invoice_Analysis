@@ -68,7 +68,7 @@ RATE_classes = {
 
     'day_dur': {
         'FULL_DAY': 'Full[-| ]?day',
-        'HALF_DAY': 'Half[-| ]?Day'
+        'PARTIAL_DAY': 'Half[-| ]?Day'
     },
 
     'discount_type': {
