@@ -1,4 +1,4 @@
-service,day_type,membership,discount_type,sum,sum,mean,mean
+SERVICE,day_type,membership_level,discount_type,sum,sum,mean,mean
 ,,,,SUBTOTAL,TOTAL,SUBTOTAL,TOTAL
 ,,,,,,,
 A/V,WEEKDAY,FULL_TIME,DISCOUNT,2090.00,2010.00,190.00,182.73
