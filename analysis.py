@@ -18,30 +18,32 @@ df_inv = (pd.read_csv(INVOICE_SUMMARIES_FNAME + '.csv')
           .set_index(['invoice', 'DATE']))
 
 
-class_fields = ['membership', 'discount_type', 'day_type', 'day_dur']
+class_fields = [member_type, discount_type, day_type, day_dur]
 df = df.join(df_inv[class_fields])
 
-discounted = df['discount_type'] != 'NONE'
-df.loc[discounted, 'discount_type'] = 'DISCOUNT'
-df.loc[~discounted, 'discount_type'] = 'NO_DISCOUNT'
+discounted = df[discount_type] != 'NONE'
+df.loc[discounted, discount_type] = 'DISCOUNT'
+df.loc[~discounted, discount_type] = 'NO_DISCOUNT'
 
 # Line items for only rooms, not including other associated invoice items
-df_rooms_only = (df.query('item_type == "ROOM"')
-                 .drop(['item_type'], axis=1)
-                 .rename(columns={'item': 'room'}))
+df_rooms_only = (df.query('{} == "{}"'.format(item_type, ROOM))
+                 .drop([item_type], axis=1)
+                 .rename(columns={'item': ROOM}))
 
 df_rooms_only['EFF_RATE'] = (df_rooms_only['TOTAL'] /
                              df_rooms_only['HOURS_UNITS'])
 
-multindex = ['day_dur',
-             'day_type',
-             'membership',
-             'discount_type']
+# df_rooms_only.to_excel('rooms_only.xls', float_format='%5.2f')
+
+multindex = [day_type,
+             day_dur,
+             member_type,
+             discount_type]
 
 grouped_by_room = (df_rooms_only
-                   .groupby(['room'] + multindex))
+                   .groupby(multindex + [ROOM]))
 
-room_counts = grouped_by_room['room'].count()
+room_counts = grouped_by_room[ROOM].count()
 room_counts.name = 'count'
 
 # Output Room rental summaries
@@ -68,16 +70,16 @@ to_nice_csv(room_means[["AMOUNT", "EFF_RATE"]],
 
 
 # Now do the same thing for services
-df_services_only = (df.query('item_type == "SERVICE"')
-                    .drop(['item_type'], axis=1)
-                    .rename(columns={'item': 'service'}))
+df_services_only = (df.query('{} == "{}"'.format(item_type, SERVICE))
+                    .drop([item_type], axis=1)
+                    .rename(columns={'item': SERVICE}))
 
 grouped_by_service = (df_services_only
-                      .groupby(['service'] + multindex))
+                      .groupby([SERVICE] + multindex))
 
 table = pd.pivot_table(df_services_only,
-                       index=['service', 'day_type',
-                              'membership', 'discount_type'],
+                       index=[SERVICE, day_type,
+                              member_type, discount_type],
                        values=['SUBTOTAL', 'TOTAL'],
                        aggfunc=[pd.np.sum, pd.np.mean], fill_value=0)
 

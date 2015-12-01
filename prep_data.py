@@ -52,7 +52,7 @@ ITEM_CLASS_SORT_ORDER = [ROOM, SERVICE, OTHER, ITEM_TOT]
 
 # This is how we categorize RATE info
 RATE_classes = {
-    member_class: {
+    member_type: {
         'PART_TIME': 'part[-| ]?time',
         'FULL_TIME': 'full[ |-]?time|full member',
         'NON_MEMBER': 'none?[ |-]member',
@@ -144,31 +144,31 @@ iszero = df[['AMOUNT', 'SUBTOTAL', 'DISCOUNT', 'TOTAL']] == 0
 is_either = (isnull | iszero).all(axis=1)
 df = df[~is_either]
 
-# Parse DESCRIPTION field entries into item_class and 'item'
+# Parse DESCRIPTION field entries into item_type and 'item'
 #  as defined in the item_classes dictionary
-df[item_class] = None
+df[item_type] = None
 df['item'] = None
 
-for item_class in item_classes:
-    for item in item_classes[item_class]:
+for ic in item_classes:
+    for item in item_classes[ic]:
         this_item_mask = (
             df['DESCRIPTION'].str
-            .contains(item_classes[item_class][item],
+            .contains(item_classes[ic][item],
                       case=False, na=False))
 
-        df.loc[this_item_mask, item_class] = item_class
+        df.loc[this_item_mask, item_type] = ic
         df.loc[this_item_mask, 'item'] = item
 
 # Remaining items (that were not assigned an item_type)
 #   get classified as OTHER
-other_mask = df[item_class].isnull()
-df.loc[other_mask, item_class] = OTHER
+other_mask = df[item_type].isnull()
+df.loc[other_mask, item_type] = OTHER
 df.loc[other_mask, 'item'] = df.loc[other_mask, 'DESCRIPTION']
 
 # Set item_type as categorical and set sort order
 #   as specified by ITEM_CLASS_SORT_ORDER
-df.loc[:, item_class] = (
-    df.loc[:, item_class]
+df.loc[:, item_type] = (
+    df.loc[:, item_type]
     .astype('category',
             categories=ITEM_CLASS_SORT_ORDER[::-1],
             ordered=True))
@@ -224,7 +224,7 @@ idx_to_drop = []
 
 for item_idx, item in df[multi_room_item_mask].iterrows():
     associated_rooms = ((df['invoice'] == item['invoice']) &
-                        (df[item_class] == ROOM) &
+                        (df[item_type] == ROOM) &
                         df['TOTAL'].isnull())
 
     if associated_rooms.any():
@@ -246,11 +246,11 @@ notnull = df[['AMOUNT', 'HOURS_UNITS']].notnull().all(axis=1)
 df.loc[notnull, 'SUBTOTAL'] = (df.loc[notnull, 'AMOUNT'] *
                                df.loc[notnull, 'HOURS_UNITS'])
 
-not_tot_type = (df[item_class] != ITEM_TOT)
+not_tot_type = (df[item_type] != ITEM_TOT)
 
 #  Fill-in all missing DISCOUNT entries with zero
 df.loc[df['DISCOUNT'].isnull() &
-       (df[item_class] != ITEM_TOT), 'DISCOUNT'] = 0
+       (df[item_type] != ITEM_TOT), 'DISCOUNT'] = 0
 
 # Fill-in all missing TOTAL for items with non-empty SUBTOTAL
 no_tot = df['TOTAL'].isnull() & df['SUBTOTAL'].notnull() & not_tot_type
@@ -278,7 +278,7 @@ df = df[~mask]
 # Manually compute SUBTOTAL and TOTAL fields in 'total' items
 tots = [0, 0]
 for idx, row in df.iterrows():
-    if row[item_class] == ITEM_TOT:
+    if row[item_type] == ITEM_TOT:
         df.loc[idx, ['SUBTOTAL', 'TOTAL']] = tots
         if tots[1] != 0:
             df.loc[idx, 'DISCOUNT'] = 1 - tots[1] / tots[0]
@@ -290,7 +290,7 @@ for idx, row in df.iterrows():
             tots[1] += row['TOTAL']
 
 # Indicate if membership is unknown
-df[member_class] = df[member_class].fillna('NA')
+df[member_type] = df[member_type].fillna('NA')
 
 # if a DISCOUNT is nonzero but no discount-type is indicated, give it a type
 unknown_discount = df[discount_type].isnull() & df['DISCOUNT'] > 0
@@ -307,13 +307,13 @@ df.loc[weekend_ind, day_type] = 'WEEKEND'
 df.loc[~weekend_ind & event_date.notnull(), day_type] = 'WEEKDAY'
 
 
-df = df.sort_values(by=['invoice_date', 'invoice', item_class],
+df = df.sort_values(by=['invoice_date', 'invoice', item_type],
                     ascending=False)
 
 line_item_fields = ['invoice',
                     'invoice_date',
                     'DATE',
-                    item_class,
+                    item_type,
                     'item',
                     'AMOUNT',
                     'HOURS_UNITS',
@@ -333,10 +333,10 @@ df[line_item_fields].to_csv(LINE_ITEMS_FNAME + '.csv',
 #  or by date within each invoice as well.
 inv_spec = ['invoice', 'DATE']
 
-rooms_by_invoice = (df.query("{}=='{}'".format(item_class, ROOM))
+rooms_by_invoice = (df.query("{}=='{}'".format(item_type, ROOM))
                     .groupby(inv_spec, sort=False))
 
-services_by_invoice = (df.query("{}=='{}'".format(item_class, SERVICE))
+services_by_invoice = (df.query("{}=='{}'".format(item_type, SERVICE))
                        .groupby(inv_spec, sort=False))
 
 setup_by_invoice = (df.query("item=='SETUP_RESET'")
@@ -373,7 +373,7 @@ total_event_income['REDUCTION'] = (1 -
 event_num_rooms = rooms_by_invoice['item'].count()
 
 
-other_fields = ['invoice_date', member_class,
+other_fields = ['invoice_date', member_type,
                 discount_type, day_type, day_dur]
 by_event = (pd.concat([event_num_rooms,
                        total_event_hours,
