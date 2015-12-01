@@ -41,7 +41,7 @@ multindex = [day_type,
              discount_type]
 
 grouped_by_room = (df_rooms_only
-                   .groupby(multindex + [ROOM]))
+                   .groupby([ROOM] + multindex))
 
 room_counts = grouped_by_room[ROOM].count()
 room_counts.name = 'count'

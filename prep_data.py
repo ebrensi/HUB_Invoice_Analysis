@@ -290,11 +290,11 @@ for idx, row in df.iterrows():
             tots[1] += row['TOTAL']
 
 # Indicate if membership is unknown
-df[member_type] = df[member_type].fillna('NA')
+df[member_type] = df[member_type].fillna('unknown')
 
 # if a DISCOUNT is nonzero but no discount-type is indicated, give it a type
 unknown_discount = df[discount_type].isnull() & df['DISCOUNT'] > 0
-df.loc[unknown_discount, discount_type] = 'NA'
+df.loc[unknown_discount, discount_type] = 'unknown'
 df[discount_type] = df[discount_type].fillna('NONE')
 
 # df['DATE'][event_date.isnull()].str.split('&|-')
