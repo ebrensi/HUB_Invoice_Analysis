@@ -5,8 +5,8 @@ import pandas as pd
 import sqlalchemy
 
 NaN = pd.np.nan
-WORKBOOK_FILES = ['~/Dropbox/Invoices/IHO_OnGoing_InvoiceTemplate.xlsx',
-                  '~/Dropbox/Invoices/2015 OnGoing InvoiceTemplate.xlsx']
+WORKBOOK_FILES = ['/home/efrem/Dropbox/Invoices/IHO_OnGoing_InvoiceTemplate.xlsx',
+                  '/home/efrem/Dropbox/Invoices/2015 OnGoing InvoiceTemplate.xlsx']
 
 JSON_DATA_FNAME = 'IHO_event_invoices.json'
 LINE_ITEMS_FNAME = 'IHO_event_invoice_line_items'
