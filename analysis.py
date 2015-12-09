@@ -30,6 +30,27 @@ df_rooms_only = (df.query('{} == "{}"'.format(item_type, ROOM))
                  .drop([item_type], axis=1)
                  .rename(columns={'item': ROOM}))
 
+ROOM_order = [
+    'EAST_OAK',
+    'WEST_OAK',
+    'DOWNTOWN',
+    'UPTOWN',
+    'MERIDIAN',
+    'OMI',
+    'JINGLETOWN',
+    'ATRIUM',
+    'BROADWAY',
+    'PATIO',
+    'MEDITATION',
+    'KITCHEN']
+
+df_rooms_only[ROOM] = (df_rooms_only[ROOM]
+                       .astype("category",
+                               categories=ROOM_order,
+                               ordered=True)
+                       )
+
+
 df_rooms_only['EFF_RATE'] = (df_rooms_only['TOTAL'] /
                              df_rooms_only['HOURS_UNITS'])
 

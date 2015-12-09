@@ -16,18 +16,18 @@ EXCLUSIONS = {}
 
 item_classes = {
     ROOM: {
-        'ATRIUM': 'atrium',
-        'BROADWAY': 'broadway',
-        'JINGLETOWN': 'jingle[-| ]?town|mezzanine',
-        'OMI': 'gallery|omi',
-        'MERIDIAN': 'meridian',
         'EAST_OAK': 'east',
         'WEST_OAK': 'west',
-        'UPTOWN': 'uptown',
         'DOWNTOWN': 'downtown',
+        'UPTOWN': 'uptown',
+        'MERIDIAN': 'meridian',
+        'OMI': 'gallery|omi',
+        'JINGLETOWN': 'jingle[-| ]?town|mezzanine',
+        'ATRIUM': 'atrium',
+        'BROADWAY': 'broadway',
+        'PATIO': 'patio',
         'MEDITATION': 'meditation',
         'KITCHEN': 'kitchen',
-        'PATIO': 'patio'
     },
 
     SERVICE: {
