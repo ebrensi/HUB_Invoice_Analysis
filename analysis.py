@@ -8,6 +8,30 @@ This is the analysis script for the IHO venue pricing project
 
 """
 
+# define ordering for some data that will be categorcal
+categories = {
+    member_type: ['NON_MEMBER',
+                  'PART_TIME',
+                  'FULL_TIME',
+                  'FRIEND'],
+
+    day_dur: ['PARTIAL_DAY', 'FULL_DAY'],
+
+    ROOM: [
+        'EAST_OAK',
+        'WEST_OAK',
+        'DOWNTOWN',
+        'UPTOWN',
+        'MERIDIAN',
+        'OMI',
+        'JINGLETOWN',
+        'ATRIUM',
+        'BROADWAY',
+        'PATIO',
+        'MEDITATION',
+        'KITCHEN']
+}
+
 
 # Read line-item data into a dataframe
 df = (pd.read_csv(LINE_ITEMS_FNAME + '.csv')
@@ -21,34 +45,31 @@ df_inv = (pd.read_csv(INVOICE_SUMMARIES_FNAME + '.csv')
 class_fields = [member_type, discount_type, day_type, day_dur]
 df = df.join(df_inv[class_fields])
 
+# Set some data to categorical.
+#  This is done mostly to get the ordering right so
+# that it is easier to copy and paste to IHO's spreadsheets
+for cat in [member_type, day_dur]:
+    df[cat] = (df[cat]
+               .astype("category",
+                       categories=categories[cat],
+                       ordered=True))
+
+
 discounted = df[discount_type] != 'NONE'
 df.loc[discounted, discount_type] = 'DISCOUNT'
 df.loc[~discounted, discount_type] = 'NO_DISCOUNT'
+
 
 # Line items for only rooms, not including other associated invoice items
 df_rooms_only = (df.query('{} == "{}"'.format(item_type, ROOM))
                  .drop([item_type], axis=1)
                  .rename(columns={'item': ROOM}))
 
-ROOM_order = [
-    'EAST_OAK',
-    'WEST_OAK',
-    'DOWNTOWN',
-    'UPTOWN',
-    'MERIDIAN',
-    'OMI',
-    'JINGLETOWN',
-    'ATRIUM',
-    'BROADWAY',
-    'PATIO',
-    'MEDITATION',
-    'KITCHEN']
-
+# Set ordering for ROOM names
 df_rooms_only[ROOM] = (df_rooms_only[ROOM]
                        .astype("category",
-                               categories=ROOM_order,
-                               ordered=True)
-                       )
+                               categories=categories[ROOM],
+                               ordered=True))
 
 
 df_rooms_only['EFF_RATE'] = (df_rooms_only['TOTAL'] /
