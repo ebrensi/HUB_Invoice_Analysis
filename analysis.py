@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 from IHO_event_invoice import *
 
-# -*- coding: utf-8 -*-
 """
 This is the analysis script for the IHO venue pricing project
 
@@ -56,6 +56,14 @@ room_means = grouped_by_room['AMOUNT',
                              'TOTAL',
                              'EFF_RATE'].mean()
 
+# Create room pivot tables
+room_pivot = pd.pivot_table(df_rooms_only,
+                            index=[ROOM],
+                            values=["EFF_RATE"],
+                            columns=[day_type, day_dur,
+                                     discount_type, member_type],
+                            aggfunc=pd.np.mean)
+
 
 # Now do the same thing for services
 df_services_only = (df.query('{} == "{}"'.format(item_type, SERVICE))
@@ -79,21 +87,22 @@ table = pd.pivot_table(df_services_only,
 
 
 # Output aggregated results
-
+"""
 # Rooms and services only
 df_rooms_only.to_excel('rooms_only.xlsx', float_format='%5.2f')
 df_services_only.to_excel('services_only.xlsx', float_format='%5.2f')
 
 # Total income for each room
 to_nice_csv(pd.concat([room_sums, room_counts], axis=1),
-            'IHO_pricing_rooms_only_sum.csv')
+'IHO_pricing_rooms_only_sum.csv')
 
 # Average income for each room
 to_nice_csv(pd.concat([room_means, room_counts], axis=1),
-            'IHO_pricing_rooms_only_avg.csv')
+'IHO_pricing_rooms_only_avg.csv')
 
 
 to_nice_csv(room_means[["AMOUNT", "EFF_RATE"]],
-            'IHO_pricing_effective_room_rates.csv')
+'IHO_pricing_effective_room_rates.csv')
 
 to_nice_csv(table, 'IHO_pricing_services_only.csv')
+"""
