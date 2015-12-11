@@ -53,10 +53,9 @@ ITEM_CLASS_SORT_ORDER = [ROOM, SERVICE, OTHER, ITEM_TOT]
 # This is how we categorize RATE info
 RATE_classes = {
     member_type: {
+        'NON_MEMBER': 'none?[ |-]member',
         'PART_TIME': 'part[-| ]?time',
         'FULL_TIME': 'full[ |-]?time|full member',
-        'NON_MEMBER': 'none?[ |-]member',
-        'FRIEND': 'Org'
     },
 
     day_type: {
@@ -65,8 +64,8 @@ RATE_classes = {
     },
 
     day_dur: {
-        'FULL_DAY': 'Full[-| ]?day',
         'PARTIAL_DAY': 'Half[-| ]?Day'
+        'FULL_DAY': 'Full[-| ]?day',
     },
 
     discount_type: {
@@ -74,7 +73,7 @@ RATE_classes = {
         'MULTI_DAY': 'Multi[-| ]?day',
         'REOCURRING': 'Multi[-| ]?event|reo?ccuring',
         'FOUNDER': 'Founder',
-        'FRIEND': 'Partner|sposor|WITH|share',
+        'FRIEND': 'Partner|sposor|WITH|share|org',
         'RETURNING': 'Returning[-| ]?client'
     }
 }
@@ -113,8 +112,7 @@ def flatten_dict(invoices):
 with open(JSON_DATA_FNAME, 'r') as in_file:
     invoices = json.load(in_file)
 
-df = pd.DataFrame(flatten_dict(invoices)
-                  ).drop_duplicates().dropna(how='all')
+df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna(how='all')
 
 # exclude invoices with no invoice#, cancellations,
 # or invoice# < INVOICE_NUM_CUTOFF
@@ -167,20 +165,18 @@ df.loc[other_mask, 'item'] = df.loc[other_mask, 'DESCRIPTION']
 
 # Set item_type as categorical and set sort order
 #   as specified by ITEM_CLASS_SORT_ORDER
-df.loc[:, item_type] = (
-    df.loc[:, item_type]
-    .astype('category',
-            categories=ITEM_CLASS_SORT_ORDER[::-1],
-            ordered=True))
+df.loc[:, item_type] = (df.loc[:, item_type]
+                        .astype('category',
+                                categories=ITEM_CLASS_SORT_ORDER[::-1],
+                                ordered=True))
 
 # Parse RATE field entries into classes
 #   as defined in the RATE_classes dictionary
 for RATE_class in RATE_classes:
     for rate in RATE_classes[RATE_class]:
-        rate_mask = (
-            df['RATE'].str
-            .contains(RATE_classes[RATE_class][rate],
-                      case=False, na=False))
+        rate_mask = df['RATE'].str.contains(RATE_classes[RATE_class][rate],
+                                            case=False,
+                                            na=False)
 
         df.loc[rate_mask, RATE_class] = rate
 
