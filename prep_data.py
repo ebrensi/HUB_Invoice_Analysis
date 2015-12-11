@@ -64,7 +64,7 @@ RATE_classes = {
     },
 
     day_dur: {
-        'PARTIAL_DAY': 'Half[-| ]?Day'
+        'PARTIAL_DAY': 'Half[-| ]?Day',
         'FULL_DAY': 'Full[-| ]?day',
     },
 
@@ -289,7 +289,7 @@ for idx, row in df.iterrows():
 df[member_type] = df[member_type].fillna('unknown')
 
 # if a DISCOUNT is nonzero but no discount-type is indicated, give it a type
-unknown_discount = df[discount_type].isnull() & df['DISCOUNT'] > 0
+unknown_discount = df[discount_type].isnull() & df['DISCOUNT']
 df.loc[unknown_discount, discount_type] = 'unknown'
 df[discount_type] = df[discount_type].fillna('NONE')
 

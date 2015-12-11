@@ -13,7 +13,8 @@ categories = {
     member_type: ['NON_MEMBER',
                   'PART_TIME',
                   'FULL_TIME',
-                  'unknown'],
+                  # 'unknown'
+                  ],
 
     day_dur: ['PARTIAL_DAY', 'FULL_DAY'],
 
@@ -27,9 +28,10 @@ categories = {
         'JINGLETOWN',
         'ATRIUM',
         'BROADWAY',
-        'PATIO',
-        'MEDITATION',
-        'KITCHEN']
+        # 'PATIO',
+        # 'MEDITATION',
+        # 'KITCHEN'
+    ]
 }
 
 
@@ -55,9 +57,14 @@ for cat in [member_type, day_dur]:
                        ordered=True))
 
 
-discounted = df[discount_type] != 'NONE'
-df.loc[discounted, discount_type] = 'DISCOUNT'
-df.loc[~discounted, discount_type] = 'NO_DISCOUNT'
+# discounted = df[discount_type] != 'NONE'
+# df.loc[discounted, discount_type] = 'DISCOUNT'
+# df.loc[~discounted, discount_type] = 'NO_DISCOUNT'
+
+
+df['EFF_RATE'] = (df['TOTAL'] /
+                  df['HOURS_UNITS'])
+df.loc[df["DISCOUNT"] == 1, 'EFF_RATE'] = 0
 
 
 # Line items for only rooms, not including other associated invoice items
@@ -72,17 +79,18 @@ df_rooms_only[ROOM] = (df_rooms_only[ROOM]
                                ordered=True))
 
 
-df_rooms_only['EFF_RATE'] = (df_rooms_only['TOTAL'] /
-                             df_rooms_only['HOURS_UNITS'])
+# df_rooms_only['EFF_RATE'] = (df_rooms_only['TOTAL'] /
+#                              df_rooms_only['HOURS_UNITS'])
 
 
-multindex = [day_type,
-             day_dur,
-             member_type,
-             discount_type]
+pivot_rows = [day_type,
+              day_dur,
+              discount_type]
+
+pivot_columns = [member_type]
 
 grouped_by_room = (df_rooms_only
-                   .groupby(multindex + [ROOM]))
+                   .groupby(pivot_rows + pivot_columns + [ROOM]))
 
 room_counts = grouped_by_room[ROOM].count()
 room_counts.name = 'count'
@@ -101,12 +109,24 @@ room_means = grouped_by_room['AMOUNT',
 # Create room pivot tables
 # may or may not want discount type in there
 room_rate_pivot = pd.pivot_table(df_rooms_only,
-                                 index=[ROOM],
+                                 index=pivot_rows + [ROOM],
                                  values=["EFF_RATE"],
-                                 columns=[day_type, day_dur,
-                                          member_type],
-                                 aggfunc=pd.np.mean,
-                                 margins=True)
+                                 columns=pivot_columns,
+                                 aggfunc=pd.np.mean)
+
+
+room_income_pivot = pd.pivot_table(df_rooms_only,
+                                   index=pivot_rows + [ROOM],
+                                   values=["TOTAL"],
+                                   columns=pivot_columns,
+                                   aggfunc=pd.np.mean)
+
+room_pivot = pd.pivot_table(df_rooms_only,
+                            index=pivot_rows + [ROOM],
+                            values=["EFF_RATE", "TOTAL"],
+                            columns=pivot_columns,
+                            aggfunc={"EFF_RATE": pd.np.mean,
+                                     "TOTAL": pd.np.mean})
 
 
 # Now do the same thing for services
@@ -117,37 +137,34 @@ df_services_only = (df.query('{} == "{}"'.format(item_type, SERVICE))
 
 df_services_only['HOURS_UNITS'] = df_services_only['HOURS_UNITS'].fillna(1.0)
 
-df_services_only['EFF_RATE'] = (df_services_only['TOTAL'] /
-                                df_services_only['HOURS_UNITS'])
+# df_services_only['EFF_RATE'] = (df_services_only['TOTAL'] /
+#                                 df_services_only['HOURS_UNITS'])
 
 
 grouped_by_service = (df_services_only
-                      .groupby(multindex + [SERVICE]))
-
-table = pd.pivot_table(df_services_only,
-                       index=[SERVICE, day_type, member_type, discount_type],
-                       values=['SUBTOTAL', 'TOTAL'],
-                       aggfunc=[pd.np.sum, pd.np.mean], fill_value=0)
+                      .groupby(pivot_rows + pivot_columns + [SERVICE]))
 
 
 # Output aggregated results
-room_rate_pivot.to_excel('room_rate_pivot.xlsx', float_format='%5.2f')
-
-
-# Rooms and services only
-df_rooms_only.to_excel('rooms_only.xlsx', float_format='%5.2f')
-df_services_only.to_excel('services_only.xlsx', float_format='%5.2f')
+"""
+# Rooms only
+writer = pd.ExcelWriter('rooms_only.xlsx')
+df_rooms_only.to_excel(writer, 'ROOM line items', float_format='%5.2f')
+room_rate_pivot.to_excel(writer, 'room_rate_pivot', float_format='%5.2f')
+room_income_pivot.to_excel(writer, 'room_income_pivot', float_format='%5.2f')
+writer.save()
 
 # Total income for each room
 to_nice_csv(pd.concat([room_sums, room_counts], axis=1),
             'IHO_pricing_rooms_only_sum.csv')
-
 # Average income for each room
 to_nice_csv(pd.concat([room_means, room_counts], axis=1),
             'IHO_pricing_rooms_only_avg.csv')
-
-
 to_nice_csv(room_means[["AMOUNT", "EFF_RATE"]],
             'IHO_pricing_effective_room_rates.csv')
 
+
+# Services only
+df_services_only.to_excel('services_only.xlsx', float_format='%5.2f')
 to_nice_csv(table, 'IHO_pricing_services_only.csv')
+"""
