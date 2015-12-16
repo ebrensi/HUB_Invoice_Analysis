@@ -15,11 +15,22 @@ Since these invoices contain peoples' contact information, the original invoices
 
 ### Imported invoice data
 [`IHO_event_invoices.json`](IHO_event_invoices.json) contains a nested dictionary data structure with sheet-names as keys at the top-level.
-Each invoice typically contains:
+Each invoice record contains:
 * items that IHO charged money for: eg. rooms and services
-* RATE info is contained in one cell of the original invoice, and is based on the type of renter and day-type:
-eg.
-  * Non-Member, Part-time, or Full-time member
+  * AMOUNT, DESCRIPTION, SUBTOTAL, DISCOUNT, TOTAL fields
+* Renter and discount info
+  * RATE field  
+
+
+### Item Classification
+[`IHO_event_invoice_line_items.csv`](IHO_event_invoice_line_items.csv) is the result of running `prep_data.py`. It contains the invoice data classified into item-type (room, service, or other) and RATE information into rate/discount types mentioned above.  We fill-in as much missing info as we can and compute subtotals with and without discount, when a discount is explicitly given as a percentage, or if the fee for an item is given as 'waived' or 'comped'.
+
+#### Line item classification:
+* `item_type` for a line-item is classified as ROOM, SERVICE, or OTHER
+  * items with `item_type` ROOM are: `EAST_OAK`, `WEST_OAK`, `DOWNTOWN`, `UPTOWN`, `MERIDIAN`, `OMI`, `JINGLETOWN`, `ATRIUM`, `BROADWAY`, `PATIO`, `MEDITATION`, or `KITCHEN`    
+
+  * items with `item_type` SERVICE classified as `SETUP_RESET`, `STAFFING`, `A/V`, `JANITORIAL`,`DRINKS`, `COMPOSTABLES`, or `SECURITY` 
+* Non-Member, Part-time, or Full-time member
   * Weekday, or Weekend rental
   * Discounts:
     - Founder Discount
@@ -27,12 +38,6 @@ eg.
   	- Multi-Day Discount
   	- Full-Day Discount
   	- Partner/Friend Discount
-
-
-### Item Classification
-[`IHO_event_invoice_line_items.csv`](IHO_event_invoice_line_items.csv) is the result of running `prep_data.py`. It contains the invoice data classified into item-type (room, service, or other) and RATE information into rate/discount types mentioned above.  We fill-in as much missing info as we can and compute subtotals with and without discount, when a discount is explicitly given as a percentage, or if the fee for an item is given as 'waived' or 'comped'.
-  * line items classified as ROOM, SERVICE, and OTHER item types based on invoice DESCRIPTION field
-
 
 ## Analysis
 First We want to query general information about which rooms were rented and at what rates, and what discounts were applied, as well as how much income was reduced by each discount.  For example: What was the average income for renting the Broadway room to a part-time member for a full-day (5.5+ hours) on a weekday?
