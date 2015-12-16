@@ -30,7 +30,8 @@ def import_workbook(workbook_file_name):
     for ws in worksheets:
         invoice_dict = parse_sheet(ws)
         if invoice_dict:
-            invoices[ws.title.strip()] = invoice_dict
+            invoice_id = ws.title.split(' ')[0]
+            invoices[invoice_id] = invoice_dict
             print(ws.title)
 
     return invoices

@@ -86,7 +86,7 @@ pivot_rows = []  # possible put discount_type
 pivot_columns = [day_type, day_dur, discount_type, member_type]
 
 grouped_by_room = (df_rooms_only
-                   .groupby(pivot_rows + pivot_columns + [ROOM]))
+                   .groupby([ROOM] + pivot_rows + pivot_columns))
 
 room_counts = grouped_by_room[ROOM].count()
 room_counts.name = 'count'
@@ -128,7 +128,7 @@ df_services_only = (df.query('{} == "{}"'.format(item_type, SERVICE))
 
 
 # ******************  Output aggregated results  ***************************
-df_rooms_only.to_csv('rooms_only.csv')
+df_rooms_only.to_nice_csv('rooms_only.csv')
 
 # Total income for each room
 to_nice_csv(room_sums, 'IHO_pricing_rooms_only_sum.csv')
