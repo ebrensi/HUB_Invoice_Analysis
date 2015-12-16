@@ -17,27 +17,19 @@ Since these invoices contain peoples' contact information, the original invoices
 [`IHO_event_invoices.json`](IHO_event_invoices.json) contains a nested dictionary data structure with sheet-names as keys at the top-level.
 Each invoice record contains:
 * items that IHO charged money for: eg. rooms and services
-  * AMOUNT, DESCRIPTION, SUBTOTAL, DISCOUNT, TOTAL fields
+  - AMOUNT, DESCRIPTION, SUBTOTAL, DISCOUNT, TOTAL fields
 * Renter and discount info
-  * RATE field  
+  - RATE field  
 
 
 ## Classification
-We parse invoice information into labels.  Classification is relevant to a whole invoice/event, or a particular line-item within an invoice.
+We parse invoice information into consistent labels.  Classification is relevant to a whole invoice/event, or a particular line-item within an invoice. 
 
 ### Invoice/event Classification
-Whole invoices are labeled with information about the rental that occurred. 
-
-#### Renter's Membership level
-  * Renters are classified as `NON_MEMBER`, `PART_TIME`, `FULL_TIME`, or `unknown`
-
-  * Weekday, or Weekend rental
-  * Discounts:
-    - Founder Discount
-  	- Multi-Room Discount
-  	- Multi-Day Discount
-  	- Full-Day Discount
-  	- Partner/Friend Discount
+Whole event information is parsed from the invoice RATE field or derived from line-item data.
+  * The person/organization (`member_type`) responsible for the transaction is labeled `NON_MEMBER`, `PART_TIME`, `FULL_TIME`, or `unknown`
+  * `day_type` determined to be `WEEKDAY` or `WEEKEND` based on event date and/or RATE info
+  * `discount_type`, when given explicitly in the invoice, is classified as `MULTI_ROOM`, `MULTI_DAY`, `REOCURRING` (for an event that happens on several dates), `FOUNDER`, `FRIEND`, or `RETURNING` (repeat customer?).
 
 
 ### Item Classification
