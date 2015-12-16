@@ -34,9 +34,9 @@ discount_type = 'discount_type'
 # The csv file produced is meant to be used for viewing by humans.
 def to_nice_csv(df, filename):
     x = df.reset_index()
-    cols = df.index.names
-    mask = (x[cols] == x[cols].shift())
-    x.loc[:, cols] = x[cols].mask(mask, '')
+    # cols = df.index.names
+    # mask = (x[cols] == x[cols].shift())
+    # x.loc[:, cols] = x[cols].mask(mask, '')
 
     x.to_csv(filename, index=False, float_format='%5.2f')
 
