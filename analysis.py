@@ -153,13 +153,7 @@ def services_pivot(discount=True):
 
 
 # Output aggregated results
-
-# Rooms only
-# writer = pd.ExcelWriter('rooms_only.xlsx')
-# df_rooms_only.to_excel(writer, 'ROOM line items', float_format='%5.2f')
-# room_rate_pivot.to_excel(writer, 'room_rate_pivot', float_format='%5.2f')
-# room_income_pivot.to_excel(writer, 'room_income_pivot', float_format='%5.2f')
-# writer.save()
+df_rooms_only.to_csv('rooms_only.csv')
 
 # Total income for each room
 to_nice_csv(pd.concat([room_sums, room_counts], axis=1),
@@ -171,14 +165,7 @@ to_nice_csv(room_means[["AMOUNT", "EFF_RATE"]],
             'IHO_pricing_effective_room_rates.csv')
 
 
-# Services only
-# writer = pd.ExcelWriter('services_only.xlsx')
-# df_services_only.to_excel(writer, 'SERVICE line items', float_format='%5.2f')
-# services_pivot.to_excel(writer, 'service_rate_pivot', float_format='%5.2f')
-# writer.save()
-
-# services_pivot.to_csv('IHO_pricing_services_only.csv')
-
+# Write everything to one Excel file
 writer = pd.ExcelWriter('Rooms&Services.xlsx')
 df_rooms_only.to_excel(writer, 'ROOM items raw', float_format='%5.2f')
 rooms_pivot(True).to_excel(
