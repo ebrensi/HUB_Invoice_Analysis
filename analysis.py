@@ -128,7 +128,7 @@ df_services_only = (df.query('{} == "{}"'.format(item_type, SERVICE))
 
 
 # ******************  Output aggregated results  ***************************
-df_rooms_only.to_nice_csv('rooms_only.csv')
+to_nice_csv(df_rooms_only, 'rooms_only.csv')
 
 # Total income for each room
 to_nice_csv(room_sums, 'IHO_pricing_rooms_only_sum.csv')
