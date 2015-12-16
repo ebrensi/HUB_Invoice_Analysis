@@ -8,7 +8,7 @@ The data we are working with come from invoices for IHO space bookings.  Each in
 
 The relevant information from an invoice is contained in two places:
   1. The sub-table of items that fees were charged for, including but not limited to: room, setup/clean-up, IHO staff support, audio technician, etc.  Each of these items has an associated fee: either a flat fee, or a rate and number of hours, and subtotal (rate * hours), and sometimes a discount field given as a percentage.
-  2. The RATE information field, contained in the bottom row of the box labeled `Notes:`. This cell usually tells us about what factors were used to determine rental rate, eg. member type and discount type
+  2. The RATE information field, contained in the bottom row of the box labeled `Notes:`. This cell contains information about what factors were used to determine rental rate, eg. member type and discount type
 
 
 Since these invoices contain peoples' contact information, the original invoices are not included in this repo.  Instead, we include the json file produced by `import_workbooks.py`, which contains all of the invoice info necessary for analysis.
