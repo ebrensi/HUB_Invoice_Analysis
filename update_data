@@ -14,5 +14,6 @@ python analysis.py
 # and push them to the Github repo
 git add *.json
 git add *.csv
+git add "Rooms&Services.xlsx"
 git commit -m"updated invoice data $(date)"
 git push origin master

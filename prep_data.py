@@ -360,9 +360,9 @@ total_event_income = (event_room_income
                       .add(event_setup_income, fill_value=0))
 
 
-total_event_income['REDUCTION'] = (1 -
-                                   total_event_income['TOTAL'] /
-                                   total_event_income['SUBTOTAL'])
+total_event_income['DISCOUNT'] = (1 -
+                                  total_event_income['TOTAL'] /
+                                  total_event_income['SUBTOTAL'])
 
 
 # Number of rooms rented for each event
@@ -376,7 +376,7 @@ by_event = (pd.concat([event_num_rooms,
                        total_event_income,
                        rooms_by_invoice[other_fields].first()], axis=1))
 
-rules = {'item': '# ROOMS', 'HOURS_UNITS': 'HOURS'}
+rules = {'item': '#rooms', 'HOURS_UNITS': 'HOURS'}
 by_event.rename(columns=rules, inplace=True)
 
 # Add a partial/full day specifier column to event summary table

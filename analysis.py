@@ -57,10 +57,13 @@ for cat in [member_type, day_dur]:
                        ordered=True))
 
 
-discounted = df[discount_type] != 'NONE'
-df.loc[discounted, discount_type] = 'DISCOUNT'
-df.loc[~discounted, discount_type] = 'NO_DISCOUNT'
+# discounted = df[discount_type] != 'NONE'
+# df.loc[discounted, discount_type] = 'DISCOUNT'
+# df.loc[~discounted, discount_type] = 'NO_DISCOUNT'
 
+
+service_items = (df[item_type] == 'SERVICE')
+df.loc[service_items, 'HOURS_UNITS'].fillna(1.0, inplace=True)
 
 df['EFF_RATE'] = (df['TOTAL'] /
                   df['HOURS_UNITS'])
@@ -124,44 +127,22 @@ df_services_only = (df.query('{} == "{}"'.format(item_type, SERVICE))
                     .rename(columns={'item': SERVICE}))
 
 
-df_services_only['HOURS_UNITS'] = df_services_only['HOURS_UNITS'].fillna(1.0)
-
-
-# Output aggregated results
+# ******************  Output aggregated results  ***************************
 df_rooms_only.to_csv('rooms_only.csv')
 
 # Total income for each room
 to_nice_csv(room_sums, 'IHO_pricing_rooms_only_sum.csv')
 
 # Average income for each room
-# to_nice_csv(room_means, 'IHO_pricing_rooms_only_avg.csv')
-to_nice_csv(room_income_pivot, 'IHO_pricing_rooms_only_avg.csv')
+to_nice_csv(room_means, 'IHO_pricing_rooms_only_avg.csv')
 
 # Effective Rates
 to_nice_csv(room_means[["AMOUNT", "EFF_RATE"]],
             'IHO_pricing_effective_room_rates.csv')
 
 
-"""
 # Write everything to one Excel file
 writer = pd.ExcelWriter('Rooms&Services.xlsx')
-df_rooms_only.to_excel(writer, 'ROOM items raw', float_format='%5.2f')
-# rooms_pivot(True).to_excel(
-#     writer, 'ROOM pivot (discounted)',
-#     float_format='%5.2f')
-
-rooms_pivot(False).to_excel(
-    writer, 'ROOM pivot (no discount)',
-    float_format='%5.2f')
-
-df_services_only.to_excel(writer, 'SERVICE items raw', float_format='%5.2f')
-# services_pivot(True).to_excel(
-#     writer, 'SERVICES pivot (discounted)',
-#     float_format='%5.2f')
-
-services_pivot(False).to_excel(
-    writer, 'SERVICES pivot (no discount)',
-    float_format='%5.2f')
-
+df_rooms_only.to_excel(writer, 'ROOM items', float_format='%5.2f')
+df_services_only.to_excel(writer, 'SERVICE items', float_format='%5.2f')
 writer.save()
-"""
