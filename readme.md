@@ -46,7 +46,6 @@ We classify line items by text-matching key terms in invoice DESCRIPTION field
    
   * Items idetified as `SETUP_RESET`, `STAFFING`, `A/V`, `JANITORIAL`,`DRINKS`, `COMPOSTABLES`, or `SECURITY` are classified as SERVICE.
   
-  * Any item that does not get classified as a ROOM or SERVICE is OTHER.
 
 
 ## Analysis
