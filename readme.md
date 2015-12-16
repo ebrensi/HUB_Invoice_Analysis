@@ -28,9 +28,12 @@ The [`prep_data.py`](prep_data.py) script parses invoice information into consis
 ### Invoice/event Classification
 The file [`IHO_event_invoice_summaries.csv`](IHO_event_invoice_summaries.csv) contains summary information from the line items grouped by invoice, where each row represents an invoice.  Some information is better understood when associated with a whole event rental.  Whole event information is parsed from the invoice RATE field or derived from line-item data.
   
-  * The person/organization (`member_type`) responsible for the transaction is labeled `NON_MEMBER`, `PART_TIME`, `FULL_TIME`, or `unknown`.
+  * The membership level of person/organization (`member_type`) responsible for the transaction is labeled `NON_MEMBER`, `PART_TIME`, `FULL_TIME`, or `unknown`.
+  
   * `discount_type`, when given explicitly in the invoice, is classified as `MULTI_ROOM`, `MULTI_DAY`, `REOCURRING` (for an event that happens on several dates), `FOUNDER`, `FRIEND`, or `RETURNING`.
+   
   * `day_type` is determined to be `WEEKDAY` or `WEEKEND` based on event-date and/or RATE info.
+  
   * `day_dur` is `FULL_DAY` or `PARTIAL_DAY` based on whether the longest room rental plus setup/reset time exceeds 5.5 hours. 
 
 ### Item Classification
@@ -40,7 +43,9 @@ The file [`IHO_event_invoice_summaries.csv`](IHO_event_invoice_summaries.csv) co
 We classify line items by text-matching key terms in invoice DESCRIPTION field 
 * `item_type` for a line-item is classified as ROOM, SERVICE, or OTHER
   * Items identified as `EAST_OAK`, `WEST_OAK`, `DOWNTOWN`, `UPTOWN`, `MERIDIAN`, `OMI`, `JINGLETOWN`, `ATRIUM`, `BROADWAY`, `PATIO`, `MEDITATION`, or `KITCHEN` are classified as ROOM.
+   
   * Items idetified as `SETUP_RESET`, `STAFFING`, `A/V`, `JANITORIAL`,`DRINKS`, `COMPOSTABLES`, or `SECURITY` are classified as SERVICE.
+  
   * Any item that does not get classified as a ROOM or SERVICE is OTHER.
 
 
