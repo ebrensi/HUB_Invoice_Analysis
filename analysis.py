@@ -13,7 +13,7 @@ categories = {
     member_type: ['NON_MEMBER',
                   'PART_TIME',
                   'FULL_TIME',
-                  # 'unknown'
+                  'unknown'
                   ],
 
     day_dur: ['PARTIAL_DAY', 'FULL_DAY'],
@@ -57,9 +57,9 @@ for cat in [member_type, day_dur]:
                        ordered=True))
 
 
-# discounted = df[discount_type] != 'NONE'
-# df.loc[discounted, discount_type] = 'DISCOUNT'
-# df.loc[~discounted, discount_type] = 'NO_DISCOUNT'
+discounted = df[discount_type] != 'NONE'
+df.loc[discounted, discount_type] = 'DISCOUNT'
+df.loc[~discounted, discount_type] = 'NO_DISCOUNT'
 
 
 df['EFF_RATE'] = (df['TOTAL'] /
@@ -78,9 +78,9 @@ df_rooms_only[ROOM] = (df_rooms_only[ROOM]
                                categories=categories[ROOM],
                                ordered=True))
 
-pivot_rows = [day_type]  # possible put discount_type
+pivot_rows = []  # possible put discount_type
 
-pivot_columns = [day_dur, member_type]
+pivot_columns = [day_type, day_dur, discount_type, member_type]
 
 grouped_by_room = (df_rooms_only
                    .groupby(pivot_rows + pivot_columns + [ROOM]))
@@ -90,14 +90,17 @@ room_counts.name = 'count'
 
 
 room_sums = grouped_by_room['HOURS_UNITS', 'SUBTOTAL', 'TOTAL'].sum()
+room_sums['count'] = room_counts
 
+room_means = grouped_by_room[
+    'AMOUNT',
+    'HOURS_UNITS',
+    'SUBTOTAL',
+    'DISCOUNT',
+    'TOTAL',
+    'EFF_RATE'].mean()
+room_means['count'] = room_counts
 
-room_means = grouped_by_room['AMOUNT',
-                             'HOURS_UNITS',
-                             'SUBTOTAL',
-                             'DISCOUNT',
-                             'TOTAL',
-                             'EFF_RATE'].mean()
 
 # Create room pivot tables
 # may or may not want discount type in there
@@ -115,20 +118,6 @@ room_income_pivot = pd.pivot_table(df_rooms_only,
                                    aggfunc=pd.np.mean)
 
 
-def rooms_pivot(discount=True):
-    if discount:
-        mask = ~df_rooms_only[discount_type].isin(["NONE"])
-    else:
-        mask = df_rooms_only[discount_type].isin(["NONE"])
-
-    return pd.pivot_table(df_rooms_only[mask],
-                          index=pivot_rows + [ROOM],
-                          values=["EFF_RATE", "TOTAL"],
-                          columns=pivot_columns,
-                          aggfunc={"EFF_RATE": pd.np.mean,
-                                   "TOTAL": pd.np.mean})
-
-
 # Now do the same thing for services
 df_services_only = (df.query('{} == "{}"'.format(item_type, SERVICE))
                     .drop([item_type], axis=1)
@@ -138,51 +127,41 @@ df_services_only = (df.query('{} == "{}"'.format(item_type, SERVICE))
 df_services_only['HOURS_UNITS'] = df_services_only['HOURS_UNITS'].fillna(1.0)
 
 
-def services_pivot(discount=True):
-    if discount:
-        mask = ~df_services_only[discount_type].isin(["NONE"])
-    else:
-        mask = df_services_only[discount_type].isin(["NONE"])
-
-    return pd.pivot_table(df_services_only[mask],
-                          index=pivot_rows + [SERVICE],
-                          values=["EFF_RATE", "TOTAL"],
-                          columns=pivot_columns,
-                          aggfunc={"EFF_RATE": pd.np.mean,
-                                   "TOTAL": pd.np.mean})
-
-
 # Output aggregated results
 df_rooms_only.to_csv('rooms_only.csv')
 
 # Total income for each room
-to_nice_csv(pd.concat([room_sums, room_counts], axis=1),
-            'IHO_pricing_rooms_only_sum.csv')
+to_nice_csv(room_sums, 'IHO_pricing_rooms_only_sum.csv')
+
 # Average income for each room
-to_nice_csv(pd.concat([room_means, room_counts], axis=1),
-            'IHO_pricing_rooms_only_avg.csv')
+# to_nice_csv(room_means, 'IHO_pricing_rooms_only_avg.csv')
+to_nice_csv(room_income_pivot, 'IHO_pricing_rooms_only_avg.csv')
+
+# Effective Rates
 to_nice_csv(room_means[["AMOUNT", "EFF_RATE"]],
             'IHO_pricing_effective_room_rates.csv')
 
 
+"""
 # Write everything to one Excel file
 writer = pd.ExcelWriter('Rooms&Services.xlsx')
 df_rooms_only.to_excel(writer, 'ROOM items raw', float_format='%5.2f')
-rooms_pivot(True).to_excel(
-    writer, 'ROOM pivot (discounted)',
-    float_format='%5.2f')
+# rooms_pivot(True).to_excel(
+#     writer, 'ROOM pivot (discounted)',
+#     float_format='%5.2f')
 
 rooms_pivot(False).to_excel(
     writer, 'ROOM pivot (no discount)',
     float_format='%5.2f')
 
 df_services_only.to_excel(writer, 'SERVICE items raw', float_format='%5.2f')
-services_pivot(True).to_excel(
-    writer, 'SERVICES pivot (discounted)',
-    float_format='%5.2f')
+# services_pivot(True).to_excel(
+#     writer, 'SERVICES pivot (discounted)',
+#     float_format='%5.2f')
 
 services_pivot(False).to_excel(
     writer, 'SERVICES pivot (no discount)',
     float_format='%5.2f')
 
 writer.save()
+"""
