@@ -22,15 +22,15 @@ Each invoice record contains:
   * RATE field  
 
 
-### Item Classification
-[`IHO_event_invoice_line_items.csv`](IHO_event_invoice_line_items.csv) is the result of running `prep_data.py`. It contains the invoice data classified into item-type (room, service, or other) and RATE information into rate/discount types mentioned above.  We fill-in as much missing info as we can and compute subtotals with and without discount, when a discount is explicitly given as a percentage, or if the fee for an item is given as 'waived' or 'comped'.
+## Classification
+We parse invoice information into labels.  Classification is relevant to a whole invoice/event, or a particular line-item within an invoice.
 
-#### Line item classification:
-* `item_type` for a line-item is classified as ROOM, SERVICE, or OTHER
-  * items with `item_type` ROOM are: `EAST_OAK`, `WEST_OAK`, `DOWNTOWN`, `UPTOWN`, `MERIDIAN`, `OMI`, `JINGLETOWN`, `ATRIUM`, `BROADWAY`, `PATIO`, `MEDITATION`, or `KITCHEN`    
+### Invoice/event Classification
+Whole invoices are labeled with information about the rental that occurred. 
 
-  * items with `item_type` SERVICE classified as `SETUP_RESET`, `STAFFING`, `A/V`, `JANITORIAL`,`DRINKS`, `COMPOSTABLES`, or `SECURITY` 
-* Non-Member, Part-time, or Full-time member
+#### Renter's Membership level
+  * Renters are classified as `NON_MEMBER`, `PART_TIME`, `FULL_TIME`, or `unknown`
+
   * Weekday, or Weekend rental
   * Discounts:
     - Founder Discount
@@ -38,6 +38,18 @@ Each invoice record contains:
   	- Multi-Day Discount
   	- Full-Day Discount
   	- Partner/Friend Discount
+
+
+### Item Classification
+[`IHO_event_invoice_line_items.csv`](IHO_event_invoice_line_items.csv) is the result of running `prep_data.py`. It contains the invoice data classified into item-type (room, service, or other) and RATE information into rate/discount types mentioned above.  We fill-in as much missing info as we can and compute subtotals with and without discount, when a discount is explicitly given as a percentage, or if the fee for an item is given as 'waived' or 'comped'.
+
+#### Line item classification:
+We classify line items by text-matching key terms in invoice DESCRIPTION field 
+* `item_type` for a line-item is classified as ROOM, SERVICE, or OTHER
+  * Items identified as `EAST_OAK`, `WEST_OAK`, `DOWNTOWN`, `UPTOWN`, `MERIDIAN`, `OMI`, `JINGLETOWN`, `ATRIUM`, `BROADWAY`, `PATIO`, `MEDITATION`, or `KITCHEN` are classified as ROOM.
+  * Items idetified as `SETUP_RESET`, `STAFFING`, `A/V`, `JANITORIAL`,`DRINKS`, `COMPOSTABLES`, or `SECURITY` are classified as SERVICE.
+  * Any item that does not get classified as a ROOM or SERVICE is OTHER.
+
 
 ## Analysis
 First We want to query general information about which rooms were rented and at what rates, and what discounts were applied, as well as how much income was reduced by each discount.  For example: What was the average income for renting the Broadway room to a part-time member for a full-day (5.5+ hours) on a weekday?
