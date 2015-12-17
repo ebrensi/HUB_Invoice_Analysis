@@ -26,11 +26,14 @@ def import_workbook(workbook_file_name):
     worksheets = wb.worksheets
 
     invoices = {}
-
+    inv_count = 1
     for ws in worksheets:
         invoice_dict = parse_sheet(ws)
         if invoice_dict:
             invoice_id = ws.title.split(' ')[0]
+            if not invoice_id:
+                invoice_id = "inv_{}".format(inv_count)
+                inv_count += 1
             invoices[invoice_id] = invoice_dict
             print(ws.title)
 
