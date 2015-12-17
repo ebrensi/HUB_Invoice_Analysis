@@ -73,7 +73,7 @@ RATE_classes = {
         'MULTI_DAY': 'Multi[-| ]?day',
         'REOCURRING': 'Multi[-| ]?event|reo?ccuring',
         'FOUNDER': 'Founder',
-        'FRIEND': 'Partner|sposor|WITH|share|org',
+        'FRIEND': 'Partner|sponsor|WITH|share|org',
         'RETURNING': 'Returning[-| ]?client'
     }
 }
@@ -123,7 +123,7 @@ exclude_mask = (invoice_num.isnull() |
                 (invoice_num < INVOICE_NUM_CUTOFF) |
                 cancellations)
 
-print("Excluding \n%s" % (df['invoice'][exclude_mask].unique()))
+print("Excluding \n{}".format(df['invoice'][exclude_mask].unique()))
 
 df = df[~exclude_mask]
 
