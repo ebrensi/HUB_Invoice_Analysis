@@ -37,8 +37,9 @@ def to_nice_csv(df, filename):
     # cols = df.index.names
     # mask = (x[cols] == x[cols].shift())
     # x.loc[:, cols] = x[cols].mask(mask, '')
-
     x.to_csv(filename, index=False, float_format='%5.2f')
+
+    # x.to_csv(filename, float_format='%5.2f')
 
 
 # Put DataFrame into MySQL table
