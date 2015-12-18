@@ -119,6 +119,16 @@ df = pd.DataFrame(flatten_dict(invoices)).drop_duplicates().dropna(how='all')
 invoice_num = df['invoice'].str.extract('(\d+)').str.strip().astype(float)
 cancellations = df['invoice'].str.contains('cancel', na=False, case=False)
 
+# Some invoices are have labels xxxxxx-x where the dash indicates a new version
+#  that replaced the last version.  We wil eliminate all but the latest
+#  version.
+df['version'] = (df['invoice'].str.split('-')
+                 .map(lambda x: int(x[1]) if len(x) > 1 else 0))
+
+df['invoice'] = (df['invoice'].str.split('-')
+                 .map(lambda x: x[0]))
+
+
 exclude_mask = (invoice_num.isnull() |
                 (invoice_num < INVOICE_NUM_CUTOFF) |
                 cancellations)
@@ -133,7 +143,7 @@ for field in FIELD_CLASSES:
                      for col_name in FIELD_CLASSES[field]]
     df[field] = pd.concat(data_to_merge).reindex_like(df)
 
-df = df[['invoice', 'invoice_date', 'DATE', 'DESCRIPTION', 'AMOUNT',
+df = df[['invoice', 'version', 'invoice_date', 'DATE', 'DESCRIPTION', 'AMOUNT',
          'HOURS_UNITS', 'SUBTOTAL', 'DISCOUNT', 'TOTAL', 'RATE']]
 
 #  drop rows where these fields are all empty or zero
@@ -271,19 +281,7 @@ print('\nDropping items with no SUBTOTAL, DISCOUNT, or TOTAL: \n{}'
 
 df = df[~mask]
 
-# Manually compute SUBTOTAL and TOTAL fields in 'total' items
-tots = [0, 0]
-for idx, row in df.iterrows():
-    if row[item_type] == ITEM_TOT:
-        df.loc[idx, ['SUBTOTAL', 'TOTAL']] = tots
-        if tots[1] != 0:
-            df.loc[idx, 'DISCOUNT'] = 1 - tots[1] / tots[0]
-        tots = [0, 0]
-    else:
-        if not pd.np.isnan(row['SUBTOTAL']):
-            tots[0] += row['SUBTOTAL']
-        if not pd.np.isnan(row['TOTAL']):
-            tots[1] += row['TOTAL']
+df = df.query("{} != '{}'".format(item_type, ITEM_TOT))
 
 # Indicate if membership is unknown
 df[member_type] = df[member_type].fillna('unknown')
@@ -307,6 +305,7 @@ df = df.sort_values(by=['invoice_date', 'invoice', item_type],
                     ascending=False)
 
 line_item_fields = ['invoice',
+                    'version',
                     'invoice_date',
                     'DATE',
                     item_type,
