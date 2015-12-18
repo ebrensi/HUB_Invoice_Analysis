@@ -122,16 +122,20 @@ cancellations = df['invoice'].str.contains('cancel', na=False, case=False)
 # Some invoices are have labels xxxxxx-x where the dash indicates a new version
 #  that replaced the last version.  We wil eliminate all but the latest
 #  version.
-df['version'] = (df['invoice'].str.split('-')
+name_split = df['invoice'].str.split('-|\_Rev')
+df['version'] = (name_split
                  .map(lambda x: int(x[1]) if len(x) > 1 else 0))
 
-df['invoice'] = (df['invoice'].str.split('-')
-                 .map(lambda x: x[0]))
+df['invoice'] = (name_split
+                 .map(lambda x: str(x[0])))
 
+old_version = (df.groupby('invoice')['version']
+               .transform(lambda x: x - max(x)) < 0)
 
 exclude_mask = (invoice_num.isnull() |
                 (invoice_num < INVOICE_NUM_CUTOFF) |
-                cancellations)
+                cancellations |
+                old_version)
 
 print("Excluding \n{}".format(df['invoice'][exclude_mask].unique()))
 
@@ -143,7 +147,7 @@ for field in FIELD_CLASSES:
                      for col_name in FIELD_CLASSES[field]]
     df[field] = pd.concat(data_to_merge).reindex_like(df)
 
-df = df[['invoice', 'version', 'invoice_date', 'DATE', 'DESCRIPTION', 'AMOUNT',
+df = df[['invoice', 'invoice_date', 'DATE', 'DESCRIPTION', 'AMOUNT',
          'HOURS_UNITS', 'SUBTOTAL', 'DISCOUNT', 'TOTAL', 'RATE']]
 
 #  drop rows where these fields are all empty or zero
@@ -305,7 +309,6 @@ df = df.sort_values(by=['invoice_date', 'invoice', item_type],
                     ascending=False)
 
 line_item_fields = ['invoice',
-                    'version',
                     'invoice_date',
                     'DATE',
                     item_type,
